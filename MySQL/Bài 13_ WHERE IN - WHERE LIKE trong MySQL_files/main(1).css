@@ -1,0 +1,158 @@
+@charset "UTF-8";
+/* CSS Document */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /*image-rendering: -moz-crisp-edges; */ /* Firefox */
+  image-rendering: -o-crisp-edges; /* Opera */
+  image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+  font-family: "Open Sans", arial;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Bold.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+.frame {
+  width: 300px;
+  height: 250px;
+  font-size: 23px;
+  font-weight: 300;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 1px solid #000;
+}
+.img-frame {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+}
+.text-heading {
+  padding: 10px 10px 0 10px;
+  position: absolute;
+  width: 300px;
+  color: #1a1f71;
+}
+.heading-wrapper {
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  text-align: center;
+}
+#banner {
+  position: relative;
+  height: 250px;
+  width: 300px;
+}
+
+#one {
+  background-color: #1a1f71;
+  z-index: 4;
+}
+#one-img {
+  opacity: 0;
+}
+#copy-one-top {
+  color: #fff;
+}
+
+#two {
+  background-color: slateblue;
+  z-index: 3;
+}
+
+#three {
+  z-index: 2;
+}
+#four {
+  position: absolute;
+  background-color: #fff;
+  z-index: 1;
+}
+#copy-four-top {
+  font-size: 20px;
+  text-align: center;
+  width: 260px;
+  color: #1a1f71;
+  margin: 0 auto;
+}
+
+#visa-logo {
+  position: absolute;
+  bottom: 5px;
+  z-index: 5;
+  left: 230px;
+}
+
+#cta {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 90px;
+}
+#cta-text {
+  display: inline-block;
+  text-align: center;
+  font-size: 12px;
+  min-width: 80px;
+  height: 20px;
+  background: url("../images/See_How_1.png") no-repeat center;
+  background-size: cover;
+  padding: 2px 5px 2px 5px;
+  border-radius: 5px;
+}
+
+#tc {
+  width: 100%;
+  font-size: 8px;
+  position: absolute;
+  bottom: 15px;
+}
+#tctext {
+  text-align: center;
+  color: #1a1f71;
+  font-weight: 500;
+}
+
+#visa-blue {
+  position: absolute;
+  bottom: 50px;
+  left: 100px;
+}
+
+#banner {
+  visibility: hidden;
+}
+.buttons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 6;
+}
+.button {
+  opacity: 0;
+  width: 300px;
+  height: 250px;
+  display: block;
+  cursor: pointer;
+}
+
+#tracking-pixel {
+  position: absolute;
+  opacity: 0;
+}

@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)http://hiepsiit.com/khoa-hoc/php/mangphp/52/51 -->
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <style></style><meta name="Keywords" content="HTML,CSS,JavaScript,SQL,PHP,jQuery,XML,DOM,Bootstrap,Web,aspx, android,IOS,C#,C,C++,   java,development,Hiepsiit,tutorials,programming,training,learning,quiz,primer,lessons,references,examples,source code,colors,demos,tips">
+<meta name="Description" content="Well organized and easy to understand Web building tutorials with lots of examples of how to use HTML, CSS, JavaScript, SQL, PHP, and XML.">
+<meta name="google-site-verification" content="pAWmGiW5C3gwu_7hmRKi4whU2rUyyLAOoj29JID9hns">
+    <title>	Tính đóng gói
+</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script src="./Tính đóng gói trong lập trình hướng đối tượng php_files/osd.js.tải xuống"></script><script type="text/javascript" async="" src="./Tính đóng gói trong lập trình hướng đối tượng php_files/recaptcha__vi.js.tải xuống"></script><script src="./Tính đóng gói trong lập trình hướng đối tượng php_files/ca-pub-6656408481976431.js.tải xuống"></script><script type="text/javascript" async="" src="./Tính đóng gói trong lập trình hướng đối tượng php_files/analytics.js.tải xuống"></script><script async="" src="./Tính đóng gói trong lập trình hướng đối tượng php_files/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-108025515-1');
+</script>
+
+<link rel="shortcut icon" href="http://hiepsiit.com/public/user/assetsMain/images/icon.ico">
+<link rel="stylesheet" href="./Tính đóng gói trong lập trình hướng đối tượng php_files/font-awesome.min.css">
+<link rel="stylesheet" href="./Tính đóng gói trong lập trình hướng đối tượng php_files/icons.css">
+  <link rel="stylesheet" href="./Tính đóng gói trong lập trình hướng đối tượng php_files/bootstrap.min.css">
+  <link rel="stylesheet" href="./Tính đóng gói trong lập trình hướng đối tượng php_files/plugins.css">
+  <link rel="stylesheet" href="./Tính đóng gói trong lập trình hướng đối tượng php_files/w3.css">
+  <link href="./Tính đóng gói trong lập trình hướng đối tượng php_files/css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="./Tính đóng gói trong lập trình hướng đối tượng php_files/responsive.css">
+    <link rel="stylesheet" href="./Tính đóng gói trong lập trình hướng đối tượng php_files/style.css">
+    <link rel="stylesheet" href="./Tính đóng gói trong lập trình hướng đối tượng php_files/mystyle.css">
+  <script src="./Tính đóng gói trong lập trình hướng đối tượng php_files/jquery-1.11.2.min.js.tải xuống"></script>
+ <script src="./Tính đóng gói trong lập trình hướng đối tượng php_files/bootstrap.min.js.tải xuống"></script>
+   <script src="./Tính đóng gói trong lập trình hướng đối tượng php_files/menu.js.tải xuống"></script>
+    <script src="./Tính đóng gói trong lập trình hướng đối tượng php_files/function.js.tải xuống"></script>
+     
+   <script>
+    $(document).ready(function(){
+        $("#hideshow").click(function(){
+        $('#leftmenu').toggle('show');
+        });
+        
+    });
+    
+    // check not mobile
+    $(window).on('resize',function(){
+    if($(this).width() > 800)
+       $('#leftmenu').show();
+       $('#mySearch').hide();
+        
+});
+</script> 
+<!-- Ezoic Code -->
+<script>var ezoicId = 77345;</script>
+<script type="text/javascript" src="./Tính đóng gói trong lập trình hướng đối tượng php_files/ezoic.js.tải xuống"></script>
+<!-- Ezoic Code -->
+<script async="" src="./Tính đóng gói trong lập trình hướng đối tượng php_files/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-6656408481976431",
+    enable_page_level_ads: true
+  });
+</script>    
+
+
+<link rel="preload" href="./Tính đóng gói trong lập trình hướng đối tượng php_files/f(1).txt" as="script"><script type="text/javascript" src="./Tính đóng gói trong lập trình hướng đối tượng php_files/f(1).txt"></script><link rel="preload" href="./Tính đóng gói trong lập trình hướng đối tượng php_files/f(2).txt" as="script"><script type="text/javascript" src="./Tính đóng gói trong lập trình hướng đối tượng php_files/f(2).txt"></script><link rel="preload" href="http://pagead2.googlesyndication.com/pagead/js/r20190626/r20190131/show_ads_impl.js" as="script"></head>
+
+<body>
+
+<div class="preloader" style="display: none;">
+    <div class="loaded" style="display: none;">&nbsp;</div>
+</div>
+<!-- Modal -->
+      <div class="container">
+      <!--Search mobile-->
+        <div class="modal fade" id="mySearch" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header login_modal_header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h6 class="modal-title" id="myModalLabel">Tìm Kiếm Bài Học</h6>
+            </div>
+            <div class="modal-body">
+                
+                
+                        <div class="form-group">
+                            <input type="text" id="search" placeholder="Vui lòng từ khóa cần tìm" value="" class="form-control login-field">
+                            
+                        </div>
+        
+                        
+                        
+                        <button href="#" class="btn btn-success modal-login-btn">Tìm kiếm</button>
+                        
+                    </div>
+                
+                    
+                    
+                                                                                                                        
+                <div class="clearfix"></div>            
+                
+            
+            <div class="clearfix"></div>
+            <div class="modal-footer login_modal_footer">
+            </div>
+        </div>
+    </div>
+</div>                	<!-- Modal Login mobile -->
+    		<div class="modal left fade" id="myLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <span class="lablelogin">Đăng Nhập </span>
+
+                </div>
+                                               <div class="modal-body">
+                    <form id="mobileLogin" class="form-horizontal" role="form" method="post" action="http://hiepsiit.com/dang-nhap-mobile">
+                      <input type="hidden" name="_token" value="bA6C6xKwDUyXfWhZGojw0LEbd7j2chkvNNUdd3H1">
+                                                
+                            <div style="margin-bottom: 25px" class="input-group">
+                              <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                              <input id="mobileloginusername" type="text" class="form-control " name="username" value="" placeholder="Vui lòng nhập tài khoản">                                        
+                             </div>
+                                
+                            <div style="margin-bottom: 25px" class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                <input id="mobileloginpass" type="password" class="form-control " name="password" placeholder="mật khẩu">
+                           </div>
+                                    
+
+                                
+                            <div class="input-group">
+                              <div class="checkbox">
+                                <label>
+                                  <input id="login-remember" type="checkbox" name="remember" value="1"> Nhớ mật khẩu
+                                </label>
+                              </div>
+                            </div>
+
+
+                                <div style="margin-top:10px" class="form-group">
+                                    <!-- Button -->
+
+                                    <div class="col-sm-12 controls">
+                                      <button type="submit" class="btn success">Đăng Nhập </button>
+                                      <a class="btn warning" href="http://hiepsiit.com/khoa-hoc/php/mangphp/52/51#" data-toggle="modal" data-target="#getPassword">Quên mật..?</a>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <div class="col-md-12 control">
+                                        <div class="modal-footer">
+                                            Bạn chưa có tài khoản! 
+                                        <a href="http://hiepsiit.com/khoa-hoc/php/mangphp/52/51#" data-toggle="modal" data-target="#myRegister">
+                                            Đăng ký tại đây
+                                        </a>
+                                        </div>
+                                    </div>
+                                </div>  
+                                 <h6 align="center">Đăng Nhập Với...</h6>
+                        <div class="modal-footer">
+                       
+                        </div>
+                        <div>
+                        <a href="http://hiepsiit.com/auth/facebook/login/mobile" class=" btnother facebook"> <i class="fa fa-facebook modal-icons "></i></a>
+                <a href="http://hiepsiit.com/auth/twitter/login/mobile" class="btnother  twitter"> <i class="fa fa-twitter modal-icons "></i> </a>
+                <a href="http://hiepsiit.com/auth/google/login/mobile" class="btnother google"> <i class="fa fa-google-plus modal-icons "></i>  </a>
+                
+                <a href="http://hiepsiit.com/auth/github/login/mobile" class="btnother github"> <i class="fa fa-github modal-icons "></i> </a>
+                            
+                    </div>
+             </form>     
+
+
+        </div>
+
+            </div><!-- modal-content -->
+        </div><!-- modal-dialog -->
+    </div>       
+    	        
+        <!-- Modal Register mobile -->
+            <div class="modal left fade" id="myRegister" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <span class="lableloginregister">Đăng Ký Thành Viên </span>
+                </div>
+
+                <div class="modal-body">
+                
+                    <div class="container">
+                       
+                       
+                        
+                                                                      
+                  <form id="mobileRe" role="form" method="post" action="http://hiepsiit.com/dang-ky-mobile">
+                  <input type="hidden" name="_token" value="bA6C6xKwDUyXfWhZGojw0LEbd7j2chkvNNUdd3H1">            
+                                                               
+                       <div class="form-group">
+                        <label for="email">Họ và tên:</label>
+                        <input type="text" class="form-control " id="txtMobileName" placeholder="Vui lòng nhập họ và tên" name="txtName" value="">
+                      </div>
+                      <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="text" class="form-control " id="txtMobileEmail" placeholder="Vui lòng nhập Email" name="txtEmail" value="">
+                      </div>
+                       <div class="form-group">
+                        <label for="pwd">Mật khẩu:</label>
+                        <input type="password" class="form-control " id="txtMobilePass" name="txtPass" placeholder="Vui lòng nhập mật khẩu">
+                      </div>
+                      <input type="hidden" name="txtmobile" value="mobile">
+                      <div class="form-group">
+                        <label for="pwd">Xác nhận mật khẩu:</label>
+                        <input type="password" class="form-control" id="txtMobileRepass" placeholder="Vui lòng nhập lại mật khẩu" name="txtRepass">
+                      </div>
+                      
+                          <div class="form-group">
+                          <!-- Button -->                                        
+                          <div>
+                         
+                              <button id="btn-signup" type="submit" class=" btn btn-success" style="width:260px"><i class="icon-hand-right"></i> &nbsp; Đăng Ký</button>
+                               
+                          </div>
+                      </div>
+                       <h6 align="center">Đăng Ký Với...</h6>
+                          <div class="modal-footer">
+                         
+                          </div>
+                          <div>
+                    <a href="http://hiepsiit.com/auth/facebook/reg/mobile" class=" btnother facebook"> <i class="fa fa-facebook modal-icons "></i></a>
+                <a href="http://hiepsiit.com/auth/twitter/reg/mobile" class="btnother  twitter"> <i class="fa fa-twitter modal-icons "></i> </a>
+                <a href="http://hiepsiit.com/auth/google/reg/mobile" class="btnother google"> <i class="fa fa-google-plus modal-icons "></i>  </a>
+                
+                <a href="http://hiepsiit.com/auth/github/reg/mobile" class="btnother github"> <i class="fa fa-github modal-icons "></i> </a>
+                            
+                    </div>
+                  </form>
+                    </div>
+                </div>
+
+            </div><!-- modal-content -->
+        </div><!-- modal-dialog -->
+    </div>
+        
+        <!--Login web-->
+            <div class="modal fade" id="loginFull" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header login_modal_header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h2 class="modal-title" id="myModalLabel">Đăng nhập</h2>
+            </div>
+
+                                         
+             <form id="webLogin" name="fullLogin" role="form" method="post" action="http://hiepsiit.com/dang-nhap-web">
+                              <input type="hidden" name="_token" value="bA6C6xKwDUyXfWhZGojw0LEbd7j2chkvNNUdd3H1">
+            <div class="modal-body login-modal">
+                <div class="clearfix"></div>
+                <div id="social-icons-conatainer">
+                    <div class="modal-body-left">
+                    
+                        <div class="form-group">
+                            <input type="text" id="webloginusername" name="username" placeholder="Vui lòng nhập tài khoản" value="" class="form-control login-field">
+                            <i class="fa fa-user login-field-icon"></i>
+                        </div>
+        
+                        <div class="form-group">
+                            <input type="password" id="webloginpass" name="password" placeholder="Vui lòng nhập mật khẩu" value="" class="form-control login-field">
+                            <i class="fa fa-lock login-field-icon"></i>
+                        </div>
+                        <div class="form-group">
+                          <div class="checkbox">
+                            <label class="checkbox-inline">
+                              <input id="login-remember" type="checkbox" name="remember" value="1"> Nhớ mật khẩu
+                            </label>
+                          </div>
+                        </div>
+                        
+                        <input type="submit" class="btn btn-success modal-login-btn" value="Đăng nhập" id="login" style="width: 100%;height: 53px;">
+                                               
+                    </div>
+                
+                    <div class="modal-body-right">
+                        <div class="modal-social-icons">
+                           <a href="http://hiepsiit.com/auth/facebook/login/web" class="btn btn-default facebook"> <i class="fa fa-facebook modal-icons"></i> Đăng nhập với Facebook </a>
+                            <a href="http://hiepsiit.com/auth/twitter/login/web" class="btn btn-default twitter"> <i class="fa fa-twitter modal-icons"></i> Đăng nhập với Twitter </a>
+                            <a href="http://hiepsiit.com/auth/google/login/web" class="btn btn-default google"> <i class="fa fa-google-plus modal-icons"></i> Đăng nhập với Google </a>
+                            <a href="http://hiepsiit.com/auth/github/login/web" class="btn btn-default github"> <i class="fa fa-github modal-icons"></i> Đăng nhập với Github </a>
+                        </div> 
+                    </div>  
+                    <div id="center-line"> Hoặc </div>
+                </div>                                                                                                              
+                <div class="clearfix"></div>
+                
+                <div class="form-group modal-register-btn">
+                    <a class="btn warning" href="http://hiepsiit.com/khoa-hoc/php/mangphp/52/51#" data-toggle="modal" data-target="#getPassword"> Quên mật khẩu?</a><a class="btn default" data-toggle="modal" data-target="#reFull"> Đăng ký thành viên mới</a>
+                </div>
+            </div>
+            </form>
+            <div class="clearfix"></div>
+            <div class="modal-footer login_modal_footer"></div>
+        </div>
+    </div>
+</div>     
+        
+		
+        <!-- Register web-->
+            <div class="modal fade" id="reFull" tabindex="2" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header login_modal_header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h2 class="modal-title" id="myModalLabel">Đăng Ký Thành Viên</h2>
+            </div>
+               
+             
+                                
+                      
+            <div class="modal-body login-modal">
+                <div class="clearfix"></div>
+                <div id="social-icons-conatainer">
+                    <div class="modal-body-left">                                    
+                       
+                         <form id="webRe" role="form" method="post" action="http://hiepsiit.com/dang-ky-fullre-web">
+                          <input type="hidden" name="_token" value="bA6C6xKwDUyXfWhZGojw0LEbd7j2chkvNNUdd3H1">       
+                         <div class="form-group">
+                          <label for="email">Họ và tên:</label>
+                          <input type="text" class="form-control " id="txtFullName" placeholder="Vui lòng nhập họ và tên" name="txtName" value="">
+                        </div> 
+                        <input type="hidden" class="form-control " placeholder="Vui lòng nhập họ và tên" name="txtweb" value="full">
+                        <div class="form-group">
+                          <label for="email">Email:</label>
+                          <input type="text" class="form-control " id="txFulltEmail" placeholder="Vui lòng nhập Email" name="txtEmail" value="">
+                          
+                        </div>
+                         <div class="form-group">
+                          <label for="pwd">Mật khẩu:</label>
+                          <input type="password" class="form-control " id="txtFullPass" placeholder="Vui lòng nhập mật khẩu" name="txtPass">
+                        </div>
+                        <div class="form-group">
+                          <label for="pwd">Xác nhận mật khẩu:</label>
+                          <input type="password" class="form-control" id="txtFullRepass" placeholder="Vui lòng nhập lại mật khẩu" name="txtRepass">
+                        </div>
+                        <style> #rc-imageselect {transform:scale(0.5);-webkit-transform:scale(0.85);transform-origin:0 0;-webkit-transform-origin:0 0;} </style>
+                         <style> @media  screen and (max-height: 575px){ #rc-imageselect, .g-recaptcha {transform:scale(0.55);-webkit-transform:scale(0.55);transform-origin:0 0;-webkit-transform-origin:0 0;} } </style> 
+                        <div class="form-group" id="rc-imageselect">
+                                <script src="./Tính đóng gói trong lập trình hướng đối tượng php_files/api.js.tải xuống" async="" defer=""></script>
+<div class="g-recaptcha" data-sitekey="6Le6ryoUAAAAAPC119yusBPsViD8XPwLbSgF3GVG"><div style="width: 304px; height: 78px;"><div><iframe src="./Tính đóng gói trong lập trình hướng đối tượng php_files/anchor.html" width="304" height="78" role="presentation" name="a-tfmtptbhsubu" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div></div>
+                               
+                            </div>
+                        <input type="submit" name="btnRe" class="btn btn-success " value="   Đăng Ký    " style="width: 100%; height: 53px">
+                    </form>
+                   
+                    </div>
+       
+                    <div class="modal-body-right">
+                        <div class="modal-social-icons">
+                          <style type="text/css">
+                            .margin1 {margin-top: 35px;}
+                            .margin2 {margin-top: 100px;}
+                          </style>
+                            <a href="http://hiepsiit.com/auth/facebook/reg/web" class="btn btn-default facebook" style="margin-top: 20px;"> <i class="fa fa-facebook modal-icons"></i> Đăng ký với Facebook </a>
+                            <a href="http://hiepsiit.com/auth/twitter/reg/web" class="btn btn-default twitter margin1"> <i class="fa fa-twitter modal-icons"></i> Đăng ký với Twitter </a>
+                            <a href="http://hiepsiit.com/auth/google/reg/web" class="btn btn-default google margin1"> <i class="fa fa-google-plus modal-icons"></i> Đăng ký với Google </a>
+                            <a href="http://hiepsiit.com/auth/github/reg/web" class="btn btn-default github margin1"> <i class="fa fa-linkedin modal-icons"></i> Đăng ký với Github </a>
+                            <a class="btn warning margin1" style="margin-top:129px;width:100%" data-toggle="modal" data-target="#loginFull" data-dismiss="modal" aria-hidden="true"> Đăng Nhập </a>
+  
+                        </div> 
+                    </div>  
+                    <div id="center-line" class="margin2"> Hoặc </div>
+                </div>                                                                                                              
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="modal-footer login_modal_footer">
+            </div>
+        </div>
+    </div>
+</div>
+        
+        <!--forget Pass-->
+            <div class="modal fade" id="getPassword" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header login_modal_header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h6 class="modal-title" id="myModalLabel">Quên mật khẩu</h6>
+            </div>
+                        
+            <form id="findPassword" action="http://hiepsiit.com/findpassword" method="post">   
+                <input type="hidden" name="_token" value="bA6C6xKwDUyXfWhZGojw0LEbd7j2chkvNNUdd3H1">            
+            <div class="modal-body">
+            
+                <div class="form-group">
+                    <input type="text" id="txtEmail" placeholder="Vui lòng nhập email để nhận mật khẩu mới" value="" class="form-control login-field" name="txtEmail">
+                    
+                </div>
+
+                <button href="#" class="btn btn-success modal-login-btn">Lấy Mật Khẩu</button>
+                
+            </div>
+            </form>                                                                                   
+                <div class="clearfix"></div>            
+                
+            
+            <div class="clearfix"></div>
+            <div class="modal-footer login_modal_footer">
+            </div>
+        </div>
+    </div>
+</div>      
+            
+<link href="./Tính đóng gói trong lập trình hướng đối tượng php_files/prism_patched.min.css" rel="stylesheet">
+<script src="./Tính đóng gói trong lập trình hướng đối tượng php_files/prism_patched.min.js.tải xuống"></script>
+
+    <div class="modal left fade  " id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog " role="document">
+            <div class="modal-content sidebar1">
+                <div class="modal-header" style="height:50px">
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Đóng"><span aria-hidden="true">×</span></button>
+                                                              	<span style="font-weight:bold;color:#FFF; padding-left:10px;">Ngôn ngữ PHP</span>
+                                     </div>
+
+                <div class="modal-body">
+
+
+                <div class="left-navigation">
+                    <style type="text/css">
+       a:link{color:white;}
+       a:hover{text-decoration: none;color:#ddd;}
+       .bgclick{
+        background-color: rgba(255, 255, 255, 0.2);
+            border-left: 1px solid white;
+            color: white;
+            font-weight: bolder;    
+      }
+     </style>
+       <ul class="list ">
+                                                                  <h6 style="font-size: 14px;font-weight:bold;padding-left:7px;">PHP CĂN BẢN</h6>
+                                                                                                                       <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/phpmodau/52/0" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Mở đầu</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/gioithieu/52/1" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Giới thiệu</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/caidatwebserver/52/2" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Cài đặt</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/phpcongcusoanthao/52/3" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Công cụ soạn thảo</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/phpcuphapcoban/52/4" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Cú pháp cơ bản</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/phpkhaibaobien/52/5" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Khai báo biến</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/phpphamvicuabien/52/6" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Phạm vi của biến</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/phphangso/52/7" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Hằng số</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/phplenhechovaprint/52/8" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Lệnh Echo và Print</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/phpkieudulieu/52/9" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Kiểu dữ liệu</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/biensieutoancuc/52/10" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Biến siêu toàn cục</a></li>
+                                                                                                                                                          <h6 style="font-size: 14px;font-weight:bold;padding-left:7px;">PHP CÁC PHÉP TOÁN</h6>
+                                                                                                                       <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/toantusohoc/52/11" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Toán tử số học</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/pheptoansosanh/52/12" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Toán tử so sánh</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/toantugan/52/13" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Toán tử gán</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/toantulogic/52/14" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Toán tử logic</a></li>
+                                                                                                                                                          <h6 style="font-size: 14px;font-weight:bold;padding-left:7px;">CẤU TRÚC ĐIỀU KHIỂN</h6>
+                                                                                                                       <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/caulenhif..else..elseif/52/15" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Câu Lệnh If..Else..Elseif</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/caulenhswitch/52/16" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Câu lệnh Switch</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/cackieulapphp/52/17" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Các lệnh lặp</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/lenhbreakvacontinue/52/18" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Lệnh break và continue</a></li>
+                                                                                                                                                          <h6 style="font-size: 14px;font-weight:bold;padding-left:7px;">PHP HÀM</h6>
+                                                                                                                       <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/cachvietham/52/19" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Cách viết hàm</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/hamcothamso/52/20" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Hàm có tham số</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/truyenthamtri/52/21" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Hàm tham trị</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/truyentheothamchieu/52/22" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Hàm tham chiếu</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/hamthamsomacdinh/52/23" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Hàm tham số mặc định</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/hamconthamso/52/24" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Hàm có N tham số</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/hamdequi/52/25" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Hàm đệ quy</a></li>
+                                                                                                                                                          <h6 style="font-size: 14px;font-weight:bold;padding-left:7px;">PHP XỬ LÝ FORM</h6>
+                                                                                                                       <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/postvaget/52/26" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>POST và GET</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/kiemtradulieuphiaserver/52/27" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Kiểm tra dữ liệu PHP</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/uploadtaptin/52/28" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Upload tập tin</a></li>
+                                                                                                                                                          <h6 style="font-size: 14px;font-weight:bold;padding-left:7px;">PHP NÂNG CAO</h6>
+                                                                                                                       <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/mangphp/52/29" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Mảng PHP</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/hamxulymang/52/30" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Hàm xử lý mảng</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/chuoiphp/52/31" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Chuỗi PHP</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/hamxulychuoi/52/32" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Hàm xử lý chuỗi</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/hamdateva/52/33" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Hàm Date và Time</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/hamincludevarequire/52/34" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Hàm Include và Require</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/cookievasession/52/35" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Cookie và Session</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/xulytaptin/52/36" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Xử lý tập tin</a></li>
+                                                                                                                                                          <h6 style="font-size: 14px;font-weight:bold;padding-left:7px;">PHP MYSQLI</h6>
+                                                                                                                       <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/mysqliconnect/52/37" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>MySQLi Connect</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/mysqlitaodb/52/38" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>MySQLi Tạo DB</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/mysqlitaotable/52/39" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>MySQLi Tạo Table</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/mysqlithem/52/40" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>MySQLi  Thêm Mẫu Tin</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/mysqlicapnhat/52/41" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>MySQLi Cập Nhật</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/mysqlixoa/52/42" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>MySQLi Xóa Mẫu Tin</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/mysqlitruyvan/52/43" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>MySQLi Truy Vấn</a></li>
+                                                                                                                                                          <h6 style="font-size: 14px;font-weight:bold;padding-left:7px;">PHP HƯỚNG ĐỐI TƯỢNG</h6>
+                                                                                                                       <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/khainiem/52/44" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Khái niệm</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/lopvadoituong/52/45" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Lớp và Đối tượng</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/magicmethods/52/46" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Magic methods</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/phuongthuckhoitao/52/47" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Phương thức khởi tạo</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/phamvitruycap/52/48" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Phạm vi truy cập</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/kethua/52/49" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Kế thừa</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/napchongvaghide/52/50" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Nạp chồng và Ghi đè</a></li>
+                                                                                                                                    <li class="bgclick" style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/tinhdonggoi/52/51" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Tính đóng gói</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/kythuatautoloading/52/52" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Kỹ thuật autoloading</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/loptruutuong/52/53" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Lớp trừu tượng</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/interfacephp/52/54" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Interface PHP</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/hamvalopfinal/52/55" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Hàm và lớp final</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/hamandanh/52/56" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Hàm ẩn danh</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/khacbietselfva%24this/52/57" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Khác biệt self và $this</a></li>
+                                                                                                                                     <p>&nbsp;</p>
+      </ul>                    	</div>
+                </div>
+             <div class="modal-footer">
+            <button type="button" class="btn warning" data-dismiss="modal">
+               Đóng
+            </button>
+            <p>&nbsp;</p>
+
+         </div>
+         </div><!-- modal-content -->
+        </div><!-- modal-dialog -->
+    </div><!-- modal -->
+    </div><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><ins id="aswift_0_anchor" style="display:block;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><iframe frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0px;width:0px;height:0px;" src="./Tính đóng gói trong lập trình hướng đối tượng php_files/saved_resource.html"></iframe></ins></ins></ins><!-- container -->
+
+		d<header class=" navbar-fixed-top">
+
+<nav id="cssmenu">
+
+<div class="logo">
+     <div class="icondangnhap">
+         <a href="http://hiepsiit.com/"><img src="./Tính đóng gói trong lập trình hướng đối tượng php_files/smallhiepsiit1.png" style="float:left" width="100px"> </a>
+          <a data-toggle="modal" data-target="#mySearch" href="http://hiepsiit.com/khoa-hoc/php/mangphp/52/51#"><img src="./Tính đóng gói trong lập trình hướng đối tượng php_files/search_icon.png"></a>
+                                <a href="http://hiepsiit.com/khoa-hoc/php/mangphp/52/51#" data-toggle="modal" data-target="#myLogin"><img src="./Tính đóng gói trong lập trình hướng đối tượng php_files/dangnhap.png"></a>
+            
+            <a class="register col-xs-121 " href="http://hiepsiit.com/khoa-hoc/php/mangphp/52/51#" data-toggle="modal" data-target="#myRegister"><img src="./Tính đóng gói trong lập trình hướng đối tượng php_files/dangky.png"></a>
+                                  
+        
+           <a data-toggle="modal" data-target="#myModal" href="http://hiepsiit.com/khoa-hoc/php/mangphp/52/51#"><img src="./Tính đóng gói trong lập trình hướng đối tượng php_files/book.png"></a>
+              <style type="text/css">
+        a:hover{text-decoration:none}
+      </style>
+
+      
+    </div>
+
+       
+</div>
+
+<div id="head-mobile"></div>
+<div class="button"></div>
+
+<ul>
+<li class="has-sub"><span class="submenu-button"></span> <a href="http://hiepsiit.com/tat-ca-khoa-hoc/Ng%C3%B4n%20ng%E1%BB%AF%20l%E1%BA%ADp%20tr%C3%ACnh-42-panel-info">NGÔN NGỮ LẬP TRÌNH</a><ul><li><a href="http://hiepsiit.com/khoa-hoc/c/laptrinhc/50/0">Lập trình C</a></li><li><a href="http://hiepsiit.com/khoa-hoc/ccongcong/laptrinhc++/59/0">Lập trình C++</a></li><li><a href="http://hiepsiit.com/khoa-hoc/ctdl/ctdlvagiaithuat/55/0">CTDL và giải thuật</a></li></ul></li><li class="has-sub"><span class="submenu-button"></span> <a href="http://hiepsiit.com/tat-ca-khoa-hoc/Thi%E1%BA%BFt%20k%E1%BA%BF%20website-43-panel-warning">THIẾT KẾ WEBSITE</a><ul><li><a href="http://hiepsiit.com/khoa-hoc/html/ngonnguhtml/51/0">Ngôn ngữ HTML</a></li><li><a href="http://hiepsiit.com/khoa-hoc/html/ngonngucss/56/0">Ngôn ngữ CSS</a></li><li><a href="http://hiepsiit.com/khoa-hoc/html/ngonngujavascript/57/0">Ngôn ngữ Javascript</a></li></ul></li><li class="has-sub"><span class="submenu-button"></span> <a href="http://hiepsiit.com/tat-ca-khoa-hoc/Ph%C3%A1t%20tri%E1%BB%83n%20Web-44-panel-success">PHÁT TRIỂN WEB</a><ul><li><a href="http://hiepsiit.com/khoa-hoc/php/ngonnguphp/52/0">Ngôn ngữ PHP</a></li><li><a href="http://hiepsiit.com/khoa-hoc/apsnet/ngonnguasp.net/58/0">Ngôn ngữ ASP.NET</a></li></ul></li><li class="has-sub"><span class="submenu-button"></span> <a href="http://hiepsiit.com/tat-ca-khoa-hoc/Ph%C3%A1t%20tri%E1%BB%83n%20Mobile-45-panel-danger">PHÁT TRIỂN MOBILE</a><ul><li><a href="http://hiepsiit.com/khoa-hoc/android/laptrinhandroid/53/0">Lập trình Android</a></li></ul></li>
+<div class="visiblesearch">
+<li>
+      
+        <form class="searchweb ">
+                <input type="text" class="searchweb searchinput1 " placeholder="Search">             
+        </form>
+                 </li><li>  <a class="login col-xs-12 " data-toggle="modal" data-target="#loginFull" href="http://hiepsiit.com/khoa-hoc/php/mangphp/52/51#">Đăng Nhập </a></li>
+           <li> <a class="login  col-md-6" href="http://hiepsiit.com/khoa-hoc/php/mangphp/52/51#" data-toggle="modal" data-target="#reFull">Đăng Ký</a></li>
+          
+                </div>
+         
+               
+       </ul>
+   
+</nav>
+</header>
+
+<!-- Sections -->
+   
+       
+<section id="business" class="portfolio sections">
+ <div class="container-fluid">
+        <div class="row">
+            <div class="col-sx-2 col-md-2 sidebar1 visiblesearch" id="leftmenu">
+
+                <div class="sidebar1Custom fixqq">
+                 <div class="left-navigation myBox">
+                 <style type="text/css">
+       a:link{color:white;}
+       a:hover{text-decoration: none;color:#ddd;}
+       .bgclick{
+        background-color: rgba(255, 255, 255, 0.2);
+            border-left: 1px solid white;
+            color: white;
+            font-weight: bolder;    
+      }
+     </style>
+       <ul class="list ">
+                                                                  <h6 style="font-size: 14px;font-weight:bold;padding-left:7px;">PHP CĂN BẢN</h6>
+                                                                                                                       <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/phpmodau/52/0" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Mở đầu</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/gioithieu/52/1" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Giới thiệu</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/caidatwebserver/52/2" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Cài đặt</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/phpcongcusoanthao/52/3" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Công cụ soạn thảo</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/phpcuphapcoban/52/4" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Cú pháp cơ bản</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/phpkhaibaobien/52/5" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Khai báo biến</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/phpphamvicuabien/52/6" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Phạm vi của biến</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/phphangso/52/7" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Hằng số</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/phplenhechovaprint/52/8" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Lệnh Echo và Print</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/phpkieudulieu/52/9" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Kiểu dữ liệu</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/biensieutoancuc/52/10" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Biến siêu toàn cục</a></li>
+                                                                                                                                                          <h6 style="font-size: 14px;font-weight:bold;padding-left:7px;">PHP CÁC PHÉP TOÁN</h6>
+                                                                                                                       <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/toantusohoc/52/11" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Toán tử số học</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/pheptoansosanh/52/12" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Toán tử so sánh</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/toantugan/52/13" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Toán tử gán</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/toantulogic/52/14" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Toán tử logic</a></li>
+                                                                                                                                                          <h6 style="font-size: 14px;font-weight:bold;padding-left:7px;">CẤU TRÚC ĐIỀU KHIỂN</h6>
+                                                                                                                       <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/caulenhif..else..elseif/52/15" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Câu Lệnh If..Else..Elseif</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/caulenhswitch/52/16" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Câu lệnh Switch</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/cackieulapphp/52/17" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Các lệnh lặp</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/lenhbreakvacontinue/52/18" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Lệnh break và continue</a></li>
+                                                                                                                                                          <h6 style="font-size: 14px;font-weight:bold;padding-left:7px;">PHP HÀM</h6>
+                                                                                                                       <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/cachvietham/52/19" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Cách viết hàm</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/hamcothamso/52/20" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Hàm có tham số</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/truyenthamtri/52/21" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Hàm tham trị</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/truyentheothamchieu/52/22" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Hàm tham chiếu</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/hamthamsomacdinh/52/23" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Hàm tham số mặc định</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/hamconthamso/52/24" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Hàm có N tham số</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/hamdequi/52/25" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Hàm đệ quy</a></li>
+                                                                                                                                                          <h6 style="font-size: 14px;font-weight:bold;padding-left:7px;">PHP XỬ LÝ FORM</h6>
+                                                                                                                       <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/postvaget/52/26" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>POST và GET</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/kiemtradulieuphiaserver/52/27" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Kiểm tra dữ liệu PHP</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/uploadtaptin/52/28" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Upload tập tin</a></li>
+                                                                                                                                                          <h6 style="font-size: 14px;font-weight:bold;padding-left:7px;">PHP NÂNG CAO</h6>
+                                                                                                                       <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/mangphp/52/29" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Mảng PHP</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/hamxulymang/52/30" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Hàm xử lý mảng</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/chuoiphp/52/31" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Chuỗi PHP</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/hamxulychuoi/52/32" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Hàm xử lý chuỗi</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/hamdateva/52/33" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Hàm Date và Time</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/hamincludevarequire/52/34" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Hàm Include và Require</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/cookievasession/52/35" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Cookie và Session</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/xulytaptin/52/36" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Xử lý tập tin</a></li>
+                                                                                                                                                          <h6 style="font-size: 14px;font-weight:bold;padding-left:7px;">PHP MYSQLI</h6>
+                                                                                                                       <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/mysqliconnect/52/37" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>MySQLi Connect</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/mysqlitaodb/52/38" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>MySQLi Tạo DB</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/mysqlitaotable/52/39" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>MySQLi Tạo Table</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/mysqlithem/52/40" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>MySQLi  Thêm Mẫu Tin</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/mysqlicapnhat/52/41" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>MySQLi Cập Nhật</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/mysqlixoa/52/42" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>MySQLi Xóa Mẫu Tin</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/mysqlitruyvan/52/43" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>MySQLi Truy Vấn</a></li>
+                                                                                                                                                          <h6 style="font-size: 14px;font-weight:bold;padding-left:7px;">PHP HƯỚNG ĐỐI TƯỢNG</h6>
+                                                                                                                       <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/khainiem/52/44" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Khái niệm</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/lopvadoituong/52/45" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Lớp và Đối tượng</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/magicmethods/52/46" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Magic methods</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/phuongthuckhoitao/52/47" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Phương thức khởi tạo</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/phamvitruycap/52/48" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Phạm vi truy cập</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/kethua/52/49" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Kế thừa</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/napchongvaghide/52/50" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Nạp chồng và Ghi đè</a></li>
+                                                                                                                                    <li class="bgclick" style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/tinhdonggoi/52/51" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Tính đóng gói</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/kythuatautoloading/52/52" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Kỹ thuật autoloading</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/loptruutuong/52/53" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Lớp trừu tượng</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/interfacephp/52/54" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Interface PHP</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/hamvalopfinal/52/55" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Hàm và lớp final</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/hamandanh/52/56" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Hàm ẩn danh</a></li>
+                                                                                                                                     <li style="padding-left:7px;"><a href="http://hiepsiit.com/khoa-hoc/php/khacbietselfva%24this/52/57" style="color:white;"><i class="fa fa-check" style="margin-right:7px"></i>Khác biệt self và $this</a></li>
+                                                                                                                                     <p>&nbsp;</p>
+      </ul>                     </div>
+                </div>
+            </div>
+            <div class="col-md-10 col-sm-8 main-content">
+            <!-- BEGIN Portlet PORTLET-->
+
+                        <style type="text/css">
+  
+  .button1 {
+  display: inline-block;
+  padding: 3px 13px;
+  font-size: 18px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Pacifico', cursive;
+  outline: none;  
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 9px #999;
+}
+
+.button1:hover {background-color: #3e8e41}
+
+.button1:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.button1.buttonred{
+  color: #fff;
+  background-color:#F00;
+}
+.button1.buttonblue{
+  color: #fff;
+  background-color: #008CBA;
+}
+
+
+</style>
+              <div class="portlet">
+                    <div class="portlet-title">
+                        <div class="caption">
+                            <i class="glyphicon glyphicon-calendar"></i>
+                            <span class="caption-subject text-uppercase" style="text-shadow: 2px 2px 3px #ccc;">Tính đóng gói</span><br>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                    <div class="portfolio-wrapper contentdetail">
+                    <div class="portlet-body col-md-9 col-sm-6 col-xs-12">
+                                          <a class="next headerinfo text-center  " href="http://hiepsiit.com/khoa-hoc/php/tinhdonggoi/52/50">&lt;&lt; Bài trước </a>
+                                                               <a class="next  headerinfo  col-xs-12 col-sm-3 col-md-6 text-center  " href="http://hiepsiit.com/khoa-hoc/php/tinhdonggoi/52/52" style="float:right">Bài kế tiếp &gt;&gt;</a>
+                    
+                    <p>
+                     </p><h1>Tính đóng gói trong OOP trong PHP</h1>
+
+<p style="text-align:justify">Tính đóng gói (encapsulation) "đóng gói" thuộc tính và phương thức của đối tượng (hoặc lớp) thông qua việc giới hạn quyền truy cập (hoặc thay đổi) giá trị của thuộc tính hoặc quyền gọi phương thức. Nói cách khác tính đóng gói cho phép kiểm soát quyền truy cập (và thay đổi) giá trị của thuộc tính hoặc quyền gọi phương thức của đối tượng (hoặc lớp) và đối tượng (hoặc lớp) con.<br>
+Trong OPP PHP việc đóng gói được thực hiện nhờ sử dụng các từ khoá public, private và protected:</p>
+
+<ul>
+	<li>public: Cho phép truy cập (và thay đổi giá trị) của thuộc tính và phương thức ở mọi phạm vi</li>
+	<li>private: Chỉ cho phép truy cập (hay thay đổi) giá trị của thuộc tính và phương thức ở phạm vi của đối tượng (hoặc lớp).</li>
+	<li>protected: Chỉ cho phép truy cập (hay thay đổi) giá trị của thuộc tính và phương thức ở phạm vi của đối tượng con (hoặc lớp con).</li>
+</ul>
+
+<p>Để hiểu rõ hơn về tính chất này chúng ta sẽ xem một ví dụ sau.</p>
+
+<pre class=" language-php line-numbers"><code class=" language-php"><span class="token php"><span class="token delimiter">&lt;?php</span>
+<span class="token keyword">class</span> <span class="token class-name">Person</span> 
+<span class="token punctuation">{</span>
+		<span class="token comment" spellcheck="true">// Phạm vi truy cập</span>
+		<span class="token keyword">public</span>  <span class="token variable">$fullName</span> <span class="token operator">=</span> <span class="token string">"Nguyễn Hữu PHP"</span><span class="token punctuation">;</span>
+		<span class="token keyword">public</span> <span class="token variable">$age</span> <span class="token punctuation">;</span>
+		 <span class="token comment" spellcheck="true">// Các phương thức</span>
+		<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">function</span> <span class="token function">getFullName</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+		<span class="token punctuation">{</span>
+			  <span class="token keyword">return</span> <span class="token this">$this</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">fullName</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		
+<span class="token punctuation">}</span> 
+<span class="token variable">$per</span>  <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">echo</span> <span class="token variable">$per</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">fullName</span> <span class="token operator">=</span> "Nguyễn Văn <span class="token constant">PHP</span> <span class="token markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">/&gt;</span></span></span>"<span class="token punctuation">;</span>
+<span class="token keyword">echo</span> <span class="token variable">$per</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">age</span> <span class="token operator">=</span> <span class="token number">24</span><span class="token punctuation">;</span>
+<span class="token delimiter">?&gt;</span></span><span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><a href="http://hiepsiit.com/tryit/try_it_php.php?idsource=1183" class="button1 buttonred" target="_blank"> Xem ví dụ</a></p>
+
+<p>Như bạn đã thấy sau khi tôi khởi tạo một đối tượng với tên là $per thì tôi có thể thiết lập cũng như lấy giá trị của các thuộc tính của đối tương Person mà không gặp bất cứ vấn đề gì.</p>
+
+<p>Tôi không muốn cho các các đối tượng khác và cả các lớp con kế thừa từ Person được phép truy cập vào một thuộc tính nào đó trong đối tượng Person giả sử là thuộc tính $Age. Lúc đó tôi sẽ phải sửa lại quyền truy cập của thuộc tính $age là:</p>
+
+<pre class=" language-php line-numbers"><code class=" language-php"><span class="token keyword">private</span> <span class="token variable">$age</span><span class="token punctuation">;</span><span class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>Và khi đó thì chúng ta không thể thiết lập giá trị cho thuộc tính $age theo cách thông thường như trên nữa. Việc thiết lập giá trị cho biến $age chỉ được thao tác từ bên trong đối tượng Person thì có một số cách sau:</p>
+
+<p><strong>1.Gán giá trị trong lúc khởi tạo đối tượng.</strong></p>
+
+<pre class=" language-php line-numbers"><code class=" language-php"><span class="token keyword">function</span> <span class="token function">__construct</span><span class="token punctuation">(</span><span class="token variable">$age</span><span class="token punctuation">,</span> <span class="token variable">$fullName</span><span class="token punctuation">)</span>
+	<span class="token punctuation">{</span>
+		<span class="token this">$this</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">age</span> <span class="token operator">=</span> <span class="token variable">$age</span><span class="token punctuation">;</span>
+		<span class="token this">$this</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">fullName</span> <span class="token operator">=</span> <span class="token variable">$fullName</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span><span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>2. Xây dựng hàm set giá trị cho thuộc tính. Trong hàm này quy định tuổi từ 1 đến 120</strong></p>
+
+<pre class=" language-php line-numbers"><code class=" language-php"><span class="token keyword">function</span> <span class="token function">setAge</span><span class="token punctuation">(</span><span class="token variable">$age</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token variable">$age</span><span class="token operator">&gt;=</span><span class="token number">1</span> <span class="token operator">&amp;&amp;</span> <span class="token variable">$age</span><span class="token operator">&lt;=</span><span class="token number">120</span><span class="token punctuation">)</span>
+        <span class="token this">$this</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">age</span> <span class="token operator">=</span> <span class="token variable">$age</span><span class="token punctuation">;</span>
+    <span class="token keyword">else</span>
+        <span class="token keyword">echo</span> <span class="token string">"Xin vui lòng nhập tuổi trong khoảng:1-&gt;120"</span><span class="token punctuation">;</span>
+    
+<span class="token punctuation">}</span><span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>3. Và việc lấy giá trị của thuộc tính $age của đối tượng Person phải thông qua một hàm public function getAge()</strong></p>
+
+<pre class=" language-php line-numbers"><code class=" language-php"><span class="token comment" spellcheck="true">// Lấy giá trị</span>
+<span class="token keyword">function</span> <span class="token function">getAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token this">$this</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">age</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>Tổng hợp</strong></p>
+
+<pre class=" language-php line-numbers"><code class=" language-php"><span class="token delimiter">&lt;?php</span>
+<span class="token keyword">class</span> <span class="token class-name">Person</span> 
+<span class="token punctuation">{</span>
+		<span class="token comment" spellcheck="true">// Phạm vi truy cập</span>
+		<span class="token keyword">private</span>  <span class="token variable">$fullName</span> <span class="token punctuation">;</span>
+		<span class="token keyword">private</span> <span class="token variable">$age</span> <span class="token punctuation">;</span>
+		 <span class="token comment" spellcheck="true">// Các phương thức</span>
+		<span class="token keyword">function</span> <span class="token function">__construct</span><span class="token punctuation">(</span><span class="token variable">$age</span><span class="token punctuation">,</span> <span class="token variable">$fullName</span><span class="token punctuation">)</span>
+		<span class="token punctuation">{</span>
+			<span class="token this">$this</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">age</span> <span class="token operator">=</span> <span class="token variable">$age</span><span class="token punctuation">;</span>
+			<span class="token this">$this</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">fullName</span> <span class="token operator">=</span> <span class="token variable">$fullName</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		<span class="token keyword">function</span> <span class="token function">setAge</span><span class="token punctuation">(</span><span class="token variable">$age</span><span class="token punctuation">)</span>
+		<span class="token punctuation">{</span>
+			<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token variable">$age</span><span class="token operator">&gt;=</span><span class="token number">1</span> <span class="token operator">&amp;&amp;</span> <span class="token variable">$age</span><span class="token operator">&lt;=</span><span class="token number">120</span><span class="token punctuation">)</span>
+				<span class="token this">$this</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">age</span> <span class="token operator">=</span> <span class="token variable">$age</span><span class="token punctuation">;</span>
+			<span class="token keyword">else</span>
+				<span class="token keyword">echo</span> <span class="token string">"Xin vui lòng nhập tuổi trong khoảng:1-&gt;120"</span><span class="token punctuation">;</span>
+			
+		<span class="token punctuation">}</span>
+		<span class="token keyword">function</span> <span class="token function">getAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+		<span class="token punctuation">{</span>
+			<span class="token keyword">return</span> <span class="token this">$this</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">age</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		
+		<span class="token keyword">function</span> <span class="token function">setFullName</span><span class="token punctuation">(</span><span class="token variable">$fullName</span><span class="token punctuation">)</span>
+		<span class="token punctuation">{</span>
+			<span class="token this">$this</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">fullName</span> <span class="token operator">=</span> <span class="token variable">$fullName</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		
+		<span class="token keyword">function</span> <span class="token function">getFullName</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+		<span class="token punctuation">{</span>
+			  <span class="token keyword">return</span> <span class="token this">$this</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">fullName</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		
+<span class="token punctuation">}</span> 
+<span class="token variable">$per</span>  <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token number">24</span><span class="token punctuation">,</span> <span class="token string">"Nguyễn Hữu PHP"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">echo</span> <span class="token variable">$per</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">getFullName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">.</span>"<span class="token markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">/&gt;</span></span></span>"<span class="token punctuation">;</span>
+<span class="token keyword">echo</span> <span class="token variable">$per</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">getage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&gt;</span><span class="token operator">?</span><span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><a href="http://hiepsiit.com/tryit/try_it_php.php?idsource=1184" class="button1 buttonred" target="_blank"> Xem ví dụ</a></p>
+
+<div class="w3-border-blue w3-leftbar w3-pale-blue w3-panel w3-rightbar">
+<p>Tính đóng gói (encapsulation) và che giấu thông tin (information hiding): Tính chất này không cho phép người sử dụng các đối tượng thay đổi trạng thái nội tại của một đối tượng. Chỉ có các phương thức nội tại của đối tượng cho phép thay đổi trạng thái của nó. Việc cho phép môi trường bên ngoài tác động lên các dữ liệu (thuộc tính) nội tại của một đối tượng theo cách nào là hoàn toàn tùy thuộc vào người viết mã. Đây là tính chất đảm bảo sự toàn vẹn của đối tượng.</p>
+</div>
+                   <p></p>
+
+              <div class="sharemenu" align="center" id="share-buttons">
+<!--                 <font size="3"><p>Chia sẻ:</p></font> -->
+            <a href="http://www.facebook.com/sharer.php?u=http://hiepsiit.com/khoa-hoc/php/tinhdonggoi/52/51" target="_blank">
+
+                    <img src="./Tính đóng gói trong lập trình hướng đối tượng php_files/facebook.png" alt="Facebook">
+                </a>
+
+                <!-- Google+ -->
+                <a href="https://plus.google.com/share?url=http://hiepsiit.com/khoa-hoc/php/tinhdonggoi/52/51" target="_blank">
+                    <img src="./Tính đóng gói trong lập trình hướng đối tượng php_files/google.png" alt="Google">
+                </a>
+                 <!-- Twitter -->
+                <a href="https://twitter.com/share?url=http://hiepsiit.com/khoa-hoc/php/tinhdonggoi/52/51" target="_blank">
+                    <img src="./Tính đóng gói trong lập trình hướng đối tượng php_files/twitter.png" alt="Twitter">
+                </a>
+                <!-- Email -->
+                <a href="https://mail.google.com/mail/u/0/?view=cm&amp;fs=1&amp;su=T%C3%ADnh%20%C4%91%C3%B3ng%20g%C3%B3i&amp;body=http://hiepsiit.com/khoa-hoc/php/tinhdonggoi/52/51">
+                    <img src="./Tính đóng gói trong lập trình hướng đối tượng php_files/email.png" alt="Email">
+                </a>
+              <!-- Print -->
+                <a href="javascript:;" onclick="window.print()" class="visiblesearch">
+                    <img src="./Tính đóng gói trong lập trình hướng đối tượng php_files/print.png" alt="Print">
+                </a>
+              </div>
+                                       <a class="next headerinfo text-center  " href="http://hiepsiit.com/khoa-hoc/php/tinhdonggoi/52/50">&lt;&lt; Bài trước </a>
+                                                            <a class="next  headerinfo  col-xs-12 col-sm-3 col-md-6 text-center  " href="http://hiepsiit.com/khoa-hoc/php/tinhdonggoi/52/52" style="float:right">Bài kế tiếp &gt;&gt;</a>
+                                        </div>
+
+                      <div class="col-md-3 col-sm-6 col-xs-12">
+     <div id="landing-bottom">
+     <!-- Ezoic - left - sidebar_floating_1 -->
+<div id="ezoic-pub-ad-placeholder-101"></div>
+<!-- End Ezoic - left - sidebar_floating_1 -->
+
+</div>
+ </div>
+                    
+                    </div>
+                    </div>
+                </div>
+
+                <!-- END Portlet PORTLET-->
+
+            
+        </div>
+    </div>
+    
+  </div>
+
+
+
+<!--Footer-->
+<section id="footer-menu" class="footer-menu1">
+<div>
+   <div class="container row">
+
+                 
+             
+                
+          <div class="col-md-15 col-sm-3">
+             <ul class="list">
+              <a href="http://hiepsiit.com/tat-ca-khoa-hoc/Ng%C3%B4n%20ng%E1%BB%AF%20l%E1%BA%ADp%20tr%C3%ACnh-42-panel-info" class="panel-info footer1" style="color: white">
+                <h6 style="margin-left:5px;font-size:13px;">NGÔN NGỮ LẬP TRÌNH</h6>
+              </a>
+                                 
+                    <li><a href="http://hiepsiit.com/khoa-hoc/c/laptrinhc/50/0" class="course" title="Lập trình C" style="color:#D2D2D2;">Lập trình C</a></li>
+                                                     
+                    <li><a href="http://hiepsiit.com/khoa-hoc/ccongcong/laptrinhc++/59/0" class="course" title="Lập trình C++" style="color:#D2D2D2;">Lập trình C++</a></li>
+                                                     
+                    <li><a href="http://hiepsiit.com/khoa-hoc/ctdl/ctdlvagiaithuat/55/0" class="course" title="CTDL và giải thuật" style="color:#D2D2D2;">CTDL và giải thuật</a></li>
+                                                    
+                      
+              </ul>
+          </div>  
+                       
+             
+                
+          <div class="col-md-15 col-sm-3">
+             <ul class="list">
+              <a href="http://hiepsiit.com/tat-ca-khoa-hoc/Thi%E1%BA%BFt%20k%E1%BA%BF%20website-43-panel-info" class="panel-info footer1" style="color: white">
+                <h6 style="margin-left:5px;font-size:13px;">THIẾT KẾ WEBSITE</h6>
+              </a>
+                                 
+                    <li><a href="http://hiepsiit.com/khoa-hoc/html/ngonnguhtml/51/0" class="course" title="Ngôn ngữ HTML" style="color:#D2D2D2;">Ngôn ngữ HTML</a></li>
+                                                     
+                    <li><a href="http://hiepsiit.com/khoa-hoc/html/ngonngucss/56/0" class="course" title="Ngôn ngữ CSS" style="color:#D2D2D2;">Ngôn ngữ CSS</a></li>
+                                                     
+                    <li><a href="http://hiepsiit.com/khoa-hoc/html/ngonngujavascript/57/0" class="course" title="Ngôn ngữ Javascript" style="color:#D2D2D2;">Ngôn ngữ Javascript</a></li>
+                                                    
+                      
+              </ul>
+          </div>  
+                       
+             
+                
+          <div class="col-md-15 col-sm-3">
+             <ul class="list">
+              <a href="http://hiepsiit.com/tat-ca-khoa-hoc/Ph%C3%A1t%20tri%E1%BB%83n%20Web-44-panel-info" class="panel-info footer1" style="color: white">
+                <h6 style="margin-left:5px;font-size:13px;">PHÁT TRIỂN WEB</h6>
+              </a>
+                                 
+                    <li><a href="http://hiepsiit.com/khoa-hoc/php/ngonnguphp/52/0" class="course" title="Ngôn ngữ PHP" style="color:#D2D2D2;">Ngôn ngữ PHP</a></li>
+                                                     
+                    <li><a href="http://hiepsiit.com/khoa-hoc/apsnet/ngonnguasp.net/58/0" class="course" title="Ngôn ngữ ASP.NET" style="color:#D2D2D2;">Ngôn ngữ ASP.NET</a></li>
+                                                    
+                      
+              </ul>
+          </div>  
+                       
+             
+                
+          <div class="col-md-15 col-sm-3">
+             <ul class="list">
+              <a href="http://hiepsiit.com/tat-ca-khoa-hoc/Ph%C3%A1t%20tri%E1%BB%83n%20Mobile-45-panel-info" class="panel-info footer1" style="color: white">
+                <h6 style="margin-left:5px;font-size:13px;">PHÁT TRIỂN MOBILE</h6>
+              </a>
+                                 
+                    <li><a href="http://hiepsiit.com/khoa-hoc/android/laptrinhandroid/53/0" class="course" title="Lập trình Android" style="color:#D2D2D2;">Lập trình Android</a></li>
+                                                    
+                      
+              </ul>
+          </div>  
+                       
+             
+                
+          <div class="col-md-15 col-sm-3">
+             <ul class="list">
+              <a href="http://hiepsiit.com/tat-ca-khoa-hoc/C%C6%A1%20s%E1%BB%9F%20d%E1%BB%AF%20li%E1%BB%87u-47-panel-info" class="panel-info footer1" style="color: white">
+                <h6 style="margin-left:5px;font-size:13px;">CƠ SỞ DỮ LIỆU</h6>
+              </a>
+                                 
+                    <li><a href="http://hiepsiit.com/khoa-hoc/sql/ngonngusql/54/0" class="course" title="Ngôn ngữ SQL" style="color:#D2D2D2;">Ngôn ngữ SQL</a></li>
+                                                    
+                      
+              </ul>
+          </div>  
+                       
+             
+                
+          <div class="col-md-15 col-sm-3">
+             <ul class="list">
+              <a href="http://hiepsiit.com/tat-ca-khoa-hoc/C%C3%B4ng%20ngh%E1%BB%87%20Java-48-panel-info" class="panel-info footer1" style="color: white">
+                <h6 style="margin-left:5px;font-size:13px;">CÔNG NGHỆ JAVA</h6>
+              </a>
+                                 
+                    <li><a href="http://hiepsiit.com/khoa-hoc/java/javacore/60/0" class="course" title="Java Core" style="color:#D2D2D2;">Java Core</a></li>
+                                                     
+                    <li><a href="http://hiepsiit.com/khoa-hoc/java/javastring/61/0" class="course" title="Java String" style="color:#D2D2D2;">Java String</a></li>
+                                                    
+                      
+              </ul>
+          </div>  
+           
+   </div>   </div>
+</section>
+</section>
+<div class="scrollup">
+    <a href="http://hiepsiit.com/khoa-hoc/php/mangphp/52/51#"><i class="fa fa-chevron-up"></i></a>
+</div>
+
+<script src="./Tính đóng gói trong lập trình hướng đối tượng php_files/plugins.js.tải xuống"></script>
+<script src="./Tính đóng gói trong lập trình hướng đối tượng php_files/modernizr.js.tải xuống"></script>
+ <script src="./Tính đóng gói trong lập trình hướng đối tượng php_files/main.js.tải xuống"></script>
+
+
+<iframe id="google_osd_static_frame_3361274390211" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./Tính đóng gói trong lập trình hướng đối tượng php_files/saved_resource(1).html"></iframe><div style="background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px; position: absolute; transition: visibility 0s linear 0.3s, opacity 0.3s linear 0s; opacity: 0; visibility: hidden; z-index: 2000000000; left: 0px; top: -10000px;"><div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.05;"></div><div class="g-recaptcha-bubble-arrow" style="border: 11px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -11px; z-index: 2000000000;"></div><div class="g-recaptcha-bubble-arrow" style="border: 10px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -10px; z-index: 2000000000;"></div><div style="z-index: 2000000000; position: relative;"><iframe title="hình xác thực recaptcha" src="./Tính đóng gói trong lập trình hướng đối tượng php_files/bframe.html" name="c-tfmtptbhsubu" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox" style="width: 100%; height: 100%;"></iframe></div></div></body><iframe id="google_shimpl" style="display: none;" src="./Tính đóng gói trong lập trình hướng đối tượng php_files/saved_resource(2).html"></iframe><iframe id="google_esf" name="google_esf" src="./Tính đóng gói trong lập trình hướng đối tượng php_files/zrt_lookup.html" data-ad-client="ca-pub-6656408481976431" style="display: none;"></iframe></html>

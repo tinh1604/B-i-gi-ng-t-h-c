@@ -1,0 +1,87 @@
+(function(window, document, undefined) {
+	//utils
+	document.getElementsByClassName
+	|| (document.getElementsByClassName = function(a) {
+		if (document.querySelectorAll)
+			return document.querySelectorAll("." + a);
+		var b, c, d, e = [];
+		if (document.evaluate) {
+			c = ".//[contains(concat(' ', @class, ' '), ' " + a
+					+ " ')]";
+			b = document.evaluate(c, document, null, 0, null);
+			while (d = b.iterateNext())
+				e.push(d)
+		} else {
+			b = document.getElementsByTagName("*");
+			c = new RegExp("(^|\\s)" + a + "(\\s|$)");
+			for (d = 0; d < b.length; d++)
+				c.test(b[d].className) && e.push(b[d])
+		}
+		return e
+	});
+	
+	var getLinkWithClassName = function() {
+		var linkstoreturn = [];
+		var links = document.getElementsByClassName("scoopit-button");
+		for ( var i = 0, l = links.length; i < l; i++) {
+			if (links[i] != null && links[i].tagName != null && links[i].tagName.toUpperCase() == "A") {
+				linkstoreturn.push(links[i]);
+			}
+		}
+		return linkstoreturn;
+	}
+	
+	var getSizeAsCssFragment = function(link) {
+		var position = link.getAttribute("scit-position");
+		if ("horizontal"===position) {
+			return "width:110px;height:20px;";
+		}
+		if ("vertical"===position) {
+			return "width:55px;height:62px;";
+		}
+		return "width:55px;height:20px;";
+	}
+	
+	var getUrl = function(link) {
+		var url = link.getAttribute("scit-url");
+		if (url == null) {
+			return encodeURIComponent(document.location);
+		}
+		return encodeURIComponent(url);
+	}
+	
+	/* main Class */
+	var ScitButton = function(link, id) {
+		var iframe = document.createElement("iframe");
+		iframe.allowtransparency = "true";
+		iframe.scrolling = "no";
+		iframe.frameBorder = "0";
+		iframe.tabindex = "0";
+		iframe.className = "scoopit-button-frame";
+		iframe.style.cssText = getSizeAsCssFragment(link)+"border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; border-width: initial; border-color: initial; "
+		iframe.src = "https://www.scoop.it/button?url=" + getUrl(link) + "&position="+link.getAttribute("scit-position");
+		link.parentNode.appendChild(iframe);
+	}
+	
+	/* run */
+	var buttons = [], 
+	S4 = function() {
+		return ((1 + Math.random()) * 65536 | 0).toString(16).substring(1)
+	}, genid = function() {
+		return S4() + S4() + S4() + S4()
+	}, links = getLinkWithClassName("scoopit-button"), count = 0;
+	for ( var i = 0, l = links.length; i < l; i++) {
+		count += 1;
+		buttons.push(ScitButton(links[i], genid()))
+	}
+	for ( var i = 0; i < count; i++) {
+		var link = links[i];
+		if (link != null && link.parentNode != null) {
+			link.parentNode.removeChild(link);
+		}
+	}
+	
+	
+})(window, document);
+
+

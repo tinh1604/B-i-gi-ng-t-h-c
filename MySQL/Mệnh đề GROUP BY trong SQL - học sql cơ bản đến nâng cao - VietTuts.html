@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)https://viettuts.vn/sql/menh-de-group-by-trong-sql -->
+<html lang="en-US" prefix="og: http://ogp.me/ns#" class="wf-fontawesome-n4-active wf-active"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts</title><meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- This site is optimized with the Yoast SEO plugin v5.8 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Mệnh đề GROUP BY trong SQL được sử dụng hợp tác với câu lệnh SELECT để sắp xếp dữ liệu giống nhau thành các nhóm. Mệnh đề GROUP BY này tuân theo mệnh đề">
+<link rel="canonical" href="https://viettuts.vn/sql/menh-de-group-by-trong-sql">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts">
+<meta property="og:description" content="Mệnh đề GROUP BY trong SQL được sử dụng hợp tác với câu lệnh SELECT để sắp xếp dữ liệu giống nhau thành các nhóm. Mệnh đề GROUP BY này tuân theo mệnh đề">
+<meta property="og:url" content="https://viettuts.vn/sql/menh-de-group-by-trong-sql">
+<meta property="og:site_name" content="VietTuts">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:description" content="Mệnh đề GROUP BY trong SQL được sử dụng hợp tác với câu lệnh SELECT để sắp xếp dữ liệu giống nhau thành các nhóm. Mệnh đề GROUP BY này tuân theo mệnh đề">
+<meta name="twitter:title" content="Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts">
+<script src="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/osd.js.tải xuống"></script><script src="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/sdk.js.tải xuống" async="" crossorigin="anonymous"></script><script src="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/ca-pub-4405294953475693.js.tải xuống"></script><script id="facebook-jssdk" src="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/sdk.js(1).tải xuống"></script><script src="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/webfontloader.js.tải xuống"></script><script async="" src="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/analytics.js.tải xuống"></script><script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/viettuts.vn\/","name":"VietTuts","potentialAction":{"@type":"SearchAction","target":"https:\/\/viettuts.vn\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="https://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="VietTuts » Feed" href="https://viettuts.vn/feed">
+<link rel="alternate" type="application/rss+xml" title="VietTuts » Comments Feed" href="https://viettuts.vn/comments/feed">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/viettuts.vn\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.7.5"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),!(j.toDataURL().length<3e3)&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,65039,8205,55356,57096),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,55356,57096),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55357,56425,55356,57341,8205,55357,56507),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55357,56425,55356,57341,55357,56507),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/wp-emoji-release.min.js.tải xuống" type="text/javascript" defer=""></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="focus-pro-theme-css" href="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="ez-icomoon-css" href="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="ez-toc-css" href="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/screen.min.css" type="text/css" media="all">
+<style id="ez-toc-inline-css" type="text/css">
+div#ez-toc-container p.ez-toc-title {font-size: 120%;}div#ez-toc-container p.ez-toc-title {font-weight: 500;}div#ez-toc-container ul li {font-size: 95%;}
+</style>
+<link rel="stylesheet" id="google-fonts-css" href="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/css" type="text/css" media="all">
+<script type="text/javascript" src="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/jquery.js.tải xuống"></script>
+<script type="text/javascript" src="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/jquery-migrate.min.js.tải xuống"></script>
+<script type="text/javascript" src="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/custom.js.tải xuống"></script>
+<!--[if lt IE 9]>
+<script type='text/javascript' src='https://viettuts.vn/wp-content/themes/genesis/lib/js/html5shiv.min.js?ver=3.7.3'></script>
+<![endif]-->
+<link rel="https://api.w.org/" href="https://viettuts.vn/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://viettuts.vn/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://viettuts.vn/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 4.7.5">
+<link rel="shortlink" href="https://viettuts.vn/?p=2320">
+<link rel="alternate" type="application/json+oembed" href="https://viettuts.vn/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fviettuts.vn%2Fsql%2Fmenh-de-group-by-trong-sql">
+<link rel="alternate" type="text/xml+oembed" href="https://viettuts.vn/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fviettuts.vn%2Fsql%2Fmenh-de-group-by-trong-sql&amp;format=xml">
+<link rel="pingback" href="https://viettuts.vn/xmlrpc.php">
+<link rel="stylesheet" type="text/css" href="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/shCore.css"><link rel="stylesheet" type="text/css" href="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/shThemeEclipse.css"><style type="text/css" id="syntaxhighlighteranchor"></style>
+<link rel="icon" href="https://viettuts.vn/wp-content/uploads/2016/08/title-icon-2.png" sizes="32x32">
+<link rel="icon" href="https://viettuts.vn/wp-content/uploads/2016/08/title-icon-2.png" sizes="192x192">
+<link rel="apple-touch-icon-precomposed" href="https://viettuts.vn/wp-content/uploads/2016/08/title-icon-2.png">
+<meta name="msapplication-TileImage" content="https://viettuts.vn/wp-content/uploads/2016/08/title-icon-2.png">
+
+<!-- BEGIN ExactMetrics v5.3.8 Universal Analytics - https://exactmetrics.com/ -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-56475639-5', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- END ExactMetrics Universal Analytics -->
+
+<script src="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/jquery.min.js.tải xuống"></script>
+<script src="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/745f2f906e.js.tải xuống"></script>
+
+<meta property="fb:app_id" content="1848307242163903">
+
+<!-- facebook plugin -->
+<link rel="preload" href="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/f(5).txt" as="script"><script type="text/javascript" src="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/f(5).txt"></script><link rel="preload" href="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/f(6).txt" as="script"><script type="text/javascript" src="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/f(6).txt"></script><link rel="stylesheet" href="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/745f2f906e.css" media="all"><link rel="preload" href="https://pagead2.googlesyndication.com/pagead/js/r20190626/r20190131/show_ads_impl.js" as="script"><style>.ez-toc-widget-container ul.ez-toc-list li::before{line-height:undefined;height:undefined}</style><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#1d3c78;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}</style></head><body class="page-template-default page page-id-2320 page-child parent-pageid-2216 custom-header header-full-width full-width-content" itemscope="" itemtype="http://schema.org/WebPage"><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div><iframe name="fb_xdm_frame_https" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/xd_arbiter.html" style="border: none;"></iframe></div><div></div></div></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.10&appId=1848307242163903";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- back to top -->
+<script type="text/javascript">
+  jQuery(document)
+      .ready(
+          function(a) {
+            var b = a(".generate-back-to-top").data("start-scroll"), c = a(
+                ".generate-back-to-top").data("scroll-speed"), d = a("a.generate-back-to-top"), e = a(window);
+            e.scroll(function() {
+              e.scrollTop() > b ? a(d).css({
+                opacity : "1",
+                visibility : "visible"
+              }) : a(d).css({
+                opacity : "0",
+                visibility : "hidden"
+              })
+            }), a(d).on("click", function(b) {
+              b.preventDefault(), a("html, body").animate({
+                scrollTop : 0
+              }, c)
+            })
+          });
+</script>
+
+
+
+<div class="site-container"><header class="site-header" itemscope="" itemtype="http://schema.org/WPHeader"><div class="wrap"><div class="title-area"><p class="site-title" itemprop="headline"><a href="https://viettuts.vn/">VietTuts</a></p><p class="site-description" itemprop="description">Học java cơ bản đến nâng cao</p></div></div>	<div class="mobilemenu">
+	  <div style="margin-top:10px;padding:0px;text-align:left;">
+	    <span style="float:left"><input type="image" src="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/menuhome64.png" onclick="showmenu()"></span>
+	  </div>
+	</div>
+	</header><nav class="nav-secondary" itemscope="" itemtype="http://schema.org/SiteNavigationElement"><div class="wrap"><ul id="menu-mainmenu" class="menu genesis-nav-menu menu-secondary"><li id="menu-item-779" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-779"><a href="https://viettuts.vn/" itemprop="url"><span itemprop="name">Home</span></a></li>
+<li id="menu-item-780" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-780"><a href="https://viettuts.vn/java" itemprop="url"><span itemprop="name">Java</span></a></li>
+<li id="menu-item-781" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-781"><a href="https://viettuts.vn/servlet" itemprop="url"><span itemprop="name">Servlet</span></a></li>
+<li id="menu-item-782" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-782"><a href="https://viettuts.vn/jsp" itemprop="url"><span itemprop="name">JSP</span></a></li>
+<li id="menu-item-783" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-783"><a href="https://viettuts.vn/struts2" itemprop="url"><span itemprop="name">Struts2</span></a></li>
+<li id="menu-item-784" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-784"><a href="https://viettuts.vn/hibernate" itemprop="url"><span itemprop="name">Hibernate</span></a></li>
+<li id="menu-item-785" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-785"><a href="https://viettuts.vn/spring" itemprop="url"><span itemprop="name">Spring</span></a></li>
+<li id="menu-item-787" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-787"><a href="https://viettuts.vn/web-service" itemprop="url"><span itemprop="name">Java WS</span></a></li>
+<li id="menu-item-788" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-788"><a href="https://viettuts.vn/mybatis" itemprop="url"><span itemprop="name">MyBatis</span></a></li>
+<li id="menu-item-4109" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4109"><a href="https://viettuts.vn/eclipse" itemprop="url"><span itemprop="name">Eclipse</span></a></li>
+<li id="menu-item-4687" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4687"><a href="https://viettuts.vn/excel-vba" itemprop="url"><span itemprop="name">VBA</span></a></li>
+<li id="menu-item-5171" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5171"><a href="https://viettuts.vn/web" itemprop="url"><span itemprop="name">Web</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-5175" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5175"><a href="https://viettuts.vn/javascript" itemprop="url"><span itemprop="name">JavaScript</span></a></li>
+	<li id="menu-item-5174" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5174"><a href="https://viettuts.vn/jquery" itemprop="url"><span itemprop="name">JQUERY</span></a></li>
+	<li id="menu-item-5172" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5172"><a href="https://viettuts.vn/json" itemprop="url"><span itemprop="name">JSON</span></a></li>
+	<li id="menu-item-5173" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5173"><a href="https://viettuts.vn/ajax" itemprop="url"><span itemprop="name">AJAX</span></a></li>
+	<li id="menu-item-6165" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6165"><a href="https://viettuts.vn/php" itemprop="url"><span itemprop="name">PHP</span></a></li>
+	<li id="menu-item-5870" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5870"><a href="https://viettuts.vn/css" itemprop="url"><span itemprop="name">CSS</span></a></li>
+	<li id="menu-item-5871" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5871"><a href="https://viettuts.vn/html" itemprop="url"><span itemprop="name">HTML</span></a></li>
+</ul>
+</li>
+<li id="menu-item-6754" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-6754"><a href="https://viettuts.vn/sql" itemprop="url"><span itemprop="name">SQL</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-6755" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6755"><a href="https://viettuts.vn/mysql" itemprop="url"><span itemprop="name">MySQL</span></a></li>
+	<li id="menu-item-7255" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7255"><a href="https://viettuts.vn/sql-server" itemprop="url"><span itemprop="name">SQL Server</span></a></li>
+</ul>
+</li>
+<li id="menu-item-5178" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5178"><a href="https://viettuts.vn/misc" itemprop="url"><span itemprop="name">Misc</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-5179" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5179"><a href="https://viettuts.vn/phan-mem-tien-ich" itemprop="url"><span itemprop="name">Phần mềm tiện ích</span></a></li>
+	<li id="menu-item-5584" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5584"><a href="https://viettuts.vn/selenium" itemprop="url"><span itemprop="name">Selenium Test</span></a></li>
+	<li id="menu-item-6953" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6953"><a href="https://viettuts.vn/lap-trinh-c" itemprop="url"><span itemprop="name">Lập trình C</span></a></li>
+	<li id="menu-item-6954" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6954"><a href="https://viettuts.vn/lap-trinh-cpp" itemprop="url"><span itemprop="name">Lập trình C++</span></a></li>
+</ul>
+</li>
+<li id="menu-item-7396" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7396"><a href="https://viettuts.vn/tuyen-dung" itemprop="url"><span itemprop="name">Tuyển Dụng</span></a></li>
+</ul></div></nav><div class="site-inner"><div class="content-sidebar-wrap"><div class="dynamic-menu"><div id="dy-menu">
+  <div class="leftmenu2">
+    <h2 class="spanh2"><span class="spanh2">SQL cơ bản</span></h2>
+  </div>
+  <div class="leftmenu">
+      <a href="https://viettuts.vn/sql/sql-la-gi">SQL là gì?</a>
+      <a href="https://viettuts.vn/sql/rdbms-la-gi">SQL - RDBMS là gì?</a>
+      <a href="https://viettuts.vn/sql/he-quan-tri-co-du-lieu">SQL - Các hệ quản trị CSDL</a>
+      <a href="https://viettuts.vn/sql/cu-phap-sql">SQL - Cú pháp</a>
+      <a href="https://viettuts.vn/sql/kieu-du-lieu-trong-sql">SQL - Kiểu dữ liệu</a>
+      <a href="https://viettuts.vn/sql/toan-tu-trong-sql">SQL - Toán tử</a>
+      <a href="https://viettuts.vn/sql/bieu-thuc-trong-sql">SQL - Biểu thức</a>
+      <a href="https://viettuts.vn/sql/create-database-trong-sql">SQL - Create Database</a>
+      <a href="https://viettuts.vn/sql/drop-database-trong-sql">SQL - Drop Database</a>
+      <a href="https://viettuts.vn/sql/select-database-trong-sql">SQL - Select Database</a>
+      <a href="https://viettuts.vn/sql/create-table-trong-sql">SQL - Create Table</a>
+      <a href="https://viettuts.vn/sql/drop-table-trong-sql">SQL - Drop Table</a>
+      <a href="https://viettuts.vn/sql/cau-lenh-insert-trong-sql">SQL - Câu lệnh Insert</a>
+      <a href="https://viettuts.vn/sql/cau-lenh-select-trong-sql">SQL - Câu lệnh Select</a>
+      <a href="https://viettuts.vn/sql/menh-de-where-trong-sql">SQL - Mệnh đề Where</a>
+      <a href="https://viettuts.vn/sql/toan-tu-and--va-or-trong-sql">SQL - Toán tử AND &amp; OR </a>
+      <a href="https://viettuts.vn/sql/cau-lenh-update-trong-sql">SQL - Câu lệnh Update</a>
+      <a href="https://viettuts.vn/sql/cau-lenh-delete-trong-sql">SQL - Câu lệnh Delete</a>
+      <a href="https://viettuts.vn/sql/menh-de-like-trong-sql">SQL - Mệnh đề Like</a>
+      <a href="https://viettuts.vn/sql/menh-de-top-trong-sql">SQL - Mệnh đề Top</a>
+      <a href="https://viettuts.vn/sql/menh-de-order-by-trong-sql">SQL - Mệnh đề Order By</a>
+      <a href="https://viettuts.vn/sql/menh-de-group-by-trong-sql" style="color: rgb(254, 137, 0); font-weight: bold;">SQL - Mệnh đề Group By</a>
+      <a href="https://viettuts.vn/sql/tu-khoa-distinct-trong-sql">SQL - Từ khóa Distinct</a>
+  </div>
+  <div class="leftmenu2">
+    <h2 class="spanh2"><span class="spanh2">SQL nâng cao</span></h2>
+  </div>
+  <div class="leftmenu">
+      <a href="https://viettuts.vn/sql/rang-buoc-trong-sql">SQL - Các ràng buộc</a>
+      <a href="https://viettuts.vn/sql/menh-de-join-trong-sql">SQL - Mệnh đề JOIN</a>
+      
+      <a href="https://viettuts.vn/sql/inner-join-trong-sql">SQL - INNER JOIN</a>
+      <a href="https://viettuts.vn/sql/right-join-trong-sql">SQL - RIGHT JOIN</a>
+      <a href="https://viettuts.vn/sql/left-join-trong-sql">SQL - LEFT JOIN</a>
+      <a href="https://viettuts.vn/sql/full-join-trong-sql">SQL - FULL JOIN</a>
+      <a href="https://viettuts.vn/sql/self-join-trong-sql">SQL - SELF JOIN</a>
+      
+      <a href="https://viettuts.vn/sql/menh-de-union-trong-sql">SQL - Mệnh đề UNION</a>
+      <a href="https://viettuts.vn/sql/gia-tri-null-trong-sql">SQL - Giá trị NULL</a>
+      <a href="https://viettuts.vn/sql/alias-trong-sql">SQL - Sử dụng Alias</a>
+      <a href="https://viettuts.vn/sql/index-trong-sql">SQL - Sử dụng Index</a>
+      <a href="https://viettuts.vn/sql/lenh-alter-table-trong-sql">SQL - Lệnh Alter</a>
+      <a href="https://viettuts.vn/sql/lenh-truncate-table-trong-sql">SQL - Lệnh Truncate Table</a>
+      <a href="https://viettuts.vn/sql/su-dung-view-trong-sql">SQL - Sử dụng View</a>
+      <a href="https://viettuts.vn/sql/menh-de-having-trong-sql">SQL - Mệnh đề Having</a>
+      <a href="https://viettuts.vn/sql/transaction-trong-sql">SQL - Transaction</a>
+      <a href="https://viettuts.vn/sql/ky-tu-dai-dien-trong-sql">SQL - Ký tự đại diện</a>
+      <a href="https://viettuts.vn/sql/xu-ly-date-trong-sql">SQL - Các hàm xử lý Date</a>
+      <a href="https://viettuts.vn/sql/bang-tam-trong-sql">SQL - Bảng tạm thời</a>
+      <a href="https://viettuts.vn/sql/clone-table-trong-sql">SQL - Clone Table</a>
+      <a href="https://viettuts.vn/sql/sub-query-trong-sql">SQL - Sub Querie</a>
+      <a href="https://viettuts.vn/sql/sequence-trong-sql">SQL - Sequence</a>
+      <a href="https://viettuts.vn/sql/xu-ly-duplicate-trong-sql">SQL - Xử lý Duplicate</a>
+  </div>
+</div>
+<div class="clearer"></div><div class="ad-left-menu">
+        <script async="" src="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/f(7).txt"></script>
+        <!-- tuts-left-160x600 -->
+        <ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-4405294953475693" data-ad-slot="9788062562" data-adsbygoogle-status="done"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px;background-color:transparent;"><ins id="aswift_0_anchor" style="display:block;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px;background-color:transparent;"><iframe width="160" height="600" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0px;width:160px;height:600px;" src="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/saved_resource(3).html"></iframe></ins></ins></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div></div><main class="content"><article class="post-2320 page type-page status-publish entry" itemscope="" itemtype="http://schema.org/CreativeWork"><header class="entry-header"><div class="ad-content-header">
+		<script async="" src="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/f(7).txt"></script>
+		<!-- tuts-content-header-720x90 -->
+		<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-4405294953475693" data-ad-slot="3865953361" data-adsbygoogle-status="done"><ins id="aswift_1_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><ins id="aswift_1_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><iframe width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;border:0px;width:728px;height:90px;" src="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/saved_resource(4).html"></iframe></ins></ins></ins>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div><h1 class="entry-title" itemprop="headline">Mệnh đề GROUP BY trong SQL</h1> 
+</header><div class="entry-content" itemprop="text"><hr>
+<div class="pre-btn"><a href="https://viettuts.vn/sql/menh-de-order-by-trong-sql"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i> Mệnh đề ORDER BY trong SQL </a></div>
+<div class="nxt-btn"><a href="https://viettuts.vn/sql/tu-khoa-distinct-trong-sql"> Từ khóa DISTINCT trong SQL <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> </a></div>
+<div class="clearer"></div>
+<hr>
+
+<p>Mệnh đề <b>GROUP BY</b> trong SQL được sử dụng hợp tác với câu lệnh SELECT để sắp xếp dữ liệu giống nhau thành các nhóm. Mệnh đề GROUP BY này tuân theo mệnh đề WHERE trong câu lệnh SELECT và đứng trước mệnh đề ORDER BY.</p>
+
+<div id="ez-toc-container" class="counter-hierarchy ez-toc-light-blue">
+<div class="ez-toc-title-container">
+<p class="ez-toc-title">Nội dung chính:</p>
+<span class="ez-toc-title-toggle"><a class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle"><i class="ez-toc-glyphicon ez-toc-icon-toggle"></i></a></span></div>
+<nav><ul class="ez-toc-list"><li><a href="https://viettuts.vn/sql/menh-de-group-by-trong-sql#Cu_phap" title="Cú pháp">Cú pháp</a></li><li><a href="https://viettuts.vn/sql/menh-de-group-by-trong-sql#Vi_du" title="Ví dụ">Ví dụ</a></li></ul></nav></div>
+<h2><span class="ez-toc-section" id="Cu_phap">Cú pháp</span></h2>
+<p>Cú pháp cơ bản của mệnh đề GROUP BY được hiển thị trong khối mã sau. Mệnh đề GROUP BY trong SQL phải tuân theo các điều kiện trong mệnh đề WHERE và phải đứng trước mệnh đề ORDER BY nếu mệnh đề được sử dụng.</p>
+<div class="codeblock3">
+<pre>SELECT column1, column2
+FROM table_name
+WHERE [ conditions ]
+GROUP BY column1, column2
+ORDER BY column1, column2
+</pre>
+</div>
+<hr>
+
+<h2><span class="ez-toc-section" id="Vi_du">Ví dụ</span></h2>
+<p>Giả sử bảng CUSTOMERS có các bản ghi sau đây:</p>
+<p> Output: </p>
+<div class="codeblock3">
+<pre>+----+----------+-----+-----------+----------+
+| ID | NAME     | AGE | ADDRESS   | SALARY   |
++----+----------+-----+-----------+----------+
+|  1 | Ha Anh   |  32 | Da Nang   |  2000.00 |
+|  2 | Van Ha   |  25 | Ha Noi    |  1500.00 |
+|  3 | Vu Bang  |  23 | Vinh      |  2000.00 |
+|  4 | Thu Minh |  25 | Ha Noi    |  6500.00 |
+|  5 | Hai An   |  27 | Ha Noi    |  8500.00 |
+|  6 | Hoang    |  22 | Ha Noi    |  4500.00 |
+|  7 | Binh     |  24 | Ha Noi    | 10000.00 |
++----+----------+-----+-----------+----------+
+</pre>
+</div>
+<p>Nếu bạn muốn biết tổng số tiền lương của mỗi khách hàng, thì truy vấn GROUP BY sẽ như sau.</p>
+<div class="codeblock">
+<div id="highlighter_962476" class="syntaxhighlighter nogutter  "><div class="bar"><div class="toolbar"><a href="https://viettuts.vn/sql/menh-de-group-by-trong-sql#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_962476_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_962476" menu="false" src="https://viettuts.vn/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/scripts/clipboard.swf"></div><a href="https://viettuts.vn/sql/menh-de-group-by-trong-sql#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="https://viettuts.vn/sql/menh-de-group-by-trong-sql#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines no-wrap"><div class="line alt1"><table><tbody><tr><td class="content"><code class="keyword">SELECT</code> <code class="keyword">NAME</code><code class="plain">, </code><code class="color2">SUM</code><code class="plain">(SALARY) </code><code class="keyword">FROM</code> <code class="plain">CUSTOMERS</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;</code><code class="keyword">GROUP</code> <code class="keyword">BY</code> <code class="keyword">NAME</code><code class="plain">;</code></td></tr></tbody></table></div></div></div>
+</div>
+<p>Điều này sẽ tạo ra kết quả sau:</p>
+<div class="codeblock3">
+<pre>+----------+-------------+
+| NAME     | SUM(SALARY) |
++----------+-------------+
+| Binh     |    10000.00 |
+| Ha Anh   |     2000.00 |
+| Hai An   |     8500.00 |
+| Hoang    |     4500.00 |
+| Thu Minh |     6500.00 |
+| Van Ha   |     1500.00 |
+| Vu Bang  |     2000.00 |
++----------+-------------+
+</pre>
+</div>
+<p>Bây giờ, chúng ta hãy nhìn vào một bảng nơi bảng CUSTOMERS có các bản ghi sau với tên trùng lặp:</p>
+<div class="codeblock">
+<div id="highlighter_480102" class="syntaxhighlighter nogutter  "><div class="bar"><div class="toolbar"><a href="https://viettuts.vn/sql/menh-de-group-by-trong-sql#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_480102_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_480102" menu="false" src="https://viettuts.vn/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/scripts/clipboard.swf"></div><a href="https://viettuts.vn/sql/menh-de-group-by-trong-sql#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="https://viettuts.vn/sql/menh-de-group-by-trong-sql#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines no-wrap"><div class="line alt1"><table><tbody><tr><td class="content"><code class="plain">+</code><code class="comments">----+----------+-----+-----------+----------+</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="content"><code class="plain">| ID | </code><code class="keyword">NAME</code>&nbsp;&nbsp;&nbsp;&nbsp; <code class="plain">| AGE | ADDRESS&nbsp;&nbsp; | SALARY&nbsp;&nbsp; |</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="content"><code class="plain">+</code><code class="comments">----+----------+-----+-----------+----------+</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="content"><code class="plain">|&nbsp; 1 | Ha Anh&nbsp;&nbsp; |&nbsp; 32 | Ha Noi&nbsp;&nbsp;&nbsp; |&nbsp; 2000.00 |</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="content"><code class="plain">|&nbsp; 2 | Ha Anh&nbsp;&nbsp; |&nbsp; 25 | Ha Noi&nbsp;&nbsp;&nbsp; |&nbsp; 1500.00 |</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="content"><code class="plain">|&nbsp; 3 | Vu Bang&nbsp; |&nbsp; 23 | Vinh&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp; 2000.00 |</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="content"><code class="plain">|&nbsp; 4 | Thu Minh |&nbsp; 25 | Ha Noi&nbsp;&nbsp;&nbsp; |&nbsp; 6500.00 |</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="content"><code class="plain">|&nbsp; 5 | Hai An&nbsp;&nbsp; |&nbsp; 27 | Ha Noi&nbsp;&nbsp;&nbsp; |&nbsp; 8500.00 |</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="content"><code class="plain">|&nbsp; 6 | Hai An&nbsp;&nbsp; |&nbsp; 22 | Ha Noi&nbsp;&nbsp;&nbsp; |&nbsp; 4500.00 |</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="content"><code class="plain">|&nbsp; 7 | Hai An&nbsp;&nbsp; |&nbsp; 24 | Ha Noi&nbsp;&nbsp;&nbsp; | 10000.00 |</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="content"><code class="plain">+</code><code class="comments">----+----------+-----+-----------+----------+</code></td></tr></tbody></table></div></div></div>
+</div>
+<p>Bây giờ một lần nữa, nếu bạn muốn biết tổng số tiền lương trên mỗi khách hàng, sau đó truy vấn GROUP BY sẽ như sau:</p>
+<div class="codeblock">
+<div id="highlighter_630348" class="syntaxhighlighter nogutter  "><div class="bar "><div class="toolbar"><a href="https://viettuts.vn/sql/menh-de-group-by-trong-sql#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_630348_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_630348" menu="false" src="https://viettuts.vn/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/scripts/clipboard.swf"></div><a href="https://viettuts.vn/sql/menh-de-group-by-trong-sql#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="https://viettuts.vn/sql/menh-de-group-by-trong-sql#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines no-wrap"><div class="line alt1"><table><tbody><tr><td class="content"><code class="keyword">SELECT</code> <code class="keyword">NAME</code><code class="plain">, </code><code class="color2">SUM</code><code class="plain">(SALARY) </code><code class="keyword">FROM</code> <code class="plain">CUSTOMERS</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;</code><code class="keyword">GROUP</code> <code class="keyword">BY</code> <code class="keyword">NAME</code><code class="plain">;</code></td></tr></tbody></table></div></div></div>
+</div>
+<p>Điều này sẽ tạo ra kết quả sau:</p>
+<div class="codeblock3">
+<pre>+----------+-------------+
+| NAME     | SUM(SALARY) |
++----------+-------------+
+| Ha Anh   |     3500.00 |
+| Hai An   |    23000.00 |
+| Thu Minh |     4500.00 |
+| Vu Bang  |     2000.00 |
++----------+-------------+
+</pre>
+</div>
+
+<div class="nexttopicdiv">
+<span class="nexttopictext">Bài tiếp theo: </span><span class="nexttopiclink"><a href="https://viettuts.vn/sql/tu-khoa-distinct-trong-sql">Từ khóa DISTINCT trong SQL</a></span>
+</div>
+
+<hr>
+<div class="pre-btn"><a href="https://viettuts.vn/sql/menh-de-order-by-trong-sql"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i> Mệnh đề ORDER BY trong SQL </a></div>
+<div class="nxt-btn"><a href="https://viettuts.vn/sql/tu-khoa-distinct-trong-sql"> Từ khóa DISTINCT trong SQL <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> </a></div>
+<div class="clearer"></div>
+<hr>
+<div class="ad-content-footer"> 
+        <script async="" src="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/f(7).txt"></script>
+        <ins class="adsbygoogle" style="display: block; height: 459px;" data-ad-format="autorelaxed" data-ad-client="ca-pub-4405294953475693" data-ad-slot="4481285974" data-adsbygoogle-status="done"><ins id="aswift_2_expand" style="display:inline-table;border:none;height:459px;margin:0;padding:0;position:relative;visibility:visible;width:766px;background-color:transparent;"><ins id="aswift_2_anchor" style="display:block;border:none;height:459px;margin:0;padding:0;position:relative;visibility:visible;width:766px;background-color:transparent;"><iframe width="766" height="459" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;border:0px;width:766px;height:459px;" src="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/saved_resource(5).html"></iframe></ins></ins></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+	    </div><div class="ad-content-footer"> 
+		<script async="" src="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/f(7).txt"></script>
+		<!-- tuts-content-footer-auto-size -->
+		<ins class="adsbygoogle" style="display: block; height: 95px; width: 766px;" data-ad-client="ca-pub-4405294953475693" data-ad-slot="3240171361" data-ad-format="auto" data-adsbygoogle-status="done"><ins id="aswift_3_expand" style="display: inline-table; border: none; height: 95px; margin: 0px; padding: 0px; position: relative; visibility: visible; width: 766px; background-color: transparent;"><ins id="aswift_3_anchor" style="display: block; border: none; height: 95px; margin: 0px; padding: 0px; position: relative; visibility: visible; width: 766px; background-color: transparent; overflow: hidden;"><iframe width="766" height="95" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_3" name="aswift_3" style="left: 0px; position: absolute; top: 0px; border: 0px; width: 766px; height: 95px;" src="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/saved_resource(6).html"></iframe></ins></ins></ins>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	    </div>    <hr>
+    <div class="fb-comments fb_iframe_widget fb_iframe_widget_fluid_desktop" data-href="http://viettuts.vn/sql/menh-de-group-by-trong-sql" data-width="100%" data-numposts="10" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=1848307242163903&amp;container_width=766&amp;height=100&amp;href=http%3A%2F%2Fviettuts.vn%2Fsql%2Fmenh-de-group-by-trong-sql&amp;locale=vi_VN&amp;numposts=10&amp;sdk=joey&amp;version=v2.10" style="width: 100%;"><span style="vertical-align: bottom; width: 100%; height: 178px;"><iframe name="f3fb35b0f03509" width="1000px" height="100px" title="fb:comments Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/comments.html" style="border: none; visibility: visible; width: 100%; height: 178px;" class=""></iframe></span></div>
+    </div></article></main>    <div class="right-menu">
+        <div class="recent-pages">
+            <h4>Recent Updates</h4>
+            <!--
+            <a href="/java-io/doc-ghi-file-trong-java">Đọc ghi file trong java</a>
+            <a href="/exception-handling">Xử lý ngoại lệ (Exception Handling) trong java</a>
+            <a href="/java-collection">Collection trong java</a>
+            <a href="/java-collection/arraylist-trong-java">ArrayList trong java</a>
+            <a href="/java-io/cac-vi-du-ve-java-io">Các ví dụ về Java I/O</a>
+            <a href="/java/ep-kieu-trong-java">Ép kiểu trong Java</a>
+            -->
+            <a href="https://viettuts.vn/tuyen-dung/miagi-solution-tuyen-dung">Miagi Solution tuyển dụng Java, .NET, Ruby, PHP,...làm việc tại Hà Nội</a><a href="https://viettuts.vn/tuyen-dung/mitrais-tuyen-dung">Mitrais tuyển dụng 16 Java Web Developer làm việc tại Hà Nội</a><a href="https://viettuts.vn/tuyen-dung">Tuyển Dụng Công Nghệ Thông Tin</a><a href="https://viettuts.vn/interview/list-cau-hoi-phong-van-java-collection">List câu hỏi phỏng vấn Java Collection</a><a href="https://viettuts.vn/interview/list-cau-hoi-phong-van-java-core">201 câu hỏi phỏng vấn java core (phần 1)</a><a href="https://viettuts.vn/python/kieu-du-lieu-dictionary-trong-python">Dictionary trong Python</a><a href="https://viettuts.vn/python/kieu-du-lieu-tuple-trong-python">Tuple trong Python</a><a href="https://viettuts.vn/python/kieu-du-lieu-list-trong-python">List trong Python</a><a href="https://viettuts.vn/python/kieu-du-lieu-string-trong-python">Chuỗi (String) trong Python</a><a href="https://viettuts.vn/python/kieu-du-lieu-number-trong-python">Number trong Python</a><a href="https://viettuts.vn/python/lenh-pass-trong-python">Lệnh pass trong Python</a><a href="https://viettuts.vn/python/lenh-continue-trong-python">Lệnh continue trong Python</a>        </div>
+
+		<!-- tuts-right-330x250 -->
+        <div class="ad-right-menu">
+            <script async="" src="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/f(7).txt"></script>
+            <ins class="adsbygoogle" style="display: inline-block; width: 300px; height: 250px;" data-ad-client="ca-pub-4405294953475693" data-ad-slot="5002260221" data-adsbygoogle-status="done"><ins id="aswift_4_expand" style="display:inline-table;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><ins id="aswift_4_anchor" style="display:block;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><iframe width="300" height="250" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_4" name="aswift_4" style="left:0;position:absolute;top:0;border:0px;width:300px;height:250px;" src="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/saved_resource(7).html"></iframe></ins></ins></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+                        <div class="fb-page-tut">
+                    <h4>VietTuts on facebook</h4>
+                    <div class="fb-page fb_iframe_widget" data-height="200" data-href="https://www.facebook.com/viettuts.vn/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="adapt_container_width=true&amp;app_id=1848307242163903&amp;container_width=299&amp;height=200&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fviettuts.vn%2F&amp;locale=vi_VN&amp;sdk=joey&amp;show_facepile=true&amp;show_posts=false&amp;small_header=false&amp;tabs=timeline"><span style="vertical-align: bottom; width: 299px; height: 200px;"><iframe name="f232150994d9f5c" width="1000px" height="200px" title="fb:page Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/page.html" style="border: none; visibility: visible; width: 299px; height: 200px;" class=""></iframe></span></div>
+                </div>                
+                    
+        <!-- tuts-matched-content-right-300x800 -->
+        <div class="ad-right-menu" id="ad-right-menu-mc">
+            <script async="" src="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/f(7).txt"></script>
+            <ins class="adsbygoogle" style="display:inline-block;width:300px;height:800px" data-ad-client="ca-pub-4405294953475693" data-ad-slot="6873914597" data-adsbygoogle-status="done"><ins id="aswift_5_expand" style="display:inline-table;border:none;height:800px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><ins id="aswift_5_anchor" style="display:block;border:none;height:800px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><iframe width="300" height="800" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_5" name="aswift_5" style="left:0;position:absolute;top:0;border:0px;width:300px;height:800px;" src="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/saved_resource(8).html"></iframe></ins></ins></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        
+        <div class="ad-right-menu AfterScroll" id="ad-right-menu-main">
+            <script async="" src="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/f(7).txt"></script>
+            <!-- tuts-right-300x600 -->
+            <ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-4405294953475693" data-ad-slot="1325357764" data-adsbygoogle-status="done"><ins id="aswift_6_expand" style="display:inline-table;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><ins id="aswift_6_anchor" style="display:block;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><iframe width="300" height="600" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_6" name="aswift_6" style="left:0;position:absolute;top:0;border:0px;width:300px;height:600px;" src="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/saved_resource(9).html"></iframe></ins></ins></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+    </div></div><div class="footer-widgets"><div class="wrap"><div class="footer-widgets-1 widget-area"><section id="text-4" class="widget widget_text"><div class="widget-wrap"><h4 class="widget-title widgettitle">Danh sách bài học</h4>
+			<div class="textwidget"><a href="http://viettuts.vn/java"> Học java </a> <br>
+<a href="http://viettuts.vn/servlet"> Học servlet </a><br>
+<a href="http://viettuts.vn/jsp"> Học jsp </a><br>
+<a href="http://viettuts.vn/hibernate"> Học Hibernate</a><br>
+<a href="http://viettuts.vn/struts2"> Học Struts2</a><br>
+<a href="http://viettuts.vn/spring"> Học Spring</a><br>
+<a href="http://viettuts.vn/sql"> Học SQL</a></div>
+		</div></section>
+</div><div class="footer-widgets-2 widget-area"><section id="text-6" class="widget widget_text"><div class="widget-wrap"><h4 class="widget-title widgettitle">Câu hỏi phỏng vấn</h4>
+			<div class="textwidget"><a href="http://viettuts.vn/interview/list-cau-hoi-phong-van-java-core"> 201 câu hỏi phỏng vấn java </a> <br>
+<a href="http://viettuts.vn/interview/list-cau-hoi-phong-van-servlet"> 25 câu hỏi phỏng vấn servlet </a><br>
+<a href="http://viettuts.vn/interview/list-cau-hoi-phong-van-jsp"> 75 câu hỏi phỏng vấn jsp </a><br>
+<a href="http://viettuts.vn/interview/list-cau-hoi-phong-van-hibernate"> 52 câu hỏi phỏng vấn Hibernate</a><br>
+<a href="http://viettuts.vn/interview/list-cau-hoi-phong-van-spring"> 70 câu hỏi phỏng vấn Spring</a><br>
+<a href="http://viettuts.vn/interview/list-cau-hoi-phong-van-sql"> 57 câu hỏi phỏng vấn SQL</a><br></div>
+		</div></section>
+</div><div class="footer-widgets-3 widget-area"><section id="text-5" class="widget widget_text"><div class="widget-wrap"><h4 class="widget-title widgettitle">About VietTuts.Vn</h4>
+			<div class="textwidget"><p> Hệ thống bài học trên VietTuts.Vn bao gồm các bài lý thuyết và thực hành về các công nghệ java và công nghệ web. Các bài lý thuyết trên hệ thống VietTuts.Vn được tham khảo và tổng hợp từ các trang http://javatpoint.com, http://www.tutorialspoint.com, http://docs.oracle.com/en ... </p>
+</div>
+		</div></section>
+</div></div></div><footer class="site-footer" itemscope="" itemtype="http://schema.org/WPFooter"><div class="wrap">
+<a title="Scroll back to top" rel="nofollow" href="https://viettuts.vn/sql/menh-de-group-by-trong-sql#" class="generate-back-to-top" style="opacity: 1; visibility: visible;" data-scroll-speed="400" data-start-scroll="300">
+    <i class="fa fa-angle-up" aria-hidden="true"></i>
+    <span class="screen-reader-text">Scroll back to top</span>
+</a>
+
+<div id="footer-copyright">
+  <div class="wrap">
+    <div class="row">
+      <p> Copyright © 2016 <a href="https://viettuts.vn/"> VietTuts.Vn </a> all rights reserved. | <a href="https://viettuts.vn/viettuts-team"> VietTuts.Vn team </a> | <a href="https://viettuts.vn/lien-he"> Liên hệ </a> | <a href="https://viettuts.vn/chinh-sach-rieng-tu"> Chính sách - riêng tư </a> </p><p>
+    </p></div>
+  </div>
+</div>
+
+<!-- <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.2.min.js"></script> -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#dy-menu [href]").each(function() {
+    if (this.href.toUpperCase() == window.location.href.toUpperCase()) {
+        //$(this).addClass("active");
+        $(this).css("color", "#fe8900");
+        $(this).css("font-weight", "bold");
+        }
+    });
+
+    var mq = window.matchMedia( "(max-width: 1023px)" );
+    if (!mq.matches) {
+	a1 = $(".dynamic-menu").height();
+	a2 = $(".content").height();
+	// if (a1 > a2) {
+	    // $(".content").css("height", (a1));
+	//}
+
+        //a1 = $("#dy-menu").height();
+        if (a2 < 2700) {
+            $("#ad-right-menu-mc").css('display','none');
+        }
+    }
+    
+    // always show ad-right-menu-main when scroll down
+    var div = $("#ad-right-menu-main");
+    
+    var pos = div.position();
+    
+    $(window).scroll(function() {
+        var windowpos = $(window).scrollTop();
+        var bottompos = $(document).height() - $(window).height() - $(window).scrollTop();
+        if (bottompos < 350) {
+            div.addClass("BottomScroll");
+            div.removeClass("BeforeScroll");
+            div.removeClass("AfterScroll");
+        } else if (pos.top + 100 > windowpos) {
+            div.addClass("AfterScroll");
+            div.removeClass("BeforeScroll");
+            div.removeClass("BottomScroll");
+        } else {
+            div.addClass("BeforeScroll");
+            div.removeClass("AfterScroll");
+            div.removeClass("BottomScroll");
+        }
+    });
+});
+</script>
+
+<script type="text/javascript">
+    function showmenu() {
+        if ($(".dynamic-menu").css('display') == 'none') {
+            $(".dynamic-menu").css('display','block');
+        } else {
+            $(".dynamic-menu").css('display','none');
+        }
+    }
+</script>
+
+<script type="text/javascript">
+jQuery(document).ready(function(a){var b=a(".generate-back-to-top").data("start-scroll"),c=a(".generate-back-to-top").data("scroll-speed"),d=a("a.generate-back-to-top"),e=a(window);e.scroll(function(){e.scrollTop()>b?a(d).css({opacity:"1",visibility:"visible"}):a(d).css({opacity:"0",visibility:"hidden"})}),a(d).on("click",function(b){b.preventDefault(),a("html, body").animate({scrollTop:0},c)})});
+</script>
+ </div></footer></div><script type="text/javascript" src="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/shCore.js.tải xuống"></script>
+<script type="text/javascript" src="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/shBrushSql.js.tải xuống"></script>
+<script type="text/javascript">
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "https://viettuts.vn/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/styles/shCore.css?ver=2.1.364";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = "https://viettuts.vn/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/styles/shThemeEclipse.css?ver=2.1.364";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+		document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.clipboardSwf = 'https://viettuts.vn/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/scripts/clipboard.swf';
+	SyntaxHighlighter.config.strings.expandSource = 'show source';
+	SyntaxHighlighter.config.strings.viewSource = 'view source';
+	SyntaxHighlighter.config.strings.copyToClipboard = 'copy to clipboard';
+	SyntaxHighlighter.config.strings.copyToClipboardConfirmation = 'The code is in your clipboard now';
+	SyntaxHighlighter.config.strings.print = 'print';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['auto-links'] = false;
+	SyntaxHighlighter.defaults['gutter'] = false;
+	SyntaxHighlighter.defaults['pad-line-numbers'] = 2;
+	SyntaxHighlighter.defaults['smart-tabs'] = false;
+	SyntaxHighlighter.defaults['wrap-lines'] = false;
+	SyntaxHighlighter.all();
+
+	// Infinite scroll support
+	if ( typeof( jQuery ) !== 'undefined' ) {
+		jQuery( function( $ ) {
+			$( document.body ).on( 'post-load', function() {
+				SyntaxHighlighter.highlight();
+			} );
+		} );
+	}
+</script>
+<script type="text/javascript" src="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/wp-embed.min.js.tải xuống"></script>
+<script type="text/javascript" src="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/jquery.smooth-scroll.min.js.tải xuống"></script>
+<script type="text/javascript" src="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/js.cookie.min.js.tải xuống"></script>
+<script type="text/javascript" src="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/jquery.sticky-kit.min.js.tải xuống"></script>
+<script type="text/javascript" src="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/jquery.waypoints.min.js.tải xuống"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var ezTOC = {"smooth_scroll":"1","visibility_hide_by_default":"","width":"auto","scroll_offset":"30"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/front.min.js.tải xuống"></script>
+
+<iframe id="google_osd_static_frame_3737971571129" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/saved_resource(10).html"></iframe></body><iframe id="google_shimpl" style="display: none;" src="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/saved_resource(11).html"></iframe><iframe id="google_esf" name="google_esf" src="./Mệnh đề GROUP BY trong SQL - học sql cơ bản đến nâng cao - VietTuts_files/zrt_lookup.html" data-ad-client="ca-pub-4405294953475693" style="display: none;"></iframe></html>

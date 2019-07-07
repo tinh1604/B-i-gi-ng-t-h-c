@@ -1,0 +1,121 @@
+﻿#post{
+    font-size:20px;
+    font-family: serif;
+}
+#post .img-responsive{
+    max-width: 100%;
+}
+#post > a:first-of-type{
+    text-decoration: none;
+}
+#post h1{
+    color: black;
+    font-size: 36px;
+    text-shadow:1px 1px 3px gray;
+    font-weight: normal;
+    margin:15px 0px 0px;
+}
+#post h2{
+    font-size:28px;
+    text-shadow:1px 1px 3px gray;
+    font-weight: normal;
+    margin: 20px 0px 15px;
+}
+#post h3{
+    font-size:24px;
+    margin-top:15px;
+    margin-bottom:15px;
+    font-weight: normal;
+    font-family: serif;
+}
+#post h4{
+    font-size:20px;
+    font-family: serif;
+    font-weight: normal;
+    margin-top:15px;
+    margin-bottom:15px;
+}
+#post p{
+    margin:15px 0px;
+    line-height:30px;
+}
+#post ul{
+    list-style-type: circle;
+    padding-top:0px;
+    padding-bottom:0px;
+    margin:0px;
+}
+#post ol{
+    padding-top:0px;
+    padding-bottom:0px;
+    margin:0px;
+}
+#post ul li,
+#post ol li{
+    margin-top:15px;
+    margin-bottom:15px;
+    line-height: 30px;
+    font-size:20px;
+}
+#post strong{
+    font-weight: normal;
+}
+/**************************************************************/
+#post .breadcrumb{
+    margin:15px 0px;
+    font-size: 22px;
+}
+#post .breadcrumb .previous{
+    float:left;
+}
+#post .breadcrumb .next{
+    float:right;
+}
+#post .breadcrumb .previous a, 
+#post .breadcrumb .next a{
+    text-decoration:none;
+    color: #4CAF50;
+    font-weight: bold;
+}
+#post .breadcrumb .previous a:hover, 
+#post .breadcrumb .next a:hover{
+    text-decoration:underline;
+}
+#post .breadcrumb::after{
+    content:"";
+    clear:both;
+    display:table;
+}
+#post .breadcrumb .back a{
+    text-decoration:none;
+    color: #4CAF50;
+    font-weight: bold;
+}
+#post .breadcrumb .back a:hover{
+    text-decoration:underline;
+}
+/************************************************************/
+#post .hidden{
+    display:none;
+}
+/************************************************************/
+#post table{
+    margin:20px 0px;
+}
+#post .table{
+    width: 100%;
+}
+#post .table-bordered{
+    border: 1px solid #adabab;
+    border-collapse:collapse;
+}
+#post .table-bordered th{
+    padding:10px 8px;
+    border: 1px solid #adabab;
+    color: #333;
+    background-color: #eee;
+}
+#post .table-bordered td{
+    border: 1px solid #adabab;
+    padding:10px 8px;
+}

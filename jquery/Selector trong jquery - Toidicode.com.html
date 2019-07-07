@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://toidicode.com/selector-trong-jquery-163.html -->
+<html lang="en" class="current"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="author" content="Thanh Tai">
+    <meta property="article:author" content="https://www.facebook.com/toidicode/">
+
+    <title>Selector trong jquery - Toidicode.com</title>
+    <!--[if lt IE 9]>
+    <script src="https://toidicode.com/wp-content/themes/thanhtai/js/html5.js"></script>
+    <![endif]-->
+    <meta name="description" content="Jquery là một thư viện hỗ trợ rất mạnh về selectors, nếu như trong javascript thuần để selector nhiều cấp thì chúng ta phải viết những câu lệnh rất dài dòng. Nhưng khi chúng ta sử dụng jquery thì điều đó lại hết sức đơn giản.">
+    <link rel="canonical" href="https://toidicode.com/selector-trong-jquery-163.html">
+    <link rel="publisher" href="https://plus.google.com/117776577259145153645">
+
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Selector trong jquery">
+    <meta property="og:description" content="Jquery là một thư viện hỗ trợ rất mạnh về selectors, nếu như trong javascript thuần để selector nhiều cấp thì chúng ta phải viết những câu lệnh rất dài dòng. Nhưng khi chúng ta sử dụng jquery thì điều đó lại hết sức đơn giản.">
+    <meta property="og:url" content="https://toidicode.com/selector-trong-jquery-163.html">
+    <meta property="og:site_name" content="Toidicode.com">
+    <meta property="fb:app_id" content="610336262482409">
+    <meta property="og:image" content="https://toidicode.com/upload/images/jquery/selectors-trong-jquery.jpg">
+    <meta property="og:image:width" content="600">
+    <meta property="og:image:height" content="312">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="Jquery là một thư viện hỗ trợ rất mạnh về selectors, nếu như trong javascript thuần để selector nhiều cấp thì chúng ta phải viết những câu lệnh rất dài dòng. Nhưng khi chúng ta sử dụng jquery thì điều đó lại hết sức đơn giản.">
+    <meta name="twitter:title" content="Selector trong jquery">
+    <meta name="twitter:image" content="https://toidicode.com/upload/images/jquery/selectors-trong-jquery.jpg">
+    <link rel="stylesheet" id="vce_style-css" href="./Selector trong jquery - Toidicode.com_files/app.min.css" type="text/css" media="screen, print">
+    <script src="./Selector trong jquery - Toidicode.com_files/inferredEvents.js.tải xuống" async=""></script><script src="./Selector trong jquery - Toidicode.com_files/1006627516070863" async=""></script><script src="./Selector trong jquery - Toidicode.com_files/sdk.js.tải xuống" async="" crossorigin="anonymous"></script><script async="" src="./Selector trong jquery - Toidicode.com_files/analytics.js.tải xuống"></script><script async="" src="./Selector trong jquery - Toidicode.com_files/fbevents.js.tải xuống"></script><script id="facebook-jssdk" src="./Selector trong jquery - Toidicode.com_files/sdk.js(1).tải xuống"></script><script src="./Selector trong jquery - Toidicode.com_files/osd.js.tải xuống"></script><script src="./Selector trong jquery - Toidicode.com_files/ca-pub-8768260344279113.js.tải xuống"></script><script src="./Selector trong jquery - Toidicode.com_files/jquery.min.js.tải xuống"></script>
+    <link rel="shortlink" href="https://toidicode.com/">
+    <link rel="manifest" href="https://toidicode.com/manifest.json">
+    <link rel="shortcut icon" href="https://toidicode.com/wp-content/uploads/2016/11/favicon77.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://toidicode.com/wp-content/uploads/2016/11/favicon77.png">
+    <meta name="theme-color" content="#3d454c">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="https://toidicode.com/wp-content/uploads/2016/11/favicon144.png">
+
+    <!-- ads -->
+    <script async="" src="./Selector trong jquery - Toidicode.com_files/f(5).txt"></script>
+
+    <link href="./Selector trong jquery - Toidicode.com_files/toastr.min.css" rel="stylesheet">
+        <link href="./Selector trong jquery - Toidicode.com_files/ocean.css" rel="stylesheet">
+<link rel="preload" href="./Selector trong jquery - Toidicode.com_files/f(6).txt" as="script"><script type="text/javascript" src="./Selector trong jquery - Toidicode.com_files/f(6).txt"></script><link rel="preload" href="./Selector trong jquery - Toidicode.com_files/f(7).txt" as="script"><script type="text/javascript" src="./Selector trong jquery - Toidicode.com_files/f(7).txt"></script><link rel="preload" href="https://pagead2.googlesyndication.com/pagead/js/r20190522/r20190131/show_ads_impl.js" as="script"><style>.cke{visibility:hidden;}</style><script src="./Selector trong jquery - Toidicode.com_files/OneSignalPageSDKES6.js.tải xuống" async=""></script><script type="text/javascript" src="./Selector trong jquery - Toidicode.com_files/config.js.tải xuống"></script><link rel="stylesheet" type="text/css" href="./Selector trong jquery - Toidicode.com_files/editor.css"><script type="text/javascript" src="./Selector trong jquery - Toidicode.com_files/vi.js.tải xuống"></script><script type="text/javascript" src="./Selector trong jquery - Toidicode.com_files/styles.js.tải xuống"></script><script type="text/javascript" src="./Selector trong jquery - Toidicode.com_files/plugin.js.tải xuống"></script><script type="text/javascript" src="./Selector trong jquery - Toidicode.com_files/en.js.tải xuống"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#1d3c78;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}</style></head>
+
+<body class="current"><div id="sticky_header" class="header-sticky"><div class="container">
+                <a class="vce-responsive-nav" href="javascript:void(0)"><i class="fa fa-bars" style="color:#3d454c"></i></a>
+            <div class="site-title">
+                    <a href="https://toidicode.com/" title="Toidicode.com" class="has-logo"><img src="./Selector trong jquery - Toidicode.com_files/logo.png" alt="Toidicode.com" style="height: auto; width: auto;"></a>
+                </div><div class="main-navigation">
+                    <ul id="vce_main_navigation_menu" class="nav-menu">
+                        <li id="menu-item-642" class="menu-item menu-item-type-custom" style=""><a href="https://toidicode.com/">HOME</a>
+                        </li>
+                        <li class="menu-item menu-item-type-custom menu-item-has-children"><a href="https://toidicode.com/script-language" style="">SCRIPT LANGUAGE</a><ul class="sub-menu"><li class="menu-item menu-item-type-taxonomy menu-item-has-children"><a href="https://toidicode.com/hoc-javascript" style="">JAVASCRIPT</a><ul class="sub-menu"><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-javascript-co-ban" style="">JAVASCRIPT CƠ BẢN</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-jquery-js" style="">JQUERY</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-angularjs" style="">ANGULARJS</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-vuejs-co-ban" style="">VUEJS</a></li><li class="menu-item menu-item-type-taxonomy menu-item-has-children"><a href="https://toidicode.com/hoc-nodejs" style="">NODE.JS</a><ul class="sub-menu"><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/nodejs-co-ban" style="">NODE.JS CƠ BẢN</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/express-framework" style="">EXPRESS FRAMEWORK</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/nodejs-mysql" style="">NODE.JS &amp; MYSQL</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/nodejs-mongodb" style="">NODE.JS &amp; MONGODB</a></li></ul></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-ecmascript" style="">ECMASCRIPT</a></li></ul></li><li class="menu-item menu-item-type-taxonomy menu-item-has-children"><a href="https://toidicode.com/tu-hoc-php" style="">PHP</a><ul class="sub-menu"><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/php-co-ban" style="">PHP CƠ BẢN</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/php-huong-doi-tuong" style="">PHP HƯỚNG ĐỐI TƯỢNG</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/php-standards" style="">PHP STANDARDS</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-laravel" style="">LARAVEL</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-codeigniter" style="">CODEIGNITER</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/php-mysql" style="">PHP&amp;MYSQL</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/php-optimize" style="">PHP OPTIMIZE &amp; SCURITY</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-php7" style="">PHP 7X</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/php-tip" style="">PHP TIP</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/php-regular-expression" style="">REGULAR EXPRESSION</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/php-mongodb" style="">PHP&amp;MONGODB</a></li></ul></li><li class="menu-item menu-item-type-taxonomy menu-item-has-children"><a href="https://toidicode.com/hoc-python" style="">PYTHON</a><ul class="sub-menu"><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/python-co-ban" style="">PYTHON CƠ BẢN</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-python-nang-cao" style="">PYTHON NÂNG CAO</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/python-mysql" style="">PYTHON &amp; MYSQL</a></li></ul></li></ul></li><li class="menu-item menu-item-type-taxonomy menu-item-has-children"><a href="https://toidicode.com/computer-language" style="">COMPUTER LANGUAGE</a><ul class="sub-menu"><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-csharp" style="">C#</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-java" style="">JAVA</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-android" style="">ANDROID</a></li></ul></li><li class="menu-item menu-item-type-taxonomy menu-item-has-children"><a href="https://toidicode.com/hoc-database" style="">DATABASE</a><ul class="sub-menu"><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-sql" style="">SQL</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-mongodb" style="">MONGODB</a></li></ul></li><li class="menu-item menu-item-type-taxonomy menu-item-has-children"><a href="https://toidicode.com/#" style="">MORE</a><ul class="sub-menu"><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-html" style="">HTML</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/linh-tinh" style="">LINH TINH</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-marketing-online" style="">MARKETING ONLINE</a></li><li class="menu-item menu-item-type-taxonomy menu-item-has-children"><a href="https://toidicode.com/hoc-css" style="">CSS</a><ul class="sub-menu"><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-css-can-ban" style="">CSS</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-css3" style="">CSS3</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/css-reference" style="">CSS REFERENCE</a></li></ul></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/dinh-nghia" style="">ĐỊNH NGHĨA</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/sublime-text" style="">SUBLIME TEXT</a></li></ul></li>
+                        <li class="search-header-wrap">
+                            <a class="search_header" href="javascript:void(0)"><i class="fa fa-search"></i></a>
+                            <ul class="search-header-form-ul" style="background: white">
+                                <li>
+                                    <form class="search-header-form" action="https://toidicode.com/search.html" method="get">
+                                        <input name="q" class="search-input" size="20" type="text" onfocus="(this.value == &#39;Nhập nội dung tìm kiếm ....&#39;) &amp;&amp; (this.value = &#39;&#39;)" onblur="(this.value == &#39;&#39;) &amp;&amp; (this.value = &#39;Nhập nội dung tìm kiếm ....&#39;)" placeholder="Nhập nội dung tìm kiếm ....">
+                                    </form>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div></div></div>
+<div id="vce-main" class="current">
+    <header id="header" class="main-header">
+        <div class="top-header">
+            <div class="container">
+                <div class="vce-wrap-left">
+                    <ul id="vce_top_navigation_menu" class="top-nav-menu">
+                        <li class="menu-item">
+                            <a href="https://toidicode.com/page/gioi-thieu.html" style="text-decoration: none;">Giới
+                                Thiệu</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="https://toidicode.com/page/lien-he.html" style="text-decoration: none;">Liên Hệ</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="https://toidicode.com/page/ban-quyen.html" style="text-decoration: none;">Bản Quyền</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="javascript:;" style="text-decoration: none;">Hợp Tác</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="https://toidicode.com/job" style="text-decoration: none;">Tuyển Dụng</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="vce-wrap-right">
+                    <div class="menu-social-menu-container">
+                        <ul id="vce_social_menu" class="soc-nav-menu">
+                            <li id="menu-item-5" class="menu-item"><a href="https://www.facebook.com/toidicode/"><span class="vce-social-name">Facebook</span></a></li>
+                            <li id="menu-item-6" class="menu-item "><a href="https://twitter.com/vthanhtai"><span class="vce-social-name">Twitter</span></a></li>
+                            <li id="menu-item-10" class="menu-item "><a href="https://github.com/toidicode/"><span class="vce-social-name">Github</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container header-1-wrapper header-main-area">
+            <div class="vce-res-nav">
+                <a class="vce-responsive-nav" href="javascript:void(0)"><i class="fa fa-bars" style="color:#3d454c"></i></a>
+            </div>
+            <div class="site-branding">
+                <h1 class="site-title" style="">
+                    <a href="https://toidicode.com/" title="Toidicode.com" class="has-logo"><img src="./Selector trong jquery - Toidicode.com_files/logo.png" alt="Toidicode.com"></a>
+                </h1>
+                <span class="site-description">BASIC TO ADVANCE</span>
+            </div>
+        </div>
+        <div class="header-bottom-wrapper">
+            <div class="container">
+                <nav id="site-navigation" class="main-navigation" role="navigation">
+                    <ul id="vce_main_navigation_menu" class="nav-menu">
+                        <li id="menu-item-642" class="menu-item menu-item-type-custom" style=""><a href="https://toidicode.com/">HOME</a>
+                        </li>
+                        <li class="menu-item menu-item-type-custom menu-item-has-children"><a href="https://toidicode.com/script-language" style="">SCRIPT LANGUAGE</a><ul class="sub-menu"><li class="menu-item menu-item-type-taxonomy menu-item-has-children"><a href="https://toidicode.com/hoc-javascript" style="">JAVASCRIPT</a><ul class="sub-menu"><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-javascript-co-ban" style="">JAVASCRIPT CƠ BẢN</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-jquery-js" style="">JQUERY</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-angularjs" style="">ANGULARJS</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-vuejs-co-ban" style="">VUEJS</a></li><li class="menu-item menu-item-type-taxonomy menu-item-has-children"><a href="https://toidicode.com/hoc-nodejs" style="">NODE.JS</a><ul class="sub-menu"><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/nodejs-co-ban" style="">NODE.JS CƠ BẢN</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/express-framework" style="">EXPRESS FRAMEWORK</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/nodejs-mysql" style="">NODE.JS &amp; MYSQL</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/nodejs-mongodb" style="">NODE.JS &amp; MONGODB</a></li></ul></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-ecmascript" style="">ECMASCRIPT</a></li></ul></li><li class="menu-item menu-item-type-taxonomy menu-item-has-children"><a href="https://toidicode.com/tu-hoc-php" style="">PHP</a><ul class="sub-menu"><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/php-co-ban" style="">PHP CƠ BẢN</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/php-huong-doi-tuong" style="">PHP HƯỚNG ĐỐI TƯỢNG</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/php-standards" style="">PHP STANDARDS</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-laravel" style="">LARAVEL</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-codeigniter" style="">CODEIGNITER</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/php-mysql" style="">PHP&amp;MYSQL</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/php-optimize" style="">PHP OPTIMIZE &amp; SCURITY</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-php7" style="">PHP 7X</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/php-tip" style="">PHP TIP</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/php-regular-expression" style="">REGULAR EXPRESSION</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/php-mongodb" style="">PHP&amp;MONGODB</a></li></ul></li><li class="menu-item menu-item-type-taxonomy menu-item-has-children"><a href="https://toidicode.com/hoc-python" style="">PYTHON</a><ul class="sub-menu"><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/python-co-ban" style="">PYTHON CƠ BẢN</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-python-nang-cao" style="">PYTHON NÂNG CAO</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/python-mysql" style="">PYTHON &amp; MYSQL</a></li></ul></li></ul></li><li class="menu-item menu-item-type-taxonomy menu-item-has-children"><a href="https://toidicode.com/computer-language" style="">COMPUTER LANGUAGE</a><ul class="sub-menu"><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-csharp" style="">C#</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-java" style="">JAVA</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-android" style="">ANDROID</a></li></ul></li><li class="menu-item menu-item-type-taxonomy menu-item-has-children"><a href="https://toidicode.com/hoc-database" style="">DATABASE</a><ul class="sub-menu"><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-sql" style="">SQL</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-mongodb" style="">MONGODB</a></li></ul></li><li class="menu-item menu-item-type-taxonomy menu-item-has-children"><a href="https://toidicode.com/#" style="">MORE</a><ul class="sub-menu"><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-html" style="">HTML</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/linh-tinh" style="">LINH TINH</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-marketing-online" style="">MARKETING ONLINE</a></li><li class="menu-item menu-item-type-taxonomy menu-item-has-children"><a href="https://toidicode.com/hoc-css" style="">CSS</a><ul class="sub-menu"><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-css-can-ban" style="">CSS</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-css3" style="">CSS3</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/css-reference" style="">CSS REFERENCE</a></li></ul></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/dinh-nghia" style="">ĐỊNH NGHĨA</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/sublime-text" style="">SUBLIME TEXT</a></li></ul></li>
+                        <li class="search-header-wrap">
+                            <a class="search_header" href="javascript:void(0)"><i class="fa fa-search"></i></a>
+                            <ul class="search-header-form-ul" style="background: white">
+                                <li>
+                                    <form class="search-header-form" action="https://toidicode.com/search.html" method="get">
+                                        <input name="q" class="search-input" size="20" type="text" onfocus="(this.value == &#39;Nhập nội dung tìm kiếm ....&#39;) &amp;&amp; (this.value = &#39;&#39;)" onblur="(this.value == &#39;&#39;) &amp;&amp; (this.value = &#39;Nhập nội dung tìm kiếm ....&#39;)" placeholder="Nhập nội dung tìm kiếm ....">
+                                    </form>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+        <div id="main-wrapper" class="current">
+
+        <div id="content" class="container site-content current">
+
+
+            <div id="primary" class="vce-main-content">
+
+                <main id="main" class="main-box main-box-single">
+                    <article class="vce-single">
+                        <header class="entry-header">
+                            <span class="meta-category">DANH MỤC: <a href="https://toidicode.com/hoc-jquery-js" class="category-55">Jquery js</a></span>
+                            <h1 class="entry-title">Bài 2: Selector trong jquery</h1>
+                            <hr>
+
+                                                    </header>
+                        <div class="entry-content">
+                            <p>Jquery là một thư viện hỗ trợ rất mạnh về selectors, nếu như trong javascript thuần để selector nhiều cấp thì chúng ta phải viết những câu lệnh rất dài dòng. Nhưng khi chúng ta sử dụng jquery thì điều đó lại hết sức đơn giản.</p>
+
+<div class="toc"><p style="color: #F09217;font-weight: bold;">Mục Lục</p><ul><li class="list-goto-0"><i class="fa-icon-double-angle-right" style="" data-color="" data-color_hover="" data-bg="" data-bg_hover=""></i><a href="https://toidicode.com/selector-trong-jquery-163.html#load-h2-0" data-g="load-h2-0">1, Tổng quan về selector trong Jquery.</a></li><li class="list-goto-1"><i class="fa-icon-double-angle-right" style="" data-color="" data-color_hover="" data-bg="" data-bg_hover=""></i><a href="https://toidicode.com/selector-trong-jquery-163.html#load-h2-1" data-g="load-h2-1">2, Các Selector trong Jquery.</a><ul><li><a href="javascript:void(0)" data-g="load-h3-0">Chọn tất cả các thành phần của HTML.</a></li><li><a href="javascript:void(0)" data-g="load-h3-1">Chọn theo element HTML</a></li><li><a href="javascript:void(0)" data-g="load-h3-2">Chọn theo class</a></li><li><a href="javascript:void(0)" data-g="load-h3-3">Chọn theo ID</a></li><li><a href="javascript:void(0)" data-g="load-h3-4">Chọn nhiều bộ chọn</a></li><li><a href="javascript:void(0)" data-g="load-h3-5">Chọn theo thẻ theo id, class cụ thể.</a></li><li><a href="javascript:void(0)" data-g="load-h3-6">Chọn thành phần con dựa theo thành phần cha</a></li><li><a href="javascript:void(0)" data-g="load-h3-7">Chọn thành phần với một vị trí cụ thể</a></li><li><a href="javascript:void(0)" data-g="load-h3-8">Chọn các thành phần có vị trí&nbsp;lớn hơn chỉ số được chỉ định.</a></li><li><a href="javascript:void(0)" data-g="load-h3-9">Chọn các thành phần có vị trí&nbsp;nhỏ&nbsp;hơn chỉ số được chỉ định.</a></li><li><a href="javascript:void(0)" data-g="load-h3-10">Chọn các thành phần ở vị trí lẻ</a></li><li><a href="javascript:void(0)" data-g="load-h3-11">Chọn các thành phần ở vị trí chẵn</a></li><li><a href="javascript:void(0)" data-g="load-h3-12">Chọn thành phần đầu tiên</a></li><li><a href="javascript:void(0)" data-g="load-h3-13">Chọn thành phần cuối cùng</a></li><li><a href="javascript:void(0)" data-g="load-h3-14">Các thành phần đang chuyển động</a></li><li><a href="javascript:void(0)" data-g="load-h3-15">Chọn các thành phần chứa attribute xác định.</a></li><li><a href="javascript:void(0)" data-g="load-h3-16">selector trong form</a></li><li><a href="javascript:void(0)" data-g="load-h3-17">Cập nhật thêm....</a></li></ul></li><li class="list-goto-2"><i class="fa-icon-double-angle-right" style="" data-color="" data-color_hover="" data-bg="" data-bg_hover=""></i><a href="https://toidicode.com/selector-trong-jquery-163.html#load-h2-2" data-g="load-h2-2">3, Lời kết.</a></li></ul></div><h2 data-index="0" id="load-h2-0">1, Tổng quan về selector trong Jquery.</h2><p style="text-align:center;margin-top:20px;margin-bottom:20px"><!-- bai-viet --> <ins class="adsbygoogle" style="display: block; height: 90px;" data-ad-client="ca-pub-8768260344279113" data-ad-slot="2157340583" data-ad-format="auto" data-adsbygoogle-status="done"><ins id="aswift_2_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:760px;background-color:transparent;"><ins id="aswift_2_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:760px;background-color:transparent;"><iframe width="760" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;border:0px;width:760px;height:90px;" src="./Selector trong jquery - Toidicode.com_files/saved_resource(4).html"></iframe></ins></ins></ins><script>$(document).ready(function () { (adsbygoogle = window.adsbygoogle || []).push({}); })</script></p>
+
+<p>-Nếu như bạn là một người đã tìm hiểu về <a href="https://toidicode.com/tu-hoc-css-8" target="_blank">CSS</a> rồi, thì bạn học selectors trong Jquery sẽ rất nhanh . Bởi vì selectors trong Jquery cũng hỗ trợ cú pháp giống như CSS.</p>
+
+<p>VD: Chọn thẻ có id là banner.</p>
+
+<p>Trong CSS:</p>
+
+<pre><code class="language-css hljs "><span class="hljs-id">#banner</span><span class="hljs-rules">{
+    <span class="hljs-rule">//<span class="hljs-attribute">code
+}</span></span></span></code></pre>
+
+<p>Trong Jquery:</p>
+
+<pre><code class="language-javascript hljs ">$(<span class="hljs-string">'#banner'</span>);</code></pre>
+
+<p>-Nhưng nếu bạn chưa tìm hiểu về CSS thì qua bài này bạn sẽ cũng hiểu được về <strong>Selectors trong &nbsp;jquery</strong>.</p>
+
+<h2 data-index="1" id="load-h2-1">2, Các Selector trong Jquery.</h2><p style="text-align:center;margin-top:20px;margin-bottom:20px"><!-- bai-viet --> <ins class="adsbygoogle" style="display: block; height: 90px;" data-ad-client="ca-pub-8768260344279113" data-ad-slot="2157340583" data-ad-format="auto" data-adsbygoogle-status="done"><ins id="aswift_3_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:760px;background-color:transparent;"><ins id="aswift_3_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:760px;background-color:transparent;"><iframe width="760" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_3" name="aswift_3" style="left:0;position:absolute;top:0;border:0px;width:760px;height:90px;" src="./Selector trong jquery - Toidicode.com_files/saved_resource(5).html"></iframe></ins></ins></ins><script>$(document).ready(function () { (adsbygoogle = window.adsbygoogle || []).push({}); })</script></p>
+
+<h3 id="load-h3-0">Chọn tất cả các thành phần của HTML.</h3>
+
+<p>-Để chọn tất cả các thành phần trong HTML thì chúng ta sử dụng cú pháp:</p>
+
+<pre><code class="language-javascript hljs ">$(<span class="hljs-string">'*'</span>);</code></pre>
+
+<p>-<span style="color:#ff0000">Lưu ý:</span> Nếu một trang web có quá nhiều thẻ HTML thì khi dùng thẻ này sẽ hao tổn rất nhiều tài nguyên (client).</p>
+
+<p><strong>VD</strong>: CSS cho tất cả các thẻ trong trang web.</p>
+
+<pre><code class="language-javascript hljs ">$(<span class="hljs-string">'*'</span>).css(<span class="hljs-string">'color'</span>,<span class="hljs-string">'red'</span>);</code></pre>
+
+<p><a class="btn-demo" href="https://toidicode.com/live/?id=189" target="_blank">Xem Kết Quả</a></p>
+
+<h3 id="load-h3-1">Chọn theo element HTML</h3>
+
+<p>-Để chọn theo&nbsp;element&nbsp;trong trang web thì chúng ta sử dụng cú pháp:</p>
+
+<pre><code class="language-javascript hljs ">$(<span class="hljs-string">'elementName'</span>);</code></pre>
+
+<p><strong>VD</strong>: CSS cho tất cả các thẻ div trong trang.</p>
+
+<pre><code class="language-javascript hljs ">$(<span class="hljs-string">'div'</span>).css(<span class="hljs-string">'color'</span>,<span class="hljs-string">'red'</span>);</code></pre>
+
+<p><a class="btn-demo" href="https://toidicode.com/live/?id=190" target="_blank">Xem Kết Quả</a></p>
+
+<h3 id="load-h3-2">Chọn theo class</h3>
+
+<p>-Để chọn theo tên class của thẻ HTML thì các bạn sử dụng cú pháp:</p>
+
+<pre><code class="language-javascript hljs ">$(<span class="hljs-string">'.className'</span>);</code></pre>
+
+<p><strong>VD</strong>: CSS cho tất cả các thẻ tên class là '<em>website</em>'</p>
+
+<pre><code class="language-javascript hljs ">$(<span class="hljs-string">'.website'</span>).css(<span class="hljs-string">'color'</span>,<span class="hljs-string">'red'</span>);</code></pre>
+
+<p><a class="btn-demo" href="https://toidicode.com/live/?id=191" target="_blank">Xem Kết Quả</a></p>
+
+<h3 id="load-h3-3">Chọn theo ID</h3>
+
+<p>-Để chọn theo cách này thì các bạn sử dụng cú pháp:</p>
+
+<pre><code class="language-javascript hljs ">$(<span class="hljs-string">'#idName'</span>);</code></pre>
+
+<p><strong>VD</strong>: CSS cho các thẻ có id là '<em>website</em>'.</p>
+
+<pre><code class="language-javascript hljs ">$(<span class="hljs-string">'#website'</span>).css(<span class="hljs-string">'color'</span>,<span class="hljs-string">'red'</span>);</code></pre>
+
+<p><a class="btn-demo" href="https://toidicode.com/live/?id=192" target="_blank">Xem Kết Quả</a></p>
+
+<h3 id="load-h3-4">Chọn nhiều bộ chọn</h3>
+
+<p>-Để chọn nhiều bộ chọn thì các bạn chỉ cần đặt nó cách nhau bởi dấu ,&nbsp;</p>
+
+<p><strong>VD</strong>: CSS cho thẻ p và thẻ div.</p>
+
+<pre><code class="language-javascript hljs ">$(<span class="hljs-string">'div, p'</span>).css(<span class="hljs-string">'color'</span>,<span class="hljs-string">'red'</span>);</code></pre>
+
+<p><a class="btn-demo" href="https://toidicode.com/live/?id=193" target="_blank">Xem Kết Quả</a></p>
+
+<h3 id="load-h3-5">Chọn theo thẻ theo id, class cụ thể.</h3>
+
+<p>-Để chọn theo cách này thì các bạn sử dụng cú phap sau:</p>
+
+<pre><code class="language-javascript hljs ">$(<span class="hljs-string">'element.class'</span>);
+<span class="hljs-comment">//hoặc</span>
+$(<span class="hljs-string">'element.id'</span>);</code></pre>
+
+<p><strong>VD</strong>: CSS chữ đỏ&nbsp;cho thẻ div có id là banner và chữ xanh lá cây cho thẻ p có class là website.</p>
+
+<pre><code class="language-javascript hljs ">$(<span class="hljs-string">'div#slogan'</span>).css(<span class="hljs-string">'color'</span>,<span class="hljs-string">'red'</span>);
+$(<span class="hljs-string">'p.website'</span>).css(<span class="hljs-string">'color'</span>,<span class="hljs-string">'green'</span>);</code></pre>
+
+<p><a class="btn-demo" href="https://toidicode.com/live/?id=194" target="_blank">Xem Kết Quả</a></p>
+
+<h3 id="load-h3-6">Chọn thành phần con dựa theo thành phần cha</h3>
+
+<p>-Để chọn theo cách này các bạn sử dụng cú pháp:</p>
+
+<pre><code class="language-javascript hljs ">$(<span class="hljs-string">'parent &gt; child'</span>);</code></pre>
+
+<p><strong>VD</strong>: CSS cho thẻ p nằm bên trong thẻ div.</p>
+
+<pre><code class="language-javascript hljs ">$(<span class="hljs-string">'div &gt; p'</span>).css(<span class="hljs-string">'color'</span>,<span class="hljs-string">'green'</span>);</code></pre>
+
+<p><a class="btn-demo" href="https://toidicode.com/live/?id=195" target="_blank">Xem Kết Quả</a></p>
+
+<h3 id="load-h3-7">Chọn thành phần với một vị trí cụ thể</h3>
+
+<p>-Để sủ dụng cách này các bạn sử dụng cú pháp:</p>
+
+<pre><code class="language-javascript hljs "><span class="hljs-comment">//lấy theo vị trí từ trên xuống, bắt đầu từ 0</span>
+$(<span class="hljs-string">'selector:eq(n)'</span>);
+<span class="hljs-comment">//Lấy theo vị trí từ dưới lên, bắt đầu từ -1</span>
+$(<span class="hljs-string">'selector:eq(-n)'</span>);</code></pre>
+
+<p><strong>VD</strong>: CSS cho div thứ 2 từ trên xuống, và p thứ 2 từ dưới lên.</p>
+
+<pre><code class="language-javascript hljs ">$(<span class="hljs-string">'div:eq(1)'</span>).css(<span class="hljs-string">'color'</span>,<span class="hljs-string">'red'</span>);
+$(<span class="hljs-string">'p:eq(-2)'</span>).css(<span class="hljs-string">'color'</span>,<span class="hljs-string">'green'</span>);</code></pre>
+
+<p><a class="btn-demo" href="https://toidicode.com/live/?id=196" target="_blank">Xem Kết Quả</a></p>
+
+<h3 id="load-h3-8">Chọn các thành phần có vị trí&nbsp;lớn hơn chỉ số được chỉ định.</h3>
+
+<p>-<span style="color:#ff0000">Lưu ý</span>: Chỉ số tính từ 0.</p>
+
+<p><strong>Cú Pháp</strong>:</p>
+
+<pre><code class="language-javascript hljs ">$(<span class="hljs-string">'slector:gt(n)'</span>);
+</code></pre>
+
+<p><strong>VD</strong>: CSS cho các thẻ div có thứ tự lớn hơn 2.</p>
+
+<pre><code class="language-javascript hljs ">$(<span class="hljs-string">'div:gt(1)'</span>).css(<span class="hljs-string">'color'</span>,<span class="hljs-string">'red'</span>);</code></pre>
+
+<p><a class="btn-demo" href="https://toidicode.com/live/?id=197" target="_blank">Xem Kết Quả</a></p>
+
+<h3 id="load-h3-9">Chọn các thành phần có vị trí&nbsp;nhỏ&nbsp;hơn chỉ số được chỉ định.</h3>
+
+<p>-<span style="color:#ff0000">Lưu ý</span>: Chỉ số tính từ 0.</p>
+
+<p><strong>Cú Pháp</strong>:</p>
+
+<pre><code class="language-javascript hljs ">$(<span class="hljs-string">'selector:lt(n)'</span>);</code></pre>
+
+<p><strong>VD</strong>: CSS cho các thẻ div có vị trí nhỏ hơn 3.</p>
+
+<pre><code class="language-javascript hljs ">$(<span class="hljs-string">'div:lt(2)'</span>).css(<span class="hljs-string">'color'</span>,<span class="hljs-string">'red'</span>);</code></pre>
+
+<p><a class="btn-demo" href="https://toidicode.com/live/?id=198" target="_blank">Xem Kết Quả</a></p>
+
+<h3 id="load-h3-10">Chọn các thành phần ở vị trí lẻ</h3>
+
+<p><strong>Cú pháp</strong>:</p>
+
+<pre><code class="language-javascript hljs ">$(<span class="hljs-string">'selector:even'</span>);</code></pre>
+
+<p><strong>VD</strong>: CSS cho các thẻ div ở vị trí lẻ.</p>
+
+<pre><code class="language-javascript hljs ">$(<span class="hljs-string">'div:even'</span>).css(<span class="hljs-string">'color'</span>,<span class="hljs-string">'red'</span>);</code></pre>
+
+<p><a class="btn-demo" href="https://toidicode.com/live/?id=199" target="_blank">Xem Kết Quả</a></p>
+
+<h3 id="load-h3-11">Chọn các thành phần ở vị trí chẵn</h3>
+
+<p><strong>Cú pháp</strong>:</p>
+
+<pre><code class="language-javascript hljs ">$(<span class="hljs-string">'selector:odd'</span>);</code></pre>
+
+<p><strong>VD</strong>: CSS cho các thẻ div ở vị trí chẵn.</p>
+
+<pre><code class="language-javascript hljs "> $(<span class="hljs-string">'div:odd'</span>).css(<span class="hljs-string">'color'</span>,<span class="hljs-string">'red'</span>);</code></pre>
+
+<p><a class="btn-demo" href="https://toidicode.com/live/?id=200" target="_blank">Xem Kết Quả</a></p>
+
+<h3 id="load-h3-12">Chọn thành phần đầu tiên</h3>
+
+<p><strong>Cú pháp</strong>:</p>
+
+<pre><code class="language-javascript hljs ">$(<span class="hljs-string">'selector:first'</span>);</code></pre>
+
+<p><strong>VD</strong>: CSS cho thẻ div đầu tiên.</p>
+
+<pre><code class="language-javascript hljs ">$(<span class="hljs-string">'div:first'</span>).css(<span class="hljs-string">'color'</span>,<span class="hljs-string">'red'</span>);</code></pre>
+
+<p><a class="btn-demo" href="https://toidicode.com/live/?id=201" target="_blank">Xem Kết Quả</a></p>
+
+<h3 id="load-h3-13">Chọn thành phần cuối cùng</h3>
+
+<p><strong>Cú pháp</strong>:</p>
+
+<pre><code class="language-javascript hljs ">$(<span class="hljs-string">'selector:last'</span>);</code></pre>
+
+<p><strong>VD</strong>: CSS cho thẻ div cuối cùng.</p>
+
+<pre><code class="language-javascript hljs ">$(<span class="hljs-string">'div:last'</span>).css(<span class="hljs-string">'color'</span>,<span class="hljs-string">'red'</span>);</code></pre>
+
+<p><a class="btn-demo" href="https://toidicode.com/live/?id=202" target="_blank">Xem Kết Quả</a></p>
+
+<h3 id="load-h3-14">Các thành phần đang chuyển động</h3>
+
+<p>-<strong>Cú Pháp</strong>:</p>
+
+<pre><code class="language-javascript hljs ">$(<span class="hljs-string">'selector:animated'</span>);
+</code></pre>
+
+<p><strong>VD</strong>:</p>
+
+<pre><code class="language-javascript hljs ">$(<span class="hljs-string">'selector:animated'</span>).css(<span class="hljs-string">'color'</span>,<span class="hljs-string">'yellow'</span>);</code></pre>
+
+<p><a class="btn-demo" href="https://toidicode.com/live/?id=203" target="_blank">Xem Kết Quả</a></p>
+
+<h3 id="load-h3-15">Chọn các thành phần chứa attribute xác định.</h3>
+
+<p><strong>Cú Pháp</strong>:</p>
+
+<pre><code class="language-javascript hljs ">$(<span class="hljs-string">'selector[attribute="value"]'</span>);</code></pre>
+
+<p><strong>VD</strong>: CSS cho&nbsp;thẻ div có title="thẻ div 4".</p>
+
+<pre><code class="language-javascript hljs ">$(<span class="hljs-string">'div[title="thẻ div 4"]'</span>).css(<span class="hljs-string">'color'</span>,<span class="hljs-string">'red'</span>);
+      </code></pre>
+
+<p><a class="btn-demo" href="https://toidicode.com/live/?id=204" target="_blank">Xem Kết Quả</a></p>
+
+<h3 id="load-h3-16">selector trong form</h3>
+
+<p>-Chọn các thẻ có input type=text.</p>
+
+<pre><code class="language-javascript hljs ">$(<span class="hljs-string">'input:text'</span>).css(<span class="hljs-string">'color'</span>,<span class="hljs-string">'green'</span>);</code></pre>
+
+<p><a class="btn-demo" href="https://toidicode.com/live/?id=205" target="_blank">Xem Kết Quả</a></p>
+
+<p>-Chọn các thẻ input type=button.</p>
+
+<pre><code class="language-javascript hljs ">$(<span class="hljs-string">'input:button'</span>).css(<span class="hljs-string">'color'</span>,<span class="hljs-string">'green'</span>);</code></pre>
+
+<p><a class="btn-demo" href="https://toidicode.com/live/?id=206" target="_blank">Xem Kết Quả</a></p>
+
+<p>-Chọn tất cả các thẻ input có type=checkbox.</p>
+
+<pre><code class="language-javascript hljs ">$(<span class="hljs-string">'input:checkbox'</span>);</code></pre>
+
+<p>-Chọn tất cả các thẻ input đang được checked.</p>
+
+<pre><code class="language-javascript hljs ">$(<span class="hljs-string">'input:checked'</span>);</code></pre>
+
+<p>-Chọn tất cả các thẻ input đang disabled.</p>
+
+<pre><code class="language-javascript hljs ">$(<span class="hljs-string">'input:disabled'</span>);</code></pre>
+
+<p>-Chọn tất cả các thẻ input đang enabled.</p>
+
+<pre><code class="language-javascript hljs ">$(<span class="hljs-string">'input:enabled'</span>);</code></pre>
+
+<p>-Chọn tất cả các thẻ có type=file.</p>
+
+<pre><code class="language-javascript hljs ">$(<span class="hljs-string">'input:file'</span>);</code></pre>
+
+<p>-Chọn thẻ input đang được focus.</p>
+
+<pre><code class="language-javascript hljs ">$(<span class="hljs-string">'input:focus'</span>);</code></pre>
+
+<p>......</p>
+
+<h3 id="load-h3-17">Cập nhật thêm....</h3>
+
+<h2 data-index="2" id="load-h2-2">3, Lời kết.</h2>
+
+<p>-Những phần selector phía trên mình trình bày mới chỉ được khoảng&nbsp;2/3 số lượng các dạng selector mà Jquery hỗ trợ, nếu như các bạn cần tìm hiểu thêm có thể xem tại <a href="http://api.jquery.com/category/selectors/" target="_blank">đây</a>.</p>
+                            <p style="text-align:right">
+                                <em>Nguồn: <a href="http://toidicode.com/">Toidicode.com</a></em>
+                            </p>
+                        </div>
+
+                        <footer class="entry-footer">
+                            <div class="meta-tags">
+                            </div>
+                        </footer>
+
+                        <div style="width:98%;margin:15px 5px;padding:7px 5px;background:white;border:1px solid #12537f;text-align:center">
+                            <a href="https://toidicode.com/selector-trong-jquery-163.html#" class="OneSignal-prompt" style="text-align:center; ">
+                                <b>Nếu bạn là người có văn
+                                    hóa, hãy để lại link bài viết gốc khi chia sẻ bài viết. Xin cảm ơn!</b>
+                            </a>
+                        </div>
+
+                    </article>
+                    <div class="option-news">
+                        <div class="action">
+                            <a href="https://toidicode.com/selector-trong-jquery-163.html#" id="likenews" data-id="163"><i class="fa fa-thumbs-up like-status">501</i></a>
+                        </div>
+                        <div class="vce-share-bar">
+                            <ul class="vce-share-items">
+                                <li>
+                                    <a class="fa fa-facebook" href="javascript:void(0);" data-url="https://www.facebook.com/sharer/sharer.php?u=https://toidicode.com/selector-trong-jquery-163.html"></a>
+                                </li>
+                                <li>
+                                    <a class="fa fa-twitter" href="javascript:void(0);" data-url="https://twitter.com/intent/tweet?url=https://toidicode.com/selector-trong-jquery-163.html"></a>
+                                </li>
+                                <li>
+                                    <a class="fa fa-google-plus" href="javascript:void(0);" data-url="https://plus.google.com/share?url=https://toidicode.com/selector-trong-jquery-163.html"></a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <nav class="prev-next-nav">
+                                                            <div class="vce-prev-link">
+                                    <a href="https://toidicode.com/tong-quan-ve-jquery-162.html" rel="prev" title="Bài 1: Tổng quan về jquery?">
+                                        <i class="fa fa-backward"></i>
+                                    </a>
+                                </div>
+                                                                                        <div class="vce-next-link">
+                                    <a href="https://toidicode.com/ham-html-va-text-trong-jquery-164.html" rel="next" title="Bài 3: Hàm html() và text() trong jquery">
+                                        <i class="fa fa-forward"></i>
+                                    </a>
+                                </div>
+                                                    </nav>
+                        <div class="toggle-prenext" style="">
+                            <i class="fa fa-bell tip-icon" title="Đây là chức năng hỗ trợ người dùng mới"></i>
+                            <ul>
+                                <li>
+                                                                            <div class="vce-prev-link">
+                                            <a href="https://toidicode.com/tong-quan-ve-jquery-162.html" rel="prev" title="Bài 1: Tổng quan về jquery?">
+                                                <i class="fa fa-backward"> Bài Trước</i>
+                                            </a>
+                                        </div>
+                                                                    </li>
+                                <li>
+                                                                            <div class="vce-next-link">
+                                            <a href="https://toidicode.com/ham-html-va-text-trong-jquery-164.html" rel="next" title="Bài 3: Hàm html() và text() trong jquery">
+                                                Bài Tiếp <i class="fa fa-forward"></i>
+                                            </a>
+                                        </div>
+                                                                    </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </main>
+                <section class="main-box mbt-border-top author-box">
+
+                    <h3 class="main-box-title">Thông tin tác giả</h3>
+
+                    <div class="main-box-inside">
+
+                        <div class="data-image">
+                            <img alt="Vũ Thanh Tài" src="./Selector trong jquery - Toidicode.com_files/taivt.jpg" class="avatar avatar-112 photo" height="112" width="112">
+                        </div>
+                        <div class="data-content">
+                            <h4 class="author-title">Vũ Thanh Tài</h4>
+                            <div class="data-entry-content">
+                                <p>The best way to learn is to share</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="vce-content-outside">
+                        <div class="data-links">
+                            <a href="https://toidicode.com/user/vu-thanh-tai.html" class="vce-author-link vce-button">Xem
+                                Tất cả bài đăng</a>
+                        </div>
+                        <div class="vce-author-links">
+                            <a href="https://toidicode.com/selector-trong-jquery-163.html" target="_blank" class="fa fa-link vce-author-website"></a>
+                            <a href="https://facebook.com/" target="_blank" class="fa fa-facebook"></a>
+                            <a href="https://plus.google.com/" target="_blank" class="fa fa-google"></a>
+                        </div>
+                    </div>
+
+                </section>
+                <div class="tip-f">Hãy tham gia group facebook để cùng giao lưu chia sẻ kiến thức! <a href="https://www.facebook.com/groups/toidicodegroup/">Tham Gia</a></div>
+                <div id="comments" class="comments-main"><div class="comments-holder main-box"><h3 class="comment-title main-box-title">Bình Luận</h3><div class="main-box-inside content-inside"><ul class="comment-list"><p style="text-align:center;font-weight:bold">Bài viết chưa có bình luận nào. Hãy là người bình luận đầu tiên đi nào!</p></ul><!-- .children --></div></div><!--END comments holder --></div>
+                <div id="respond" class="comment-respond"><div id="content-f"><h3 id="reply-title" class="comment-reply-title">Để Lại Bình Luận <small><a rel="nofollow" class="cancel-comment-reply-link" style="display:none;float:right" onclick="action.hideForm()">X</a></small></h3><form action="https://toidicode.com/comment/addcomment" method="post" id="commentform" autocomplete="off" class="comment-form anti-spam-form-processed"><p class="comment-form-comment"><label for="comment">Comment <span class="required"> *</span></label><textarea id="commentt" name="comment" cols="45" rows="8" style="visibility: hidden; display: none;"></textarea><div id="cke_commentt" class="cke_1 cke cke_reset cke_chrome cke_editor_commentt cke_ltr cke_browser_webkit" dir="ltr" lang="vi" role="application" aria-labelledby="cke_commentt_arialbl"><span id="cke_commentt_arialbl" class="cke_voice_label">Bộ soạn thảo văn bản có định dạng, commentt</span><div class="cke_inner cke_reset" role="presentation"><span id="cke_1_top" class="cke_top cke_reset_all" role="presentation" style="height: auto; user-select: none;"><span id="cke_6" class="cke_voice_label">Thanh công cụ</span><span id="cke_1_toolbox" class="cke_toolbox" role="group" aria-labelledby="cke_6" onmousedown="return false;"><span id="cke_7" class="cke_toolbar" aria-labelledby="cke_7_label" role="toolbar"><span id="cke_7_label" class="cke_voice_label">Kiểu cơ bản</span><span class="cke_toolbar_start"></span><span class="cke_toolgroup" role="presentation"><a id="cke_8" class="cke_button cke_button__bold cke_button_off" href="javascript:void(&#39;Đậm&#39;)" title="Đậm (Ctrl+B)" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_8_label" aria-describedby="cke_8_description" aria-haspopup="false" onkeydown="return CKEDITOR.tools.callFunction(0,event);" onfocus="return CKEDITOR.tools.callFunction(1,event);" onclick="CKEDITOR.tools.callFunction(2,this);return false;"><span class="cke_button_icon cke_button__bold_icon" style="background-image:url(&#39;https://toidicode.com/public/ckeditor-basic/plugins/icons.png?t=H0CG&#39;);background-position:0 -24px;background-size:auto;">&nbsp;</span><span id="cke_8_label" class="cke_button_label cke_button__bold_label" aria-hidden="false">Đậm</span><span id="cke_8_description" class="cke_button_label" aria-hidden="false">Keyboard shortcut Ctrl+B</span></a><a id="cke_9" class="cke_button cke_button__italic cke_button_off" href="javascript:void(&#39;Nghiêng&#39;)" title="Nghiêng (Ctrl+I)" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_9_label" aria-describedby="cke_9_description" aria-haspopup="false" onkeydown="return CKEDITOR.tools.callFunction(3,event);" onfocus="return CKEDITOR.tools.callFunction(4,event);" onclick="CKEDITOR.tools.callFunction(5,this);return false;"><span class="cke_button_icon cke_button__italic_icon" style="background-image:url(&#39;https://toidicode.com/public/ckeditor-basic/plugins/icons.png?t=H0CG&#39;);background-position:0 -48px;background-size:auto;">&nbsp;</span><span id="cke_9_label" class="cke_button_label cke_button__italic_label" aria-hidden="false">Nghiêng</span><span id="cke_9_description" class="cke_button_label" aria-hidden="false">Keyboard shortcut Ctrl+I</span></a></span><span class="cke_toolbar_end"></span></span><span id="cke_10" class="cke_toolbar" aria-labelledby="cke_10_label" role="toolbar"><span id="cke_10_label" class="cke_voice_label">Đoạn</span><span class="cke_toolbar_start"></span><span class="cke_toolgroup" role="presentation"><a id="cke_11" class="cke_button cke_button__numberedlist cke_button_off" href="javascript:void(&#39;Chèn/Xoá Danh sách có thứ tự&#39;)" title="Chèn/Xoá Danh sách có thứ tự" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_11_label" aria-describedby="cke_11_description" aria-haspopup="false" onkeydown="return CKEDITOR.tools.callFunction(6,event);" onfocus="return CKEDITOR.tools.callFunction(7,event);" onclick="CKEDITOR.tools.callFunction(8,this);return false;"><span class="cke_button_icon cke_button__numberedlist_icon" style="background-image:url(&#39;https://toidicode.com/public/ckeditor-basic/plugins/icons.png?t=H0CG&#39;);background-position:0 -576px;background-size:auto;">&nbsp;</span><span id="cke_11_label" class="cke_button_label cke_button__numberedlist_label" aria-hidden="false">Chèn/Xoá Danh sách có thứ tự</span><span id="cke_11_description" class="cke_button_label" aria-hidden="false"></span></a><a id="cke_12" class="cke_button cke_button__bulletedlist cke_button_off" href="javascript:void(&#39;Chèn/Xoá Danh sách không thứ tự&#39;)" title="Chèn/Xoá Danh sách không thứ tự" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_12_label" aria-describedby="cke_12_description" aria-haspopup="false" onkeydown="return CKEDITOR.tools.callFunction(9,event);" onfocus="return CKEDITOR.tools.callFunction(10,event);" onclick="CKEDITOR.tools.callFunction(11,this);return false;"><span class="cke_button_icon cke_button__bulletedlist_icon" style="background-image:url(&#39;https://toidicode.com/public/ckeditor-basic/plugins/icons.png?t=H0CG&#39;);background-position:0 -528px;background-size:auto;">&nbsp;</span><span id="cke_12_label" class="cke_button_label cke_button__bulletedlist_label" aria-hidden="false">Chèn/Xoá Danh sách không thứ tự</span><span id="cke_12_description" class="cke_button_label" aria-hidden="false"></span></a><span class="cke_toolbar_separator" role="separator"></span><a id="cke_13" class="cke_button cke_button__outdent cke_button_disabled " href="javascript:void(&#39;Dịch ra ngoài&#39;)" title="Dịch ra ngoài" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_13_label" aria-describedby="cke_13_description" aria-haspopup="false" aria-disabled="true" onkeydown="return CKEDITOR.tools.callFunction(12,event);" onfocus="return CKEDITOR.tools.callFunction(13,event);" onclick="CKEDITOR.tools.callFunction(14,this);return false;"><span class="cke_button_icon cke_button__outdent_icon" style="background-image:url(&#39;https://toidicode.com/public/ckeditor-basic/plugins/icons.png?t=H0CG&#39;);background-position:0 -384px;background-size:auto;">&nbsp;</span><span id="cke_13_label" class="cke_button_label cke_button__outdent_label" aria-hidden="false">Dịch ra ngoài</span><span id="cke_13_description" class="cke_button_label" aria-hidden="false"></span></a><a id="cke_14" class="cke_button cke_button__indent cke_button_off" href="javascript:void(&#39;Dịch vào trong&#39;)" title="Dịch vào trong" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_14_label" aria-describedby="cke_14_description" aria-haspopup="false" onkeydown="return CKEDITOR.tools.callFunction(15,event);" onfocus="return CKEDITOR.tools.callFunction(16,event);" onclick="CKEDITOR.tools.callFunction(17,this);return false;"><span class="cke_button_icon cke_button__indent_icon" style="background-image:url(&#39;https://toidicode.com/public/ckeditor-basic/plugins/icons.png?t=H0CG&#39;);background-position:0 -336px;background-size:auto;">&nbsp;</span><span id="cke_14_label" class="cke_button_label cke_button__indent_label" aria-hidden="false">Dịch vào trong</span><span id="cke_14_description" class="cke_button_label" aria-hidden="false"></span></a></span><span class="cke_toolbar_end"></span></span><span id="cke_15" class="cke_toolbar" aria-labelledby="cke_15_label" role="toolbar"><span id="cke_15_label" class="cke_voice_label">Liên kết</span><span class="cke_toolbar_start"></span><span class="cke_toolgroup" role="presentation"><a id="cke_16" class="cke_button cke_button__link cke_button_off" href="javascript:void(&#39;Chèn/Sửa liên kết&#39;)" title="Chèn/Sửa liên kết (Ctrl+L)" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_16_label" aria-describedby="cke_16_description" aria-haspopup="false" onkeydown="return CKEDITOR.tools.callFunction(18,event);" onfocus="return CKEDITOR.tools.callFunction(19,event);" onclick="CKEDITOR.tools.callFunction(20,this);return false;"><span class="cke_button_icon cke_button__link_icon" style="background-image:url(&#39;https://toidicode.com/public/ckeditor-basic/plugins/icons.png?t=H0CG&#39;);background-position:0 -456px;background-size:auto;">&nbsp;</span><span id="cke_16_label" class="cke_button_label cke_button__link_label" aria-hidden="false">Chèn/Sửa liên kết</span><span id="cke_16_description" class="cke_button_label" aria-hidden="false">Keyboard shortcut Ctrl+L</span></a><a id="cke_17" class="cke_button cke_button__unlink cke_button_disabled " href="javascript:void(&#39;Xoá liên kết&#39;)" title="Xoá liên kết" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_17_label" aria-describedby="cke_17_description" aria-haspopup="false" aria-disabled="true" onkeydown="return CKEDITOR.tools.callFunction(21,event);" onfocus="return CKEDITOR.tools.callFunction(22,event);" onclick="CKEDITOR.tools.callFunction(23,this);return false;"><span class="cke_button_icon cke_button__unlink_icon" style="background-image:url(&#39;https://toidicode.com/public/ckeditor-basic/plugins/icons.png?t=H0CG&#39;);background-position:0 -480px;background-size:auto;">&nbsp;</span><span id="cke_17_label" class="cke_button_label cke_button__unlink_label" aria-hidden="false">Xoá liên kết</span><span id="cke_17_description" class="cke_button_label" aria-hidden="false"></span></a></span><span class="cke_toolbar_end"></span></span><span id="cke_18" class="cke_toolbar" aria-labelledby="cke_18_label" role="toolbar"><span id="cke_18_label" class="cke_voice_label">Chèn</span><span class="cke_toolbar_start"></span><span class="cke_toolgroup" role="presentation"><a id="cke_19" class="cke_button cke_button__insertpre cke_button_off" href="javascript:void(&#39;Insert code snippet&#39;)" title="Insert code snippet" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_19_label" aria-describedby="cke_19_description" aria-haspopup="false" onkeydown="return CKEDITOR.tools.callFunction(24,event);" onfocus="return CKEDITOR.tools.callFunction(25,event);" onclick="CKEDITOR.tools.callFunction(26,this);return false;"><span class="cke_button_icon cke_button__insertpre_icon" style="background-image:url(&#39;https://toidicode.com/public/ckeditor-basic/plugins/insertpre/icons/insertpre.png?t=H0CG&#39;);background-position:0 0px;background-size:16px;">&nbsp;</span><span id="cke_19_label" class="cke_button_label cke_button__insertpre_label" aria-hidden="false">Insert code snippet</span><span id="cke_19_description" class="cke_button_label" aria-hidden="false"></span></a></span><span class="cke_toolbar_end"></span></span><span id="cke_20" class="cke_toolbar cke_toolbar_last" aria-labelledby="cke_20_label" role="toolbar"><span id="cke_20_label" class="cke_voice_label">about</span><span class="cke_toolbar_start"></span><span class="cke_toolgroup" role="presentation"><a id="cke_21" class="cke_button cke_button__about cke_button_off" href="javascript:void(&#39;Thông tin về CKEditor&#39;)" title="Thông tin về CKEditor" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_21_label" aria-describedby="cke_21_description" aria-haspopup="false" onkeydown="return CKEDITOR.tools.callFunction(27,event);" onfocus="return CKEDITOR.tools.callFunction(28,event);" onclick="CKEDITOR.tools.callFunction(29,this);return false;"><span class="cke_button_icon cke_button__about_icon" style="background-image:url(&#39;https://toidicode.com/public/ckeditor-basic/plugins/icons.png?t=H0CG&#39;);background-position:0 0px;background-size:auto;">&nbsp;</span><span id="cke_21_label" class="cke_button_label cke_button__about_label" aria-hidden="false">Thông tin về CKEditor</span><span id="cke_21_description" class="cke_button_label" aria-hidden="false"></span></a></span><span class="cke_toolbar_end"></span></span></span></span><div id="cke_1_contents" class="cke_contents cke_reset" role="presentation" style="height: 200px;"><iframe src="./Selector trong jquery - Toidicode.com_files/saved_resource(6).html" frameborder="0" class="cke_wysiwyg_frame cke_reset" style="width: 100%; height: 100%;" title="Bộ soạn thảo văn bản có định dạng, commentt" tabindex="0" allowtransparency="true"></iframe></div></div></div></p><p class="comment-form-author"><label for="author">Name<span class="required"> *</span></label> <input id="cname" name="name" type="text" placeholder="Nhập vào tên..." size="30" required="true" value=""></p><p class="comment-form-email"><label for="email">Email<span class="required"> *</span></label> <input id="cemail" name="email" type="text" value="" size="30" placeholder="Nhập email..." required="true"></p><p class="comment-form-url"><label for="url">Website</label><input id="cwebsite" name="url" type="text" value="" size="30" placeholder="website..."></p><p class="comment-captcha"><label for="captcha">Captcha <span class="required"> *</span></label><img src="./Selector trong jquery - Toidicode.com_files/saved_resource" alt="captcha" class="captcha-img" onclick="this.setAttribute(&#39;src&#39;,&#39;https://toidicode.com/captcha/?key=0.9814072713230142&#39;)"><input id="ccaptcha" name="captcha" type="text" placeholder="captcha..." required="true"></p><p class="form-submit"><input name="submit" type="submit" id="send-comment" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="163" id="cpostid"><input type="hidden" name="comment_parent" id="cparent" value="0"><input type="hidden" name="_token" id="cparent" value="XFT96dW4da5Aku84WZtRnhJGoxZeDwQQ6ayNhiTp"></p><input type="hidden" name="type" class="antispam-control antispam-control-a" value="post"></form><p></p></div></div>
+            </div>
+            <aside id="sidebar" class="sidebar right current">
+                <div id="" class="" style="margin-bottom: 30px; overflow-x: : hidden;">
+	<h4 class="widget-title">QC</h4>
+		<ins class="adsbygoogle" style="display: inline-block; width: 300px; height: 250px;" data-ad-client="ca-pub-8768260344279113" data-ad-slot="4493528180" data-adsbygoogle-status="done"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><ins id="aswift_0_anchor" style="display:block;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><iframe width="300" height="250" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0px;width:300px;height:250px;" src="./Selector trong jquery - Toidicode.com_files/saved_resource(7).html"></iframe></ins></ins></ins>
+		<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>                <div id="" class="widget list-news  current">
+    <h4 class="widget-title">CÙNG DANH MỤC</h4>
+    <ul class="current">
+                    <li><a href="https://toidicode.com/tong-quan-ve-jquery-162.html" title="Tổng quan về jquery?">Bài 1: Tổng quan về jquery?</a></li>
+                    <li class="current"><a href="https://toidicode.com/selector-trong-jquery-163.html" title="Selector trong jquery">Bài 2: Selector trong jquery</a></li>
+                    <li><a href="https://toidicode.com/ham-html-va-text-trong-jquery-164.html" title="Hàm html() và text() trong jquery">Bài 3: Hàm html() và text() trong jquery</a></li>
+                    <li><a href="https://toidicode.com/cac-ham-tac-dong-vao-noi-dung-cua-the-html-trong-jquery-165.html" title="Các hàm tác động vào nội dung của thẻ HTML trong Jquery">Bài 4: Các hàm tác động vào nội dung của thẻ HTML trong Jquery</a></li>
+                    <li><a href="https://toidicode.com/classes-trong-jquery-166.html" title="Classes trong Jquery">Bài 5: Classes trong Jquery</a></li>
+            </ul>
+</div>
+                <div id="email-subscribers-2" class="widget widget_text elp-widget"><h5 class="widget-title">ĐĂNG KÝ NHẬN BÀI QUA EMAIL</h5>
+    <script src="./Selector trong jquery - Toidicode.com_files/ajaxmail.min.js.tải xuống"></script>
+    <div>
+     <div class="es_msg"><font color="red" id="es_msg"></font></div>
+     <div class="es_msgc"><font color="green" id="es_msgc"></font></div>
+     <div class="es_lablebox">Email *</div>
+     <div class="es_textbox">
+        <form action="javascript:void(0)" onsubmit="subMail(&#39;XFT96dW4da5Aku84WZtRnhJGoxZeDwQQ6ayNhiTp&#39;)" autocomplete="off">
+            <input class="es_textbox_class" type="email" name="email_feild" id="email_feild" onkeypress="if(event.keyCode==13) submail()" placeholder="Mail..." minlength="6" maxlength="30" required="">
+        </form></div>
+        <div class="es_button" style="margin-top: 5px;">
+            <input class="es_textbox_button" name="es_txt_button" id="es_txt_button" value="Subscribe" type="submit">
+       
+   </div>
+</div>
+</div>                <div class="widget widget_text elp-widget">
+	<h4 class="widget-title">Tools</h4>
+		<ul class="listtools">
+			<li><a href="https://chrome.google.com/webstore/detail/toidicodecom-extension/geinliihnjpahdmepmimcjjendjbgijm?hl=vi" target="_bank" title="Toidicode extension">Toidicode Extension</a></li>
+			<li><a href="https://toidicode.com/face-transform.html" target="_bank" title="Face transform">Face Transform</a></li>
+			<li><a href="https://youtubevi.com/" target="_bank" title="Download Video From Youtube">Download Video From Youtube</a></li>
+		</ul>
+</div>
+<div id="" class="">
+	<h4 class="widget-title">FANPAGE</h4>
+	<div class="fb-page fb_iframe_widget" data-href="https://www.facebook.com/toidicode/" data-tabs="false" data-width="300" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="adapt_container_width=false&amp;app_id=610336262482409&amp;container_width=300&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Ftoidicode%2F&amp;locale=vi_VN&amp;sdk=joey&amp;show_facepile=true&amp;small_header=false&amp;tabs=false&amp;width=300"><span style="vertical-align: bottom; width: 300px; height: 214px;"><iframe name="f254764192edb4" width="300px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" title="fb:page Facebook Social Plugin" src="./Selector trong jquery - Toidicode.com_files/page.html" style="border: none; visibility: visible; width: 300px; height: 214px;" class=""></iframe></span></div>
+</div>                <!-- ads -->
+<div id="" class="widget widget_text elp-widget vce-sticky affix-top">
+    <!-- fix-top -->
+    <ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-8768260344279113" data-ad-slot="9202929389" data-adsbygoogle-status="done"><ins id="aswift_1_expand" style="display:inline-table;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><ins id="aswift_1_anchor" style="display:block;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><iframe width="300" height="600" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;border:0px;width:300px;height:600px;" src="./Selector trong jquery - Toidicode.com_files/saved_resource(8).html"></iframe></ins></ins></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>            </aside>
+
+        </div>
+    </div>
+
+    <footer id="footer" class="site-footer">
+        <div class="container">
+            <div class="container-fix">
+                <div class="bit-1">
+                    <a href="https://toidicode.com/"><img src="./Selector trong jquery - Toidicode.com_files/logo.png" alt="toidicode.com"></a>
+                </div>
+                <div class="bit-3">
+                    <h4 style="color: white;border-bottom:1px solid #646a70 ">
+                        <div style="border-bottom:1px solid #2a2e32">Giới thiệu</div>
+                    </h4>
+                    <div style="font-size: 14px">Toidicode.com được tạo ra nhằm mục đích chia sẻ các tutorial về lập
+                        trình nói chung và lập trình Web nói riêng.
+                        <p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="./Selector trong jquery - Toidicode.com_files/80x15.png"></a></p>
+                    </div>
+                </div>
+                <div class="bit-3">
+                    <h4 style="color: white;border-bottom:1px solid #646a70 ">
+                        <div style="border-bottom:1px solid #2a2e32">Liên kết</div>
+                    </h4>
+                    <div style="font-size: 14px">
+                        <a href="https://vannien.vn/" target="_blank" rel="noopener" title="Xem tử vi tướng số" style="color: #ffffff">Vannien.vn</a>
+                        <br>
+                        <a href="https://youtubevi.com/" target="_blank" rel="noopener" title="Download any video from youtube" style="color: #ffffff">Youtubevi.com</a>
+                        <br>
+                        <a href="https://canhsale.info/" target="_blank" rel="noopener" title="Review sản phẩm, tư vẫn chọn mua" style="color: #ffffff">Lanhchanh.com</a>
+                        <br>
+
+                        <br>
+                    </div>
+                </div>
+                <div class="bit-3">
+                    <h4 style="color: white;border-bottom:1px solid #646a70 ">
+                        <div style="border-bottom:1px solid #2a2e32">Liên hệ</div>
+                    </h4>
+                    <div style="font-size: 14px">
+                        Điện thoại: +849 XXXX 7680
+                        <br> Email: <a href="mailto:toidicode.com@gmail.com?subject=Contact" style="color: #f90">toidicode.com@gmail.com</a>
+                        <br> Copyright © 2017. by <a href="https://toidicode.com/" style="color: #f90">Toidicode.com</a>
+                        <p>
+                            <a rel="noopener" href="http://www.dmca.com/Protection/Status.aspx?ID=21f417fa-aaee-437b-aa8b-2145d3fbd02e&amp;refurl=https://toidicode.com/selector-trong-jquery-163.html" title="DMCA.com Protection Status" class="dmca-badge" target="_blank"> <img src="./Selector trong jquery - Toidicode.com_files/dmca-badge-w100-5x1-02.png" alt="DMCA.com Protection Status"></a>
+                            <script src="./Selector trong jquery - Toidicode.com_files/DMCABadgeHelper.min.js.tải xuống">
+                            </script>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="height:5px;">
+            <div style="width:25%;background:#af472d;height:100%;float:left"></div>
+            <div style="width:25%;background:#c6ac27;height:100%;float:left"></div>
+            <div style="width:25%;background:#207347;height:100%;float:left"></div>
+            <div style="width:25%;background:#8f99b6;height:100%;float:left"></div>
+        </div>
+        <div id="fra" style="width: 0;height: 0;overflow: hidden;"></div>
+    </footer>
+</div>
+
+<a href="javascript:void(0)" id="back-top" style="bottom: 57px; border: 1px solid rgb(221, 221, 221); display: inline;"><i class="fa fa-angle-up"></i></a>
+<script>
+    console.log("%c%s", 'color:red;', `
+
+   /$$               /$$       /$$ /$$                           /$$
+  | $$              |__/      | $$|__/                          | $$
+ /$$$$$$    /$$$$$$  /$$  /$$$$$$$ /$$  /$$$$$$$  /$$$$$$   /$$$$$$$  /$$$$$$       /$$$$$$$  /$$$$$$  /$$$$$$/$$$$
+|_  $$_/   /$$__  $$| $$ /$$__  $$| $$ /$$_____/ /$$__  $$ /$$__  $$ /$$__  $$     /$$_____/ /$$__  $$| $$_  $$_  $$
+  | $$    | $$  \\ $$| $$| $$  | $$| $$| $$      | $$  \\ $$| $$  | $$| $$$$$$$$    | $$      | $$  \\ $$| $$ \\ $$ \\ $$
+  | $$ /$$| $$  | $$| $$| $$  | $$| $$| $$      | $$  | $$| $$  | $$| $$_____/    | $$      | $$  | $$| $$ | $$ | $$
+  |  $$$$/|  $$$$$$/| $$|  $$$$$$$| $$|  $$$$$$$|  $$$$$$/|  $$$$$$$|  $$$$$$$ /$$|  $$$$$$$|  $$$$$$/| $$ | $$ | $$
+   \\___/   \\______/ |__/ \\_______/|__/ \\_______/ \\______/  \\_______/ \\_______/|__/ \\_______/ \\______/ |__/ |__/ |__/
+
+
+
+`);
+</script>
+
+
+<script type="text/javascript" src="./Selector trong jquery - Toidicode.com_files/custom.js.tải xuống"></script>
+<script type="text/javascript" src="./Selector trong jquery - Toidicode.com_files/adsense.js.tải xuống"></script>
+<script>
+    if (typeof flagADS === "undefined") {
+        toastr.warning('Làm ơn tắt adblock đi giùm mình với! please!');
+    }
+
+    window.fbAsyncInit = function () {
+        FB.init({
+            appId: '610336262482409',
+            xfbml: true,
+            version: 'v2.7'
+        });
+    };
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/vi_VN/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+    <!-- Facebook Pixel Code -->
+
+    !function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+            n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s)
+    }(window,
+        document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1006627516070863'); // Insert your pixel ID here.
+    fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+               src="https://www.facebook.com/tr?id=1006627516070863&ev=PageView&noscript=1"/></noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code -->
+<!-- analytics-->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-84078941-1', 'auto');
+    ga('send', 'pageview');
+</script>
+<!-- end analytics-->
+<script src="./Selector trong jquery - Toidicode.com_files/OneSignalSDK.js.tải xuống" async=""></script>
+<script src="./Selector trong jquery - Toidicode.com_files/toastr.min.js.tải xuống"></script>
+<script>
+    var OneSignal = window.OneSignal || [];
+    OneSignal.push(["init", {
+        appId: "6f7bb3d7-7a68-49e2-8482-64665bc9c1b3",
+        autoRegister: true,
+        notifyButton: {
+            enable: false /* Set to false to hide */
+        },
+        welcomeNotification: {
+            "title": "Toidicode.com",
+            "message": "Cảm ơn bạn đã đăng ký nhận thông báo từ chúng tôi!",
+            "url": "https://toidicode.com"
+        }
+    }]);
+
+    toastr.options = {
+        "closeButton": true,
+        "timeOut": "0",
+        "extendedTimeOut": "0",
+        // "positionClass": "toast-bottom-right",
+    };
+
+        
+</script>
+    
+    <script src="./Selector trong jquery - Toidicode.com_files/highlight.pack.js.tải xuống"></script>
+    <script src="./Selector trong jquery - Toidicode.com_files/custom.min.js.tải xuống" type="text/javascript"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+      $(document).ready(function () {
+        $(window).scroll(function (e) {
+          var windowOs = $(window).scrollTop();
+          var elementOs = $('.option-news').offset().top;
+
+          if (elementOs - windowOs < (100 + window.outerHeight)) {
+            $('.toggle-prenext').show(300);
+          } else {
+            $('.toggle-prenext').hide(300);
+          }
+        });
+
+              loadHeading();
+        showMucluc();
+                addCurrentLink();
+      });
+
+      var config = {
+        url: 'https://toidicode.com/',
+        id: 163,
+        type: 'post',
+        token: 'XFT96dW4da5Aku84WZtRnhJGoxZeDwQQ6ayNhiTp'
+      };
+    </script>
+    <script src="./Selector trong jquery - Toidicode.com_files/ckeditor.js.tải xuống" defer="" type="text/javascript" charset="utf-8"></script>
+    <script src="./Selector trong jquery - Toidicode.com_files/comment.min.js.tải xuống" type="text/javascript" charset="utf-8"></script>
+
+
+<div id="sidr-main" class="sidr left"><div class="sidr-inner">
+                    <ul id="sidr-id-vce_main_navigation_menu" class="sidr-class-nav-menu">
+                        <li id="sidr-id-menu-item-642" class="sidr-class-menu-item sidr-class-menu-item-type-custom"><a href="https://toidicode.com/">HOME</a>
+                        </li>
+                        <li class="sidr-class-menu-item sidr-class-menu-item-type-custom sidr-class-menu-item-has-children"><a href="https://toidicode.com/script-language">SCRIPT LANGUAGE</a><ul class="sidr-class-sub-menu"><li class="sidr-class-menu-item sidr-class-menu-item-type-taxonomy sidr-class-menu-item-has-children"><a href="https://toidicode.com/hoc-javascript">JAVASCRIPT</a><ul class="sidr-class-sub-menu"><li class="sidr-class-menu-item sidr-class-menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-javascript-co-ban">JAVASCRIPT CƠ BẢN</a></li><li class="sidr-class-menu-item sidr-class-menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-jquery-js">JQUERY</a></li><li class="sidr-class-menu-item sidr-class-menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-angularjs">ANGULARJS</a></li><li class="sidr-class-menu-item sidr-class-menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-vuejs-co-ban">VUEJS</a></li><li class="sidr-class-menu-item sidr-class-menu-item-type-taxonomy sidr-class-menu-item-has-children"><a href="https://toidicode.com/hoc-nodejs">NODE.JS</a><ul class="sidr-class-sub-menu"><li class="sidr-class-menu-item sidr-class-menu-item-type-taxonomy"><a href="https://toidicode.com/nodejs-co-ban">NODE.JS CƠ BẢN</a></li><li class="sidr-class-menu-item sidr-class-menu-item-type-taxonomy"><a href="https://toidicode.com/express-framework">EXPRESS FRAMEWORK</a></li><li class="sidr-class-menu-item sidr-class-menu-item-type-taxonomy"><a href="https://toidicode.com/nodejs-mysql">NODE.JS &amp; MYSQL</a></li><li class="sidr-class-menu-item sidr-class-menu-item-type-taxonomy"><a href="https://toidicode.com/nodejs-mongodb">NODE.JS &amp; MONGODB</a></li></ul><span class="vce-menu-parent fa fa-angle-down"></span></li><li class="sidr-class-menu-item sidr-class-menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-ecmascript">ECMASCRIPT</a></li></ul><span class="vce-menu-parent fa fa-angle-down"></span></li><li class="sidr-class-menu-item sidr-class-menu-item-type-taxonomy sidr-class-menu-item-has-children"><a href="https://toidicode.com/tu-hoc-php">PHP</a><ul class="sidr-class-sub-menu"><li class="sidr-class-menu-item sidr-class-menu-item-type-taxonomy"><a href="https://toidicode.com/php-co-ban">PHP CƠ BẢN</a></li><li class="sidr-class-menu-item sidr-class-menu-item-type-taxonomy"><a href="https://toidicode.com/php-huong-doi-tuong">PHP HƯỚNG ĐỐI TƯỢNG</a></li><li class="sidr-class-menu-item sidr-class-menu-item-type-taxonomy"><a href="https://toidicode.com/php-standards">PHP STANDARDS</a></li><li class="sidr-class-menu-item sidr-class-menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-laravel">LARAVEL</a></li><li class="sidr-class-menu-item sidr-class-menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-codeigniter">CODEIGNITER</a></li><li class="sidr-class-menu-item sidr-class-menu-item-type-taxonomy"><a href="https://toidicode.com/php-mysql">PHP&amp;MYSQL</a></li><li class="sidr-class-menu-item sidr-class-menu-item-type-taxonomy"><a href="https://toidicode.com/php-optimize">PHP OPTIMIZE &amp; SCURITY</a></li><li class="sidr-class-menu-item sidr-class-menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-php7">PHP 7X</a></li><li class="sidr-class-menu-item sidr-class-menu-item-type-taxonomy"><a href="https://toidicode.com/php-tip">PHP TIP</a></li><li class="sidr-class-menu-item sidr-class-menu-item-type-taxonomy"><a href="https://toidicode.com/php-regular-expression">REGULAR EXPRESSION</a></li><li class="sidr-class-menu-item sidr-class-menu-item-type-taxonomy"><a href="https://toidicode.com/php-mongodb">PHP&amp;MONGODB</a></li></ul><span class="vce-menu-parent fa fa-angle-down"></span></li><li class="sidr-class-menu-item sidr-class-menu-item-type-taxonomy sidr-class-menu-item-has-children"><a href="https://toidicode.com/hoc-python">PYTHON</a><ul class="sidr-class-sub-menu"><li class="sidr-class-menu-item sidr-class-menu-item-type-taxonomy"><a href="https://toidicode.com/python-co-ban">PYTHON CƠ BẢN</a></li><li class="sidr-class-menu-item sidr-class-menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-python-nang-cao">PYTHON NÂNG CAO</a></li><li class="sidr-class-menu-item sidr-class-menu-item-type-taxonomy"><a href="https://toidicode.com/python-mysql">PYTHON &amp; MYSQL</a></li></ul><span class="vce-menu-parent fa fa-angle-down"></span></li></ul><span class="vce-menu-parent fa fa-angle-down"></span></li><li class="sidr-class-menu-item sidr-class-menu-item-type-taxonomy sidr-class-menu-item-has-children"><a href="https://toidicode.com/computer-language">COMPUTER LANGUAGE</a><ul class="sidr-class-sub-menu"><li class="sidr-class-menu-item sidr-class-menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-csharp">C#</a></li><li class="sidr-class-menu-item sidr-class-menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-java">JAVA</a></li><li class="sidr-class-menu-item sidr-class-menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-android">ANDROID</a></li></ul><span class="vce-menu-parent fa fa-angle-down"></span></li><li class="sidr-class-menu-item sidr-class-menu-item-type-taxonomy sidr-class-menu-item-has-children"><a href="https://toidicode.com/hoc-database">DATABASE</a><ul class="sidr-class-sub-menu"><li class="sidr-class-menu-item sidr-class-menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-sql">SQL</a></li><li class="sidr-class-menu-item sidr-class-menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-mongodb">MONGODB</a></li></ul><span class="vce-menu-parent fa fa-angle-down"></span></li><li class="sidr-class-menu-item sidr-class-menu-item-type-taxonomy sidr-class-menu-item-has-children"><a href="https://toidicode.com/#">MORE</a><ul class="sidr-class-sub-menu"><li class="sidr-class-menu-item sidr-class-menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-html">HTML</a></li><li class="sidr-class-menu-item sidr-class-menu-item-type-taxonomy"><a href="https://toidicode.com/linh-tinh">LINH TINH</a></li><li class="sidr-class-menu-item sidr-class-menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-marketing-online">MARKETING ONLINE</a></li><li class="sidr-class-menu-item sidr-class-menu-item-type-taxonomy sidr-class-menu-item-has-children"><a href="https://toidicode.com/hoc-css">CSS</a><ul class="sidr-class-sub-menu"><li class="sidr-class-menu-item sidr-class-menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-css-can-ban">CSS</a></li><li class="sidr-class-menu-item sidr-class-menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-css3">CSS3</a></li><li class="sidr-class-menu-item sidr-class-menu-item-type-taxonomy"><a href="https://toidicode.com/css-reference">CSS REFERENCE</a></li></ul><span class="vce-menu-parent fa fa-angle-down"></span></li><li class="sidr-class-menu-item sidr-class-menu-item-type-taxonomy"><a href="https://toidicode.com/dinh-nghia">ĐỊNH NGHĨA</a></li><li class="sidr-class-menu-item sidr-class-menu-item-type-taxonomy"><a href="https://toidicode.com/sublime-text">SUBLIME TEXT</a></li></ul><span class="vce-menu-parent fa fa-angle-down"></span></li>
+                        <li class="sidr-class-search-header-wrap">
+                            <a class="sidr-class-search_header" href="javascript:void(0)"><i class="sidr-class-fa sidr-class-fa-search"></i></a>
+                            <ul class="sidr-class-search-header-form-ul">
+                                <li>
+                                    <form class="sidr-class-search-header-form" action="https://toidicode.com/search.html" method="get">
+                                        <input name="q" class="sidr-class-search-input" size="20" type="text" onfocus="(this.value == &#39;Nhập nội dung tìm kiếm ....&#39;) &amp;&amp; (this.value = &#39;&#39;)" onblur="(this.value == &#39;&#39;) &amp;&amp; (this.value = &#39;Nhập nội dung tìm kiếm ....&#39;)" placeholder="Nhập nội dung tìm kiếm ....">
+                                    </form>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div></div><iframe id="google_osd_static_frame_6425692622021" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./Selector trong jquery - Toidicode.com_files/saved_resource(9).html"></iframe><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./Selector trong jquery - Toidicode.com_files/xd_arbiter.html" style="border: none;"></iframe></div><div></div></div></div><iframe src="./Selector trong jquery - Toidicode.com_files/webPushAnalytics.html" style="display: none;"></iframe></body><iframe id="google_shimpl" style="display: none;" src="./Selector trong jquery - Toidicode.com_files/saved_resource(10).html"></iframe><iframe id="google_esf" name="google_esf" src="./Selector trong jquery - Toidicode.com_files/zrt_lookup.html" data-ad-client="ca-pub-8768260344279113" style="display: none;"></iframe></html>

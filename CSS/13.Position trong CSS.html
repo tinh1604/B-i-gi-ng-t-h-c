@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)http://bcdonline.net/position-trong-css/ -->
+<html class=" js flexbox no-touch rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio" lang="en-US" prefix="og: http://ogp.me/ns#"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>Position trong CSS</title>
+	<!--iOS/android/handheld specific -->	
+<link rel="apple-touch-icon" href="http://bcdonline.net/position-trong-css/apple-touch-icon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="prefetch" href="http://bcdonline.net/">
+	<link rel="prerender" href="http://bcdonline.net/">
+	<link rel="stylesheet" type="text/css" media="all" href="./13.Position trong CSS_files/style.css">
+    <link rel="icon" type="image/png" href="http://bcdonline.net/wp-content/uploads/2015/08/f-icon1.png">
+	<link rel="pingback" href="http://bcdonline.net/xmlrpc.php">
+			<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+<!-- This site is optimized with the Yoast SEO plugin v4.9 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Sử dụng position relative và position absolute trong css để thiết kế giao diện web.">
+<link rel="canonical" href="http://bcdonline.net/position-trong-css/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Position trong CSS">
+<meta property="og:description" content="Sử dụng position relative và position absolute trong css để thiết kế giao diện web.">
+<meta property="og:url" content="http://bcdonline.net/position-trong-css/">
+<meta property="og:site_name" content="BCDOnline Blog">
+<meta property="article:tag" content="css">
+<meta property="article:tag" content="css cơ bản">
+<meta property="article:tag" content="css-html">
+<meta property="article:section" content="HTML - CSS">
+<meta property="article:published_time" content="2012-01-02T17:05:07+00:00">
+<meta property="article:modified_time" content="2014-07-30T22:02:04+00:00">
+<meta property="og:updated_time" content="2014-07-30T22:02:04+00:00">
+<meta property="og:image" content="http://bcdonline.net/wp-content/uploads/2012/01/Position-trong-CSS.jpg">
+<meta property="og:image:width" content="390">
+<meta property="og:image:height" content="245">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:description" content="Sử dụng position relative và position absolute trong css để thiết kế giao diện web.">
+<meta name="twitter:title" content="Position trong CSS">
+<meta name="twitter:image" content="http://bcdonline.net/wp-content/uploads/2012/01/Position-trong-CSS.jpg">
+<!-- / Yoast SEO plugin. -->
+
+<link rel="dns-prefetch" href="http://ajax.googleapis.com/">
+<link rel="dns-prefetch" href="http://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="http://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="BCDOnline Blog » Feed" href="http://bcdonline.net/feed/">
+<link rel="alternate" type="application/rss+xml" title="BCDOnline Blog » Comments Feed" href="http://bcdonline.net/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="BCDOnline Blog » Position trong CSS Comments Feed" href="http://bcdonline.net/position-trong-css/feed/">
+		<script src="./13.Position trong CSS_files/sdk.js.tải xuống" async="" crossorigin="anonymous"></script><script src="./13.Position trong CSS_files/cb=gapi.loaded_0" async=""></script><script type="text/javascript" async="" src="./13.Position trong CSS_files/plusone.js.tải xuống" gapi_processed="true"></script><script id="twitter-wjs" src="./13.Position trong CSS_files/widgets.js.tải xuống"></script><script id="facebook-jssdk" src="./13.Position trong CSS_files/sdk.js(1).tải xuống"></script><script type="text/javascript" async="" src="./13.Position trong CSS_files/ga.js.tải xuống"></script><script type="text/javascript" async="" src="./13.Position trong CSS_files/plusone.js.tải xuống" gapi_processed="true"></script><script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/bcdonline.net\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b===c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="./13.Position trong CSS_files/wp-emoji-release.min.js.tải xuống" type="text/javascript" defer=""></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="gdsr_style_main-css" href="./13.Position trong CSS_files/gdsr.css.php" type="text/css" media="all">
+<link rel="stylesheet" id="gdsr_style_xtra-css" href="./13.Position trong CSS_files/rating.css" type="text/css" media="all">
+<link rel="stylesheet" id="contact-form-7-css" href="./13.Position trong CSS_files/styles.css" type="text/css" media="all">
+<link rel="stylesheet" id="et_monarch-open-sans-css" href="./13.Position trong CSS_files/css" type="text/css" media="all">
+<link rel="stylesheet" id="et_monarch-css-css" href="./13.Position trong CSS_files/style(1).css" type="text/css" media="all">
+<script type="text/javascript" src="./13.Position trong CSS_files/jquery.min.js.tải xuống"></script>
+<script type="text/javascript" src="./13.Position trong CSS_files/gdsr.js.tải xuống"></script>
+<script type="text/javascript" src="./13.Position trong CSS_files/jquery-ui.min.js.tải xuống"></script>
+<script type="text/javascript" src="./13.Position trong CSS_files/modernizr.min.js.tải xuống"></script>
+<script type="text/javascript" src="./13.Position trong CSS_files/customscript.js.tải xuống"></script>
+<link rel="https://api.w.org/" href="http://bcdonline.net/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://bcdonline.net/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://bcdonline.net/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 4.8">
+<link rel="shortlink" href="http://bcdonline.net/?p=395">
+<link rel="alternate" type="application/json+oembed" href="http://bcdonline.net/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fbcdonline.net%2Fposition-trong-css%2F">
+<link rel="alternate" type="text/xml+oembed" href="http://bcdonline.net/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fbcdonline.net%2Fposition-trong-css%2F&amp;format=xml">
+<script type="text/javascript">
+//<![CDATA[
+var gdsr_cnst_nonce = "8a381830fd";
+var gdsr_cnst_ajax = "http://bcdonline.net/wp-content/plugins/gd-star-rating/ajax.php";
+var gdsr_cnst_button = 0;
+var gdsr_cnst_cache = 0;
+// ]]>
+</script>
+<!--[if IE]><style type="text/css">.ratemulti .starsbar .gdcurrent { -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)"; filter: alpha(opacity=70); }</style><![endif]-->
+<style type="text/css" id="et-social-custom-css">
+				 
+			</style><link rel="stylesheet" type="text/css" href="./13.Position trong CSS_files/shCore.css"><link rel="stylesheet" type="text/css" href="./13.Position trong CSS_files/shThemeDefault.css"><style type="text/css" id="syntaxhighlighteranchor"></style>
+	<!--start fonts-->
+<link href="./13.Position trong CSS_files/css(1)" rel="stylesheet" type="text/css">
+<style type="text/css">
+.title, h1,h2,h3,h4,h5,h6, .total-comments { font-family: 'Exo', sans-serif;}
+</style>
+<!--end fonts-->
+<style type="text/css">
+body {background-color:#FFFFFF;}
+body {background-image:url(http://bcdonline.net/wp-content/themes/split/images/nobg.png);}
+.mts-subscribe input[type="submit"], #commentform input#submit, .tagcloud a, .readMore a, .currenttext, .pagination a:hover, .toplink, .flex-control-paging li a.flex-active, .flex-control-paging li a:hover {background-color:#4DA6FF; }
+.single_post a, a:hover, .textwidget a, .leftSidebar .widget li a:hover, #commentform a, .pagination a, .pagination2, .copyrights a:hover, a, .sidebar.c-4-12 a:hover, footer .widget li a:hover, footer .widget .tweets a, .secondary-navigation .current-menu-item a {color:#4DA6FF; }
+.pagination a, .pagination2 {border-color:#4DA6FF; }
+.shareit { top: 305px; left: auto; z-index: 0; margin: 0 0 0 -120px; width: 90px; position: fixed; overflow: hidden; padding: 5px; background: white; }
+.share-item {margin: 2px;}
+</style>
+   
+
+	<!-- Google + -->
+	<script type="text/javascript">
+	  (function() {
+		var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+		po.src = 'https://apis.google.com/js/plusone.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+	  })();
+	</script>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-26824914-1']);
+      _gaq.push(['_trackPageview']);
+    
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <meta property="fb:app_id" content="537132266440926">
+    <meta property="fb:admins" content="100000121749249">
+    
+<style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#1d3c78;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}</style></head>
+
+    <body id="blog" class="post-template-default single single-post postid-395 single-format-standard main et_monarch cat-4-id"><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./13.Position trong CSS_files/d_vbiawPdxB.html" style="border: none;"></iframe></div><div></div></div></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.4&appId=537132266440926";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+
+	<header class="main-header">
+		<div class="container">
+			<div id="header">
+															<h2 id="logo" class="image-logo">
+							<a href="http://bcdonline.net/"><img src="./13.Position trong CSS_files/logos.png" alt="BCDOnline Blog"></a>
+						</h2><!-- END #logo -->
+									  
+				<div class="header-right">
+					<li id="mts_ad_728_widget-2" class="widget widget-header"><div class="ad-728"><a rel="nofollow" href="http://bcdonline.net/su-dung-wordpress-thiet-ke-theme-wordpress/"><img src="./13.Position trong CSS_files/banner-hoc-wordpress-bcdonline-blog.png" width="728" height="90" alt=""></a></div></li>				</div>
+			</div><!--#header-->
+		</div><!--.container-->     
+	</header> 
+	<div class="secondary-navigation">
+		<nav id="navigation">
+							<ul id="menu-navmenu" class="menu sf-js-enabled"><li id="menu-item-2136" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-2136"><a href="http://bcdonline.net/">Trang Chủ</a></li>
+<li id="menu-item-9" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor menu-item-has-children menu-item-9"><a title="Lập Trình" href="http://bcdonline.net/category/lap-trinh/" class="sf-with-ul">Lập Trình<span class="sf-sub-indicator"> »</span></a>
+<ul class="sub-menu sf-js-enabled" style="display: none; visibility: hidden;">
+	<li id="menu-item-7" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-7"><a title="HTML &amp; CSS" href="http://bcdonline.net/category/lap-trinh/html-css/">HTML &amp; CSS</a></li>
+	<li id="menu-item-370" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-370"><a title="JavaScript &amp; jQuery" href="http://bcdonline.net/category/lap-trinh/javascript-jquery/">JavaScript &amp; jQuery</a></li>
+	<li id="menu-item-13" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-13"><a title="PHP – MySQL" href="http://bcdonline.net/category/lap-trinh/php-mysql/">PHP &amp; MySQL</a></li>
+	<li id="menu-item-5" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-5"><a title="ASP.Net – SQLServer" href="http://bcdonline.net/category/lap-trinh/asp-net-sql/">ASP.Net &amp; SQL Server</a></li>
+	<li id="menu-item-10" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10"><a title="Lập Trình C/C++" href="http://bcdonline.net/category/lap-trinh/lap-trinh-c/">Lập Trình C/ C++</a></li>
+</ul>
+</li>
+<li id="menu-item-21" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-21"><a title="WordPress" href="http://bcdonline.net/category/wordpress/" class="sf-with-ul">WordPress<span class="sf-sub-indicator"> »</span></a>
+<ul class="sub-menu sf-js-enabled" style="display: none; visibility: hidden;">
+	<li id="menu-item-2223" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2223"><a href="http://bcdonline.net/tag/wordpress-themes/">WordPress Themes</a></li>
+	<li id="menu-item-2224" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2224"><a href="http://bcdonline.net/tag/wordpress-plugins/">WordPress Plugins</a></li>
+</ul>
+</li>
+<li id="menu-item-8" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8"><a title="Joomla" href="http://bcdonline.net/category/joomla/">Joomla</a></li>
+<li id="menu-item-12" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-12"><a title="Phát Triển WEB" href="http://bcdonline.net/category/phat-trien-web/">Phát Triển WEB</a></li>
+<li id="menu-item-76" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-76"><a title="Đồ Họa" href="http://bcdonline.net/category/do-hoa/">Đồ Họa</a></li>
+<li id="menu-item-15" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-15"><a title="Tản Mạn" href="http://bcdonline.net/category/tan-man/">Tản Mạn</a></li>
+<li id="menu-item-2206" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2206"><a href="http://bcdonline.net/web-tools-online-mien-phi/">Web tools</a></li>
+</ul>					<select><option selected="selected" value="">Go to...</option><option value="http://bcdonline.net/">Trang Chủ</option><optgroup label="Lập Trình »"><option value="http://bcdonline.net/category/lap-trinh/html-css/"> - HTML &amp; CSS</option><option value="http://bcdonline.net/category/lap-trinh/javascript-jquery/"> - JavaScript &amp; jQuery</option><option value="http://bcdonline.net/category/lap-trinh/php-mysql/"> - PHP &amp; MySQL</option><option value="http://bcdonline.net/category/lap-trinh/asp-net-sql/"> - ASP.Net &amp; SQL Server</option><option value="http://bcdonline.net/category/lap-trinh/lap-trinh-c/"> - Lập Trình C/ C++</option></optgroup><optgroup label="WordPress »"><option value="http://bcdonline.net/tag/wordpress-themes/"> - WordPress Themes</option><option value="http://bcdonline.net/tag/wordpress-plugins/"> - WordPress Plugins</option></optgroup><option value="http://bcdonline.net/category/joomla/">Joomla</option><option value="http://bcdonline.net/category/phat-trien-web/">Phát Triển WEB</option><option value="http://bcdonline.net/category/do-hoa/">Đồ Họa</option><option value="http://bcdonline.net/category/tan-man/">Tản Mạn</option><option value="http://bcdonline.net/web-tools-online-mien-phi/">Web tools</option></select></nav>
+	</div>   
+	<div class="main-container"><div id="page" class="single">
+	<div class="content">
+		<article class="article">
+			<div id="content_box">
+									<div id="post-395" class="g post post-395 type-post status-publish format-standard has-post-thumbnail hentry category-html-css tag-css tag-css-co-ban tag-css-html cat-4-id has_thumb">
+						<div class="single_post">
+															<div class="breadcrumb"><a href="http://bcdonline.net/" rel="nofollow">Trang chủ</a>&nbsp;&nbsp;»&nbsp;&nbsp;<a href="http://bcdonline.net/category/lap-trinh/html-css/" rel="nofollow">HTML - CSS</a> &nbsp;&nbsp;»&nbsp;&nbsp; Position trong CSS</div>
+														<header>
+								<h1 class="title single-title entry-title">Position trong CSS</h1>
+																	<div class="post-info"><span class="author fn theauthor">by <a rel="nofollow" href="http://bcdonline.net/author/bancamden/" title="Posts by bancamden">bancamden</a></span><span class="thecategory"> | category <a href="http://bcdonline.net/category/lap-trinh/html-css/" rel="nofollow">HTML - CSS</a></span> | <span class="thecomment">6 Comments</span><span class="post_date date updated" style="display: none;">2 January,2012</span></div>
+															</header><!--.headline_area-->
+														<div class="post-single-content box mark-links">
+																<p>Chúng ta đã tìm hiểu về foat và clear trong css, hai thuộc tính này sử dụng đôi khi mình chưa kiểm soát chính xác về vị trí của nó trong trang web thì Position trong css sẽ cho chúng tra nhiều lựa chọn hơn, chúng ta có thể định chính xác vi trí của các đối tượng trên website.<br>
+<span id="more-395"></span><br>
+Bạn cứ xem trang web ta như một hệ trục tọa độ 2 chiều và các đối tượng là các mãng hình và cứ thế định vị trí cho chúng theo tọa độ x, y.</p>
+<div id="attachment_396" style="width: 560px" class="wp-caption aligncenter"><img class="size-full wp-image-396" title="Position trong CSS" src="./13.Position trong CSS_files/position-diem.jpg" alt="Position trong CSS" width="550" height="300" srcset="http://bcdonline.net/wp-content/uploads/2012/01/position-diem.jpg 550w, http://bcdonline.net/wp-content/uploads/2012/01/position-diem-300x163.jpg 300w" sizes="(max-width: 550px) 100vw, 550px"><p class="wp-caption-text">Position trong CSS</p></div>
+<p>Nói về Position trong CSS chúng ta có 4 thuộc tính: static, absolute, fixed và relative tuy nhiên chúng ta hay sử dụng nhất là relative và absolute.</p>
+<p>Ví dụ đoạn văn html sau và chúng ta định dạng với hai kiểu này các bạn xem điểm khác biệt và cùng rút ra cách sử dụng Position (vị trí) trong css.</p>
+<div id="attachment_397" style="width: 523px" class="wp-caption aligncenter"><img class="size-full wp-image-397" title="Position demo" src="./13.Position trong CSS_files/position.jpg" alt="Position demo" width="513" height="196" srcset="http://bcdonline.net/wp-content/uploads/2012/01/position.jpg 513w, http://bcdonline.net/wp-content/uploads/2012/01/position-300x114.jpg 300w" sizes="(max-width: 513px) 100vw, 513px"><p class="wp-caption-text">Position demo</p></div>
+<p>Code HTML hình trên là:</p>
+<div><div id="highlighter_479976" class="syntaxhighlighter  jscript"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="jscript plain">&lt;!--</code></div><div class="line number2 index1 alt1"><code class="jscript plain">&lt;div </code><code class="jscript keyword">class</code><code class="jscript plain">=</code><code class="jscript string">"content"</code><code class="jscript plain">&gt;</code></div><div class="line number3 index2 alt2"><code class="jscript plain">Đoạn 1: ...</code></div><div class="line number4 index3 alt1">&nbsp;</div><div class="line number5 index4 alt2"><code class="jscript plain">Đoạn 2: ...</code></div><div class="line number6 index5 alt1">&nbsp;</div><div class="line number7 index6 alt2"><code class="jscript plain">Đoạn 3: ...</code></div><div class="line number8 index7 alt1"><code class="jscript plain">&lt;/div&gt;</code></div><div class="line number9 index8 alt2"><code class="jscript plain">--&gt;</code></div></div></td></tr></tbody></table></div></div>
+<h5>Position static</h5>
+<p>Trên là dạng trình bày mặc định hay là trình bày dạng position static, các đoạn văn được xếp theo thứ tự từ trên xuống dưới theo tự nhiên.</p>
+<h5>Relative position</h5>
+<p>Thuộc tính relative position dùng để định định dạng vị trí tương đối cho đối tượng. Relative position bao gồm các thành phần top, right, bottom và left và mặc định tức là khỏi viết gì. Tuy nhiên bạn chỉ cần canh top – left hay top – right … là đủ.</p>
+<p>Giả sử trong bài trên mình định dạng sang trái 20px, trên 20px thì viết như sau:</p>
+<div><div id="highlighter_803058" class="syntaxhighlighter  jscript"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="jscript plain">&lt;!-- doan2{&nbsp;&nbsp;&nbsp; position:relative;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; top:20px;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; left:20px; } --&gt;</code></div></div></td></tr></tbody></table></div></div>
+<p>Kết quả ta thấy:</p>
+<div id="attachment_398" style="width: 542px" class="wp-caption aligncenter"><img class="size-full wp-image-398" title="Position relative" src="./13.Position trong CSS_files/position-relative.jpg" alt="Position relative" width="532" height="198" srcset="http://bcdonline.net/wp-content/uploads/2012/01/position-relative.jpg 532w, http://bcdonline.net/wp-content/uploads/2012/01/position-relative-300x111.jpg 300w" sizes="(max-width: 532px) 100vw, 532px"><p class="wp-caption-text">Position relative</p></div>
+<p>Từ kết quả trên ta có thể nói rằng đoạn văn 2 dịch chuyển sang trái 20px và trên xuông 20px + margin mặc định nữa. Tuy rằng dịch chuyển nhưng vị trí củ vẫn được giữ thể hiện là đoạn văn 3 không tràn lên vị trí của đoạn văn 2.</p>
+<p>Còn mặc định của <strong>position relative</strong> thì sẽ giữ nguyên vị trí k thay đổi gì cả.</p>
+<h5>Absolute position</h5>
+<p>Đây là cách trình bày vị trí tuyệt đối của đối tượng, cũng có các thành phần: top, right, bottom và left bạn có thể định dạng tọa độ 4 thành phần này hay chỉ cố định 2 thành phần.</p>
+<p>Trình bày kiểu này đòi hỏi có một <strong>Position relative</strong> bao quanh đối tượng này để lấy làm chổ tựa, và vị trí sẽ canh theo đối tượng bao quanh này. Nếu không có thì sẽ canh theo body.</p>
+<p>Cũng như trên mình định trên – xuống 20px, trái qua 20px bạn code như sau:</p>
+<div><div id="highlighter_419380" class="syntaxhighlighter  jscript"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="jscript plain">&lt;!-- doan2{&nbsp;&nbsp;&nbsp; position:absolute;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; top:20px;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; left:20px; } --&gt;</code></div></div></td></tr></tbody></table></div></div>
+<p>Kết quả hiển thị trên trình duyệt như sau:</p>
+<div id="attachment_399" style="width: 565px" class="wp-caption aligncenter"><img class="size-full wp-image-399" title="Position absolute" src="./13.Position trong CSS_files/position-absolute.jpg" alt="Position absolute" width="555" height="145" srcset="http://bcdonline.net/wp-content/uploads/2012/01/position-absolute.jpg 555w, http://bcdonline.net/wp-content/uploads/2012/01/position-absolute-300x78.jpg 300w" sizes="(max-width: 555px) 100vw, 555px"><p class="wp-caption-text">Position absolute</p></div>
+<p>Bạn dễ dàng nhìn thấy điểm khác biệt giữa absolute position và relative position là vừa dịch chuyển xong absolute đã mất vị trí củ và đoạn văn 3 đã tràn lên đồng thời đoạn 2 sẽ tách biệt khỏi không còn phụ thuộc vào các đoạn văn còn lại cũng như div content bao quanh nó, lúc này chỉ canh theo tag body trên 20px và trái 20px.</p>
+<h5>Fixed position</h5>
+<p>Đây là cách trình bày cố định vị trí cho dù bạn có cuộn thanh cuộn thì đối tượng được fix vẫn cứ chạy theo.</p>
+<h5>Lưu ý khi sử dụng Position</h5>
+<p>Khi bạn sử dụng position thì canh tọa độ là chuyện gặp k ít khó khăn tuy nhiên có một mẹo nhỏ giúp bạn làm điều đó. Khởi tạo giá trị ban đầu xong bạn dùng <a href="http://bcdonline.net/huong-dan-cai-dat-va-su-dung-add-on-firebug-trong-firefox/" title="Dùng add on firebug trong firefox" target="_blank">addon firebug trong firefox</a> chon vào đúng css đang sử dụng và dùng phím mũi tên lên xuống xem ngoài trình duyệt thay đổi, nếu hợp lý bạn lấy số liệu đó thay vào số liệu củ là OK nhất. hi</p>
+<div id="attachment_404" style="width: 547px" class="wp-caption aligncenter"><img src="./13.Position trong CSS_files/debug.jpg" alt="Position debug" title="Position debug" width="537" height="141" class="size-full wp-image-404" srcset="http://bcdonline.net/wp-content/uploads/2012/01/debug.jpg 537w, http://bcdonline.net/wp-content/uploads/2012/01/debug-300x78.jpg 300w" sizes="(max-width: 537px) 100vw, 537px"><p class="wp-caption-text">Position debug</p></div>
+<h5>Áp dụng Position vào làm giao diện Web</h5>
+<p>Mình có một ví dụ nho nhỏ cho bạn áp dụng Position trong CSS. Vấn đề bây giờ là thiết kế banner với logo bên trái và menu bên phải dùng position.</p>
+<p>Code HTML:</p>
+<div><div id="highlighter_697623" class="syntaxhighlighter  jscript"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="jscript plain">&lt;!--</code></div><div class="line number2 index1 alt1"><code class="jscript plain">&lt;div </code><code class="jscript keyword">class</code><code class="jscript plain">=</code><code class="jscript string">"menu"</code><code class="jscript plain">&gt;</code></div><div class="line number3 index2 alt2"><code class="jscript plain">&lt;div </code><code class="jscript keyword">class</code><code class="jscript plain">=</code><code class="jscript string">"logo"</code><code class="jscript plain">&gt;</code></div><div class="line number4 index3 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">&lt;img src=</code><code class="jscript string">"guitar.png"</code> <code class="jscript plain">width=</code><code class="jscript string">"128"</code> <code class="jscript plain">height=</code><code class="jscript string">"128"</code> <code class="jscript plain">/&gt;&lt;/div&gt;</code></div><div class="line number5 index4 alt2"><code class="jscript plain">&lt;ul&gt;</code></div><div class="line number6 index5 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">&lt;li&gt;&lt;a href=</code><code class="jscript string">"#"</code><code class="jscript plain">&gt;Trang Chủ&lt;/a&gt; |&lt;/li&gt;</code></div><div class="line number7 index6 alt2"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">&lt;li&gt;&lt;a href=</code><code class="jscript string">"#"</code><code class="jscript plain">&gt;Liên Hệ&lt;/a&gt; |&lt;/li&gt;</code></div><div class="line number8 index7 alt1"><code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="jscript plain">&lt;li&gt;&lt;a href=</code><code class="jscript string">"<a href="http://bcdonline.net/">http://bcdonline.net</a>"</code><code class="jscript plain">&gt;bcdOnline.net&lt;/a&gt;&lt;/li&gt;</code></div><div class="line number9 index8 alt2"><code class="jscript plain">&lt;/ul&gt;</code></div><div class="line number10 index9 alt1"><code class="jscript plain">&lt;/div&gt;</code></div><div class="line number11 index10 alt2"><code class="jscript plain">--&gt;</code></div></div></td></tr></tbody></table></div></div>
+<p>Giao diện chạy lên lúc này là:</p>
+<div id="attachment_400" style="width: 521px" class="wp-caption aligncenter"><img class="size-full wp-image-400" title="Position ví dụ" src="./13.Position trong CSS_files/position-demo.jpg" alt="Position ví dụ" width="511" height="190" srcset="http://bcdonline.net/wp-content/uploads/2012/01/position-demo.jpg 511w, http://bcdonline.net/wp-content/uploads/2012/01/position-demo-300x111.jpg 300w" sizes="(max-width: 511px) 100vw, 511px"><p class="wp-caption-text">Position ví dụ</p></div>
+<p>Đầu tiên bạn relative div #menu để các các thành phần bên trong logo, menu được canh tọa độ theo div #menu.</p>
+<div><div id="highlighter_557729" class="syntaxhighlighter  jscript"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="jscript plain">&lt;!-- .menu {&nbsp;&nbsp;&nbsp;&nbsp; position: relative; } --&gt;</code></div></div></td></tr></tbody></table></div></div>
+<p>Típ theo mình cho logo về bên trái:</p>
+<div><div id="highlighter_55880" class="syntaxhighlighter  jscript"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="jscript plain">&lt;!-- .logo{&nbsp; position:absolute;&nbsp; top:10px;&nbsp;&nbsp; left: 20px; } --&gt;</code></div></div></td></tr></tbody></table></div></div>
+<p>Bước kế típ là mang cái mê nu lên bên trên:</p>
+<div><div id="highlighter_667396" class="syntaxhighlighter  jscript"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="jscript plain">&lt;!-- .menu ul{&nbsp;&nbsp; position:absolute;&nbsp; top: 10px;&nbsp; right:5px; } --&gt;</code></div></div></td></tr></tbody></table></div></div>
+<p>Kết quả chúng ta được:</p>
+<div id="attachment_401" style="width: 526px" class="wp-caption aligncenter"><img class="size-full wp-image-401" title="Position kết quả" src="./13.Position trong CSS_files/position-demo-fini.jpg" alt="Position kết quả" width="516" height="167" srcset="http://bcdonline.net/wp-content/uploads/2012/01/position-demo-fini.jpg 516w, http://bcdonline.net/wp-content/uploads/2012/01/position-demo-fini-300x97.jpg 300w" sizes="(max-width: 516px) 100vw, 516px"><p class="wp-caption-text">Position kết quả</p></div>
+<p><strong>Kết luận:</strong><br>
+OK, vậy là đáp ứng nhu cầu vấn đề râu ria lùm xùm sao cho đẹp thì các bạn thêm vào, ứng dụng tất cả vào design một giao diện tốt nhất hehe. Anh em góp ý thì comment nha!</p>
+<div style="display: none">VN:F [1.9.22_1171]</div><div class="ratingblock "><div class="ratingheader "></div><div class="ratingstars "><div id="article_rater_395" class="ratepost gdsr-oxygen gdsr-size-24"><div class="starsbar gdsr-size-24"><div class="gdouter gdheight"><div id="gdr_vote_a395" style="width: 186.85714285714px;" class="gdinner gdheight"></div><div id="gdr_stars_a395" class="gdsr_rating_as"><a id="gdsrX395X10X0XaXarticle_rater_395Xarticle_loader_395X10X24" title="10 / 10" class="s10" rel="nofollow"></a><a id="gdsrX395X9X0XaXarticle_rater_395Xarticle_loader_395X10X24" title="9 / 10" class="s9" rel="nofollow"></a><a id="gdsrX395X8X0XaXarticle_rater_395Xarticle_loader_395X10X24" title="8 / 10" class="s8" rel="nofollow"></a><a id="gdsrX395X7X0XaXarticle_rater_395Xarticle_loader_395X10X24" title="7 / 10" class="s7" rel="nofollow"></a><a id="gdsrX395X6X0XaXarticle_rater_395Xarticle_loader_395X10X24" title="6 / 10" class="s6" rel="nofollow"></a><a id="gdsrX395X5X0XaXarticle_rater_395Xarticle_loader_395X10X24" title="5 / 10" class="s5" rel="nofollow"></a><a id="gdsrX395X4X0XaXarticle_rater_395Xarticle_loader_395X10X24" title="4 / 10" class="s4" rel="nofollow"></a><a id="gdsrX395X3X0XaXarticle_rater_395Xarticle_loader_395X10X24" title="3 / 10" class="s3" rel="nofollow"></a><a id="gdsrX395X2X0XaXarticle_rater_395Xarticle_loader_395X10X24" title="2 / 10" class="s2" rel="nofollow"></a><a id="gdsrX395X1X0XaXarticle_rater_395Xarticle_loader_395X10X24" title="1 / 10" class="s1" rel="nofollow"></a></div></div></div></div><div id="article_loader_395" style="display: none; width: 240px " class="ratingloaderarticle"><div class="loader flower width " style="height: 24px"></div></div></div><div class="ratingtext "><div id="gdr_text_a395">Rating: 7.8/<strong>10</strong> (14 votes cast)</div></div></div><span class="hreview-aggregate"><span class="item"><span class="fn">Position trong CSS</span></span>, <span class="rating"><span class="average">7.8</span> out of <span class="best">10</span> based on <span class="votes">14</span> ratings <span class="summary"></span></span></span><span class="et_social_bottom_trigger"></span>																 
+																	<div class="tags"><span class="tagtext">Tags:</span><a href="http://bcdonline.net/tag/css/" rel="tag">css</a>, <a href="http://bcdonline.net/tag/css-co-ban/" rel="tag">css cơ bản</a>, <a href="http://bcdonline.net/tag/css-html/" rel="tag">css-html</a></div>
+															</div>
+						</div><!--.post-content box mark-links-->
+							
+							<div class="related-posts"><div class="postauthor-top"><h3>Bài liên quan:</h3></div><ul>								<li class="">
+									<a rel="nofollow" class="relatedthumb" href="http://bcdonline.net/huong-dan-tao-menu-da-cap-ngang-voi-html-va-css/" title="Hướng dẫn tạo menu đa cấp ngang với HTML và CSS">
+										<span class="rthumb">
+																							<img width="65" height="50" src="./13.Position trong CSS_files/menu-ngang-da-cap-1-2-3-65x50.jpg" class="attachment-widgetthumb size-widgetthumb wp-post-image" alt="" title="">																					</span>
+										<span>
+											Hướng dẫn tạo menu đa cấp ngang với HTML và CSS										</span>
+									</a>
+									<div class="related-post-info"><span class="theauthor">by <a rel="nofollow" href="http://bcdonline.net/author/bancamden/" title="Posts by bancamden">bancamden</a></span></div>
+								</li>
+																<li class="last">
+									<a rel="nofollow" class="relatedthumb" href="http://bcdonline.net/gioi-thieu-tong-quan-ve-bootstrap-3-framework/" title="Giới thiệu tổng quan về Bootstrap 3 framework">
+										<span class="rthumb">
+																							<img width="65" height="50" src="./13.Position trong CSS_files/bootstrap-65x50.png" class="attachment-widgetthumb size-widgetthumb wp-post-image" alt="" title="">																					</span>
+										<span>
+											Giới thiệu tổng quan về Bootstrap 3 framework										</span>
+									</a>
+									<div class="related-post-info"><span class="theauthor">by <a rel="nofollow" href="http://bcdonline.net/author/bancamden/" title="Posts by bancamden">bancamden</a></span></div>
+								</li>
+								</ul></div>							<!-- .related-posts -->
+                          
+						  
+					</div><!--.g post-->
+					<div class="fb-comments fb_iframe_widget fb_iframe_widget_fluid_desktop" data-href="http://bcdonline.net/position-trong-css/" data-numposts="20" width="100%" data-colorscheme="light" data-version="v2.3" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=537132266440926&amp;color_scheme=light&amp;container_width=670&amp;height=100&amp;href=http%3A%2F%2Fbcdonline.net%2Fposition-trong-css%2F&amp;locale=vi_VN&amp;numposts=20&amp;sdk=joey&amp;version=v2.3" style="width: 100%;"><span style="vertical-align: bottom; width: 100%; height: 203px;"><iframe name="f29a5db9c4dac04" width="1000px" height="100px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" title="fb:comments Facebook Social Plugin" src="./13.Position trong CSS_files/comments.html" style="border: none; visibility: visible; width: 0px; height: 203px;" class=" fb_iframe_widget_lift"></iframe></span></div>							</div>
+		</article>
+		<aside class="sidebar c-4-12">
+	<div id="sidebars" class="g">
+		<div class="sidebar">
+			<ul class="sidebar_list q2w3-fixed-widget-container" style="height: 640px;">
+				<li id="search-3" class="widget widget-sidebar"><form method="get" id="searchform" class="search-form" action="http://bcdonline.net/" _lpchecked="1">
+	<fieldset>
+		<input type="text" name="s" id="s" value="Search the site..." onblur="if (this.value == &#39;&#39;) {this.value = &#39;Search the site...&#39;;}" onfocus="if (this.value == &#39;Search the site...&#39;) {this.value = &#39;&#39;;}">
+	</fieldset>
+</form></li><li id="facebook-like-widget-2" class="widget widget-sidebar"><h3>BCDONLINE TRÊN FACEBOOK</h3>		<iframe src="./13.Position trong CSS_files/likebox.html" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:298px; height: 240px;" allowtransparency="true"></iframe>
+		</li><li id="mts_subscribe_widget-3" class="widget widget-sidebar">        	
+			<div class="mts-subscribe">
+                
+                <h3>THEO DÕI BLOG QUA EMAIL</h3>
+                <form style="" action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#39;http://feedburner.google.com/fb/a/mailverify?uri=bcdonline&#39;, &#39;popupwindow&#39;, &#39;scrollbars=yes,width=550,height=520&#39;);return true" _lpchecked="1">
+				<input type="text" value="Your email Address..." onblur="if (this.value == &#39;&#39;) {this.value = &#39;Your email Address...&#39;;}" onfocus="if (this.value == &#39;Your email Address...&#39;) {this.value = &#39;&#39;;}" name="email">
+				<input type="hidden" value="bcdonline" name="uri"><input type="hidden" name="loc" value="en_US"><input type="submit" value="Subscribe">
+				</form>
+
+                <div class="result"></div>
+                
+            </div><!--subscribe_widget-->
+		
+		</li><!-- fixed widget --><li id="nav_menu-3_clone" class="widget widget-sidebar q2w3-widget-clone-sidebar-1" style="top: 40px; width: 300px; height: 173px; visibility: hidden;"></li><li id="nav_menu-3" class="widget widget-sidebar" style="top: 40px; width: 300px; position: fixed;"><h3>CÓ THỂ BẠN QUAN TÂM</h3><div class="menu-cmmenu-container"><ul id="menu-cmmenu" class="menu"><li id="menu-item-1685" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1685"><a href="http://bcdonline.net/su-dung-wordpress-thiet-ke-theme-wordpress/">Sử dụng, thiết kế WordPress</a></li>
+<li id="menu-item-520" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-520"><a title="Thiết kế web bằng Joomla" href="http://bcdonline.net/thiet-ke-web-bang-joomla/">Thiết kế web bằng Joomla</a></li>
+<li id="menu-item-823" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-823"><a title="Xây dựng website bán hàng online bằng joomla" href="http://bcdonline.net/xay-dung-website-ban-hang-bang-joomla/">Xây dựng website bán hàng bằng joomla</a></li>
+<li id="menu-item-976" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-976"><a href="http://bcdonline.net/huong-dan-su-dung-css/">Hướng dẫn sử dụng CSS</a></li>
+<li id="menu-item-1725" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1725"><a href="http://bcdonline.net/hoc-thiet-ke-web-asp-net-c-sharp/">Học thiết kế web ASP.Net – C#</a></li>
+</ul></div></li>			</ul>
+		</div>
+	</div><!--sidebars-->
+</aside>		</div>
+	</div><!--#page-->
+</div><!--.main-container-->
+<footer>
+	<div class="container">
+		<div class="footer-widgets">
+			    <div class="f-widget f-widget-1">
+    	<div class="footer_widget" id="text-6">			<div class="textwidget"><img style="margin-bottom: 5px;" alt="BCDOnline Blog - Thủ thuật WordPress" src="./13.Position trong CSS_files/logo_footer.png">
+<div style="text-align: justify;">BCDOnline Blog đang trong thời gian xây dựng do đó blog luôn hoan nghênh và đón nhận mọi ý kiến đóng góp cũng như đánh giá của các bạn về blog, mọi thắc mắc và hợp tác vui lòng liên hệ. Cảm ơn!</div>
+<div><a rel="nofollow" style="float: right; margin-top:7px;" target="_blank" href="http://bcdonline.net/lien-he/" title="Liên Hệ  | BCDOnline Blog"><img alt="Liên hệ với BCDOnline Blog" src="./13.Position trong CSS_files/contact-me_icon_12.png"></a>
+</div></div>
+		</div>    </div>
+    <div class="f-widget f-widget-2">
+    	<div class="footer_widget" id="linkcat-2"><h3>Bạn bè tôi</h3>
+	<ul class="xoxo blogroll">
+<li><a href="http://freetuts.net/" title="freetuts.net" target="_blank">Freetuts.net</a></li>
+<li><a href="http://www.giaiphapso.info/" title="Giải Pháp Số" target="_blank">Giải pháp số</a></li>
+<li><a href="http://hocphp.info/" title="Học lập trình web PHP" target="_blank">Học lập trình web PHP</a></li>
+<li><a href="http://vanmy.net/" title="Thủ thuật Wordpress, thủ thuật SEO" target="_blank">Thủ thuật Wordpress, SEO</a></li>
+
+	</ul>
+</div>
+    </div>
+    <div class="f-widget f-widget-3">
+    	<div class="footer_widget" id="linkcat-263"><h3>Đối tác</h3>
+	<ul class="xoxo blogroll">
+<li><a href="http://wordpressthemes2016.com/" title="Best WordPress Themes" target="_blank">Best WordPress Themes</a></li>
+<li><a href="http://cacmonanngon.org/" title="Các món ăn ngon" target="_blank">Các món ăn ngon</a></li>
+<li><a href="http://quanaongoclinh.com/" title="Quần Áo Ngọc Linh" target="_blank">Quần Áo Ngọc Linh</a></li>
+<li><a href="http://simcuatui.com/" title="Sim so dep" target="_blank">Sim so dep</a></li>
+<li><a href="https://tapchimua.com/" title="Tạp chí mua – trang thông tin đánh giá về sản phẩm" target="_blank">Tạp Chí Mua</a></li>
+<li><a href="http://thammyvienuytin.vn/cach-tri-nam-da-mat-triet-de-hieu-qua-tai-jw/" title="Trị nám" target="_blank">Trị nám</a></li>
+
+	</ul>
+</div>
+    </div>
+    <div class="f-widget f-widget-4 last">
+    	<div class="footer_widget" id="text-7"><h3>About Me</h3>			<div class="textwidget"><div id="social-links">
+	<a title="Google" class="google" href="https://plus.google.com/108532896502719236536" target="_blank">Google</a>
+	<a title="Facebook!" class="facebook" href="http://www.facebook.com/hocwebonline" target="_blank">Facebbook!</a>
+	<a title="Twitter!" class="twitter" href="https://twitter.com/bcdonlinenet" target="_blank">Twitter!</a>
+	<a class="rss" title="RSS" href="http://feeds2.feedburner.com/bcdonline" target="_blank">RSS</a>
+</div>
+<div id="menu-about">
+	<ul>
+		<li><a rel="nofollow" href="http://bcdonline.net/bancamden/">Giới thiệu</a></li>
+		<li><a rel="nofollow" href="http://bcdonline.net/qui-dinh-chung/">Qui định chung</a></li>
+		<li><a rel="nofollow" href="http://bcdonline.net/sitemap/">HTML Sitemap</a></li>
+		<li><a rel="nofollow" href="http://bcdonline.net/lien-he/">Liên hệ</a></li>
+	</ul>
+</div></div>
+		</div>    </div>
+		</div><!--.footer-widgets-->
+	</div><!--.container-->
+	<div class="copyrights">
+		<!--start copyrights-->
+<div class="row" id="copyright-note">
+<span>BCDOnline Blog Copyright © 2017.</span>
+<div class="top">mã nguồn <a target="_blank" href="https://wordpress.org/">WordPress</a>&nbsp;<a href="http://bcdonline.net/position-trong-css/#top" class="toplink">&nbsp;</a></div>
+</div>
+<!--end copyrights-->
+	</div> 
+</footer><!--footer-->
+<!--Twitter Button Script------>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+<!--Facebook Like Button Script------>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=136911316406581";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="et_social_sidebar_networks et_social_visible_sidebar et_social_slideright et_social_animated et_social_rectangle et_social_sidebar_flip et_social_sidebar_withcounts et_social_mobile_on" style="top: 212px;">
+					
+					<ul class="et_social_icons_container"><li class="et_social_facebook">
+									<a href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fbcdonline.net%2Fposition-trong-css%2F&amp;t=Position%20trong%20CSS" class="et_social_share et_social_display_count" rel="nofollow" data-social_name="facebook" data-post_id="395" data-social_type="share" data-min_count="0">
+										<i class="et_social_icon et_social_icon_facebook"></i>
+										
+										
+										<span class="et_social_overlay"></span>
+									<div class="et_social_count"><span>3</span></div></a>
+								</li><li class="et_social_twitter">
+									<a href="http://twitter.com/share?text=Position%20trong%20CSS&amp;url=http%3A%2F%2Fbcdonline.net%2Fposition-trong-css%2F&amp;via=bcdonlinenet" class="et_social_share et_social_display_count" rel="nofollow" data-social_name="twitter" data-post_id="395" data-social_type="share" data-min_count="0">
+										<i class="et_social_icon et_social_icon_twitter"></i>
+										
+										
+										<span class="et_social_overlay"></span>
+									<div class="et_social_count"><span>1</span></div></a>
+								</li><li class="et_social_googleplus">
+									<a href="https://plus.google.com/share?url=http%3A%2F%2Fbcdonline.net%2Fposition-trong-css%2F&amp;t=Position%20trong%20CSS" class="et_social_share et_social_display_count" rel="nofollow" data-social_name="googleplus" data-post_id="395" data-social_type="share" data-min_count="0">
+										<i class="et_social_icon et_social_icon_googleplus"></i>
+										
+										
+										<span class="et_social_overlay"></span>
+									<div class="et_social_count"><span>0</span></div></a>
+								</li></ul>
+					<span class="et_social_hide_sidebar et_social_icon"></span>
+				</div><div class="et_social_mobile_button"></div>
+					<div class="et_social_mobile et_social_fadein">
+						<div class="et_social_heading">Share This</div>
+						<span class="et_social_close"></span>
+						<div class="et_social_networks et_social_simple et_social_rounded et_social_left et_social_withcounts" style="display: none; max-height: 45px; height: 45px;">
+							<ul class="et_social_icons_container"><li class="et_social_facebook">
+									<a href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fbcdonline.net%2Fposition-trong-css%2F&amp;t=Position%20trong%20CSS" class="et_social_share et_social_display_count" rel="nofollow" data-social_name="facebook" data-post_id="395" data-social_type="share" data-min_count="0">
+										<i class="et_social_icon et_social_icon_facebook"></i>
+										<div class="et_social_network_label"><div class="et_social_networkname">Facebook</div><div class="et_social_count"><span>3</span></div></div>
+										
+										<span class="et_social_overlay"></span>
+									</a>
+								</li><li class="et_social_twitter">
+									<a href="http://twitter.com/share?text=Position%20trong%20CSS&amp;url=http%3A%2F%2Fbcdonline.net%2Fposition-trong-css%2F&amp;via=bcdonlinenet" class="et_social_share et_social_display_count" rel="nofollow" data-social_name="twitter" data-post_id="395" data-social_type="share" data-min_count="0">
+										<i class="et_social_icon et_social_icon_twitter"></i>
+										<div class="et_social_network_label"><div class="et_social_networkname">Twitter</div><div class="et_social_count"><span>1</span></div></div>
+										
+										<span class="et_social_overlay"></span>
+									</a>
+								</li><li class="et_social_googleplus">
+									<a href="https://plus.google.com/share?url=http%3A%2F%2Fbcdonline.net%2Fposition-trong-css%2F&amp;t=Position%20trong%20CSS" class="et_social_share et_social_display_count" rel="nofollow" data-social_name="googleplus" data-post_id="395" data-social_type="share" data-min_count="0">
+										<i class="et_social_icon et_social_icon_googleplus"></i>
+										<div class="et_social_network_label"><div class="et_social_networkname">Google+</div><div class="et_social_count"><span>0</span></div></div>
+										
+										<span class="et_social_overlay"></span>
+									</a>
+								</li></ul>
+						</div>
+					</div>
+					<div class="et_social_mobile_overlay"></div><script type="text/javascript" src="./13.Position trong CSS_files/shCore.js.tải xuống"></script>
+<script type="text/javascript" src="./13.Position trong CSS_files/shBrushJScript.js.tải xuống"></script>
+<script type="text/javascript">
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "http://bcdonline.net/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?ver=3.0.9b";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = "http://bcdonline.net/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.9b";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+		document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.all();
+</script>
+<script type="text/javascript" src="./13.Position trong CSS_files/comment-reply.min.js.tải xuống"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"http:\/\/bcdonline.net\/wp-json\/","namespace":"contact-form-7\/v1"},"recaptcha":{"messages":{"empty":"Please verify that you are not a robot."}},"cached":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./13.Position trong CSS_files/scripts.js.tải xuống"></script>
+<script type="text/javascript" src="./13.Position trong CSS_files/idle-timer.min.js.tải xuống"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var monarchSettings = {"ajaxurl":"http:\/\/bcdonline.net\/wp-admin\/admin-ajax.php","pageurl":"http:\/\/bcdonline.net\/position-trong-css\/","stats_nonce":"394d75e657","share_counts":"a2df086ebb","follow_counts":"69d75f52a3","total_counts":"01cfb7fb12","media_single":"e0b4b037d0","media_total":"93c947ba41","generate_all_window_nonce":"8288b847e5","no_img_message":"No images available for sharing on this page"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./13.Position trong CSS_files/custom.js.tải xuống"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var qpprFrontData = {"linkData":{"\/?page_id=1119":[1,0,""]},"siteURL":"http:\/\/bcdonline.net","siteURLq":"http:\/\/bcdonline.net"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./13.Position trong CSS_files/qppr_frontend_script.min.js.tải xuống"></script>
+<script type="text/javascript">
+var q2w3_sidebar_options = new Array();
+q2w3_sidebar_options[0] = { "sidebar" : "sidebar-1", "margin_top" : 40, "margin_bottom" : 0, "stop_id" : "", "screen_max_width" : 0, "screen_max_height" : 0, "width_inherit" : false, "refresh_interval" : 1500, "window_load_hook" : false, "disable_mo_api" : false, "widgets" : ['nav_menu-3'] };
+</script>
+<script type="text/javascript" src="./13.Position trong CSS_files/q2w3-fixed-widget.min.js.tải xuống"></script>
+<script type="text/javascript" src="./13.Position trong CSS_files/wp-embed.min.js.tải xuống"></script>
+
+
+<!-- Performance optimized by W3 Total Cache. Learn more: https://www.w3-edge.com/products/
+
+Object Caching 1583/1727 objects using disk
+Page Caching using disk: enhanced
+Database Caching 4/53 queries in 0.020 seconds using disk
+
+ Served from: bcdonline.net @ 2017-07-07 10:53:06 by W3 Total Cache --><iframe scrolling="no" frameborder="0" allowtransparency="true" src="./13.Position trong CSS_files/widget_iframe.2e9f365dae390394eb8d923cba8c5b11.html" title="Twitter settings iframe" style="display: none;"></iframe></body></html>

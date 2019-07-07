@@ -1,0 +1,28 @@
+console.log("Loaded!");
+
+var baseDelay = 1000;
+
+function initAnimation() {
+  var tl = anime.timeline({
+    easing: "linear"
+  });
+
+  tl.add({
+    targets: "#one",
+    opacity: 0,
+    duration: 500,
+    delay: baseDelay
+  })
+    .add({
+      targets: "#two",
+      left: "-300px",
+      duration: 500,
+      delay: baseDelay * 2
+    })
+    .add({
+      targets: "#three",
+      left: "-300px",
+      duration: 500,
+      delay: baseDelay * 3
+    });
+}

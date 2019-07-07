@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+        ul{
+            width: 250px;
+        }
+
+        ul li{
+            height: 30px;           /*Cao 30px*/
+            line-height: 30px;      /*Cho chữ canh giữa 30px*/
+            list-style: none;       /*Không hiển thị dấu chấm đầu menu*/
+            padding: 0px 10px;      /*đẩy nôi dung menu vào 10cm (trái + phải)*/
+            background: pink;       /*màu nèn màu hồng*/
+            border: solid 1px red;  /*đường viền màu đỏ*/
+            border-bottom: none;    /*vì menu liền kề nhau nên border-bottom không cần*/
+            position: relative;     /*chọn làm khung*/
+        }
+
+        ul li:last-child{
+            border-bottom: solid 1px red;
+        }
+
+        ul li ul{
+            position: absolute;
+            top: -1px;          /*cho ngang hàng với menu cha, vì menu cha có border - 1 nên ta phải trừ đi 1*/
+            right: -250px;      /*vì nàm ngoài khung và dài 250px nên là số âm 250px */
+            display: none;      /*Ban đầu sẽ không hiển thị*/
+        }
+        a {text-decoration: none}
+
+        ul li:hover ul{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>
+        <a href="#">Trang Chủ</a>
+    </li>
+    <li>
+        <a href="#">Tin Tức</a>
+        <ul>
+            <li>
+                <a href="#">Tin Trong Nước</a>
+            </li>
+            <li>
+                <a href="#">Tin Nước Ngoài</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">Khoa Học</a>
+        <ul>
+            <li>
+                <a href="#">Viễn Tưởng</a>
+            </li>
+            <li>
+                <a href="#">Sáng Tạo</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">Pháp Luật</a>
+        <ul>
+            <li>
+                <a href="#">Văn Bản</a>
+            </li>
+            <li>
+                <a href="#">Kiến Nghị</a>
+            </li>
+        </ul>
+    </li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="vi-VN"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang="vi-VN"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="vi-VN"> <![endif]-->
+<!--[if gt IE 8]><!--> 
+<html class="no-js" lang="vi-VN"> <!--<![endif]-->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        	<meta property="og:locale" content="vi_VN" />
+	<meta http-equiv="content-language" content="vi" />
+	<link rel="alternate" href="https://freetuts.net/php-function/mysqli_fetch_array.html" hreflang="vi-vn" />
+	<meta name="twitter:card" content="summary" />
+	<title>Hàm mysqli_fetch_arrray trong php.</title>
+	<meta itemprop="name" content="Hàm mysqli_fetch_arrray trong php.">
+	<meta property="og:title" content="Hàm mysqli_fetch_arrray trong php." />
+	<meta name="twitter:title" content="Hàm mysqli_fetch_arrray trong php." />
+	<meta name="revisit-after" content="1 days" />
+	<meta name="robots" content="INDEX,FOLLOW"/>
+	<meta name="keywords" content="mysqli_fetch_arrray, mysqli_fetch_arrray function, ham mysqli_fetch_arrray, hàm mysqli_fetch_arrray"/>
+	<meta name="description" content="Hàm mysqli_fetch_arrray() sẽ tìm và trả về một dòng kết quả của một truy vấn MySQL nào đó dưới dạng một mảng kết hợp, mảng liên tục hoặc cả hai."/>
+	<meta itemprop="description" content="Hàm mysqli_fetch_arrray() sẽ tìm và trả về một dòng kết quả của một truy vấn MySQL nào đó dưới dạng một mảng kết hợp, mảng liên tục hoặc cả hai.">
+	<meta property="og:description" content="Hàm mysqli_fetch_arrray() sẽ tìm và trả về một dòng kết quả của một truy vấn MySQL nào đó dưới dạng một mảng kết hợp, mảng liên tục hoặc cả hai." />
+	<meta name="twitter:description" content="Hàm mysqli_fetch_arrray() sẽ tìm và trả về một dòng kết quả của một truy vấn MySQL nào đó dưới dạng một mảng kết hợp, mảng liên tục hoặc cả hai." />
+	<link rel="author" href="https://plus.google.com/104638972201822941189"/>
+	<meta itemprop="image" content="https://freetuts.net/public/logo/main-logo.png">
+	<meta property="og:image" content="https://freetuts.net/public/logo/main-logo.png" />
+	<meta name="twitter:image" content="https://freetuts.net/public/logo/main-logo.png" />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="https://freetuts.net/php-function/mysqli_fetch_array.html" />
+	<link rel="canonical" href="https://freetuts.net/php-function/mysqli_fetch_array.html" />
+	<meta property="article:section" content="PHP Function" />
+	<meta property="article:author" content="Nguyễn Văn Cường" />
+	<meta name="author" content="Nguyễn Văn Cường" />
+	<meta property="article:published_time" content="2017-05-15T11:31:03+01:00" />
+	<meta name="twitter:creator" content="@freetutsdotnet" />
+	<meta property="article:publisher" content="https://www.facebook.com/groups/freetutsdotnet/" />
+	<link rel="publisher" href="https://plus.google.com/107680919915235377536/videos"/>
+	<meta property="og:site_name" content="freetuts" />
+	<meta name="copyright" content="Copyright © 2018 by Freetuts.net" />
+	<link rel="shortcut icon" type="image/x-icon" href="https://freetuts.net/public/logo/icon.png?r=1" />	<meta property="fb:app_id" content="2175055175872587" />        <meta name="google-site-verification" content="mco4fG6mE6Rh6fWFCAU7zwQkDGYtKNA8g_UnbaB1oBQ" />
+<link rel='stylesheet' id='plugins-css'  href='https://freetuts.net/public/theme/css/style.css?v=9' type='text/css' media='all' />
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>        
+    </head>
+    <body id="manual_detail" class="sticky_navigation_off page page-template-default right-sidebar singular fade-imgs-in-appear time_in_twelve_format one-side-wide both-sidebars wpb-js-composer js-comp-ver-4.9 vc_responsive no-js" itemtype="http://schema.org/WebPage">
+                <div class="boxed-wrap clearfix">
+            <div id="header-wrapper">
+    <div class="topbar">
+        <div class="inner">
+            <div class="top-left-content">
+                <ul id="menu-top-menu" class="top-nav mom_visibility_desktop">
+                    <li class="menu-item active-gioi-thieu"><a href="/gioi-thieu.html" title="Giới thiệu">GIỚI THIỆU</a></li>
+                    <li class="menu-item active-ban-quyen"><a href="https://freetuts.net/ban-quyen.html" title="Bản quyền">BẢN QUYỀN</a></li>
+                    <li class="menu-item active-lien-he"><a href="https://freetuts.net/lien-he.html"  title="liên hệ">LIÊN HỆ</a></li>
+                </ul>
+                <div class="mom_visibility_device device-top-menu-wrap">
+                    <div class="top-menu-holder"><i class="fa-icon-reorder mh-icon"></i></div>
+                    <ul id="menu-top-menu-1" class="device-top-nav">
+                    </ul>			     
+                </div>
+            </div>
+            <div class="top-right-content">
+                <ul class="mom-social-icons">
+                        
+                                            <li class="facebook"><a rel="nofollow" target="_blank" class="vector_icon" href="https://www.facebook.com/groups/freetutsdotnet/"><i class="fa-icon-facebook "></i></a></li>        
+                                                                <li class="gplus"><a rel="nofollow" target="_blank" class="vector_icon" href="https://plus.google.com/107680919915235377536/videos" ><i class="fa-icon-google-plus"></i></a></li>     
+                                                                <li class="youtube"><a rel="nofollow" target="_blank" class="vector_icon" href="https://www.youtube.com/c/FreetutsNetVideo"><i class="fa-icon-youtube"></i></a></li>
+                                    </ul>
+            </div>
+        </div>
+    </div>
+    <header class="header">
+        <div class="inner">
+            <div class="logo"> 
+                <a href="https://freetuts.net/" title="học lập trình">
+                    <img src="https://freetuts.net/public/logo/logo.png?rand=2" alt="Học lập trình" style="max-width: 150px"/>
+                </a>
+            </div>
+            <div class="header-right">
+                <div class="mom-e3lanat-wrap  ">
+                    <div class="mom-e3lanat " style="margin-bottom:-0px;">
+                        <div class="mom-e3lanat-inner">
+                            <div class="mom-e3lan" style=" margin-bottom:0px;">
+                                <div class="e3lan-code">
+                                    <!--<div class="job_action">
+                                        <span class="mom_button_wrap"><a class="button mom_button orange_bt" href="/tim-khoa-hoc" title="tìm khóa học">TÌM KHÓA HỌC</a></span>
+                                        <span class="mom_button_wrap"><a class="button mom_button orange_bt" href="/khoa-hoc/tao-combo" title="TẠO COMBO KHÓA HỌC">TẠO COMBO</a></span>
+                                        <span class="mom_button_wrap"><a class="button mom_button blue_bt" href="/khuyen-mai" title="khuyến mãi">TIN KHUYẾN MÃI</a></span>
+                                        <span class="mom_button_wrap"><a class="button mom_button blue_bt" href="/dang-tin-tuyen-dung.html" title="khuyến mãi">ĐĂNG TUYỂN DỤNG</a></span>
+                                    </div>-->
+                                    <div class="ggad"><ins class="adsbygoogle " style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-3652581368701082" data-ad-slot="9272476986"></ins> <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script></div>                                </div>	
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </header>
+</div>
+<nav id="navigation" itemtype="http://schema.org/SiteNavigationElement" itemscope="itemscope" role="navigation" class="dd-effect-slide">
+    <div class="navigation-inner">
+        <div class="inner">
+            <ul id="menu-main-menu" class=" main-menu mom_visibility_desktop">
+            
+        <li class="menu-item menu-item-has-children menu-parent-item mom_default_menu_item menu-item-depth-0">
+        <a href="https://freetuts.net/webmaster" 
+                      >WebMaster</a>
+        <ul class="sub-menu ">
+                            <li class="menu-item menu-item-has-children menu-parent-item mom_default_menu_item menu-item-depth-1">
+                    <a 
+                                                 
+                        href="https://freetuts.net/giam-gia" 
+                                                title="Mã giảm giá Hosting">Mã giảm giá Hosting</a>
+                        
+                                        <ul class="sub-menu ">
+                                                                                <li class="menu-item  mom_default_menu_item menu-item-depth-2">
+                                <a href="https://freetuts.net/giam-gia/domain"  title="Domain">Domain</a>
+                            </li>
+                                                                                <li class="menu-item  mom_default_menu_item menu-item-depth-2">
+                                <a href="https://freetuts.net/giam-gia/hosting"  title="Hosting">Hosting</a>
+                            </li>
+                                                                                <li class="menu-item  mom_default_menu_item menu-item-depth-2">
+                                <a href="https://freetuts.net/giam-gia/vps-server"  title="VPS - Server">VPS - Server</a>
+                            </li>
+                                                                                <li class="menu-item  mom_default_menu_item menu-item-depth-2">
+                                <a href="https://freetuts.net/giam-gia/chung-chi-ssl"  title="Chứng chỉ SSL">Chứng chỉ SSL</a>
+                            </li>
+                                                                                <li class="menu-item  mom_default_menu_item menu-item-depth-2">
+                                <a href="https://freetuts.net/giam-gia/phan-mem"  title="Phần mềm">Phần mềm</a>
+                            </li>
+                                                                                <li class="menu-item  mom_default_menu_item menu-item-depth-2">
+                                <a href="https://freetuts.net/giam-gia/tin-tuc"  title="Tin tức">Tin tức</a>
+                            </li>
+                                            </ul>
+                    <i class="responsive-caret"></i>
+                                    </li>
+                            <li class="menu-item  menu-parent-item mom_default_menu_item menu-item-depth-1">
+                    <a 
+                                                 
+                        href="https://freetuts.net/hosting-vps-mien-phi" 
+                                                title="Hosting/VPS miễn phí">Hosting/VPS miễn phí</a>
+                        
+                                    </li>
+                            <li class="menu-item  menu-parent-item mom_default_menu_item menu-item-depth-1">
+                    <a 
+                                                 
+                        href="https://freetuts.net/hosting-vps-gia-re" 
+                                                title="Hosting/VPS giá rẻ">Hosting/VPS giá rẻ</a>
+                        
+                                    </li>
+                            <li class="menu-item  menu-parent-item mom_default_menu_item menu-item-depth-1">
+                    <a 
+                                                 
+                        href="https://freetuts.net/thu-thuat-hosting" 
+                                                title="Thủ thuật Hosting">Thủ thuật Hosting</a>
+                        
+                                    </li>
+                            <li class="menu-item  menu-parent-item mom_default_menu_item menu-item-depth-1">
+                    <a 
+                                                 
+                        href="https://freetuts.net/thu-thuat-vps" 
+                                                title="Thủ thuật VPS">Thủ thuật VPS</a>
+                        
+                                    </li>
+                            <li class="menu-item menu-item-has-children menu-parent-item mom_default_menu_item menu-item-depth-1">
+                    <a 
+                                                 
+                        href="https://freetuts.net/control-panel" 
+                                                title="Control Panel">Control Panel</a>
+                        
+                                        <ul class="sub-menu ">
+                                                                                <li class="menu-item  mom_default_menu_item menu-item-depth-2">
+                                <a href="https://freetuts.net/control-panel/direct-admin"  title="Direct Admin">Direct Admin</a>
+                            </li>
+                                                                                <li class="menu-item  mom_default_menu_item menu-item-depth-2">
+                                <a href="https://freetuts.net/control-panel/cpanel"  title="CPanel">CPanel</a>
+                            </li>
+                                            </ul>
+                    <i class="responsive-caret"></i>
+                                    </li>
+                            <li class="menu-item  menu-parent-item mom_default_menu_item menu-item-depth-1">
+                    <a 
+                                                 
+                        href="https://freetuts.net/hoc-wordpress" 
+                                                title="Thủ thuật WordPress">Thủ thuật WordPress</a>
+                        
+                                    </li>
+                    </ul>
+        <i class='responsive-caret'></i>
+    </li>
+            
+        <li class="menu-item menu-item-type-custom  menu-item-has-children menu-parent-item mom_mega menu-item-depth-0">
+        <a href="/lap-trinh" title="học lập trình">Lập trình</a>
+        <ul class="sub-menu mom_mega_wrap mom_mega_col_5">
+            <li class="menu-item menu-item-type-custom  menu-item-has-children menu-parent-item mega_column mega_col_title active menu-item-depth-1">
+                <a href="#" rel="nofollow" onclick="return false;">LẬP TRÌNH PHP</a>
+                <ul>
+                    <li  class="menu-item mom_default_menu_item menu-item-depth-2"><a href="/hoc-php" title="học php"><i class="enotype-icon-arrow-right6 mega_menu_arrow_holder"></i>Học PHP</a></li>
+                    <li class="menu-item mom_default_menu_item menu-item-depth-2"><a href="/hoc-wordpress" title="học wordpress"><i class="enotype-icon-arrow-right6 mega_menu_arrow_holder"></i>Học WordPress</a></li>
+                    <li class="menu-item mom_default_menu_item menu-item-depth-2"><a href="/hoc-codeigniter" title="học codeigniter"><i class="enotype-icon-arrow-right6 mega_menu_arrow_holder"></i>Học Codeigniter</a></li>
+                    <li  class="menu-item mom_default_menu_item menu-item-depth-2"><a href="/hoc-laravel" title="học Laravel"><i class="enotype-icon-arrow-right6 mega_menu_arrow_holder"></i>Học Laravel</a></li>
+                    <li class="menu-item mom_default_menu_item menu-item-depth-2"><a href="/hoc-phalcon" title="học phalcon"><i class="enotype-icon-arrow-right6 mega_menu_arrow_holder"></i>Học Phalcon</a></li>
+                </ul>
+                <i class="responsive-caret"></i>
+            </li>
+            
+            <li class="menu-item menu-item-type-custom  menu-item-has-children menu-parent-item mega_column mega_col_title menu-item-depth-1">
+                <a href="#" rel="nofollow" onclick="return false;">JAVASCRIPT</a>
+                <ul>
+                    <li  class="menu-item mom_default_menu_item menu-item-depth-2"><a href="/hoc-javascript" title="học javascript"><i class="enotype-icon-arrow-right6 mega_menu_arrow_holder"></i>Học Javascript</a></li>
+                    <li class="menu-item mom_default_menu_item menu-item-depth-2"><a href="/hoc-jquery" title="học jquery"><i class="enotype-icon-arrow-right6 mega_menu_arrow_holder"></i>Học jQuery</a></li>
+                    <li class="menu-item mom_default_menu_item menu-item-depth-2"><a href="/hoc-javascript/ecmascript-2015-es6" title="Học ECMAScript ES6"><i class="enotype-icon-arrow-right6 mega_menu_arrow_holder"></i>Học ECMAScript ES6</a></li>
+                    <li  class="menu-item mom_default_menu_item menu-item-depth-2"><a href="/hoc-typescript" title="Học TypeScript"><i class="enotype-icon-arrow-right6 mega_menu_arrow_holder"></i>Học TypeScript</a></li>
+                    <li  class="menu-item mom_default_menu_item menu-item-depth-2"><a href="/hoc-vuejs" title="Học VueJS"><i class="enotype-icon-arrow-right6 mega_menu_arrow_holder"></i>Học VueJS</a></li>
+                    <li  class="menu-item mom_default_menu_item menu-item-depth-2"><a href="/hoc-nodejs" title="Học NodeJS"><i class="enotype-icon-arrow-right6 mega_menu_arrow_holder"></i>Học NodeJS</a></li>
+                </ul>
+                <i class="responsive-caret"></i>
+            </li>
+            <li class="menu-item menu-item-type-custom  menu-item-has-children menu-parent-item mega_column mega_col_title menu-item-depth-1">
+                <a href="/hoc-html-css"  title="học html css">HTML - CSS</a>
+                <ul>
+                    <li  class="menu-item mom_default_menu_item menu-item-depth-2"><a href="/hoc-html-css/hoc-html-can-ban-nang-cao" title="Học HTML5"><i class="enotype-icon-arrow-right6 mega_menu_arrow_holder"></i>Học HTML</a></li>
+                    <li class="menu-item mom_default_menu_item menu-item-depth-2"><a href="/hoc-html-css/hoc-css-can-ban-nang-cao" title="Học CSS"><i class="enotype-icon-arrow-right6 mega_menu_arrow_holder"></i>Học CSS</a></li>
+                    <li  class="menu-item mom_default_menu_item menu-item-depth-2"><a href="/hoc-html-css/hoc-css3-can-ban-nang-cao" title="Học CSS3"><i class="enotype-icon-arrow-right6 mega_menu_arrow_holder"></i>Học CSS3</a></li>
+                    <li  class="menu-item mom_default_menu_item menu-item-depth-2"><a href="/hoc-bootstrap" title="hoc bootstrap"><i class="enotype-icon-arrow-right6 mega_menu_arrow_holder"></i>Học Bootstrap</a></li>
+                    <li  class="menu-item mom_default_menu_item menu-item-depth-2"><a href="/hoc-sass-css" title="hoc sass css"><i class="enotype-icon-arrow-right6 mega_menu_arrow_holder"></i>Học SASS CSS</a></li>
+                    <li class="menu-item mom_default_menu_item menu-item-depth-2"><a href="/hoc-html-css/how-to" title="how to"><i class="enotype-icon-arrow-right6 mega_menu_arrow_holder"></i>How to</a></li>
+                    <li class="menu-item mom_default_menu_item menu-item-depth-2"><a href="/hoc-html-css/css-responsive-web-design" title="responsive"><i class="enotype-icon-arrow-right6 mega_menu_arrow_holder"></i>CSS Responsive</a></li>
+                    <li class="menu-item mom_default_menu_item menu-item-depth-2"><a href="/hoc-html-css/hieu-ung-parallax" title="Hiệu ứng Parallax"><i class="enotype-icon-arrow-right6 mega_menu_arrow_holder"></i>Hiệu ứng Parallax</a></li>
+                </ul>
+                <i class="responsive-caret"></i>
+            </li>
+            <li class="menu-item menu-item-type-custom  menu-item-has-children menu-parent-item mega_column mega_col_title active menu-item-depth-1">
+                <a href="#" rel="nofollow" onclick="return false;">NGÔN NGỮ KHÁC</a>
+                <ul class="sub-menu mom_mega_wrap mom_mega_col_4">
+                    <li  class="menu-item mom_default_menu_item menu-item-depth-2"><a href="/ky-thuat-lap-trinh/c++-can-ban" title="hoc c++"><i class="enotype-icon-arrow-right6 mega_menu_arrow_holder"></i>Học C++</a></li>
+                    <li class="menu-item mom_default_menu_item menu-item-depth-2"><a href="/hoc-python" title="hoc python"><i class="enotype-icon-arrow-right6 mega_menu_arrow_holder"></i>Học Python</a></li>
+                    <li class="menu-item mom_default_menu_item menu-item-depth-2"><a href="/hoc-java/java-core" title="học Java core"><i class="enotype-icon-arrow-right6 mega_menu_arrow_holder"></i>Học Java Core</a></li>
+                    <li class="menu-item mom_default_menu_item menu-item-depth-2"><a href="/hoc-csharp/csharp-can-ban-va-nang-cao" title="hoc C# căn bản và nâng cao"><i class="enotype-icon-arrow-right6 mega_menu_arrow_holder"></i>Học C#</a></li>
+                    <li class="menu-item mom_default_menu_item menu-item-depth-2"><a href="/hoc-ruby" title="Học Ruby"><i class="enotype-icon-arrow-right6 mega_menu_arrow_holder"></i>Học Ruby</a></li>
+                </ul>
+                <i class="responsive-caret"></i>
+            </li>
+            <li class="menu-item menu-item-type-custom  menu-item-has-children menu-parent-item mega_column mega_col_title active menu-item-depth-1">
+            
+                <a href="/cong-cu" title="công cụ">CÔNG CỤ</a>
+                <ul class="sub-menu mom_mega_wrap mom_mega_col_4">
+                    <li  class="menu-item mom_default_menu_item menu-item-depth-2"><a href="/hoc-git/git-can-ban" title="Git căn bản"><i class="enotype-icon-arrow-right6 mega_menu_arrow_holder"></i>GIT căn bản</a></li>
+                    <li class="menu-item mom_default_menu_item menu-item-depth-2"><a href="/hoc-git/github-can-ban-va-nang-cao" title="Github căn bản"><i class="enotype-icon-arrow-right6 mega_menu_arrow_holder"></i>Github căn bản</a></li>
+                </ul>
+                
+                <a href="/testing" title="testing" style="margin-top: 10px; padding-bottom: 7px">TESTING</a>
+                <ul class="sub-menu mom_mega_wrap mom_mega_col_4">
+                    <li  class="menu-item mom_default_menu_item menu-item-depth-2"><a href="/testing/software-testing" title="software testing"><i class="enotype-icon-arrow-right6 mega_menu_arrow_holder"></i>Software Testing</a></li>
+                    <li  class="menu-item mom_default_menu_item menu-item-depth-2"><a href="/testing/jmeter-testing" title="JMeter testing"><i class="enotype-icon-arrow-right6 mega_menu_arrow_holder"></i>JMeter Testing</a></li>
+                </ul>
+                 <a href="/testing" title="testing" style="margin-top: 10px; padding-bottom: 7px">NETWORK</a>
+                <ul class="sub-menu mom_mega_wrap mom_mega_col_4">
+                    <li  class="menu-item mom_default_menu_item menu-item-depth-2"><a href="/hoc-linux" title="software testing"><i class="enotype-icon-arrow-right6 mega_menu_arrow_holder"></i>Học Linux</a></li>
+                </ul>
+                <i class="responsive-caret"></i>
+            </li>
+        </ul>
+        <i class="responsive-caret"></i>
+    </li>
+   
+            
+        
+    <li class="menu-item menu-item-type-custom  menu-item-has-children menu-parent-item mom_mega menu-item-depth-0">
+        <a href="/database" title="DATABASE">DATABASE</a>
+        <ul class="sub-menu mom_mega_wrap mom_mega_col_4">
+            <li class="menu-item menu-item-type-custom  menu-item-has-children menu-parent-item mega_column mega_col_title active menu-item-depth-1">
+                <a href="/csdl-can-ban" title="CSDL Căn bản">CSDL CĂN BẢN</a>
+                <ul>
+                    <li  class="menu-item mom_default_menu_item menu-item-depth-2"><a href="/csdl-can-ban/nhap-mon-co-so-du-lieu" title="Nhập môn CSDL"><i class="enotype-icon-arrow-right6 mega_menu_arrow_holder"></i>Nhập môn CSDL</a></li>
+                    <li class="menu-item mom_default_menu_item menu-item-depth-2"><a href="/csdl-can-ban/hoc-json" title="Học JSON"><i class="enotype-icon-arrow-right6 mega_menu_arrow_holder"></i>Học JSON</a></li>
+                    <li class="menu-item mom_default_menu_item menu-item-depth-2"><a href="/csdl-can-ban/hoc-xml" title="Học XML"><i class="enotype-icon-arrow-right6 mega_menu_arrow_holder"></i>Học XML</a></li>
+                    <li class="menu-item mom_default_menu_item menu-item-depth-2"><a href="/csdl-can-ban/ngon-ngu-truy-van-t-sql" title="Học T-SQL"><i class="enotype-icon-arrow-right6 mega_menu_arrow_holder"></i>Học T-SQL</a></li>
+                </ul>
+                <i class="responsive-caret"></i>
+            </li>
+            <li class="menu-item menu-item-type-custom  menu-item-has-children menu-parent-item mega_column mega_col_title active menu-item-depth-1">
+                <a href="#" rel="nofollow" title="#">CSDL QUAN HỆ</a>
+                <ul>
+                    <li  class="menu-item mom_default_menu_item menu-item-depth-2"><a href="/hoc-mysql" title="Học MySQL"><i class="enotype-icon-arrow-right6 mega_menu_arrow_holder"></i>Học MySQL</a></li>
+                    <li class="menu-item mom_default_menu_item menu-item-depth-2"><a href="/hoc-oracle" title="Học Oracle"><i class="enotype-icon-arrow-right6 mega_menu_arrow_holder"></i>Học Oracle</a></li>
+                    <li class="menu-item mom_default_menu_item menu-item-depth-2"><a href="/hoc-sql-server" title="Học SQL Server"><i class="enotype-icon-arrow-right6 mega_menu_arrow_holder"></i>Học SQL Server</a></li>
+                    <li class="menu-item mom_default_menu_item menu-item-depth-2"><a href="/hoc-sqlite" title="Học SQLite"><i class="enotype-icon-arrow-right6 mega_menu_arrow_holder"></i>Học SQLite</a></li>
+                </ul>
+                <i class="responsive-caret"></i>
+            </li>
+            <li class="menu-item menu-item-type-custom  menu-item-has-children menu-parent-item mega_column mega_col_title active menu-item-depth-1">
+                <a href="#" rel="nofollow" title="#">NO SQL</a>
+                <ul>
+                    <li  class="menu-item mom_default_menu_item menu-item-depth-2"><a href="/hoc-mongodb" title="Học MongoDB"><i class="enotype-icon-arrow-right6 mega_menu_arrow_holder"></i>Học MongoDB</a></li>
+                </ul>
+                <i class="responsive-caret"></i>
+            </li>
+        </ul>
+        <i class="responsive-caret"></i>
+    </li>
+    
+            
+        <li class="menu-item menu-item-has-children menu-parent-item mom_default_menu_item menu-item-depth-0">
+        <a href="https://freetuts.net/khoa-hoc" 
+                      >Khóa Học</a>
+        <ul class="sub-menu ">
+                            <li class="menu-item  menu-parent-item mom_default_menu_item menu-item-depth-1">
+                    <a 
+                                                 
+                        href="https://freetuts.net/khoa-hoc/combo" 
+                                                title="[Combo] khóa học">[Combo] khóa học</a>
+                        
+                                    </li>
+                            <li class="menu-item  menu-parent-item mom_default_menu_item menu-item-depth-1">
+                    <a 
+                                                 
+                        href="https://freetuts.net/khoa-hoc/lap-trinh-frontend" 
+                                                title="Lập Trình Front-End">Lập Trình Front-End</a>
+                        
+                                    </li>
+                            <li class="menu-item  menu-parent-item mom_default_menu_item menu-item-depth-1">
+                    <a 
+                                                 
+                        href="https://freetuts.net/khoa-hoc/lap-trinh-backend" 
+                                                title="Lập Trình Back-End">Lập Trình Back-End</a>
+                        
+                                    </li>
+                            <li class="menu-item  menu-parent-item mom_default_menu_item menu-item-depth-1">
+                    <a 
+                                                 
+                        href="https://freetuts.net/khoa-hoc/lap-trinh-mobile" 
+                                                title="Lập Trình Mobile">Lập Trình Mobile</a>
+                        
+                                    </li>
+                            <li class="menu-item  menu-parent-item mom_default_menu_item menu-item-depth-1">
+                    <a 
+                                                 
+                        href="https://freetuts.net/khoa-hoc/ngon-ngu-khac" 
+                                                title="Ngôn Ngữ Khác">Ngôn Ngữ Khác</a>
+                        
+                                    </li>
+                            <li class="menu-item  menu-parent-item mom_default_menu_item menu-item-depth-1">
+                    <a 
+                                                 
+                        href="https://freetuts.net/khoa-hoc/thiet-ke-do-hoa" 
+                                                title="Thiết Kế Đồ Họa">Thiết Kế Đồ Họa</a>
+                        
+                                    </li>
+                            <li class="menu-item  menu-parent-item mom_default_menu_item menu-item-depth-1">
+                    <a 
+                                                 
+                        href="https://freetuts.net/khoa-hoc/seo-marketing" 
+                                                title="SEO - Marketing">SEO - Marketing</a>
+                        
+                                    </li>
+                            <li class="menu-item  menu-parent-item mom_default_menu_item menu-item-depth-1">
+                    <a 
+                                                 
+                        href="https://freetuts.net/khoa-hoc/ngoai-ngu" 
+                                                title="Ngoại Ngữ">Ngoại Ngữ</a>
+                        
+                                    </li>
+                    </ul>
+        <i class='responsive-caret'></i>
+    </li>
+            
+        <li class="menu-item menu-item-has-children menu-parent-item mom_default_menu_item menu-item-depth-0">
+        <a href="https://freetuts.net/cong-nghe" 
+                      >Công nghệ</a>
+        <ul class="sub-menu ">
+                            <li class="menu-item  menu-parent-item mom_default_menu_item menu-item-depth-1">
+                    <a 
+                                                 
+                        href="https://freetuts.net/cong-nghe/dien-thoai-phu-kien" 
+                                                title="Điện Thoại & Phụ Kiện">Điện Thoại & Phụ Kiện</a>
+                        
+                                    </li>
+                            <li class="menu-item  menu-parent-item mom_default_menu_item menu-item-depth-1">
+                    <a 
+                                                 
+                        href="https://freetuts.net/cong-nghe/may-tinh-linh-kien" 
+                                                title="Máy Tính & Linh Kiện">Máy Tính & Linh Kiện</a>
+                        
+                                    </li>
+                            <li class="menu-item  menu-parent-item mom_default_menu_item menu-item-depth-1">
+                    <a 
+                                                 
+                        href="https://freetuts.net/cong-nghe/thiet-bi-ngoai-vi" 
+                                                title="Thiết Bị Ngoại Vi">Thiết Bị Ngoại Vi</a>
+                        
+                                    </li>
+                            <li class="menu-item  menu-parent-item mom_default_menu_item menu-item-depth-1">
+                    <a 
+                                                 
+                        href="https://freetuts.net/cong-nghe/thiet-bi-van-phong" 
+                                                title="Thiết Bị Văn Phòng">Thiết Bị Văn Phòng</a>
+                        
+                                    </li>
+                            <li class="menu-item  menu-parent-item mom_default_menu_item menu-item-depth-1">
+                    <a 
+                                                 
+                        href="https://freetuts.net/cong-nghe/quay-phim-chup-anh" 
+                                                title="Quay phim & Chụp ảnh">Quay phim & Chụp ảnh</a>
+                        
+                                    </li>
+                            <li class="menu-item  menu-parent-item mom_default_menu_item menu-item-depth-1">
+                    <a 
+                                                 
+                        href="https://freetuts.net/cong-nghe/do-dung-gia-dinh" 
+                                                title="Đồ Dùng Gia Đình">Đồ Dùng Gia Đình</a>
+                        
+                                    </li>
+                            <li class="menu-item  menu-parent-item mom_default_menu_item menu-item-depth-1">
+                    <a 
+                                                 
+                        href="https://freetuts.net/cong-nghe/o-to-xe-may" 
+                                                title="Ô Tô & Xe Máy">Ô Tô & Xe Máy</a>
+                        
+                                    </li>
+                            <li class="menu-item  menu-parent-item mom_default_menu_item menu-item-depth-1">
+                    <a 
+                                                 
+                        href="https://freetuts.net/cong-nghe/thiet-bi-thong-minh" 
+                                                title="Thiết Bị Thông Minh">Thiết Bị Thông Minh</a>
+                        
+                                    </li>
+                            <li class="menu-item  menu-parent-item mom_default_menu_item menu-item-depth-1">
+                    <a 
+                                                 
+                        href="https://freetuts.net/cong-nghe/mo-the-ngan-hang" 
+                                                title="Mở Thẻ Ngân Hàng">Mở Thẻ Ngân Hàng</a>
+                        
+                                    </li>
+                    </ul>
+        <i class='responsive-caret'></i>
+    </li>
+            
+        <li class="menu-item menu-item-has-children menu-parent-item mom_default_menu_item menu-item-depth-0">
+        <a href="https://freetuts.net/tai-nguyen" 
+                      >Tài nguyên</a>
+        <ul class="sub-menu ">
+                            <li class="menu-item menu-item-has-children menu-parent-item mom_default_menu_item menu-item-depth-1">
+                    <a 
+                                                 
+                        href="https://freetuts.net/sach-hay" 
+                                                title="Sách hay">Sách hay</a>
+                        
+                                        <ul class="sub-menu ">
+                                                                                <li class="menu-item  mom_default_menu_item menu-item-depth-2">
+                                <a href="https://freetuts.net/sach-hay/tong-hop"  title="Tổng hợp sách">Tổng hợp sách</a>
+                            </li>
+                                                                                <li class="menu-item  mom_default_menu_item menu-item-depth-2">
+                                <a href="https://freetuts.net/sach-hay/nuoi-day-con"  title="Nuôi dạy con">Nuôi dạy con</a>
+                            </li>
+                                                                                <li class="menu-item  mom_default_menu_item menu-item-depth-2">
+                                <a href="https://freetuts.net/sach-hay/thieu-nhi"  title="Thiếu Nhi">Thiếu Nhi</a>
+                            </li>
+                                                                                <li class="menu-item  mom_default_menu_item menu-item-depth-2">
+                                <a href="https://freetuts.net/sach-hay/kinh-te-kinh-doanh"  title="Kinh tế - Kinh doanh">Kinh tế - Kinh doanh</a>
+                            </li>
+                                                                                <li class="menu-item  mom_default_menu_item menu-item-depth-2">
+                                <a href="https://freetuts.net/sach-hay/khoa-hoc-cong-nghe"  title="Khoa học - Công nghệ">Khoa học - Công nghệ</a>
+                            </li>
+                                                                                <li class="menu-item  mom_default_menu_item menu-item-depth-2">
+                                <a href="https://freetuts.net/sach-hay/ngoai-ngu"  title="Ngoại ngữ">Ngoại ngữ</a>
+                            </li>
+                                                                                <li class="menu-item  mom_default_menu_item menu-item-depth-2">
+                                <a href="https://freetuts.net/sach-hay/nghe-thuat-lam-dep"  title="Nghệ thuật - Làm đẹp">Nghệ thuật - Làm đẹp</a>
+                            </li>
+                                                                                <li class="menu-item  mom_default_menu_item menu-item-depth-2">
+                                <a href="https://freetuts.net/sach-hay/tham-khao"  title="Tham khảo">Tham khảo</a>
+                            </li>
+                                            </ul>
+                    <i class="responsive-caret"></i>
+                                    </li>
+                            <li class="menu-item menu-item-has-children menu-parent-item mom_default_menu_item menu-item-depth-1">
+                    <a 
+                                                 
+                        href="https://freetuts.net/phan-mem" 
+                                                title="Phần mềm">Phần mềm</a>
+                        
+                                        <ul class="sub-menu ">
+                                                                                <li class="menu-item  mom_default_menu_item menu-item-depth-2">
+                                <a href="https://freetuts.net/phan-mem-lap-trinh"  title="Phần Mềm Lập Trình">Phần Mềm Lập Trình</a>
+                            </li>
+                                                                                <li class="menu-item  mom_default_menu_item menu-item-depth-2">
+                                <a href="https://freetuts.net/phan-mem-thiet-ke-do-hoa"  title="Phần Mềm Đồ Họa">Phần Mềm Đồ Họa</a>
+                            </li>
+                                                                                <li class="menu-item  mom_default_menu_item menu-item-depth-2">
+                                <a href="https://freetuts.net/phan-mem-diet-virus"  title="Phần Mềm Diệt Virus">Phần Mềm Diệt Virus</a>
+                            </li>
+                                                                                <li class="menu-item  mom_default_menu_item menu-item-depth-2">
+                                <a href="https://freetuts.net/phan-mem-van-phong"  title="Phần Mềm Văn Phòng">Phần Mềm Văn Phòng</a>
+                            </li>
+                                                                                <li class="menu-item  mom_default_menu_item menu-item-depth-2">
+                                <a href="https://freetuts.net/phan-mem-game"  title="Phần Mềm Game">Phần Mềm Game</a>
+                            </li>
+                                                                                <li class="menu-item  mom_default_menu_item menu-item-depth-2">
+                                <a href="https://freetuts.net/phan-mem-he-thong"  title="Phần Mềm Hệ Thống">Phần Mềm Hệ Thống</a>
+                            </li>
+                                                                                <li class="menu-item  mom_default_menu_item menu-item-depth-2">
+                                <a href="https://freetuts.net/phan-mem-giai-tri"  title="Phần Mềm Giải Trí">Phần Mềm Giải Trí</a>
+                            </li>
+                                                                                <li class="menu-item  mom_default_menu_item menu-item-depth-2">
+                                <a href="https://freetuts.net/phan-mem-tien-ich"  title="Phần Mềm Tiện Ích">Phần Mềm Tiện Ích</a>
+                            </li>
+                                                                                <li class="menu-item  mom_default_menu_item menu-item-depth-2">
+                                <a href="https://freetuts.net/phan-mem-hoc-tap"  title="Phần Mềm Học Tập">Phần Mềm Học Tập</a>
+                            </li>
+                                            </ul>
+                    <i class="responsive-caret"></i>
+                                    </li>
+                            <li class="menu-item menu-item-has-children menu-parent-item mom_default_menu_item menu-item-depth-1">
+                    <a 
+                                                 
+                        href="https://freetuts.net/tai-lieu" 
+                                                title="Tài liệu">Tài liệu</a>
+                        
+                                        <ul class="sub-menu ">
+                                                                                <li class="menu-item  mom_default_menu_item menu-item-depth-2">
+                                <a href="https://freetuts.net/tai-lieu-hoc-lap-trinh"  title="Tài Liệu Lập Trình">Tài Liệu Lập Trình</a>
+                            </li>
+                                                                                <li class="menu-item  mom_default_menu_item menu-item-depth-2">
+                                <a href="https://freetuts.net/tai-lieu-quan-tri-mang"  title="Quản Trị Mạng">Quản Trị Mạng</a>
+                            </li>
+                                                                                <li class="menu-item  mom_default_menu_item menu-item-depth-2">
+                                <a href="https://freetuts.net/tai-lieu-thiet-ke-video"  title="Tài Liệu Thiết Kế">Tài Liệu Thiết Kế</a>
+                            </li>
+                                                                                <li class="menu-item  mom_default_menu_item menu-item-depth-2">
+                                <a href="https://freetuts.net/tai-lieu-hoc-ngoai-ngu"  title="Tài Liệu Ngoại Ngữ">Tài Liệu Ngoại Ngữ</a>
+                            </li>
+                                                                                <li class="menu-item  mom_default_menu_item menu-item-depth-2">
+                                <a href="https://freetuts.net/tai-lieu-seo-marketing"  title="SEO - Marketing">SEO - Marketing</a>
+                            </li>
+                                            </ul>
+                    <i class="responsive-caret"></i>
+                                    </li>
+                            <li class="menu-item menu-item-has-children menu-parent-item mom_default_menu_item menu-item-depth-1">
+                    <a 
+                                                 
+                        href="https://freetuts.net/thu-thuat-may-tinh" 
+                                                title="Thủ thuật">Thủ thuật</a>
+                        
+                                        <ul class="sub-menu ">
+                                                                                <li class="menu-item  mom_default_menu_item menu-item-depth-2">
+                                <a href="https://freetuts.net/thu-thuat-windows"  title="Thủ thuật Windows">Thủ thuật Windows</a>
+                            </li>
+                                                                                <li class="menu-item  mom_default_menu_item menu-item-depth-2">
+                                <a href="https://freetuts.net/thu-thuat-phan-mem"  title="Thủ thuật phần mềm">Thủ thuật phần mềm</a>
+                            </li>
+                                                                                <li class="menu-item  mom_default_menu_item menu-item-depth-2">
+                                <a href="https://freetuts.net/thu-thuat-internet"  title="Thủ thuật Internet">Thủ thuật Internet</a>
+                            </li>
+                                                                                <li class="menu-item  mom_default_menu_item menu-item-depth-2">
+                                <a href="https://freetuts.net/thu-thuat-facebook"  title="Thủ thuật Facebook">Thủ thuật Facebook</a>
+                            </li>
+                                                                                <li class="menu-item  mom_default_menu_item menu-item-depth-2">
+                                <a href="https://freetuts.net/hinh-nen-dep"  title="Hình nền đẹp">Hình nền đẹp</a>
+                            </li>
+                                            </ul>
+                    <i class="responsive-caret"></i>
+                                    </li>
+                            <li class="menu-item menu-item-has-children menu-parent-item mom_default_menu_item menu-item-depth-1">
+                    <a 
+                                                 
+                        href="https://freetuts.net/kiem-tien-online" 
+                                                title="Kiếm tiền online">Kiếm tiền online</a>
+                        
+                                        <ul class="sub-menu ">
+                                                                                <li class="menu-item  mom_default_menu_item menu-item-depth-2">
+                                <a href="https://freetuts.net/affiliate-marketing"  title="Tiếp thị liên kết">Tiếp thị liên kết</a>
+                            </li>
+                                                                                <li class="menu-item  mom_default_menu_item menu-item-depth-2">
+                                <a href="https://freetuts.net/rut-gon-link-kiem-tien-voi-licklink-hoa-hong-cao-nhat-hien-nay-1323.html"  title="Rút gọn link Licklink">Rút gọn link Licklink</a>
+                            </li>
+                                                                                <li class="menu-item  mom_default_menu_item menu-item-depth-2">
+                                <a href="https://freetuts.net/kiem-tien-rut-gon-link-voi-123linktop-921.html"  title="Rút gọn link 123link">Rút gọn link 123link</a>
+                            </li>
+                                            </ul>
+                    <i class="responsive-caret"></i>
+                                    </li>
+                            <li class="menu-item menu-item-has-children menu-parent-item mom_default_menu_item menu-item-depth-1">
+                    <a 
+                                                 
+                        href="https://freetuts.net/top-news" 
+                                                title="Top News">Top News</a>
+                        
+                                        <ul class="sub-menu ">
+                                                                                <li class="menu-item  mom_default_menu_item menu-item-depth-2">
+                                <a href="https://freetuts.net/top-news/tin-tuc-su-kien"  title="Tin tức sự kiện">Tin tức sự kiện</a>
+                            </li>
+                                                                                <li class="menu-item  mom_default_menu_item menu-item-depth-2">
+                                <a href="https://freetuts.net/top-news/hoc-tap-nghe-nghiep"  title="Học tập, nghề nghiệp">Học tập, nghề nghiệp</a>
+                            </li>
+                                                                                <li class="menu-item  mom_default_menu_item menu-item-depth-2">
+                                <a href="https://freetuts.net/top-news/top-tot-nhat"  title="TOP tốt nhất">TOP tốt nhất</a>
+                            </li>
+                                            </ul>
+                    <i class="responsive-caret"></i>
+                                    </li>
+                    </ul>
+        <i class='responsive-caret'></i>
+    </li>
+            
+        <li class="menu-item menu-item-has-children menu-parent-item mom_default_menu_item menu-item-depth-0">
+        <a href="https://freetuts.net/viec-lam" 
+                      >Việc làm</a>
+        <ul class="sub-menu ">
+                            <li class="menu-item  menu-parent-item mom_default_menu_item menu-item-depth-1">
+                    <a 
+                                                 
+                        href="https://freetuts.net/viec-lam/thuc-tap" 
+                                                title="Thực tập">Thực tập</a>
+                        
+                                    </li>
+                            <li class="menu-item  menu-parent-item mom_default_menu_item menu-item-depth-1">
+                    <a 
+                                                 
+                        href="https://freetuts.net/viec-lam/web-developer" 
+                                                title="Web Developer">Web Developer</a>
+                        
+                                    </li>
+                            <li class="menu-item  menu-parent-item mom_default_menu_item menu-item-depth-1">
+                    <a 
+                                                 
+                        href="https://freetuts.net/viec-lam/web-designer" 
+                                                title="Web Designer">Web Designer</a>
+                        
+                                    </li>
+                            <li class="menu-item  menu-parent-item mom_default_menu_item menu-item-depth-1">
+                    <a 
+                                                 
+                        href="https://freetuts.net/viec-lam/mobile-developer" 
+                                                title="Mobile Developer">Mobile Developer</a>
+                        
+                                    </li>
+                            <li class="menu-item  menu-parent-item mom_default_menu_item menu-item-depth-1">
+                    <a 
+                                                 
+                        href="https://freetuts.net/viec-lam/software-developer" 
+                                                title="Software Developer">Software Developer</a>
+                        
+                                    </li>
+                            <li class="menu-item  menu-parent-item mom_default_menu_item menu-item-depth-1">
+                    <a 
+                                                 
+                        href="https://freetuts.net/viec-lam/seo-marketing" 
+                                                title="SEO - Marketing">SEO - Marketing</a>
+                        
+                                    </li>
+                            <li class="menu-item  menu-parent-item mom_default_menu_item menu-item-depth-1">
+                    <a 
+                                                 
+                        href="https://freetuts.net/viec-lam/tester" 
+                                                title="Tester">Tester</a>
+                        
+                                    </li>
+                            <li class="menu-item  menu-parent-item mom_default_menu_item menu-item-depth-1">
+                    <a 
+                                                 
+                        href="https://freetuts.net/viec-lam/viec-lam-khac" 
+                                                title="Việc làm khác">Việc làm khác</a>
+                        
+                                    </li>
+                    </ul>
+        <i class='responsive-caret'></i>
+    </li>
+            
+        <li class="menu-item menu-item-has-children menu-parent-item mom_default_menu_item menu-item-depth-0">
+        <a href="#" 
+           rel="nofollow"           >TOOLS</a>
+        <ul class="sub-menu ">
+                            <li class="menu-item  menu-parent-item mom_default_menu_item menu-item-depth-1">
+                    <a 
+                                                 
+                        href="https://freetuts.net/tim-khoa-hoc" 
+                                                title="Tìm khóa học online">Tìm khóa học online</a>
+                        
+                                    </li>
+                            <li class="menu-item  menu-parent-item mom_default_menu_item menu-item-depth-1">
+                    <a 
+                                                 
+                        href="https://freetuts.net/loi-bai-hat" 
+                                                title="Tìm lời bài hát">Tìm lời bài hát</a>
+                        
+                                    </li>
+                            <li class="menu-item  menu-parent-item mom_default_menu_item menu-item-depth-1">
+                    <a 
+                                                 
+                        href="https://freetuts.net/bitly" 
+                                                title="Rút gọn link Bitly">Rút gọn link Bitly</a>
+                        
+                                    </li>
+                            <li class="menu-item  menu-parent-item mom_default_menu_item menu-item-depth-1">
+                    <a 
+                                                 
+                        href="https://freetuts.net/php-online" 
+                                                title="Code PHP Online">Code PHP Online</a>
+                        
+                                    </li>
+                            <li class="menu-item  menu-parent-item mom_default_menu_item menu-item-depth-1">
+                    <a 
+                                                 
+                        href="https://freetuts.net/minifier" 
+                                                title="CSS/JS Minifier">CSS/JS Minifier</a>
+                        
+                                    </li>
+                            <li class="menu-item  menu-parent-item mom_default_menu_item menu-item-depth-1">
+                    <a 
+                                                 
+                        href="https://freetuts.net/youtube-downloader" 
+                                                title="Video Downloader">Video Downloader</a>
+                        
+                                    </li>
+                            <li class="menu-item  menu-parent-item mom_default_menu_item menu-item-depth-1">
+                    <a 
+                                                 
+                        href="https://freetuts.net/hoi-dap" 
+                                                title="Hỏi đáp">Hỏi đáp</a>
+                        
+                                    </li>
+                            <li class="menu-item  menu-parent-item mom_default_menu_item menu-item-depth-1">
+                    <a 
+                                                 
+                        href="https://freetuts.net/glossary" 
+                                                title="Bảng Định Nghĩa">Bảng Định Nghĩa</a>
+                        
+                                    </li>
+                    </ul>
+        <i class='responsive-caret'></i>
+    </li>
+            
+</ul>
+
+<div class="device-menu-wrap mom_visibility_device">
+    <div id="menu-holder" class="device-menu-holder">
+        <i class="fa-icon-align-justify mh-icon"></i> <span class="the_menu_holder_area"><i class="dmh-icon"></i>Menu</span><i class="mh-caret"></i>
+    </div>
+    <ul class="device-menu mom_visibility_device" id="main_menu_mobile">
+    </ul>  
+</div>            <div class="nav-buttons">
+                <span class="nav-button nav-search">
+                    <i class="fa-icon-search"></i>
+                </span>
+                <div class="nb-inner-wrap search-wrap border-box">
+                    <div class="nb-inner sw-inner">
+                        <div class="search-form mom-search-form">
+                            <form method="get" id="search_form_top" action="https://www.google.com.vn/search" target="_blank" onsubmit="jQuery('#q').val('site:freetuts.net ' + jQuery('#q_tmp').val())">
+                                <input class="sf" type="text" placeholder="Search ..." value="" onkeypress="" autocomplete="off" id="q_tmp" />
+                                <input type="hidden" name="q" id="q" value=""/>
+                                <button class="button" type="submit"><i class="fa-icon-search"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>                   
+            <div class="boxed-content-wrapper clearfix">
+                
+                <div class="nav-shaddow"></div>
+                <div style="margin-top:-17px; margin-bottom:20px;"></div>
+                
+                <div class="inner" id="breaking_news">
+    <div class="breaking-news">
+        <div class="the_ticker" >
+            
+            <div class="news-ticker" style="margin-left: 0px !important">
+                <ul>
+                    <li>
+                        <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                            <a itemprop="url" href="https://freetuts.net" title="Trang chủ">
+                                <span itemprop="title">Trang chủ</span>
+                            </a>
+                        </span>
+                    </li>
+                                        <li>
+                        <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                            <i class="fa-icon-double-angle-right"></i>
+                                                        <a itemprop="url" href="https://freetuts.net/php-function" title="PHP Function">
+                                <span itemprop="title">PHP Function</span>
+                            </a>
+                                                    </span>
+                    </li>
+                                        <li>
+                        <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                            <i class="fa-icon-double-angle-right"></i>
+                                                        <a itemprop="url" href="https://freetuts.net/php-function/mysqli-function" title="MySQLI Function">
+                                <span itemprop="title">MySQLI Function</span>
+                            </a>
+                                                    </span>
+                    </li>
+                                        <li>
+                        <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                            <i class="fa-icon-double-angle-right"></i>
+                                                        <span>mysqli_fetch_array()</span>
+                                                    </span>
+                    </li>
+                                    </ul>
+            </div>
+        </div>
+    </div>
+</div>    
+               
+                <div class="inner">
+                    <div class="abc2side">
+    <div id="abcleft" style="overflow: hidden">
+        <div id="abcleft-unit">
+            <div class="ggad"><ins class="adsbygoogle " style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-3652581368701082" data-ad-slot="7762000484"></ins> <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script></div>        </div>
+    </div>
+    <div id="abcright" style="overflow: hidden">
+        <div id="abcright-unit">
+                
+             <div class="ggad"><ins class="adsbygoogle " style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-3652581368701082" data-ad-slot="7762000484"></ins> <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script></div>        </div>
+    </div>
+</div>                    <div class="main_container">
+                        <div class="main-col" id="main_container">
+                            
+                            <div class="base-box" itemtype="http://schema.org/Article" style="margin-bottom: 0px">
+    <h1 id="main_title" class="post-tile entry-title" itemprop="headline">Hàm mysqli_fetch_array() trong PHP</h1>
+    <!--<div style="margin-bottom: 20px">
+<div class="sharethis-inline-share-buttons"></div>
+</div>-->    <span id="element_action" data-id="316" data-uri="https://freetuts.net/ajax/view/manual_post"></span> 
+    <div class="mom-post-meta single-post-meta">
+
+        <span class="author vcard">Đăng bởi:
+                phungminhduong        </span>
+        <span>
+            - Vào ngày: <time datetime="2017-05-15T11:31:03+01:00" itemprop="datePublished" class="updated">15-05-2017</time>
+        </span>
+        <span>
+            - View: 3114        </span>
+    </div>
+
+    <div class="entry-content">
+                        <div style="text-align: center; margin-top: 20px">
+            <div class="ggad"><ins class="adsbygoogle " style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-3652581368701082" data-ad-slot="9272476986"></ins> <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script></div>        </div>
+        <p>Hàm&nbsp;<code>mysqli_fetch_array()</code> sẽ tìm và trả về một dòng&nbsp;kết quả của một truy vấn MySQL&nbsp;nào đó dưới dạng một mảng kết hợp, mảng liên tục hoặc cả hai.</p>
+
+<h2 class="role">Cú pháp</h2>
+
+<p><strong>Cú pháp</strong>:&nbsp;<code>mysqli_fetch_array( $result, $result_type);</code></p>
+
+<p><strong>Trong đó</strong>:</p>
+
+<ul>
+	<li><code>$result</code>&nbsp;là kết quả của truy vấn, là kết quả trả về của các hàm:&nbsp;<code>mysqli_query()</code>, <code>mysqli_store_result()</code> hoặc <code>mysqli_use_result()</code>.</li>
+	<li><code>$result_type</code> là tham số không bắt buộc, quy định kiểu trả về mang một trong các giá trị sau:
+	<ul>
+		<li>MYSQLI_ASSOC.</li>
+		<li>MYSQLI_NUM.</li>
+		<li>MYSQLI_BOTH.</li>
+	</ul>
+	</li>
+</ul>
+
+<h2 class="ads_displayed">Kết quả trả về</h2>
+
+<p>Hàm sẽ trả về mảng kết hợp hoặc liên tục chứa thông tin của&nbsp;hàng kết quả.</p>
+
+<h2>Ví dụ</h2>
+
+<p>Cách sử dụng hàm&nbsp;<code>mysqli_fetch_array()</code>:</p>
+
+<p><div class="demo-wrapper">
+        <div class="demo-title">
+            <span class="left" style="font-weight: bold">Code</span>
+        </div>
+    <pre class="brush:php;">$con=mysqli_connect("localhost","my_user","my_password","my_db");
+// Check connection
+if (mysqli_connect_errno()){
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
+
+$sql="SELECT Lastname,Age FROM Persons ORDER BY Lastname";
+$result=mysqli_query($con,$sql);
+
+// Numeric array
+$row=mysqli_fetch_array($result,MYSQLI_NUM);
+printf ("%s (%s)\n",$row[0],$row[1]);
+
+// Associative array
+$row=mysqli_fetch_array($result,MYSQLI_ASSOC);
+printf ("%s (%s)\n",$row["Lastname"],$row["Age"]);
+
+// Free result set
+mysqli_free_result($result);
+
+mysqli_close($con);</pre></div></p>
+
+<p>Tham khảo: w3schools.com</p><script type="text/javascript" src="https://freetuts.net/public/syntaxhighlighter/scripts/shCore.js"></script><link type="text/css" rel="stylesheet" href="https://freetuts.net/public/syntaxhighlighter/styles/shCoreDefault.css"/><script type="text/javascript" src="https://freetuts.net/public/syntaxhighlighter/scripts/shBrushPhp.js"></script><script type="text/javascript"> SyntaxHighlighter.config.stripBrs = false; /*SyntaxHighlighter.config.tagName = "pre";*/ SyntaxHighlighter.defaults["gutter"] = true; SyntaxHighlighter.all();</script>        
+        <p style="text-align: right; font-style: italic; margin-top: 10px">
+    Nguồn: <a href="https://freetuts.net" title="chia sẻ kiến thức miễn phí">freetuts.net</a>
+</p>        
+    </div>
+</div>
+
+<div style="text-align: center; margin-top: 20px">
+    <div class="ggad"><ins class="adsbygoogle " style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-3652581368701082" data-ad-slot="9272476986"></ins> <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script></div></div>
+
+<div class="coupon-notice" style="margin-top: 20px;">
+    <p class="title">PHP Function </p>
+    <ul class="has">
+                <li><a href="https://freetuts.net/php-function/array-functions" title="Array Functions">Array Functions</a></li>
+                <li><a href="https://freetuts.net/php-function/hash-functions" title="Hash Functions">Hash Functions</a></li>
+                <li><a href="https://freetuts.net/php-function/string-functions" title="String Functions">String Functions</a></li>
+                <li><a href="https://freetuts.net/php-function/variable-handling-functions" title="Variable handling Functions">Variable handling Functions</a></li>
+                <li><a href="https://freetuts.net/php-function/date-time-function" title="Date / Time function">Date / Time function</a></li>
+                <li><a href="https://freetuts.net/php-function/file-system-functions" title="File system Functions">File system Functions</a></li>
+                <li><a href="https://freetuts.net/php-function/mysqli-function" title="MySQLI Function">MySQLI Function</a></li>
+                <li><a href="https://freetuts.net/php-function/ham-tu-dinh-nghia" title="Hàm tự định nghĩa">Hàm tự định nghĩa</a></li>
+            </ul>
+</div>
+
+<div style="margin-top: 10px; margin-bottom: 20px">
+    <div id="comments" class="comments-area">
+    <ol class="comments_list">
+        <div id="main_comment_wrapper"></div>
+        <div id="main_comment_list">
+            
+        </div>
+        <div style="text-align: center; display: none;" id="load_more_comment_wrapper">
+            <span class="mom_button_wrap" id="load_more_comment_btn"><a class="button mom_button blue_bt big_bt" href="#" style="margin: 0px;">Tải Thêm Comment</a></span>
+        </div>
+    </ol>
+</div>
+<input type="hidden" id="add_comment" name="add_comment" value="fc2cfa9f3c8e4794c7dd59afcd5aa982"/><input type="hidden" id="load_comment" name="load_comment" value="5f9f94104a825fcc94f6af329dd6796f"/><input type="hidden" id="push_comment" name="push_comment" value="bf383f25b0401fffe832c41c70964588"/><script src="https://freetuts.net/public/ckeditor/ckeditor.js"></script>
+<script src="https://freetuts.net/public/theme/js/comments.js?v=9"></script>
+<script language="javascript">
+    comments.comment_ref_id = '316';
+    comments.comment_type   = 'manual_post'; 
+    comments.base_url       = 'https://freetuts.net/';
+    comments.avatar         = 'https://freetuts.net/public/logo/main-logo.png';
+</script></div>                            
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    
+                    <div class="sidebar main-sidebar" id="right_sidebar" style="position: relative">
+                    <div class="widget widget_categories cate_post_list lowercase" id="sidebar_right_tut_series_list">
+    <div class="widget-head">
+        <h3 class="widget-title">
+            <span>MySQLI Function</span>
+        </h3>
+    </div>	
+    <ul>
+                <li class="cat-item">
+            <a  href="https://freetuts.net/php-function/mysql_affected_rows.html" title="mysql_affected_rows()">mysql_affected_rows()</a>
+        </li>
+                <li class="cat-item">
+            <a  href="https://freetuts.net/php-function/mysqli_connect.html" title="mysqli_connect()">mysqli_connect()</a>
+        </li>
+                <li class="cat-item">
+            <a  href="https://freetuts.net/php-function/mysql_close.html" title="mysql_close()">mysql_close()</a>
+        </li>
+                <li class="cat-item">
+            <a  href="https://freetuts.net/php-function/mysql_connect.html" title="mysql_connect()">mysql_connect()</a>
+        </li>
+                <li class="cat-item">
+            <a  href="https://freetuts.net/php-function/mysqli_affected_rows.html" title="mysqli_affected_rows()">mysqli_affected_rows()</a>
+        </li>
+                <li class="cat-item">
+            <a  href="https://freetuts.net/php-function/mysqli_change_user.html" title="mysqli_change_user()">mysqli_change_user()</a>
+        </li>
+                <li class="cat-item">
+            <a  href="https://freetuts.net/php-function/mysqli_connect_errno.html" title="mysqli_connect_errno()">mysqli_connect_errno()</a>
+        </li>
+                <li class="cat-item">
+            <a  href="https://freetuts.net/php-function/mysqli_connect_error.html" title="mysqli_connect_error()">mysqli_connect_error()</a>
+        </li>
+                <li class="cat-item">
+            <a  href="https://freetuts.net/php-function/mysqli_errno.html" title="mysqli_errno()">mysqli_errno()</a>
+        </li>
+                <li class="cat-item">
+            <a  href="https://freetuts.net/php-function/mysqli_error_list.html" title="mysqli_error_list()">mysqli_error_list()</a>
+        </li>
+                <li class="cat-item">
+            <a  href="https://freetuts.net/php-function/mysqli_error.html" title="mysqli_error()">mysqli_error()</a>
+        </li>
+                <li class="cat-item">
+            <a  href="https://freetuts.net/php-function/mysqli_fetch_all.html" title="mysqli_fetch_all()">mysqli_fetch_all()</a>
+        </li>
+                <li class="cat-item">
+            <a style="color:#ffa507" href="https://freetuts.net/php-function/mysqli_fetch_array.html" title="mysqli_fetch_array()">mysqli_fetch_array()</a>
+        </li>
+                <li class="cat-item">
+            <a  href="https://freetuts.net/php-function/mysqli_fetch_assoc.html" title="mysqli_fetch_assoc()">mysqli_fetch_assoc()</a>
+        </li>
+                <li class="cat-item">
+            <a  href="https://freetuts.net/php-function/mysqli_fetch_field.html" title="mysqli_fetch_field()">mysqli_fetch_field()</a>
+        </li>
+                <li class="cat-item">
+            <a  href="https://freetuts.net/php-function/mysqli_fetch_fields.html" title="mysqli_fetch_fields()">mysqli_fetch_fields()</a>
+        </li>
+                <li class="cat-item">
+            <a  href="https://freetuts.net/php-function/mysqli_fetch_lengths.html" title="mysqli_fetch_lengths()">mysqli_fetch_lengths()</a>
+        </li>
+                <li class="cat-item">
+            <a  href="https://freetuts.net/php-function/mysqli_fetch_object.html" title="mysqli_fetch_object()">mysqli_fetch_object()</a>
+        </li>
+                <li class="cat-item">
+            <a  href="https://freetuts.net/php-function/mysqli_fetch_row.html" title="mysqli_fetch_row()">mysqli_fetch_row()</a>
+        </li>
+                <li class="cat-item">
+            <a  href="https://freetuts.net/php-function/mysqli_field_count.html" title="mysqli_field_count()">mysqli_field_count()</a>
+        </li>
+                <li class="cat-item">
+            <a  href="https://freetuts.net/php-function/mysqli_field_seek.html" title="mysqli_field_seek()">mysqli_field_seek()</a>
+        </li>
+                <li class="cat-item">
+            <a  href="https://freetuts.net/php-function/mysqli_field_tell.html" title="mysqli_field_tell()">mysqli_field_tell()</a>
+        </li>
+                <li class="cat-item">
+            <a  href="https://freetuts.net/php-function/mysqli_free_result.html" title="mysqli_free_result()">mysqli_free_result()</a>
+        </li>
+                <li class="cat-item">
+            <a  href="https://freetuts.net/php-function/mysqli_get_charset.html" title="mysqli_get_charset()">mysqli_get_charset()</a>
+        </li>
+                <li class="cat-item">
+            <a  href="https://freetuts.net/php-function/mysqli_get_client_stats.html" title="mysqli_get_client_stats()">mysqli_get_client_stats()</a>
+        </li>
+                <li class="cat-item">
+            <a  href="https://freetuts.net/php-function/mysqli_get_client_version.html" title="mysqli_get_client_version()">mysqli_get_client_version()</a>
+        </li>
+                <li class="cat-item">
+            <a  href="https://freetuts.net/php-function/mysqli_get_connection_stats.html" title="mysqli_get_connection_stats()">mysqli_get_connection_stats()</a>
+        </li>
+                <li class="cat-item">
+            <a  href="https://freetuts.net/php-function/mysqli_get_host_info.html" title="mysqli_get_host_info()">mysqli_get_host_info()</a>
+        </li>
+                <li class="cat-item">
+            <a  href="https://freetuts.net/php-function/mysqli_get_proto_info.html" title="mysqli_get_proto_info()">mysqli_get_proto_info()</a>
+        </li>
+                <li class="cat-item">
+            <a  href="https://freetuts.net/php-function/mysqli_get_server_info.html" title="mysqli_get_server_info()">mysqli_get_server_info()</a>
+        </li>
+                <li class="cat-item">
+            <a  href="https://freetuts.net/php-function/mysqli_get_server_version.html" title="mysqli_get_server_version()">mysqli_get_server_version()</a>
+        </li>
+                <li class="cat-item">
+            <a  href="https://freetuts.net/php-function/mysqli_info.html" title="mysqli_info()">mysqli_info()</a>
+        </li>
+                <li class="cat-item">
+            <a  href="https://freetuts.net/php-function/mysqli_init.html" title="mysqli_init()">mysqli_init()</a>
+        </li>
+                <li class="cat-item">
+            <a  href="https://freetuts.net/php-function/mysqli_multi_query.html" title="mysqli_multi_query()">mysqli_multi_query()</a>
+        </li>
+                <li class="cat-item">
+            <a  href="https://freetuts.net/php-function/mysqli_next_result.html" title="mysqli_next_result()">mysqli_next_result()</a>
+        </li>
+                <li class="cat-item">
+            <a  href="https://freetuts.net/php-function/mysqli_num_fields.html" title="mysqli_num_fields()">mysqli_num_fields()</a>
+        </li>
+                <li class="cat-item">
+            <a  href="https://freetuts.net/php-function/mysqli_num_rows.html" title="mysqli_num_rows()">mysqli_num_rows()</a>
+        </li>
+                <li class="cat-item">
+            <a  href="https://freetuts.net/php-function/mysqli_options.html" title="mysqli_options()">mysqli_options()</a>
+        </li>
+                <li class="cat-item">
+            <a  href="https://freetuts.net/php-function/mysqli_ping.html" title="mysqli_ping()">mysqli_ping()</a>
+        </li>
+                <li class="cat-item">
+            <a  href="https://freetuts.net/php-function/mysqli_query.html" title="mysqli_query()">mysqli_query()</a>
+        </li>
+                <li class="cat-item">
+            <a  href="https://freetuts.net/php-function/mysqli_real_connect.html" title="mysqli_real_connect()">mysqli_real_connect()</a>
+        </li>
+                <li class="cat-item">
+            <a  href="https://freetuts.net/php-function/mysqli_refresh.html" title="mysqli_refresh()">mysqli_refresh()</a>
+        </li>
+                <li class="cat-item">
+            <a  href="https://freetuts.net/php-function/mysqli_select_db.html" title="mysqli_select_db()">mysqli_select_db()</a>
+        </li>
+                <li class="cat-item">
+            <a  href="https://freetuts.net/php-function/mysqli_set_charset.html" title="mysqli_set_charset()">mysqli_set_charset()</a>
+        </li>
+                <li class="cat-item">
+            <a  href="https://freetuts.net/php-function/mysqli_stat.html" title="mysqli_stat()">mysqli_stat()</a>
+        </li>
+            </ul>
+</div>
+                            <div class="widget momizat-news_letter follow-author" style=" padding: 0px !important" >
+    <div class="fb-page" data-href="https://www.facebook.com/freetuts/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
+    <div id="fb-root"></div>
+    <script>(function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id))
+                return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.7&appId=393357887513127";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+</div>                            <div id="f_right_sidebar">
+                <div class="widget momizat-reviews">
+    <div class="mom-posts-widget">
+       <div class="ggad"><ins class="adsbygoogle " style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-3652581368701082" data-ad-slot="9963167153"></ins> <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script></div>    </div>
+</div>
+            </div>
+            </div>                    
+                    <div class="clear"></div>
+                    
+                </div>
+            </div>
+            
+<div id="footer_wrapper">
+    <footer id="footer">
+        <div class="inner">
+            <div class="one_fourth">
+                <div class="widget momizat-posts">
+                    <div class="widget-head">
+                        <h3 class="widget-title">
+                            <span>
+                                Review khóa học
+                            </span>
+                        </h3>
+                    </div>
+                    <div class="mom-posts-widget">
+                                                <div class="mpw-post">
+                            <div class="post-img main-sidebar-element"><a href="https://freetuts.net/khoa-hoc/ma-giam-gia-40-khoa-hoc-unica-dung-suot-doi-112.html">
+                                    <img src="https://freetuts.net/upload/learn_post/_thumbs/Images/2018/12/16/112/giam-gia-unica.gif"  alt="Mã giảm giá 40% khóa học UNICA, dùng suốt đời" width="75" height="60"></a>
+                            </div>
+                            <div class="details has-feature-image">
+                                <h4><a href="https://freetuts.net/khoa-hoc/ma-giam-gia-40-khoa-hoc-unica-dung-suot-doi-112.html" title="Mã giảm giá 40% khóa học UNICA, dùng suốt đời">Mã giảm giá 40% khóa học UNICA, dùng suốt đời</a></h4>
+                            </div>
+                        </div>
+                                                <div class="mpw-post">
+                            <div class="post-img main-sidebar-element"><a href="https://freetuts.net/khoa-hoc/dong-loat-giam-them-100k-cho-moi-khoa-hoc-tren-fedu-111.html">
+                                    <img src="https://freetuts.net/upload/learn_post/_thumbs/Images/2018/12/14/111/dong-loat-giam-gia-fedu.gif"  alt="Đồng loạt giảm thêm 100k cho mỗi khóa học trên FEDU" width="75" height="60"></a>
+                            </div>
+                            <div class="details has-feature-image">
+                                <h4><a href="https://freetuts.net/khoa-hoc/dong-loat-giam-them-100k-cho-moi-khoa-hoc-tren-fedu-111.html" title="Đồng loạt giảm thêm 100k cho mỗi khóa học trên FEDU">Đồng loạt giảm thêm 100k cho mỗi khóa học trên FEDU</a></h4>
+                            </div>
+                        </div>
+                                                <div class="mpw-post">
+                            <div class="post-img main-sidebar-element"><a href="https://freetuts.net/khoa-hoc/thiet-ke-do-hoa-va-lap-trinh-web-2-ky-nang-hot-ban-nen-hoc-trong-thoi-ky-cmcn-40-110.html">
+                                    <img src="https://freetuts.net/upload/learn_post/_thumbs/Images/2018/11/23/110/thiet-ke-do-hoa-va-lap-trinh-web.gif"  alt="Thiết kế đồ họa và Lập trình web - 2 kỹ năng HOT bạn nên học trong thời kỳ CMCN 4.0" width="75" height="60"></a>
+                            </div>
+                            <div class="details has-feature-image">
+                                <h4><a href="https://freetuts.net/khoa-hoc/thiet-ke-do-hoa-va-lap-trinh-web-2-ky-nang-hot-ban-nen-hoc-trong-thoi-ky-cmcn-40-110.html" title="Thiết kế đồ họa và Lập trình web - 2 kỹ năng HOT bạn nên học trong thời kỳ CMCN 4.0">Thiết kế đồ họa và Lập trình web - 2 kỹ năng HOT bạn nên học trong thời kỳ CMCN 4.0</a></h4>
+                            </div>
+                        </div>
+                                                <div class="mpw-post">
+                            <div class="post-img main-sidebar-element"><a href="https://freetuts.net/khoa-hoc/lo-trinh-hoc-lap-trinh-php-tu-dau-cho-nguoi-moi-62.html">
+                                    <img src="https://freetuts.net/upload/learn_post/_thumbs/Images/2018/05/24/62/lo-trinh-hoc-lap-trinh-php-tu-dau-cho-nguoi-moi.gif"  alt="Lộ trình học lập trình PHP từ đầu cho người mới" width="75" height="60"></a>
+                            </div>
+                            <div class="details has-feature-image">
+                                <h4><a href="https://freetuts.net/khoa-hoc/lo-trinh-hoc-lap-trinh-php-tu-dau-cho-nguoi-moi-62.html" title="Lộ trình học lập trình PHP từ đầu cho người mới">Lộ trình học lập trình PHP từ đầu cho người mới</a></h4>
+                            </div>
+                        </div>
+                                                <div class="mpw-post">
+                            <div class="post-img main-sidebar-element"><a href="https://freetuts.net/khoa-hoc/lo-trinh-hoc-lap-trinh-frontend-tu-dau-cho-nguoi-moi-41.html">
+                                    <img src="https://freetuts.net/upload/learn_post/_thumbs/Images/2018/05/21/41/lo-trinh-hoc-lap-trinh-frontend-tu-dau-cho-nguoi-moi.gif"  alt="Lộ trình học lập trình Front-end từ đầu cho người mới" width="75" height="60"></a>
+                            </div>
+                            <div class="details has-feature-image">
+                                <h4><a href="https://freetuts.net/khoa-hoc/lo-trinh-hoc-lap-trinh-frontend-tu-dau-cho-nguoi-moi-41.html" title="Lộ trình học lập trình Front-end từ đầu cho người mới">Lộ trình học lập trình Front-end từ đầu cho người mới</a></h4>
+                            </div>
+                        </div>
+                                            </div>
+                </div>			
+            </div>
+            
+            <div class="one_fourth">
+                <div class="widget momizat-posts">
+                    <div class="widget-head"><h3 class="widget-title"><span>Combo khóa học</span></h3></div>
+                    <div class="mom-posts-widget">
+                                                <div class="mpw-post">
+                            <div class="post-img main-sidebar-element"><a href="https://freetuts.net/khoa-hoc/hoc-lam-chu-ky-nang-thiet-ke-do-hoa-level-1-91.html">
+                                    <img src="https://freetuts.net/upload/learn_post/_thumbs/Images/2018/07/14/91/hoc-lam-chu-ky-nang-thiet-ke-do-hoa-level-1.gif"  alt="Khóa học làm chủ kỹ năng thiết kế đồ họa Level 1 + 2 + 3" width="75" height="60"></a>
+                            </div>
+                            <div class="details has-feature-image">
+                                <h4><a href="https://freetuts.net/khoa-hoc/hoc-lam-chu-ky-nang-thiet-ke-do-hoa-level-1-91.html" title="Khóa học làm chủ kỹ năng thiết kế đồ họa Level 1 + 2 + 3">Khóa học làm chủ kỹ năng thiết kế đồ họa Level 1 + 2 + 3</a></h4>
+                            </div>
+                        </div>
+                                                <div class="mpw-post">
+                            <div class="post-img main-sidebar-element"><a href="https://freetuts.net/khoa-hoc/combo-2-khoa-hoc-nodejs-va-reactjs-+-redux-71.html">
+                                    <img src="https://freetuts.net/upload/learn_post/_thumbs/Images/2018/06/18/71/node-react.jpeg"  alt="Combo 2 khóa học NodeJS và ReactJS + Redux" width="75" height="60"></a>
+                            </div>
+                            <div class="details has-feature-image">
+                                <h4><a href="https://freetuts.net/khoa-hoc/combo-2-khoa-hoc-nodejs-va-reactjs-+-redux-71.html" title="Combo 2 khóa học NodeJS và ReactJS + Redux">Combo 2 khóa học NodeJS và ReactJS + Redux</a></h4>
+                            </div>
+                        </div>
+                                                <div class="mpw-post">
+                            <div class="post-img main-sidebar-element"><a href="https://freetuts.net/khoa-hoc/combo-khoa-hoc-tung-buoc-tro-thanh-fullstack-developer-68.html">
+                                    <img src="https://freetuts.net/upload/learn_post/_thumbs/Images/2018/06/12/68/combo-6-khoa-hoc-fullstack-tu-frontend-den-backend.gif"  alt="Combo 8 khóa học từng bước trở thành Full-stack Developer" width="75" height="60"></a>
+                            </div>
+                            <div class="details has-feature-image">
+                                <h4><a href="https://freetuts.net/khoa-hoc/combo-khoa-hoc-tung-buoc-tro-thanh-fullstack-developer-68.html" title="Combo 8 khóa học từng bước trở thành Full-stack Developer">Combo 8 khóa học từng bước trở thành Full-stack Developer</a></h4>
+                            </div>
+                        </div>
+                                                <div class="mpw-post">
+                            <div class="post-img main-sidebar-element"><a href="https://freetuts.net/khoa-hoc/combo-khoa-hoc-lap-trinh-frontend-tu-can-ban-den-nang-cao-67.html">
+                                    <img src="https://freetuts.net/upload/learn_post/_thumbs/Images/2018/06/12/67/combo-5-khoa-hoc-lap-trinh-frontend-tu-can-ban-den-nang-cao.gif"  alt="Combo 5 khóa học lập trình Frontend từ căn bản đến nâng cao theo lộ trình 1" width="75" height="60"></a>
+                            </div>
+                            <div class="details has-feature-image">
+                                <h4><a href="https://freetuts.net/khoa-hoc/combo-khoa-hoc-lap-trinh-frontend-tu-can-ban-den-nang-cao-67.html" title="Combo 5 khóa học lập trình Frontend từ căn bản đến nâng cao theo lộ trình 1">Combo 5 khóa học lập trình Frontend từ căn bản đến nâng cao theo lộ trình 1</a></h4>
+                            </div>
+                        </div>
+                                                <div class="mpw-post">
+                            <div class="post-img main-sidebar-element"><a href="https://freetuts.net/khoa-hoc/combo-2-khoa-hoc-lap-trinh-php-va-mysql-mvc-tu-can-ban-den-nang-cao-33.html">
+                                    <img src="https://freetuts.net/upload/learn_post/_thumbs/Images/2018/05/16/33/combo-khoa-hoc-lap-trinh-php-va-mysql-mvc-tu-can-ban-den-nang-cao.gif"  alt="Combo 2 khóa học lập trình PHP và MySQL MVC từ căn bản đến nâng cao" width="75" height="60"></a>
+                            </div>
+                            <div class="details has-feature-image">
+                                <h4><a href="https://freetuts.net/khoa-hoc/combo-2-khoa-hoc-lap-trinh-php-va-mysql-mvc-tu-can-ban-den-nang-cao-33.html" title="Combo 2 khóa học lập trình PHP và MySQL MVC từ căn bản đến nâng cao">Combo 2 khóa học lập trình PHP và MySQL MVC từ căn bản đến nâng cao</a></h4>
+                            </div>
+                        </div>
+                                            </div>
+                </div>			
+            </div>
+            <div class="one_fourth">
+                <div class="widget widget_categories">
+                    <div class="widget-head"><h3 class="widget-title"><span>Liên kết bạn bè</span></h3></div>
+                    <ul class="two_columns_categoreis clearfix">
+                        <li><a target="_blank" href=" https://ezdlvid.com"> Online Video Downloader</a></li>
+                        <li><a target="_blank" href="http://bcdonline.net/">bcdonline.net</a></li>
+                                                <li><a target="_blank" href="http://o7planning.org/" rel="nofollow external">o7planning.org</a></li>
+                        <li><a target="_blank" href="https://namngo.net/" title='Nam Ngô'>Nam Ngô</a></li>
+                        <li><a target="_blank" href="http://laptrinhvb.net/" title='Lập Trình VB'>Lập Trình VB</a></li>
+                        <li>Dịch vụ <a target="_blank" href="https://www.webico.vn/" title="thiết kế web chuyên nghiệp">thiết kế web chuyên nghiệp</a></li>
+                        
+                    </ul>
+                    <p>
+                        <a href="//www.dmca.com/Protection/Status.aspx?ID=4495f67a-93e3-4127-a6fe-eb89933037aa" title="DMCA.com Protection Status" class="dmca-badge" target="_blank" rel="nofollow"> 
+                            <img src="https://freetuts.net/public/_dmca_premi_badge_5.png" alt="DMCA.com Protection Status">
+                        </a>
+                    </p>
+                    
+                </div>
+            </div>
+            <div class="one_fourth last">
+                <div class="widget momizat-twitter">			
+                    <div class="widget-head">
+                        <h3 class="widget-title"><span>Giới thiệu</span></h3>
+                    </div>	
+                    <div>
+                        
+                        <p>
+                            Freetuts.net là một blog cá nhân được thành lập vào năm 2014, tại đây bạn sẽ tìm thấy các bài viết về lập trình nói chung và lĩnh vực lập trình web nói riêng.
+                        </p>
+                        <p>Học lập trình online đang là xu hướng, hiện nay có rất nhiều <a href="/khoa-hoc" title="khóa học online">khóa học online</a> chất lượng với chi phí rất rẻ giúp bạn tiết kiệm tiền và có thể học mọi lúc mọi nơi.</p>
+                    </div>
+                </div>	
+            </div>
+            <div class="clear"></div>                    
+        </div>
+    </footer> 
+    <div class="copyrights-area">
+        <div class="inner">
+            <p class="copyrights-text">
+                2016 Powered By <a id="adf_click" href="https://goo.gl/vCFVj1" target="_blank" rel="nofollow">GoodNews</a>, Theme By Momizat Team
+                - Benchmark: 0.0128            </p>
+            <ul class="mom-social-icons">
+                                        <li class="facebook"><a rel="nofollow" target="_blank" class="vector_icon" href="https://www.facebook.com/groups/freetutsdotnet/"><i class="fa-icon-facebook "></i></a></li>        
+                                                            <li class="gplus"><a rel="nofollow" target="_blank" class="vector_icon" href="https://plus.google.com/107680919915235377536/videos" ><i class="fa-icon-google-plus"></i></a></li>     
+                                                            <li class="youtube"><a rel="nofollow" target="_blank" class="vector_icon" href="https://www.youtube.com/c/FreetutsNetVideo"><i class="fa-icon-youtube"></i></a></li>
+                                        <li class="rss"><a rel="nofollow" target="_blank" class="vector_icon" href="https://freetuts.net/feed"><i class="fa-icon-rss"></i></a></li>
+            </ul>				                
+        </div>
+    </div>
+</div>
+
+<div class="sticky_ads">
+    
+</div>
+<script language="javascript">
+    var stickyAd = [];
+        
+</script>            <div class="clear"></div>
+        </div> <!--Boxed wrap-->
+        <div class="checkabl" style="display: none">
+    <span>Bạn đang sử dụng chương trình chặn quảng cáo, hãy tắt nó để mình có kinh phí duy trì website nhé!</span>
+</div>
+<script type="text/javascript">
+    var config = {
+        base_url    : 'https://freetuts.net/'
+    };
+    
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-136331943-1', 'auto');
+            ga('send', 'pageview');
+          </script>
+<!--[if lt IE 9]>
+<script src="https://freetuts.net/public/theme/js/html5.js"></script>
+<script src="https://freetuts.net/public/theme/js/IE9.js"></script>
+<![endif]-->
+<a href="#" rel="nofollow" class="scrollToTop button"><i class="enotype-icon-arrow-up"></i></a>
+<a href="#" rel="nofollow" class="scrollToBottom button"><i class="enotype-icon-arrow-down"></i></a>
+<script type='text/javascript' src='https://freetuts.net/public/theme/js/lib.js?v=9'></script>
+<script type='text/javascript' src='https://freetuts.net/public/theme/js/ads.js?v=9'></script>
+<script type='text/javascript' src='https://freetuts.net/public/theme/js/all.js?v=9'></script>
+<!--<script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=5afaa9a4c3d29a001129f245"></script>-->    </body>
+
+</html>

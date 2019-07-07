@@ -1,0 +1,91 @@
+function dynamicCodes() {
+  Enabler.setProfileId(10423727);
+  var devDynamicContent = {};
+
+  devDynamicContent.Visa_SEA_2019_XB_EN = [{}];
+  devDynamicContent.Visa_SEA_2019_XB_EN[0]._id = 0;
+  devDynamicContent.Visa_SEA_2019_XB_EN[0].UniqueId = 1;
+  devDynamicContent.Visa_SEA_2019_XB_EN[0].IsDefault = true;
+  devDynamicContent.Visa_SEA_2019_XB_EN[0].IsActive = true;
+  devDynamicContent.Visa_SEA_2019_XB_EN[0].StartDate = {};
+  devDynamicContent.Visa_SEA_2019_XB_EN[0].StartDate.RawValue = "4/1/2019";
+  devDynamicContent.Visa_SEA_2019_XB_EN[0].StartDate.UtcValue = 1554102000000;
+  devDynamicContent.Visa_SEA_2019_XB_EN[0].EndDate = {};
+  devDynamicContent.Visa_SEA_2019_XB_EN[0].EndDate.RawValue = "8/31/2019";
+  devDynamicContent.Visa_SEA_2019_XB_EN[0].EndDate.UtcValue = 1567234800000;
+  devDynamicContent.Visa_SEA_2019_XB_EN[0].MetrixLabID = {};
+  devDynamicContent.Visa_SEA_2019_XB_EN[0].MetrixLabID.URL =
+    "https://tracker.samplicio.us/tracker/038c60ed-c623-441b-9ff4-fda7efed6318/pixel.gif?sid=%esid!&pid=%epid!&crid=%ecid!&device_id=%m&c1=%ebuy!&c2=%eaid!&cachebuster=%n";
+  devDynamicContent.Visa_SEA_2019_XB_EN[0].SourceMarket = "Philippines";
+  devDynamicContent.Visa_SEA_2019_XB_EN[0].Corridor = "Thailand";
+  devDynamicContent.Visa_SEA_2019_XB_EN[0].Personas = "Millennial";
+  devDynamicContent.Visa_SEA_2019_XB_EN[0].Motivation = "Eat";
+  devDynamicContent.Visa_SEA_2019_XB_EN[0].Time = "PreTrip-Outbound";
+  devDynamicContent.Visa_SEA_2019_XB_EN[0].Frame1_Copy =
+    "Craving a quick taste of Thailand?";
+  devDynamicContent.Visa_SEA_2019_XB_EN[0].Frame2_Image = {};
+  devDynamicContent.Visa_SEA_2019_XB_EN[0].Frame2_Image.Url =
+    "https://s0.2mdn.net/creatives/assets/3196014/PH_Thailand _Millennial_Eat_PreTripOutbound_300x250_Frame2.jpg";
+  devDynamicContent.Visa_SEA_2019_XB_EN[0].Frame2_Copy =
+    "Craving a quick taste of Thailand?";
+  devDynamicContent.Visa_SEA_2019_XB_EN[0].Frame3_Image = {};
+  devDynamicContent.Visa_SEA_2019_XB_EN[0].Frame3_Image.Url =
+    "https://s0.2mdn.net/creatives/assets/3196014/PH_Thailand _Millennial_Eat_PreTripOutbound_300x250_Frame3.jpg";
+  devDynamicContent.Visa_SEA_2019_XB_EN[0].Frame3_Copy =
+    "Food trips made easy.";
+  devDynamicContent.Visa_SEA_2019_XB_EN[0].Frame4_Copy =
+    "Enjoy multi-layered payment protection.";
+  devDynamicContent.Visa_SEA_2019_XB_EN[0].TC_Copy =
+    "Terms and condition apply";
+  devDynamicContent.Visa_SEA_2019_XB_EN[0].CTA_Copy = "Learn More";
+  devDynamicContent.Visa_SEA_2019_XB_EN[0].Exit_URL = {};
+  devDynamicContent.Visa_SEA_2019_XB_EN[0].Exit_URL.Url =
+    "https://www.visa.com.ph/travel-with-visa/travel-support.html?utm_source=google&utm_medium=cpc&utm_campaign=visa-xb&utm_content=ThailandMillennialEatPre-travel300x250";
+  Enabler.setDevDynamicContent(devDynamicContent);
+
+  document.getElementById("copy-one-top").innerHTML =
+    dynamicContent.Visa_SEA_2019_XB_EN[0].Frame1_Copy;
+
+  // Set dynamic text
+  document.getElementById("copy-two-top").innerHTML =
+    dynamicContent.Visa_SEA_2019_XB_EN[0].Frame2_Copy;
+  document.getElementById("copy-three-top").innerHTML =
+    dynamicContent.Visa_SEA_2019_XB_EN[0].Frame3_Copy;
+  document.getElementById("copy-four-top").innerHTML =
+    dynamicContent.Visa_SEA_2019_XB_EN[0].Frame4_Copy;
+  document.getElementById("tctext").innerHTML =
+    dynamicContent.Visa_SEA_2019_XB_EN[0].TC_Copy;
+  document.getElementById("cta-text").innerHTML =
+    dynamicContent.Visa_SEA_2019_XB_EN[0].CTA_Copy;
+
+  // Set dynamic images
+  document
+    .getElementById("two-img")
+    .setAttribute(
+      "src",
+      dynamicContent.Visa_SEA_2019_XB_EN[0].Frame2_Image.Url
+    );
+  document
+    .getElementById("three-img")
+    .setAttribute(
+      "src",
+      dynamicContent.Visa_SEA_2019_XB_EN[0].Frame3_Image.Url
+    );
+
+  // Set tracking pixel
+  document
+    .getElementById("tracking-pixel")
+    .setAttribute("src", dynamicContent.Visa_SEA_2019_XB_EN[0].MetrixLabID.URL);
+
+  // Set exit url when clicked on
+  document.getElementById("clickthroughButton").addEventListener(
+    "click",
+    function() {
+      Enabler.exitOverride(
+        "Background Exit",
+        dynamicContent.Visa_SEA_2019_XB_EN[0].Exit_URL.Url
+      );
+    },
+    false
+  );
+}

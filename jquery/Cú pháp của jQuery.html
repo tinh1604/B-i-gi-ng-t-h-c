@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)http://webcoban.vn/jquery/cu-phap-cua-jquery.html -->
+<html lang="vi"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>Cú pháp của jQuery</title>
+   
+   <meta name="viewport" content="width=device-width, initial-scale=0.7">
+   <meta name="description" content="Cú pháp của jQuery, cách sử dụng jQuery, cách nhúng mã jQuery, cách dùng jQuery cho trang web">
+   <link rel="icon" href="http://webcoban.vn/home/image/favicon.png">
+   <link rel="stylesheet" type="text/css" href="./Cú pháp của jQuery_files/style.css">
+   <link rel="stylesheet" type="text/css" href="./Cú pháp của jQuery_files/post.css">
+   <link rel="stylesheet" type="text/css" href="./Cú pháp của jQuery_files/form.css">
+   <link rel="stylesheet" type="text/css" href="./Cú pháp của jQuery_files/default.css">
+   <link rel="stylesheet" type="text/css" href="./Cú pháp của jQuery_files/font-awesome.min.css">
+   <script type="text/javascript" async="" src="./Cú pháp của jQuery_files/analytics.js.tải xuống"></script><script src="./Cú pháp của jQuery_files/jquery-1.12.0.min.js.tải xuống"></script>
+</head>
+<body>
+   <div id="frame">
+      <header id="header">
+         <div class="logo">
+            <a href="http://webcoban.vn/"><img src="./Cú pháp của jQuery_files/logo.png"></a>
+         </div>
+         <div class="banner">
+            <div>
+            </div>
+         </div>
+      </header>
+      <nav id="navigation" style="position: fixed; top: 0px;">
+         <ul>
+            <li class="btn-post"><a onclick="open_post()"><span class="fa fa-align-justify fa-lg"></span></a></li>
+            <li class="btn-home"><a href="http://webcoban.vn/"><span class="fa fa-home fa-lg"></span></a></li>
+            <li class="btn-project"><a onclick="open_project()"><span class="fa fa-book fa-lg"></span> TẤT CẢ TÀI LIỆU</a></li>
+            <li class="item"><a href="http://webcoban.vn/html/default.html">HTML</a></li>
+            <li class="item"><a href="http://webcoban.vn/css/default.html">CSS</a></li>
+            <li class="item"><a href="http://webcoban.vn/javascript/default.html">JavaScript</a></li>
+            <li class="item"><a href="http://webcoban.vn/jquery/default.html">jQuery</a></li>
+            <li class="item"><a href="http://webcoban.vn/mysql/default.html">MySQL</a></li>
+            <li class="item"><a href="http://webcoban.vn/php/default.html">PHP</a></li>
+            <li class="btn-search"><a onclick="open_search()"><span class="fa fa-search"></span></a></li>
+         </ul>
+      </nav>
+      <div id="side" style="top: 49px;">
+         <div>
+            <div>
+               <div class="close"><a onclick="close_post()">CLOSE</a></div>
+               <div class="project">jQuery</div>
+                              <div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+                                    <a href="http://webcoban.vn/jquery/default.html">- Bài 01: Tổng quan về jQuery</a>
+                                    <a href="http://webcoban.vn/jquery/cu-phap-cua-jquery.html" class="active">- Bài 02: jQuery Syntax</a>
+                                    <a href="http://webcoban.vn/jquery/bai-03-jquery-selectors.html">- Bài 03: jQuery Selectors</a>
+                                    <a href="http://webcoban.vn/jquery/cach-hien-an-phan-tu-html-bang-phuong-thuc-show-hide-trong-jquery.html">- Bài 04: Cách hiện và ẩn một phần tử</a>
+                                    <a href="http://webcoban.vn/jquery/cach-hien-an-phan-tu-voi-hieu-ung-phai-mau-trong-jquery.html">- Bài 05: Cách hiện và ẩn một phần tử (với hiệu ứng phai màu)</a>
+                                    <a href="http://webcoban.vn/jquery/ham-callback-trong-jquery.html">- Bài 06: jQuery Callback</a>
+                                    <a href="http://webcoban.vn/jquery/cach-hien-an-phan-tu-voi-hieu-ung-truot-trong-jquery.html">- Bài 07: Cách hiện và ẩn một phần tử (với hiệu ứng trượt)</a>
+                                    <a href="http://webcoban.vn/jquery/hieu-ung-dong-animation-trong-jquery.html">- Bài 08: jQuery Animate</a>
+                                    <a href="http://webcoban.vn/jquery/ket-thuc-hieu-ung-bang-phuong-thuc-stop-trong-jquery.html">- Bài 09: Phương thức Stop()</a>
+                                    <a href="http://webcoban.vn/jquery/viet-hang-loat-phuong-thuc-chi-voi-mot-cau-lenh-trong-jquery.html">- Bài 10: Kỹ thuật viết hàng loạt phương thức rút gọn (CHƯA XONG)</a>
+                                    <a href="http://webcoban.vn/jquery/cac-phuong-thuc-lay-noi-dung-va-thuoc-tinh-trong-jquery.html">- Bài 11: jQuery Get</a>
+                                    <a href="http://webcoban.vn/jquery/xoa-phan-tu-html-trong-jquery.html">- Bài 12: jQuery Remove</a>
+                                    <a href="http://webcoban.vn/jquery/cac-phuong-thuc-thiet-lap-thuoc-tinh-class-trong-jquery.html">- Bài 13: jQuery CSS Classes</a>
+                                    <a href="http://webcoban.vn/jquery/cach-chon-cac-phan-tu-to-tien-trong-jquery.html">- Bài 14: jQuery Ancestors</a>
+                                                <div class="category"><span class="fa fa-book fa-lg"></span> Tìm hiểu nâng cao</div>
+                                    <a href="http://webcoban.vn/jquery/tat-ca-bo-chon-trong-jquery.html">- jQuery Selectors (Các bộ chọn trong jQuery)</a>
+                                    <a href="http://webcoban.vn/jquery/tat-ca-su-kien-trong-jquery.html">- jQuery Event (Các sự kiện trong jQuery)</a>
+                                    <a href="http://webcoban.vn/jquery/danh-sach-tat-ca-cac-phuong-thuc-trong-jquery.html">- jQuery Methods (Các phương thức cơ bản trong jQuery)</a>
+                                    <a href="http://webcoban.vn/jquery/cac-phuong-thuc-dung-de-thao-tac-voi-html-css-trong-jquery.html">- jQuery HTML/CSS (Các phương thức thao tác với HTML &amp; CSS trong jQuery)</a>
+                                             </div>
+         </div>
+      </div>
+      <div id="right" style="margin-top: 45px;">
+         <div class="frame">
+            <div id="post">
+               <div class="ads_728x90">
+                  <div>
+                  </div>
+               </div>
+               <a href="http://webcoban.vn/jquery/cu-phap-cua-jquery.html" title="Cú pháp của jQuery"><h1>Cú pháp của jQuery</h1></a>
+               <div class="hidden">
+                  <h2>Cú pháp của jQuery</h2>
+                  <h3>Cú pháp của jQuery, cách sử dụng jQuery, cách nhúng mã jQuery, cách dùng jQuery cho trang web</h3>
+                  <h4>Cú pháp của jQuery, cách sử dụng jQuery, cách nhúng mã jQuery, cách dùng jQuery cho trang web</h4>
+               </div>
+                              <div class="breadcrumb">
+                  <div class="previous"><a href="http://webcoban.vn/jquery/default.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a></div>
+                  <div class="next"><a href="http://webcoban.vn/jquery/bai-03-jquery-selectors.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a></div>
+               </div>
+                              <h4>Cách thức làm việc của jQuery là bạn sẽ dùng các bộ chọn (Selectors) để chọn ra các phần tử HTML mà mình muốn xử lý, sau đó dùng các hàm (được cung cấp bởi thư viện jQuery) để xử lý các phần tử HTML đó.</h4>
+
+<h2>Cấu trúc cơ bản</h2>
+
+<p>Dưới đây là cấu trúc cơ bản của một chức năng jQuery</p>
+
+<div class="the_pre_default">
+<pre class="hljs javascript">$(<span class="hljs-built_in">document</span>).ready(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+&nbsp; &nbsp; <span class="hljs-comment">//Các phương thức jQuery nằm trong này</span>
+});</pre>
+</div>
+
+<p>Hoặc cú pháp rút gọn</p>
+
+<div class="the_pre_default">
+<pre class="hljs javascript">$(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+&nbsp; &nbsp; <span class="hljs-comment">//Các phương thức jQuery nằm trong này</span>
+});</pre>
+</div>
+
+<table class="tbbang_luuy">
+	<tbody>
+		<tr>
+			<td style="vertical-align:middle; width:10px">
+			<div class="lamp"><img src="./Cú pháp của jQuery_files/lamp.png" style="margin:0px"></div>
+			</td>
+			<td>
+			<div class="element">Hai cú pháp trên bạn thích dùng cái nào cũng được. Tuy nhiên, khuyến khích sử dụng cú pháp đầy đủ<br>
+			(Vì nó sẽ dễ nhìn hơn trong trường hợp các dòng lệnh của bạn quá lùm xùm)</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2>Phương thức jQuery đơn giản</h2>
+
+<p>Phương thức được gọi là đơn giản khi bạn chỉ cần chọn ra một phần tử HTML rồi dùng một hành động xử lý nó.</p>
+
+<div class="form_6">
+<div class="theh3">Cú pháp</div>
+
+<hr>
+<pre class="hljs javascript">$(selector).action();
+</pre>
+</div>
+
+<div class="form_6">
+<div class="theh3">Ví dụ</div>
+
+<div class="noithem">
+<p>Đoạn mã dưới đây tôi chọn các phần tử HTML có class là abc với hành động hide() để ẩn các phẩn từ đó.</p>
+</div>
+
+<hr>
+<pre class="hljs javascript">$(<span class="hljs-string">".abc"</span>).hide();</pre>
+
+<div class="nutxem"><a href="http://webcoban.vn/jquery/demo?file=187" target="_blank">Xem ví dụ</a></div>
+</div>
+
+<h2>Phương thức jQuery phức tạp</h2>
+
+<p>Phương thức được gọi là thức tạp khi bạn chọn một phần tử HTML rồi dùng hành động xử lý nó, trong hành động đó lại bao gồm các phương thức jQuery khác.</p>
+
+<div class="form_6">
+<div class="theh3">Cú pháp</div>
+
+<hr>
+<pre class="hljs javascript">$(selector).action(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+&nbsp; &nbsp; <span class="hljs-comment">// Các phương thức jQuery khác nằm trong này</span>
+});</pre>
+</div>
+
+<div class="form_6">
+<div class="theh3">Ví dụ</div>
+
+<div class="noithem">
+<p>Đoạn mã dưới đây tôi chọn phần tử HTML là nút button với hành động là click() thì nó sẽ ẩn các phần tử HTML có class là abc rồi hiện thông báo là "Đã ẩn phần tử có class là abc".</p>
+</div>
+
+<hr>
+<pre class="hljs javascript">$(<span class="hljs-string">"input[type='button']"</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+&nbsp; &nbsp; $(<span class="hljs-string">".abc"</span>).hide();
+&nbsp; &nbsp; alert(<span class="hljs-string">"Đã ẩn phần tử có class là abc"</span>);
+});</pre>
+
+<div class="nutxem"><a href="http://webcoban.vn/jquery/demo?file=188" target="_blank">Xem ví dụ</a></div>
+</div>
+
+<h2>Cách chèn mã jQuery vào trang web</h2>
+
+<p>Ở <u><strong>Bài 01: Tổng quan về jQuery</strong></u>, tôi có hướng dẫn cách nhúng tập tin jQuery vào trang web. Lưu ý, đó chỉ là cái thư viện giúp bạn viết mã, nếu bạn muốn nhúng các mã vào trang web thì có hai cách tương tự như nhúng mã JavaScript.</p>
+
+<p><u><strong>Cách 1:</strong></u> Nhúng mã trực tiếp vào trang web</p>
+
+<p>Đặt vào trang web thẻ &lt;script&gt;</p>
+
+<div class="the_pre_default">
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+&nbsp; &nbsp; <span class="hljs-comment">//Các mã jQuery trong này</span>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</div>
+
+<p><u><strong>Cách 2:</strong></u> Liên kết đến một tập tin .js</p>
+
+<p>Bạn tạo một tập tin&nbsp;.js rồi đặt các đoạn mã vào đó (Trong tập tin .js không được dùng thẻ &lt;script&gt;). Rồi từ trang web liên kết đến tập tin .js bằng cú pháp</p>
+
+<div class="the_pre_default">
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"đường dẫn đến tập tin .js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</div>
+
+<table class="tbbang_luuy">
+	<tbody>
+		<tr>
+			<td style="vertical-align:middle; width:10px">
+			<div class="lamp"><img src="./Cú pháp của jQuery_files/lamp.png" style="margin:0px"></div>
+			</td>
+			<td>
+			<div class="element">Dù là cách 1 hay cách 2, bạn vẫn phải đặt các đoạn mã đó ở phía dưới tập tin thư viên của jQuery (Vì phải load thư viện trước thì các đoạn mã của bạn mới chạy được)</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+                              <div class="breadcrumb">
+                  <div class="previous"><a href="http://webcoban.vn/jquery/default.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a></div>
+                  <div class="next"><a href="http://webcoban.vn/jquery/bai-03-jquery-selectors.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a></div>
+               </div>
+                              <div class="ads_336x280">
+                  <div>
+                  </div>
+                  <div>
+                  </div>
+               </div>
+            </div>
+            <div id="ads">
+               <div id="ads_160x600" style="position: fixed; top: 45px;">
+                  <div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div id="search">
+            <div>
+               <div>
+                  <div class="close"><img src="./Cú pháp của jQuery_files/close.png" onclick="close_search()"></div>
+                  <div class="search"></div>
+               </div>
+            </div>
+         </div>
+         <div id="all-project">
+            <div>
+               <div>
+                  <ul>
+                     <li class="close"><a onclick="close_project()">CLOSE</a></li>
+                     <li><a href="http://webcoban.vn/html/default.html">HTML</a></li>
+                     <li><a href="http://webcoban.vn/css/default.html">CSS</a></li>
+                     <li><a href="http://webcoban.vn/javascript/default.html">JavaScript</a></li>
+                     <li><a href="http://webcoban.vn/jquery/default.html">jQuery</a></li>
+                     <li><a href="http://webcoban.vn/mysql/default.html">MySQL</a></li>
+                     <li><a href="http://webcoban.vn/php/default.html">PHP</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <footer id="footer">
+            <p>Bài viết này đã được đăng ký bản quyền nội dung</p>
+            <p>©2016 Bản quyền thuộc về webcoban.vn</p>
+         </footer>
+      </div>
+   </div>
+   <script src="./Cú pháp của jQuery_files/post.js.tải xuống"></script>
+   <script src="./Cú pháp của jQuery_files/highlight.pack.js.tải xuống"></script>
+   <script>hljs.initHighlightingOnLoad();</script>
+<script async="" src="./Cú pháp của jQuery_files/js"></script>
+<script src="./Cú pháp của jQuery_files/analytics.js(1).tải xuống"></script>
+
+</body></html>

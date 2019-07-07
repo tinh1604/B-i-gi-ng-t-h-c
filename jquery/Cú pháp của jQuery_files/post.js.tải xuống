@@ -1,0 +1,102 @@
+﻿$(document).ready(function(){
+    fix_side();
+})
+$(window).resize(function(){
+    var window_width = window.innerWidth;
+    if(window_width>844){
+         if($("#navigation .btn-project a").hasClass("active")==true){
+            close_project();
+        }
+    }
+    if(window_width>1259){
+        if($("#navigation .btn-post a").hasClass("active")==true){
+            close_post();
+        }
+    }
+    fix_side();
+});
+if (window.addEventListener) {
+    window.addEventListener("scroll", function() {
+        fix_side();
+    });
+}else if (window.attachEvent) {
+    window.attachEvent("onscroll", function() {
+        fix_side();
+    });
+}
+function fix_side(){
+    var top = scrolltop();
+    var header_height = $("#header").height();
+    if(header_height==96){
+        if(top >= 96){
+            document.getElementById("navigation").style.position = "fixed";
+            document.getElementById("navigation").style.top = "0";
+            document.getElementById("side").style.top = "49px";
+            document.getElementById("right").style.marginTop = "45px";
+            document.getElementById("ads_160x600").style.position = "fixed";
+            document.getElementById("ads_160x600").style.top = "45px";
+        }else if (top < 96){
+            document.getElementById("ads_160x600").style.position = "static";
+            document.getElementById("navigation").style.position = "static";
+            document.getElementById("side").style.top = 145 - top +"px";
+            document.getElementById("right").style.marginTop = "0px";
+        }
+    }else{
+        if(top >= header_height){
+            document.getElementById("navigation").style.position = "fixed";
+            document.getElementById("navigation").style.top = "0";
+            document.getElementById("side").style.top = "49px";
+            document.getElementById("right").style.marginTop = "45px";
+            document.getElementById("ads_160x600").style.position = "fixed";
+            document.getElementById("ads_160x600").style.top = "45px";
+        }else if (top < header_height){
+            document.getElementById("ads_160x600").style.position = "static";
+            document.getElementById("navigation").style.position = "static";
+            document.getElementById("side").style.top = (header_height+49) - top +"px";
+            document.getElementById("right").style.marginTop = "0px";
+        }
+    }
+}
+function scrolltop() {
+    var top = 0;
+    if (typeof(window.pageYOffset) == "number") {
+        top = window.pageYOffset;
+    }else if (document.body && document.body.scrollTop) {
+        top = document.body.scrollTop;
+    }else if (document.documentElement && document.documentElement.scrollTop) {
+        top = document.documentElement.scrollTop;
+    }
+    return top;
+}
+function open_post(){
+    $("html").css("overflow","hidden");
+    $("#side").css("display","block");
+    $("#navigation .btn-post a").addClass("active");
+}
+function close_post(){
+    $("#side").removeAttr("style");
+    $("html").css("overflow","auto");
+    $("#navigation .btn-post a").removeClass("active");
+}
+function open_project(){
+    $("html").css("overflow","hidden");
+    $("#all-project").css("display","block");
+    $("#navigation .btn-project a").addClass("active");
+}
+function close_project(){
+    $("#all-project").removeAttr("style");
+    $("html").css("overflow","auto");
+    $("#navigation .btn-project a").removeClass("active");
+}
+function open_search(){
+    $("html").css("overflow","hidden");
+    $("#search").css("display","block");
+    var test = $("#search .search").html();
+    if(test==""){
+        $("#search .search").html("<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script><gcse:search></gcse:search>");
+    }
+}
+function close_search(){
+    $("html").css("overflow","auto");
+    $("#search").removeAttr("style");
+}

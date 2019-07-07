@@ -1,0 +1,29 @@
+console.log("Loaded!");
+
+var baseDelay = 1000;
+
+function initAnimation() {
+  var tl = anime.timeline({
+    easing: "linear"
+  });
+
+  tl.add({
+    targets: "#one",
+    opacity: 0,
+    duration: 500,
+    delay: baseDelay
+  })
+    .add({
+      targets: "#two",
+      left: "-728px",
+      duration: 500,
+      delay: baseDelay * 2
+    })
+    .add({
+      targets: ["#three", "#visa-logo"],
+      left: "-728px",
+      opacity: 0,
+      duration: 500,
+      delay: baseDelay * 3
+    });
+}

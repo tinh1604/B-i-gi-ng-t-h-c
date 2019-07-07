@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" lang="vi" prefix="og: http://ogp.me/ns#">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="vi" prefix="og: http://ogp.me/ns#">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="vi" prefix="og: http://ogp.me/ns#">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html lang="vi" prefix="og: http://ogp.me/ns#">
+<!--<![endif]-->
+<head>
+
+
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '216154075592068');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=216154075592068&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+
+
+<meta name="google-site-verification" content="NQ60pyW72-h5-dosVERxM2L16RKv_EBuiLtiWktP0Bk" />
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PX83MHB');</script>
+<!-- End Google Tag Manager -->
+	<meta charset="UTF-8" />
+			
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="pingback" href="http://fedu.vn/xmlrpc.php" />
+
+		<!--[if lt IE 9]>
+	<script src="http://fedu.vn/wp-content/themes/Divi/js/html5.js" type="text/javascript"></script>
+	<![endif]-->
+
+	<script type="text/javascript">
+		document.documentElement.className = 'js';
+	</script>
+
+	<title>Cách thức xác nhận Email và URL trong PHP</title>
+
+<!-- Recent Posts Widget With Thumbnails: Could not open the CSS file! Print inline CSS instead: -->
+<style type='text/css'>.rpwwt-widget ul { list-style: outside none none; margin-left: 0; margin-right: 0; padding-left: 0; padding-right: 0; }
+.rpwwt-widget ul li { overflow: hidden; margin: 0 0 1.5em; }
+.rpwwt-widget ul li:last-child { margin: 0; }
+.rpwwt-widget ul li img { display: inline; float: left; margin: .3em .75em .75em 0; }
+#rpwwt-recent-posts-widget-with-thumbnails-2 img { width: 75px; height: 50px; }
+#rpwwt-recent-posts-widget-with-thumbnails-3 img { width: 75px; height: 50px; }
+#rpwwt-recent-posts-widget-with-thumbnails-4 img { width: 75px; height: 75px; }
+#rpwwt-recent-posts-widget-with-thumbnails-5 img { width: 75px; height: 75px; }
+</style>
+
+<!-- This site is optimized with the Yoast SEO plugin v8.1.2 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Cách thức xác nhận Email và URL trong PHP. Bài viết dưới đây sẽ giới thiệu cho bạn biết cách xác nhận email, url trong PHP."/>
+<link rel="canonical" href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/back-end/php/php-nang-cao/gioi-thieu-cac-mau-trong-php-cach-thuc-xac-nhan-email-va-url-trong-php/" />
+<meta property="og:locale" content="vi_VN" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Cách thức xác nhận Email và URL trong PHP" />
+<meta property="og:description" content="Cách thức xác nhận Email và URL trong PHP. Bài viết dưới đây sẽ giới thiệu cho bạn biết cách xác nhận email, url trong PHP." />
+<meta property="og:url" content="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/back-end/php/php-nang-cao/gioi-thieu-cac-mau-trong-php-cach-thuc-xac-nhan-email-va-url-trong-php/" />
+<meta property="og:site_name" content="Fedu" />
+<meta property="article:section" content="PHP nâng cao" />
+<meta property="article:published_time" content="2017-09-06T22:40:46+00:00" />
+<meta property="article:modified_time" content="2017-10-18T21:29:03+00:00" />
+<meta property="og:updated_time" content="2017-10-18T21:29:03+00:00" />
+<meta property="og:image" content="http://fedu.vn/wp-content/uploads/2017/08/mảng.jpg" />
+<meta property="og:image:width" content="500" />
+<meta property="og:image:height" content="300" />
+<meta property="og:image:alt" content="mảng" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:description" content="Cách thức xác nhận Email và URL trong PHP. Bài viết dưới đây sẽ giới thiệu cho bạn biết cách xác nhận email, url trong PHP." />
+<meta name="twitter:title" content="Cách thức xác nhận Email và URL trong PHP" />
+<meta name="twitter:image" content="http://fedu.vn/wp-content/uploads/2017/08/mảng.jpg" />
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Dòng thông tin Fedu &raquo;" href="http://fedu.vn/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Dòng phản hồi Fedu &raquo;" href="http://fedu.vn/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Fedu &raquo; Giới thiệu các mẫu trong PHP – Cách thức xác nhận Email và URL trong PHP Dòng phản hồi" href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/back-end/php/php-nang-cao/gioi-thieu-cac-mau-trong-php-cach-thuc-xac-nhan-email-va-url-trong-php/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/fedu.vn\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.8"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<!-- managing ads with Advanced Ads – https://wpadvancedads.com/ --><script>
+					advanced_ads_ready=function(){var fns=[],listener,doc=typeof document==="object"&&document,hack=doc&&doc.documentElement.doScroll,domContentLoaded="DOMContentLoaded",loaded=doc&&(hack?/^loaded|^c/:/^loaded|^i|^c/).test(doc.readyState);if(!loaded&&doc){listener=function(){doc.removeEventListener(domContentLoaded,listener);window.removeEventListener("load",listener);loaded=1;while(listener=fns.shift())listener()};doc.addEventListener(domContentLoaded,listener);window.addEventListener("load",listener)}return function(fn){loaded?setTimeout(fn,0):fns.push(fn)}}();
+			</script><meta content="Divi-child v." name="generator"/><style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='cpsh-shortcodes-css'  href='http://fedu.vn/wp-content/plugins/column-shortcodes//assets/css/shortcodes.css?ver=1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://fedu.vn/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.0.4' type='text/css' media='all' />
+<link rel='stylesheet' id='elusive-style-css'  href='http://fedu.vn/wp-content/plugins/widget-icon/assets/elusive/css/elusive-webfont.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-style-css'  href='http://fedu.vn/wp-content/plugins/widget-icon/assets/font-awesome/css/font-awesome.min.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='widget-icon-front-style-css'  href='http://fedu.vn/wp-content/plugins/widget-icon/css/widget-icon-front.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='wgdr-css'  href='http://fedu.vn/wp-content/plugins/woocommerce-google-dynamic-retargeting-tag/public/css/wgdr-frontend.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='woocommerce-layout-css'  href='http://fedu.vn/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=3.4.5' type='text/css' media='all' />
+<link rel='stylesheet' id='woocommerce-smallscreen-css'  href='http://fedu.vn/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=3.4.5' type='text/css' media='only screen and (max-width: 768px)' />
+<link rel='stylesheet' id='woocommerce-general-css'  href='http://fedu.vn/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=3.4.5' type='text/css' media='all' />
+<style id='woocommerce-inline-inline-css' type='text/css'>
+.woocommerce form .form-row .required { visibility: visible; }
+</style>
+<link rel='stylesheet' id='wp-pagenavi-css'  href='http://fedu.vn/wp-content/plugins/wp-pagenavi/pagenavi-css.css?ver=2.70' type='text/css' media='all' />
+<link rel='stylesheet' id='select2-css'  href='http://fedu.vn/wp-content/plugins/woocommerce/assets/css/select2.css?ver=3.4.5' type='text/css' media='all' />
+<link rel='stylesheet' id='yith-wcaf-css'  href='http://fedu.vn/wp-content/plugins/yith-woocommerce-affiliates/assets/css/yith-wcaf.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='owl-carousel-css'  href='http://fedu.vn/wp-content/themes/Divi-child/css/owl.carousel.min.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='owl-theme-css'  href='http://fedu.vn/wp-content/themes/Divi-child/css/owl.theme.min.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='http://fedu.vn/wp-content/plugins/js_composer/assets/lib/bower/font-awesome/css/font-awesome.min.css?ver=5.4.2' type='text/css' media='all' />
+<style id='font-awesome-inline-css' type='text/css'>
+[data-font="FontAwesome"]:before {font-family: 'FontAwesome' !important;content: attr(data-icon) !important;speak: none !important;font-weight: normal !important;font-variant: normal !important;text-transform: none !important;line-height: 1 !important;font-style: normal !important;-webkit-font-smoothing: antialiased !important;-moz-osx-font-smoothing: grayscale !important;}
+</style>
+<link rel='stylesheet' id='bootstrap-css'  href='http://fedu.vn/wp-content/themes/Divi-child/css/grid12.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='libs-style-css'  href='http://fedu.vn/wp-content/themes/Divi-child/css/libs.css?ver=4.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='divi-fonts-css'  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&#038;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='divi-style-css'  href='http://fedu.vn/wp-content/themes/Divi-child/style.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='upw_theme_standard-css'  href='http://fedu.vn/wp-content/plugins/ultimate-posts-widget/css/upw-theme-standard.min.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='et-shortcodes-css-css'  href='http://fedu.vn/wp-content/themes/Divi/epanel/shortcodes/css/shortcodes.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='fancybox-css'  href='http://fedu.vn/wp-content/plugins/easy-fancybox/fancybox/jquery.fancybox.1.3.21.min.css' type='text/css' media='screen' />
+<link rel='stylesheet' id='et-shortcodes-responsive-css-css'  href='http://fedu.vn/wp-content/themes/Divi/epanel/shortcodes/css/shortcodes_responsive.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='magnific-popup-css'  href='http://fedu.vn/wp-content/themes/Divi/includes/builder/styles/magnific_popup.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='http://fedu.vn/wp-includes/css/dashicons.min.css?ver=4.9.8' type='text/css' media='all' />
+<style id='dashicons-inline-css' type='text/css'>
+[data-font="Dashicons"]:before {font-family: 'Dashicons' !important;content: attr(data-icon) !important;speak: none !important;font-weight: normal !important;font-variant: normal !important;text-transform: none !important;line-height: 1 !important;font-style: normal !important;-webkit-font-smoothing: antialiased !important;-moz-osx-font-smoothing: grayscale !important;}
+</style>
+<link rel='stylesheet' id='enlighter-local-css'  href='http://fedu.vn/wp-content/plugins/enlighter/resources/EnlighterJS.min.css?ver=3.8' type='text/css' media='all' />
+<link rel='stylesheet' id='bsf-Defaults-css'  href='http://fedu.vn/wp-content/uploads/smile_fonts/Defaults/Defaults.css?ver=4.9.8' type='text/css' media='all' />
+<script type='text/javascript' src='http://fedu.vn/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://fedu.vn/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_view_cart":"Xem gi\u1ecf h\u00e0ng","cart_url":"http:\/\/fedu.vn\/thanh-toan\/","is_cart":"","cart_redirect_after_add":"yes"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://fedu.vn/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=3.4.5'></script>
+<script type='text/javascript' src='http://fedu.vn/wp-content/plugins/js_composer/assets/js/vendors/woocommerce-add-to-cart.js?ver=5.4.2'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var the_ajax_script = {"ajaxurl":"http:\/\/fedu.vn\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://fedu.vn/wp-content/plugins/google-site-verification-using-meta-tag//verification.js?ver=4.9.8'></script>
+<link rel='https://api.w.org/' href='http://fedu.vn/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://fedu.vn/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://fedu.vn/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.9.8" />
+<meta name="generator" content="WooCommerce 3.4.5" />
+<link rel='shortlink' href='http://fedu.vn/?p=8899' />
+<link rel="alternate" type="application/json+oembed" href="http://fedu.vn/wp-json/oembed/1.0/embed?url=http%3A%2F%2Ffedu.vn%2Fthu-vien-hoc-tap%2Flap-trinh-web%2Fback-end%2Fphp%2Fphp-nang-cao%2Fgioi-thieu-cac-mau-trong-php-cach-thuc-xac-nhan-email-va-url-trong-php%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://fedu.vn/wp-json/oembed/1.0/embed?url=http%3A%2F%2Ffedu.vn%2Fthu-vien-hoc-tap%2Flap-trinh-web%2Fback-end%2Fphp%2Fphp-nang-cao%2Fgioi-thieu-cac-mau-trong-php-cach-thuc-xac-nhan-email-va-url-trong-php%2F&#038;format=xml" />
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '129250604427556');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=129250604427556&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code --><script type="text/javascript">
+	window._wp_rp_static_base_url = 'https://wprp.zemanta.com/static/';
+	window._wp_rp_wp_ajax_url = "http://fedu.vn/wp-admin/admin-ajax.php";
+	window._wp_rp_plugin_version = '3.6.4';
+	window._wp_rp_post_id = '8899';
+	window._wp_rp_num_rel_posts = '4';
+	window._wp_rp_thumbnails = true;
+	window._wp_rp_post_title = 'Gi%E1%BB%9Bi+thi%E1%BB%87u+c%C3%A1c+m%E1%BA%ABu+trong+PHP+%E2%80%93+C%C3%A1ch+th%E1%BB%A9c+x%C3%A1c+nh%E1%BA%ADn+Email+v%C3%A0+URL+trong+PHP';
+	window._wp_rp_post_tags = ['php+n%C3%A2ng+cao', 'mu', 'trong', 'cho', 'cc', 'php', 'vo', 'tin', 'kim', 'kt', 'thc', 'az', 'tn', 'gin', 'gi', 'white'];
+	window._wp_rp_promoted_content = true;
+</script>
+<link rel="stylesheet" href="http://fedu.vn/wp-content/plugins/wordpress-23-related-posts-plugin/static/themes/vertical-m.css?version=3.6.4" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />		<style id="theme-customizer-css">
+													.woocommerce #respond input#submit, .woocommerce-page #respond input#submit, .woocommerce #content input.button, .woocommerce-page #content input.button, .woocommerce-message, .woocommerce-error, .woocommerce-info { background: #1e73be !important; }
+			#et_search_icon:hover, .mobile_menu_bar:before, .mobile_menu_bar:after, .et_toggle_slide_menu:after, .et-social-icon a:hover, .et_pb_sum, .et_pb_pricing li a, .et_pb_pricing_table_button, .et_overlay:before, .entry-summary p.price ins, .woocommerce div.product span.price, .woocommerce-page div.product span.price, .woocommerce #content div.product span.price, .woocommerce-page #content div.product span.price, .woocommerce div.product p.price, .woocommerce-page div.product p.price, .woocommerce #content div.product p.price, .woocommerce-page #content div.product p.price, .et_pb_member_social_links a:hover, .woocommerce .star-rating span:before, .woocommerce-page .star-rating span:before, .et_pb_widget li a:hover, .et_pb_filterable_portfolio .et_pb_portfolio_filters li a.active, .et_pb_filterable_portfolio .et_pb_portofolio_pagination ul li a.active, .et_pb_gallery .et_pb_gallery_pagination ul li a.active, .wp-pagenavi span.current, .wp-pagenavi a:hover, .nav-single a, .posted_in a { color: #1e73be; }
+			.et_pb_contact_submit, .et_password_protected_form .et_submit_button, .et_pb_bg_layout_light .et_pb_newsletter_button, .comment-reply-link, .form-submit .et_pb_button, .et_pb_bg_layout_light .et_pb_promo_button, .et_pb_bg_layout_light .et_pb_more_button, .woocommerce a.button.alt, .woocommerce-page a.button.alt, .woocommerce button.button.alt, .woocommerce-page button.button.alt, .woocommerce input.button.alt, .woocommerce-page input.button.alt, .woocommerce #respond input#submit.alt, .woocommerce-page #respond input#submit.alt, .woocommerce #content input.button.alt, .woocommerce-page #content input.button.alt, .woocommerce a.button, .woocommerce-page a.button, .woocommerce button.button, .woocommerce-page button.button, .woocommerce input.button, .woocommerce-page input.button, .et_pb_contact p input[type="checkbox"]:checked + label i:before { color: #1e73be; }
+			.footer-widget h4 { color: #1e73be; }
+			.et-search-form, .nav li ul, .et_mobile_menu, .footer-widget li:before, .et_pb_pricing li:before, blockquote { border-color: #1e73be; }
+			.et_pb_counter_amount, .et_pb_featured_table .et_pb_pricing_heading, .et_quote_content, .et_link_content, .et_audio_content, .et_pb_post_slider.et_pb_bg_layout_dark, .et_slide_in_menu_container, .et_pb_contact p input[type="radio"]:checked + label i:before { background-color: #1e73be; }
+									a { color: #00a9a6; }
+													#top-header, #et-secondary-nav li ul { background-color: #1e73be; }
+																
+		
+							#main-footer { background-color: #232323; }
+							#footer-widgets .footer-widget a,
+			#footer-widgets .footer-widget li a,
+			#footer-widgets .footer-widget li a:hover { color: #f7f7f7; }
+							.footer-widget { color: #ffffff; }
+							#main-footer .footer-widget h4 { color: #ffffff; }
+							.footer-widget li:before { border-color: #ffffff; }
+						.bottom-nav, .bottom-nav a, .bottom-nav li.current-menu-item a { color: #ffffff; }#et-footer-nav .bottom-nav li.current-menu-item a { color: #ffffff; }#footer-bottom { background-color: rgba(94,94,94,0.82); }#footer-info, #footer-info a { color: #ffffff; }#footer-bottom .et-social-icon a { color: #ffffff; }										
+		
+																														
+		@media only screen and ( min-width: 981px ) {
+																									.footer-widget h4 { font-size: 11px; }
+													#logo { max-height: 60%; }
+				.et_pb_svg_logo #logo { height: 60%; }
+																			.et_header_style_centered.et_hide_primary_logo #main-header:not(.et-fixed-header) .logo_container, .et_header_style_centered.et_hide_fixed_logo #main-header.et-fixed-header .logo_container { height: 11.88px; }
+																.et-fixed-header#top-header, .et-fixed-header#top-header #et-secondary-nav li ul { background-color: #1e73be; }
+																		
+					}
+					@media only screen and ( min-width: 1350px) {
+				.et_pb_row { padding: 27px 0; }
+				.et_pb_section { padding: 54px 0; }
+				.single.et_pb_pagebuilder_layout.et_full_width_page .et_post_meta_wrapper { padding-top: 81px; }
+				.et_pb_section.et_pb_section_first { padding-top: inherit; }
+				.et_pb_fullwidth_section { padding: 0; }
+			}
+		
+		@media only screen and ( max-width: 980px ) {
+																				}
+		@media only screen and ( max-width: 767px ) {
+														}
+	</style>
+
+	
+	
+	
+	<style id="module-customizer-css">
+			</style>
+
+	<link rel="shortcut icon" href="http://blog.fedu.vn/wp-content/uploads/2018/07/ICON-01-260x300.png" />	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+	
+<!-- WooCommerce Facebook Integration Begin -->
+
+<script type='text/javascript'>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+</script>
+
+<script>
+fbq('init', '219807885288641', "219807885288641", {
+    "agent": "woocommerce-3.4.5-1.9.0"
+});
+
+fbq('track', 'PageView', {
+    "source": "woocommerce",
+    "version": "3.4.5",
+    "pluginVersion": "1.9.0"
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  jQuery && jQuery(function($){
+    $('body').on('added_to_cart', function(event) {
+      // Ajax action.
+      $.get('?wc-ajax=fb_inject_add_to_cart_event', function(data) {
+        $('head').append(data);
+      });
+    });
+  });
+}, false);
+
+</script>
+<!-- DO NOT MODIFY -->
+<!-- WooCommerce Facebook Integration end -->
+    
+<!-- Facebook Pixel Code -->
+<noscript>
+<img height="1" width="1" style="display:none" alt="fbpx"
+src="https://www.facebook.com/tr?id=219807885288641&ev=PageView&noscript=1"/>
+</noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code -->
+    <meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress."/>
+<!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="http://fedu.vn/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css" media="screen"><![endif]--><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>(adsbygoogle = window.adsbygoogle || []).push({
+google_ad_client: "ca-pub-9398635694504358",
+enable_page_level_ads: true,
+});
+</script>
+<noscript><style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript><!--
+Plugin: Google meta tag Site Verification Plugin
+Tracking Code.
+
+-->
+
+<meta name="google-site-verification" content="NQ60pyW72-h5-dosVERxM2L16RKv_EBuiLtiWktP0Bk"/><style type="text/css">
+	.et_fullscreen_slider .et_pb_slides,
+	.et_fullscreen_slider .et_pb_slide,
+	.et_fullscreen_slider .et_pb_container {
+	    min-height: 100% !important;
+	    height: 100% !important;
+	}
+
+	.et_pb_more_button
+	{
+		display: none !important;
+	}
+	.et_pb_slide_content
+	{
+		height: 100px;
+	}
+
+	.img-tet-left{
+		position: fixed;
+	    z-index: 99999999999;
+	    top: 0;
+	    left: 0;
+	    
+	    height: 400px;
+	}
+	.img-tet-right{
+		position: fixed;
+	    z-index: 99999999999;
+	    top: 0;
+	    right: 0;
+	    
+	    height: 400px;
+	}
+	.img-tet-bottom{
+	    position: fixed;
+	    z-index: 9999999999999;
+	    bottom: 0px;
+	    left: 0px;
+	   }
+</style>
+
+
+
+
+
+
+</head>
+<body class="post-template-default single single-post postid-8899 single-format-standard woocommerce-no-js et_pb_button_helper_class et_fixed_nav et_show_nav et_cover_background et_secondary_nav_enabled et_secondary_nav_two_panels et_pb_gutter windows et_pb_gutters3 et_primary_nav_dropdown_animation_fade et_secondary_nav_dropdown_animation_fade et_pb_footer_columns4 et_header_style_left et_right_sidebar et_divi_theme chrome wpb-js-composer js-comp-ver-5.4.2 vc_responsive">
+
+<!-- <div class="img-tet-left">
+	<img src="http://fedu.vn/wp-content/uploads/2019/01/1.png" alt="">
+</div>
+<div class="img-tet-right">
+	<img src="http://fedu.vn/wp-content/uploads/2019/01/background-right-2019.png" alt="">
+</div>
+<div class="img-tet-bottom">
+	<img src="http://fedu.vn/wp-content/uploads/2019/01/banner_header.png" alt="">
+</div> -->
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId            : '115700545682365',
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v2.11'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+	
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PX83MHB"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+	<div id="page-container">
+
+			<div id="top-header">
+			<div class="container clearfix">
+
+			
+				<div id="et-info">
+									<span id="et-info-phone">0869259562</span>
+				
+									<a href="/cdn-cgi/l/email-protection#85e6eaebf1e4e6f1c5e3e0e1f0abf3eb"><span id="et-info-email"><span class="__cf_email__" data-cfemail="07646869736664734761626372297169">[email&#160;protected]</span></span></a>
+				
+				<ul class="et-social-icons">
+
+	<li class="et-social-icon et-social-facebook">
+		<a href="#" class="icon">
+			<span>Facebook</span>
+		</a>
+	</li>
+	<li class="et-social-icon et-social-twitter">
+		<a href="#" class="icon">
+			<span>Twitter</span>
+		</a>
+	</li>
+	<li class="et-social-icon et-social-google-plus">
+		<a href="#" class="icon">
+			<span>Google</span>
+		</a>
+	</li>
+	<li class="et-social-icon et-social-rss">
+		<a href="http://fedu.vn/feed/" class="icon">
+			<span>RSS</span>
+		</a>
+	</li>
+
+</ul>				</div> <!-- #et-info -->
+
+			
+				<div id="et-secondary-menu">
+				<div class="et_duplicate_social_icons">
+								<ul class="et-social-icons">
+
+	<li class="et-social-icon et-social-facebook">
+		<a href="#" class="icon">
+			<span>Facebook</span>
+		</a>
+	</li>
+	<li class="et-social-icon et-social-twitter">
+		<a href="#" class="icon">
+			<span>Twitter</span>
+		</a>
+	</li>
+	<li class="et-social-icon et-social-google-plus">
+		<a href="#" class="icon">
+			<span>Google</span>
+		</a>
+	</li>
+	<li class="et-social-icon et-social-rss">
+		<a href="http://fedu.vn/feed/" class="icon">
+			<span>RSS</span>
+		</a>
+	</li>
+
+</ul>
+							</div><ul id="et-secondary-nav" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12020"><a href="http://blog.fedu.vn/"><i class="fa fa-newspaper-o" aria-hidden="true"></i> Blog</a></li>
+</ul><a href="http://fedu.vn/gio-hang/" class="et-cart-info">
+				<span>Mục 0</span>
+			</a>				</div> <!-- #et-secondary-menu -->
+
+			</div> <!-- .container -->
+		</div> <!-- #top-header -->
+	
+	
+		<header id="main-header" data-height-onload="66">
+			<div class="container clearfix et_menu_container">
+							<div class="logo_container">
+					<span class="logo_helper"></span>
+					<a href="http://fedu.vn/">
+						<img src="http://fedu.vn/wp-content/uploads/2018/06/LogoOfficial-01.png" alt="Fedu" id="logo" data-height-percentage="60" />
+					</a>
+				</div>
+				<div id="et-top-navigation" data-height="66" data-fixed-height="40">
+											<nav id="top-menu-nav">
+						<ul id="top-menu" class="nav"><li id="menu-item-76" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-76"><a href="http://fedu.vn/">Trang chủ</a></li>
+<li id="menu-item-1249" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1249"><a href="http://fedu.vn/khoa-hoc/">Khóa học</a>
+<ul class="sub-menu">
+	<li id="menu-item-1250" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1250"><a href="http://fedu.vn/khoa-hoc/lap-trinh-thiet-ke-web/">Lập trình &#8211; Thiết kế web</a></li>
+	<li id="menu-item-10534" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-10534"><a href="http://fedu.vn/khoa-hoc/combo-khoa-hoc-lap-trinh-web/">Combo Khóa Học Lập Trình Web</a></li>
+	<li id="menu-item-1251" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1251"><a href="http://fedu.vn/khoa-hoc/thiet-ke-do-hoa/">Thiết kế đồ họa</a></li>
+	<li id="menu-item-10533" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-10533"><a href="http://fedu.vn/khoa-hoc/combo-khoa-hoc-do-hoa/">Combo Khóa Học Đồ Họa</a></li>
+	<li id="menu-item-1252" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1252"><a href="http://fedu.vn/khoa-hoc/tin-hoc-van-phong/">Tin học văn phòng</a></li>
+	<li id="menu-item-12033" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-12033"><a href="http://fedu.vn/khoa-hoc/hoc-lap-trinh-theo-level/">HỌC LẬP TRÌNH THEO LEVEL</a></li>
+	<li id="menu-item-12034" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-12034"><a href="http://fedu.vn/khoa-hoc/hoc-thiet-ke-do-hoa-theo-level/">Học thiết kế đồ họa theo Level</a></li>
+</ul>
+</li>
+<li id="menu-item-284" class="mega-menu menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor menu-item-has-children menu-item-284"><a href="http://fedu.vn/thu-vien-hoc-tap/">Thư viện học tập</a>
+<ul class="sub-menu">
+	<li id="menu-item-608" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-608"><a href="http://fedu.vn/thu-vien-hoc-tap/office-tin-hoc-van-phong/">Tin học văn phòng</a>
+	<ul class="sub-menu">
+		<li id="menu-item-609" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-609"><a href="http://fedu.vn/thu-vien-hoc-tap/office-tin-hoc-van-phong/excel/">Excel</a></li>
+		<li id="menu-item-610" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-610"><a href="http://fedu.vn/thu-vien-hoc-tap/office-tin-hoc-van-phong/power-point/">Power Point</a></li>
+		<li id="menu-item-611" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-611"><a href="http://fedu.vn/thu-vien-hoc-tap/office-tin-hoc-van-phong/word/">Word</a></li>
+	</ul>
+</li>
+	<li id="menu-item-607" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-607"><a href="http://fedu.vn/thu-vien-hoc-tap/thiet-ke-do-hoa/">Thiết kế đồ họa</a>
+	<ul class="sub-menu">
+		<li id="menu-item-618" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-618"><a href="http://fedu.vn/thu-vien-hoc-tap/thiet-ke-do-hoa/photoshop/">Photoshop</a></li>
+		<li id="menu-item-615" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-615"><a href="http://fedu.vn/thu-vien-hoc-tap/thiet-ke-do-hoa/adobe-ilustrator/">Adobe Ilustrator</a></li>
+		<li id="menu-item-613" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-613"><a href="http://fedu.vn/thu-vien-hoc-tap/thiet-ke-do-hoa/adobe-animate/">Adobe Animate</a></li>
+		<li id="menu-item-612" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-612"><a href="http://fedu.vn/thu-vien-hoc-tap/thiet-ke-do-hoa/adobe-after-efect/">Adobe After Efect</a></li>
+		<li id="menu-item-614" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-614"><a href="http://fedu.vn/thu-vien-hoc-tap/thiet-ke-do-hoa/adobe-experience/">Adobe Experience</a></li>
+		<li id="menu-item-616" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-616"><a href="http://fedu.vn/thu-vien-hoc-tap/thiet-ke-do-hoa/adobe-lightroom/">Adobe Lightroom</a></li>
+		<li id="menu-item-617" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-617"><a href="http://fedu.vn/thu-vien-hoc-tap/thiet-ke-do-hoa/adobe-muse/">Adobe Muse</a></li>
+	</ul>
+</li>
+	<li id="menu-item-606" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor menu-item-has-children menu-item-606"><a href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/">Lập trình web</a>
+	<ul class="sub-menu">
+		<li id="menu-item-622" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-622"><a href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/front-end/html5/">HTML5</a></li>
+		<li id="menu-item-621" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-621"><a href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/front-end/css/">CSS</a></li>
+		<li id="menu-item-620" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-620"><a href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/front-end/bootstrap/">Bootstrap</a></li>
+		<li id="menu-item-623" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-623"><a href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/front-end/jquery/">jquery</a></li>
+		<li id="menu-item-624" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-624"><a href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/front-end/json/">Json</a></li>
+		<li id="menu-item-619" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor menu-item-619"><a href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/back-end/php/">php</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-1853" class="active-course menu-item menu-item-type-custom menu-item-object-custom menu-item-1853"><a href="http://khoahoc.fedu.vn/kich-hoat-khoa-hoc"><i class="fa fa-pencil" aria-hidden="true"></i> Kích hoạt khóa học</a></li>
+<li id="menu-item-231" class="login-course menu-item menu-item-type-custom menu-item-object-custom menu-item-231"><a href="http://khoahoc.fedu.vn/login"><i class="fa fa-sign-in" aria-hidden="true"></i> Đăng nhập lớp học</a></li>
+</ul>						</nav>
+					
+					
+					
+										<div id="et_top_search">
+						<span id="et_search_icon"></span>
+					</div>
+					
+					<div id="et_mobile_nav_menu">
+				<div class="mobile_nav closed">
+					<span class="select_page">Chọn trang</span>
+					<span class="mobile_menu_bar mobile_menu_bar_toggle"></span>
+				</div>
+			</div>				</div> <!-- #et-top-navigation -->
+			</div> <!-- .container -->
+			<div class="et_search_outer">
+				<div class="container et_search_form_container">
+					<form role="search" method="get" class="et-search-form" action="http://fedu.vn/">
+					<input type="search" class="et-search-field" placeholder="Tìm kiếm &hellip;" value="" name="s" title="Tìm:" />					</form>
+					<span class="et_close_search_field"></span>
+				</div>
+			</div>
+		</header> <!-- #main-header -->
+
+		<div id="et-main-area">
+<div id="main-content">
+	
+	
+<div class="main-header">
+        <div class="welcome">
+            <h2 style="color: #fff;">CHÀO MỪNG BẠN ĐẾN VỚI THƯ VIỆN HỌC TẬP & ĐÀO TẠO CƠ BẢN</h2>
+        </div>
+        <div class="search-box">
+            <form class="search-form" method="get" action="http://fedu.vn">
+                <input type="text" class="keyword" id="keyword" name="s" value="" placeholder="Chúng tôi giúp gì được cho bạn?" />
+                <button type="submit" name="submit"><i class="fa fa-search"></i></button>
+                <input type="hidden" name="post_type" value="post"/>
+            </form>
+        </div>
+    </div>	
+
+<div class="lesson-info">
+    <div class="container">
+    	        <div class="breadcrumb">
+            <!-- Breadcrumb NavXT 6.1.0 -->
+<span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to Fedu." href="http://fedu.vn" class="home"><span property="name">Trang chủ</span></a><meta property="position" content="1"></span> &gt; <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to the Thư viện học tập category archives." href="http://fedu.vn/thu-vien-hoc-tap/" class="taxonomy category"><span property="name">Thư viện học tập</span></a><meta property="position" content="2"></span> &gt; <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to the Lập trình web category archives." href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/" class="taxonomy category"><span property="name">Lập trình web</span></a><meta property="position" content="3"></span> &gt; <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to the Back-end category archives." href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/back-end/" class="taxonomy category"><span property="name">Back-end</span></a><meta property="position" content="4"></span> &gt; <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to the php category archives." href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/back-end/php/" class="taxonomy category"><span property="name">php</span></a><meta property="position" content="5"></span> &gt; <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to the PHP nâng cao category archives." href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/back-end/php/php-nang-cao/" class="taxonomy category"><span property="name">PHP nâng cao</span></a><meta property="position" content="6"></span> &gt; <span property="itemListElement" typeof="ListItem"><span property="name">Giới thiệu các mẫu trong PHP – Cách thức xác nhận Email và URL trong PHP</span><meta property="position" content="7"></span>        </div>
+        <div class="lesson-title">
+            <h2>Giới thiệu các mẫu trong PHP – Cách thức xác nhận Email và URL trong PHP</h2>
+                    </div>
+        <div class="section-nav col-md-3 col-sm-4">
+        	<h3>php</h3>
+        	        	<h4>PHP nâng cao</h4>
+            <ul>
+            	            	 <li class=""><a href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/back-end/php/php-nang-cao/gioi-thieu-ve-php/">Giới thiệu về PHP</a></li>
+            	            	 <li class=""><a href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/back-end/php/php-nang-cao/cai-dat-php/">Cài đặt PHP</a></li>
+            	            	 <li class=""><a href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/back-end/php/php-nang-cao/cu-phap-php/">Cú pháp PHP</a></li>
+            	            	 <li class=""><a href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/back-end/php/php-nang-cao/cac-bien-trong-php-5/">Các biến trong PHP</a></li>
+            	            	 <li class=""><a href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/back-end/php/php-nang-cao/echoin-trong-php/">Echo/In trong PHP</a></li>
+            	            	 <li class=""><a href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/back-end/php/php-nang-cao/cac-kieu-du-lieu-trong-php/">Các kiểu dữ liệu trong PHP</a></li>
+            	            	 <li class=""><a href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/back-end/php/php-nang-cao/php-strings/">PHP Strings ( Chuỗi )</a></li>
+            	            	 <li class=""><a href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/back-end/php/php-nang-cao/php-constants-hang/">PHP Constants ( Hằng số )</a></li>
+            	            	 <li class=""><a href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/back-end/php/php-nang-cao/php-operators/">PHP Operators ( Toán tử )</a></li>
+            	            	 <li class=""><a href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/back-end/php/php-nang-cao/php-else-elseif-statements-cau-lenh-dieu-kien/">PHP if&#8230;else&#8230;elseif Statements ( Câu lệnh điều kiện )</a></li>
+            	            	 <li class=""><a href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/back-end/php/php-nang-cao/php-switch-statement-cau-lenh-switch/">PHP switch Statement ( Câu lệnh switch )</a></li>
+            	            	 <li class=""><a href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/back-end/php/php-nang-cao/php-loops-vong-lap/">PHP while Loops ( vòng lặp while )</a></li>
+            	            	 <li class=""><a href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/back-end/php/php-nang-cao/php-loops-vong-lap-2/">PHP for Loops ( Vòng lặp For )</a></li>
+            	            	 <li class=""><a href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/back-end/php/php-nang-cao/php-functions-ham/">PHP Functions ( Hàm )</a></li>
+            	            	 <li class=""><a href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/back-end/php/php-nang-cao/php-arrays-mang/">PHP Arrays ( Mảng )</a></li>
+            	            	 <li class=""><a href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/back-end/php/php-nang-cao/phan-loai-mang-trong-php/">Phân Loại Mảng Trong PHP</a></li>
+            	            	 <li class=""><a href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/back-end/php/php-nang-cao/php-cac-bien-global-superglobal/">PHP – Các Biến Global – Superglobal</a></li>
+            	            	 <li class=""><a href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/back-end/php/php-nang-cao/cach-xu-ly-gia-tri-form-trong-php/">Cách Xử Lý Giá Trị Form Trong PHP</a></li>
+            	            	 <li class=""><a href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/back-end/php/php-nang-cao/validation-form-xay-dung-tinh-hop-le-cua-du-lieu-form-trong-php/">Validation Form &#8211; Xây dựng tính hợp lệ của dữ liệu form trong PHP</a></li>
+            	            	 <li class=""><a href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/back-end/php/php-nang-cao/cac-du-lieu-bat-buoc-trong-php/">Các thông tin bắt buộc trong PHP</a></li>
+            	            	 <li class="active"><a href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/back-end/php/php-nang-cao/gioi-thieu-cac-mau-trong-php-cach-thuc-xac-nhan-email-va-url-trong-php/">Giới thiệu các mẫu trong PHP – Cách thức xác nhận Email và URL trong PHP</a></li>
+            	            	 <li class=""><a href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/back-end/php/php-nang-cao/mau-form-hoan-chinh-trong-php/">Mẫu Form hoàn chỉnh trong PHP</a></li>
+            	            	 <li class=""><a href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/back-end/php/php-nang-cao/mang-da-chieu-trong-php/">Mảng đa chiều trong PHP</a></li>
+            	            	 <li class=""><a href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/back-end/php/php-nang-cao/ham-ngay-va-thang-trong-php/">Hàm ngày và tháng trong PHP</a></li>
+            	            	 <li class=""><a href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/back-end/php/php-nang-cao/cau-lenh-include-trong-php/">Câu lệnh include trong PHP</a></li>
+            	            	 <li class=""><a href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/back-end/php/php-nang-cao/xu-ly-files-trong-php/">Xử Lý Files Trong PHP</a></li>
+            	            	 <li class=""><a href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/back-end/php/php-nang-cao/cac-ham-xu-ly-file-trong-php/">Các hàm xử lý file trong PHP</a></li>
+            	            	 <li class=""><a href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/back-end/php/php-nang-cao/tao-va-viet-file-trong-php/">Tạo và Viết File trong PHP</a></li>
+            	            </ul>
+                </div>
+        <div class="lesson-content col-md-9 col-sm-8" >
+        <div class="button_next_single_page" style="margin-bottom: 50px; margin-top: 0px;">
+        	<button type="button" class="btn btn-primary prev_single">❮ Previous</button>
+        	<button type="button" class="btn btn-primary next_single">Next ❯</button>
+        </div>
+        <div class="clearfix">
+        	
+        </div>
+            <p><span style="color: #000000;">Ở chương trước, chúng ta đã tìm hiểu về cách thức xác nhận tên, email và URL. Trong bài này, chúng tôi sẽ giới thiệu cho các bạn về các mẫu trong PHP và cách thức xác nhận Email và URL trong PHP.</span></p>
+<hr />
+<h2><span style="color: #000000;">Xác nhận tên</span></h2>
+<p><span style="color: #000000;">Đoạn mã code dưới đây sẽ chỉ cho bạn thấy cách đơn giản để kiểm tra tên của bạn chỉ chưa chữ cái và khoảng trắng hay không? Nếu giá trị của thông tin cung cấp không chính xác, máy sẽ gửi thông báo lỗi về cho người dùng.</span></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="null">$name = test_input($_POST["name"]);
+if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+  $nameErr = "Only letters and white space allowed"; 
+}</pre>
+<p><span style="color: #000000;">Hàm <strong>preg_match() </strong>ở trên truyền vào 2 tham số:</span></p>
+<p><span style="color: #000000;">Tham số đầu tiên là các kí tự để kiểm tra là từ a-z và từ A-Z,nếu các kí tự của biến $name ở tham số thứ 2 nằm trong khoảng a-z,A-Z thì nó sẽ trả về kết quả true ngược lại thì sẽ trả về kết quả false.</span></p>
+<p><span style="color: #000000;">Hàm <strong>preg_match ()</strong> so sánh từng kí tự của một chuỗi ở tham số 2 với  quy định bạn đưa ra (ví dụ là từ a-z, từ 0-9…) và trả về true nếu hợp lệ, và false nếu không hợp lệ.</span></p>
+<hr />
+<h2><span style="color: #000000;">Xác thực email</span></h2>
+<p><span style="color: #000000;">Cách nhanh nhất và đơn giản nhất để kiểm tra một địa chỉ email có hợp lệ hay không ta dùng hàm filter_var().</span></p>
+<p><span style="color: #000000;">Xét đoạn mã code dưới đây, nếu địa chỉ email không hợp lệ, thông báo lỗi sẽ gửi về máy chủ.</span></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="null">$email = test_input($_POST["email"]);
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+  $emailErr = "Invalid email format"; 
+}</pre>
+<hr />
+<h2><span style="color: #000000;">Xác thực URL ( Xác thực Email và URL trong PHP)</span></h2>
+<p><span style="color: #000000;">Đoạn mã code dưới đây chỉ ra một cách để kiểm tra địa chỉ URL có hợp lệ hay không ( biểu thức này cho phép dấu gạch ngang chứa trong URL. Nếu cú pháp địa chỉ không hợp lệ, máy chủ sẽ gửi thông báo lỗi về cho người dùng.</span></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="null">$website = test_input($_POST["website"]);
+if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&amp;@#\/%?=~_|!:,.;]*[-a-z0-9+&amp;@#\/%=~_|]/i",$website)) {
+  $websiteErr = "Invalid URL"; 
+}</pre>
+<hr />
+<h2><span style="color: #000000;">Xác thực tên, Email và URL </span></h2>
+<p><span style="color: #000000;">Bây giờ, các ký tự sẽ được biểu diễn dưới dạng sau: </span></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="null">&lt;?php
+// define variables and set to empty values
+$nameErr = $emailErr = $genderErr = $websiteErr = "";
+$name = $email = $gender = $comment = $website = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if (empty($_POST["name"])) {
+    $nameErr = "Name is required";
+  } else {
+    $name = test_input($_POST["name"]);
+    // check if name only contains letters and whitespace
+    if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+      $nameErr = "Only letters and white space allowed"; 
+    }
+  }
+
+  if (empty($_POST["email"])) {
+    $emailErr = "Email is required";
+  } else {
+    $email = test_input($_POST["email"]);
+    // check if e-mail address is well-formed
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      $emailErr = "Invalid email format"; 
+    }
+  }
+
+  if (empty($_POST["website"])) {
+    $website = "";
+  } else {
+    $website = test_input($_POST["website"]);
+    // check if URL address syntax is valid (this regular expression also allows dashes in the URL)
+    if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&amp;@#\/%?=~_|!:,.;]*[-a-z0-9+&amp;@#\/%=~_|]/i",$website)) {
+      $websiteErr = "Invalid URL"; 
+    }
+  }
+
+  if (empty($_POST["comment"])) {
+    $comment = "";
+  } else {
+    $comment = test_input($_POST["comment"]);
+  }
+
+  if (empty($_POST["gender"])) {
+    $genderErr = "Gender is required";
+  } else {
+    $gender = test_input($_POST["gender"]);
+  }
+}
+?&gt;</pre>
+<p>&nbsp;</p>
+<p><span style="color: #000000;">Tham khảo thêm các khóa học lập trình web từ Front-end đến Back-end do trực tiếp giảng viên quốc tế trường FPT Arena giảng dạy giúp bạn thành thạo kỹ năng lập trình web từ CƠ BẢN – NÂNG CAO với giá chỉ từ 290,000đ:</span></p>
+<ul>
+<li><a href="http://fedu.vn/khoa-hoc/lap-trinh-thiet-ke-web/khoa-hoc-lap-trinh-frontend-co-ban-bootstrap-4-jquery-css3-html5/?utm_source=Blog&amp;utm_medium=Blog&amp;utm_campaign=VietND.09">Học lập trình front-end cơ bản với bootstrap 4/html5/css3</a></li>
+<li><a href="http://fedu.vn/khoa-hoc/lap-trinh-thiet-ke-web/hoc-lap-trinh-frontend-nang-cao-qua-project-thuc-te/?utm_source=Blog&amp;utm_medium=Blog&amp;utm_campaign=VietND.15">Học lập trình front-end nâng cao qua Project thực tế</a></li>
+<li><a href="http://fedu.vn/khoa-hoc/lap-trinh-thiet-ke-web/hoc-thiet-ke-web-voi-photoshop-theo-kieu-sass/?utm_source=Blog&amp;utm_medium=Blog&amp;utm_campaign=VietND.21">Học thiết kế web với Photoshop, CSS theo kiểu SASS</a></li>
+<li><a href="http://fedu.vn/khoa-hoc/lap-trinh-thiet-ke-web/hoc-cach-su-dung-git-github-cho-lap-trinh-va-thiet-ke-website/?utm_source=Blog&amp;utm_medium=Blog&amp;utm_campaign=VietND.11">Học cách sử dụng Git_hub cho lập trình viên</a></li>
+<li><a href="http://fedu.vn/khoa-hoc/lap-trinh-thiet-ke-web/hoc-lap-trinh-phpmysql-back-end-theo-mo-hinh-mvc/?utm_source=Blog&amp;utm_medium=Blog&amp;utm_campaign=VietND.18">Học lập trình Back-end PHP theo mô hình MVC cơ bản</a></li>
+<li><a href="http://fedu.vn/khoa-hoc/lap-trinh-thiet-ke-web/hoc-lap-trinh-back-end-phpmysqljquery-nang-cao/?utm_source=Blog&amp;utm_medium=Blog&amp;utm_campaign=ViietND.19">Học lập trình Back-end PHP theo mô hình MVC nâng cao</a></li>
+<li><a href="http://fedu.vn/khoa-hoc/lap-trinh-thiet-ke-web/hoc-lap-trinh-angular-voi-co-du-lieu/?utm_source=Blog&amp;utm_medium=Blog&amp;utm_campaign=VietND.20">Học lập trình Cơ sở dữ liệu với AngularJS</a></li>
+<li><a href="http://fedu.vn/khoa-hoc/lap-trinh-thiet-ke-web/hoc-lap-trinh-ra-website-tmdt-hoan-chinh-bang-wordpress-va-woocomrce-z/?utm_source=Blog&amp;utm_medium=Blog&amp;utm_campaign=VietND.12">Học lập trình theme wordpress. Làm ra mọi website hoàn chỉnh với wordpress</a></li>
+<li><a href="http://fedu.vn/khoa-hoc/combo-khoa-hoc-lap-trinh-web/combo-lap-trinh-web-front-end-tu-co-ban-nang-cao/?utm_source=Blog&amp;utm_medium=Blog&amp;utm_campaign=Combo_VietND.09_VietND.15">Combo lập trình front-end từ cơ bản – nâng cao</a></li>
+<li><a href="http://fedu.vn/khoa-hoc/combo-khoa-hoc-lap-trinh-web/hoc-lap-trinh-back-end-phpmysql-theo-mo-hinh-mvc-tu-co-ban-nang-cao/?utm_source=Blog&amp;utm_medium=Blog&amp;utm_campaign=Combo_Vietnd.18_VietND.19">Combo lập trình back-end từ cơ bản đến nâng cao</a></li>
+<li><a href="http://fedu.vn/khoa-hoc/combo-khoa-hoc-lap-trinh-web/lap-trinh-theme-wordpress-tu-front-end-den-back-end/?utm_source=Blog&amp;utm_medium=Blog&amp;utm_campaign=Combo_Vietnd09_Vietnd.12_VietND.15">Combo lập trình web với word press từ A-Z</a></li>
+</ul>
+<p>&nbsp;</p>
+
+<div class="wp_rp_wrap  wp_rp_vertical_m" id="wp_rp_first"><div class="wp_rp_content"><h3 class="related_post_title">Bài viết liên quan</h3><ul class="related_post wp_rp"><li data-position="0" data-poid="in-8588" data-post-type="none" ><a href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/back-end/php/php-nang-cao/cach-xu-ly-gia-tri-form-trong-php/" class="wp_rp_thumbnail"><img src="http://fedu.vn/wp-content/uploads/2017/08/mảng-150x150.jpg" alt="Cách Xử Lý Giá Trị Form Trong PHP" width="150" height="150" /></a><a href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/back-end/php/php-nang-cao/cach-xu-ly-gia-tri-form-trong-php/" class="wp_rp_title">Cách Xử Lý Giá Trị Form Trong PHP</a></li><li data-position="1" data-poid="in-2446" data-post-type="none" ><a href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/back-end/php/php-nang-cao/cu-phap-php/" class="wp_rp_thumbnail"><img src="http://fedu.vn/wp-content/uploads/2017/07/large__original_php2-500x300_c-150x150.jpg" alt="Cú pháp PHP" width="150" height="150" /></a><a href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/back-end/php/php-nang-cao/cu-phap-php/" class="wp_rp_title">Cú pháp PHP</a></li><li data-position="2" data-poid="in-9825" data-post-type="none" ><a href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/back-end/php/php-nang-cao/tao-va-viet-file-trong-php/" class="wp_rp_thumbnail"><img src="http://fedu.vn/wp-content/uploads/2017/07/large__original_php2-500x300_c-1-150x150.jpg" alt="Tạo và Viết File trong PHP" width="150" height="150" /></a><a href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/back-end/php/php-nang-cao/tao-va-viet-file-trong-php/" class="wp_rp_title">Tạo và Viết File trong PHP</a></li><li data-position="3" data-poid="in-8780" data-post-type="none" ><a href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/back-end/php/php-nang-cao/validation-form-xay-dung-tinh-hop-le-cua-du-lieu-form-trong-php/" class="wp_rp_thumbnail"><img src="http://fedu.vn/wp-content/uploads/2017/08/mảng-150x150.jpg" alt="Validation Form &#8211; Xây dựng tính hợp lệ của dữ liệu form trong PHP" width="150" height="150" /></a><a href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/back-end/php/php-nang-cao/validation-form-xay-dung-tinh-hop-le-cua-du-lieu-form-trong-php/" class="wp_rp_title">Validation Form &#8211; Xây dựng tính hợp lệ của dữ liệu form trong PHP</a></li></ul></div></div>
+        <div class="button_next_single_page">
+        	<button type="button" class="btn btn-primary prev_single">❮ Previous</button>
+        	<button type="button" class="btn btn-primary next_single">Next ❯</button>
+        </div>
+
+        				<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+				jQuery('button.btn.btn-primary.prev_single').click(function(){
+					window.location.assign("http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/front-end/css/huong-dan-css/cac-thuoc-tinh-text-trong-css/");				});
+
+				jQuery('button.btn.btn-primary.next_single').click(function(){
+					 window.location.assign("http://fedu.vn/thu-vien-hoc-tap/thiet-ke-do-hoa/thiet-ke-do-hoa-can-hoc-nhung-gi/");				});
+
+				
+				</script>
+        </div>
+        </div>
+</div>
+
+<div class="top-footer">
+    <div class="container" style="padding-top: 0px;">
+        <div class="item col-md-4 col-sm-4">
+            <a href="https://www.facebook.com/groups/1283666168335006/" target="blank"><i class="fa fa-volume-off"></i> HỎI ĐÁP VỚI CỘNG ĐỒNG</a>
+        </div>
+        <div class="item col-md-4 col-sm-4">
+            <a href="http://fedu.vn/lien-he"><i class="fa fa-phone"></i> LIÊN HỆ TRỰC TIẾP VỚI CHÚNG TÔI</a>
+        </div>
+        <div class="item col-md-4 col-sm-4">
+            <a href="http://fedu.vn/tin-tuc"><i class="fa fa-feed"></i> BLOG - TIN TỨC</a>
+        </div>
+    </div>
+</div>	
+</div> <!-- #main-content -->
+
+
+
+
+	<span class="et_pb_scroll_top et-pb-icon"></span>
+
+
+
+
+
+
+			<footer id="main-footer">
+
+				
+<div class="container">
+	<div id="footer-widgets">
+	<div class="col-md-3"><div id="text-7" class="fwidget et_pb_widget widget_text"><h4 class="title"><i style="padding-right: 10px; vertical-align: inherit;" class="elusive icon-home"></i>THÔNG TIN FEDU</h4>			<div class="textwidget"><ul>
+<li><a href="http://fedu.vn/gioi-thieu/">Giới thiệu</a></li>
+<li><a href="http://fedu.vn/cau-hoi-thuong-gap/">Câu hỏi thường gặp</a></li>
+<li><a href="http://fedu.vn/tuyen-dung/">Tuyển dụng</a></li>
+<li><a href="http://fedu.vn/tin-tuc/chinh-sach-hoc-tap/">Chính sách học tập</a></li>
+<li><a href="http://fedu.vn/lien-he/">Liên hệ</a></li>
+</ul>
+<p><a class="dmca-badge" title="DMCA.com Protection Status" href="//www.dmca.com/Protection/Status.aspx?ID=0c778192-1bd1-4982-9ac2-cf18d02130fc"> <img src="//images.dmca.com/Badges/dmca_protected_sml_120m.png?ID=0c778192-1bd1-4982-9ac2-cf18d02130fc" alt="DMCA.com Protection Status" /></a> <script src="//images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script></p>
+</div>
+		</div> <!-- end .fwidget --></div> <!-- end .footer-widget --><div class="col-md-3"><div id="text-6" class="fwidget et_pb_widget widget_text"><h4 class="title"><i style="padding-right: 10px; vertical-align: inherit;" class="elusive icon-group"></i>GROUP FACEBOOK</h4>			<div class="textwidget"><ul>
+<li><a href="https://www.facebook.com/groups/107584456406418/?ref=group_header">Học thiết kế qua bài tập thực hành</a></li>
+<li><a href="https://www.facebook.com/groups/1283666168335006/">Cùng học lập trình web Back-end&amp;Front-end</a></li>
+<li><a href="https://www.facebook.com/groups/952717101497959/">Hỗ trợ học tin học văn phòng</a></li>
+</ul>
+</div>
+		</div> <!-- end .fwidget --></div> <!-- end .footer-widget --><div class="col-md-3"><div id="lc_taxonomy-3" class="fwidget et_pb_widget widget_lc_taxonomy"><div id="lct-widget-project_category-container" class="list-custom-taxonomy-widget"><h4 class="title"><i style="padding-right: 10px; vertical-align: inherit;" class="elusive icon-th-list"></i>KHÓA HỌC</h4><ul id="lct-widget-project_category">	<li class="cat-item cat-item-10"><a href="http://fedu.vn/project_category/thiet-ke-do-hoa/" >Thiết kế đồ họa</a> (13)
+</li>
+	<li class="cat-item cat-item-9"><a href="http://fedu.vn/project_category/lap-trinh-thiet-ke-web/" >Lập trình &#8211; Thiết kế web</a> (6)
+</li>
+	<li class="cat-item cat-item-11"><a href="http://fedu.vn/project_category/tin-hoc-van-phong/" >Tin học văn phòng</a> (1)
+</li>
+</ul></div></div> <!-- end .fwidget --></div> <!-- end .footer-widget --><div class="col-md-3"><div id="text-8" class="fwidget et_pb_widget widget_text"><h4 class="title"><i style="padding-right: 10px; vertical-align: inherit;" class="elusive icon-comment-alt"></i>THƯ VIỆN HỌC TẬP</h4>			<div class="textwidget"><div class='content-column one_half'><ul>
+<li><a href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/front-end/html5/">Html 5</a></li>
+<li><a href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/front-end/css3/">Css 3</a></li>
+<li><a href="#">Mysql</a></li>
+<li><a href="http://fedu.vn/thu-vien-hoc-tap/lap-trinh-web/back-end/php/">PHP</a></li>
+</ul></div><div class='content-column one_half last_column'></div><div class='clear_column'></div></p>
+<p>&nbsp;</p>
+</div>
+		</div> <!-- end .fwidget --></div> <!-- end .footer-widget -->	</div> <!-- #footer-widgets -->
+</div>	<!-- .container -->
+
+
+
+
+		
+
+
+				<div id="footer-bottom">
+
+					<div class="container clearfix">
+
+				<ul class="et-social-icons">
+
+	<li class="et-social-icon et-social-facebook">
+		<a href="#" class="icon">
+			<span>Facebook</span>
+		</a>
+	</li>
+	<li class="et-social-icon et-social-twitter">
+		<a href="#" class="icon">
+			<span>Twitter</span>
+		</a>
+	</li>
+	<li class="et-social-icon et-social-google-plus">
+		<a href="#" class="icon">
+			<span>Google</span>
+		</a>
+	</li>
+	<li class="et-social-icon et-social-rss">
+		<a href="http://fedu.vn/feed/" class="icon">
+			<span>RSS</span>
+		</a>
+	</li>
+
+</ul><div id="footer-info">Copyright © 2017 Fedu. All rights reserved.</div>
+					</div>	<!-- .container -->
+
+				</div>
+
+			</footer> <!-- #main-footer -->
+
+		</div> <!-- #et-main-area -->
+
+
+
+
+
+
+	</div> <!-- #page-container -->
+
+
+
+	
+
+        <!-- START Google Code for Dynamic Retargeting -->
+            <script type="text/javascript">
+                var google_tag_params = {
+                    ecomm_pagetype: 'other'
+                };
+            </script>
+			
+        <script type="text/javascript">
+            /* <![CDATA[ */
+            var google_conversion_id = 853881412;
+            var google_custom_params = window.google_tag_params;
+            var google_remarketing_only = true;
+            /* ]]> */
+        </script>
+        <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+        </script>
+        <noscript>
+            <div style="display:inline;">
+                <img height="1" width="1" style="border-style:none;" alt=""
+                     src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/853881412/?value=0&guid=ON&script=0"/>
+            </div>
+        </noscript>
+        <!-- END Google Code for Dynamic Retargeting -->
+
+		<style type="text/css" id="et-builder-page-custom-style">
+				 .et_pb_bg_layout_dark { color: #ffffff !important; } .page.et_pb_pagebuilder_layout #main-content { background-color: rgba(255,255,255,0); } .et_pb_section { background-color: #ffffff; }
+			</style>	<script type="text/javascript">
+		var c = document.body.className;
+		c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+		document.body.className = c;
+	</script>
+	<script type='text/javascript' src='http://fedu.vn/wp-content/themes/Divi/includes/builder/scripts/frontend-builder-global-functions.js?ver=4.9.8'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"http:\/\/fedu.vn\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"recaptcha":{"messages":{"empty":"H\u00e3y x\u00e1c nh\u1eadn r\u1eb1ng b\u1ea1n kh\u00f4ng ph\u1ea3i l\u00e0 robot."}}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://fedu.vn/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.0.4'></script>
+<script type='text/javascript' src='http://fedu.vn/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.70'></script>
+<script type='text/javascript' src='http://fedu.vn/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://fedu.vn/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=3.4.5'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","cart_hash_key":"wc_cart_hash_456f23a784194ce7ba0868c12f0acc8d","fragment_name":"wc_fragments_456f23a784194ce7ba0868c12f0acc8d"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://fedu.vn/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=3.4.5'></script>
+<script type='text/javascript' src='http://fedu.vn/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://fedu.vn/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.11.4'></script>
+<script type='text/javascript'>
+jQuery(document).ready(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"\u0110\u00f3ng","currentText":"H\u00f4m nay","monthNames":["Th\u00e1ng M\u1ed9t","Th\u00e1ng Hai","Th\u00e1ng Ba","Th\u00e1ng T\u01b0","Th\u00e1ng N\u0103m","Th\u00e1ng S\u00e1u","Th\u00e1ng B\u1ea3y","Th\u00e1ng T\u00e1m","Th\u00e1ng Ch\u00edn","Th\u00e1ng M\u01b0\u1eddi","Th\u00e1ng M\u01b0\u1eddi M\u1ed9t","Th\u00e1ng M\u01b0\u1eddi Hai"],"monthNamesShort":["Th1","Th2","Th3","Th4","Th5","Th6","Th7","Th8","Th9","Th10","Th11","Th12"],"nextText":"Ti\u1ebfp theo","prevText":"Quay v\u1ec1","dayNames":["Ch\u1ee7 Nh\u1eadt","Th\u1ee9 Hai","Th\u1ee9 Ba","Th\u1ee9 T\u01b0","Th\u1ee9 N\u0103m","Th\u1ee9 S\u00e1u","Th\u1ee9 B\u1ea3y"],"dayNamesShort":["CN","T2","T3","T4","T5","T6","T7"],"dayNamesMin":["C","H","B","T","N","S","B"],"dateFormat":"dd\/mm\/yy","firstDay":1,"isRTL":false});});
+</script>
+<script type='text/javascript' src='http://fedu.vn/wp-content/plugins/woocommerce/assets/js/select2/select2.full.min.js?ver=4.0.3'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var yith_wcaf = {"labels":{"select2_i18n_matches_1":"One result is available, press enter to select it.","select2_i18n_matches_n":"%qty% results are available, use up and down arrow keys to navigate.","select2_i18n_no_matches":"Kh\u00f4ng t\u00ecm th\u1ea5y k\u1ebft qu\u1ea3 ph\u00f9 h\u1ee3p","select2_i18n_ajax_error":"T\u1ea3i th\u1ea5t b\u1ea1i","select2_i18n_input_too_short_1":"Vui l\u00f2ng nh\u1eadp 1 ho\u1eb7c nhi\u1ec1u k\u00fd t\u1ef1","select2_i18n_input_too_short_n":"Vui l\u00f2ng nh\u1eadp %qty% ho\u1eb7c nhi\u1ec1u k\u00fd t\u1ef1","select2_i18n_input_too_long_1":"Vui l\u00f2ng x\u00f3a 1 k\u00fd t\u1ef1","select2_i18n_input_too_long_n":"Vui l\u00f2ng x\u00f3a %qty%  k\u00fd t\u1ef1","select2_i18n_selection_too_long_1":"B\u1ea1n ch\u1ec9 c\u00f3 th\u1ec3 ch\u1ecdn 1 s\u1ea3n ph\u1ea9m","select2_i18n_selection_too_long_n":"B\u1ea1n c\u00f3 th\u1ec3 ch\u1ecdn %qty% s\u1ea3n ph\u1ea9m","select2_i18n_load_more":"T\u1ea3i nhi\u1ec1u k\u1ebft qu\u1ea3 h\u01a1n&hellip;","select2_i18n_searching":"T\u00ecm ki\u1ebfm&hellip;","link_copied_message":"Url copied"},"ajax_url":"http:\/\/fedu.vn\/wp-admin\/admin-ajax.php","search_products_nonce":"12fd1011af","set_referrer_nonce":"e292186828"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://fedu.vn/wp-content/plugins/yith-woocommerce-affiliates/assets/js/yith-wcaf.min.js?ver=4.9.8'></script>
+<script type='text/javascript' src='http://fedu.vn/wp-content/themes/Divi-child/js/owl.carousel.min.js?ver=4.9.8'></script>
+<script type='text/javascript' src='http://fedu.vn/wp-content/themes/Divi-child/js/custom.js?ver=1'></script>
+<script type='text/javascript' src='http://fedu.vn/wp-includes/js/comment-reply.min.js?ver=4.9.8'></script>
+<script type='text/javascript' src='http://fedu.vn/wp-content/themes/Divi/includes/builder/scripts/jquery.mobile.custom.min.js?ver=4.9.8'></script>
+<script type='text/javascript' src='http://fedu.vn/wp-content/themes/Divi/js/custom.js?ver=4.9.8'></script>
+<script type='text/javascript' src='http://fedu.vn/wp-content/themes/Divi/js/smoothscroll.js?ver=4.9.8'></script>
+<script type='text/javascript' src='http://fedu.vn/wp-content/plugins/easy-fancybox/fancybox/jquery.fancybox.1.3.21.min.js'></script>
+<script type='text/javascript'>
+var fb_timeout, fb_opts={'overlayShow':true,'hideOnOverlayClick':true,'showCloseButton':true,'margin':20,'centerOnScroll':false,'enableEscapeButton':true,'autoScale':true };
+if(typeof easy_fancybox_handler==='undefined'){
+var easy_fancybox_handler=function(){
+jQuery('.nofancybox,a.wp-block-file__button,a.pin-it-button,a[href*="pinterest.com/pin/create"],a[href*="facebook.com/share"],a[href*="twitter.com/share"]').addClass('nolightbox');
+/* IMG */
+var fb_IMG_select='a[href*=".jpg"]:not(.nolightbox,li.nolightbox>a),area[href*=".jpg"]:not(.nolightbox),a[href*=".jpeg"]:not(.nolightbox,li.nolightbox>a),area[href*=".jpeg"]:not(.nolightbox),a[href*=".png"]:not(.nolightbox,li.nolightbox>a),area[href*=".png"]:not(.nolightbox),a[href*=".webp"]:not(.nolightbox,li.nolightbox>a),area[href*=".webp"]:not(.nolightbox)';
+jQuery(fb_IMG_select).addClass('fancybox image');
+var fb_IMG_sections=jQuery('.gallery,.wp-block-gallery,.tiled-gallery');
+fb_IMG_sections.each(function(){jQuery(this).find(fb_IMG_select).attr('rel','gallery-'+fb_IMG_sections.index(this));});
+jQuery('a.fancybox,area.fancybox,li.fancybox a').each(function(){jQuery(this).fancybox(jQuery.extend({},fb_opts,{'transitionIn':'elastic','easingIn':'easeOutBack','transitionOut':'elastic','easingOut':'easeInBack','opacity':false,'hideOnContentClick':false,'titleShow':true,'titlePosition':'over','titleFromAlt':true,'showNavArrows':true,'enableKeyboardNav':true,'cyclic':false}))});};
+jQuery('a.fancybox-close').on('click',function(e){e.preventDefault();jQuery.fancybox.close()});
+};
+var easy_fancybox_auto=function(){setTimeout(function(){jQuery('#fancybox-auto').trigger('click')},1000);};
+jQuery(easy_fancybox_handler);jQuery(document).on('post-load',easy_fancybox_handler);
+jQuery(easy_fancybox_auto);
+</script>
+<script type='text/javascript' src='http://fedu.vn/wp-content/plugins/easy-fancybox/js/jquery.easing.1.4.1.min.js'></script>
+<script type='text/javascript' src='http://fedu.vn/wp-content/plugins/easy-fancybox/js/jquery.mousewheel.3.1.13.min.js'></script>
+<script type='text/javascript' src='http://fedu.vn/wp-content/themes/Divi/includes/builder/scripts/jquery.fitvids.js?ver=4.9.8'></script>
+<script type='text/javascript' src='http://fedu.vn/wp-content/plugins/js_composer/assets/lib/waypoints/waypoints.min.js?ver=5.4.2'></script>
+<script type='text/javascript' src='http://fedu.vn/wp-content/themes/Divi/includes/builder/scripts/jquery.magnific-popup.js?ver=4.9.8'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var et_pb_custom = {"ajaxurl":"http:\/\/fedu.vn\/wp-admin\/admin-ajax.php","images_uri":"http:\/\/fedu.vn\/wp-content\/themes\/Divi\/images","builder_images_uri":"http:\/\/fedu.vn\/wp-content\/themes\/Divi\/includes\/builder\/images","et_frontend_nonce":"95e02357d5","subscription_failed":"L\u00e0m \u01a1n, ki\u1ec3m tra \u0111\u1ed3ng d\u01b0\u1edbi ch\u1eafc ch\u1eafn \u0111\u1ec3 c\u00e1c \u00f4ng g\u00f5 \u0111\u00fang th\u00f4ng tin.","et_ab_log_nonce":"20eaf75f57","fill_message":"Xin vui l\u00f2ng, \u0111i\u1ec1n v\u00e0o c\u00e1c l\u0129nh v\u1ef1c sau \u0111\u00e2y:","contact_error_message":"Xin h\u00e3y s\u1eeda nh\u1eefng l\u1ed7i sau:","invalid":"Kh\u00f4ng h\u1ee3p l\u1ec7 email","captcha":"Captcha","prev":"Tr\u01b0\u1edbc","previous":"Tr\u01b0\u1edbc","next":"Ti\u1ebfp theo","wrong_captcha":"B\u1ea1n \u0111\u00e3 nh\u1eadp sai s\u1ed1 captcha.","is_builder_plugin_used":"","ignore_waypoints":"yes","is_divi_theme_used":"1","widget_search_selector":".widget_search","is_ab_testing_active":"","page_id":"8899","unique_test_id":"","ab_bounce_rate":"5","is_cache_plugin_active":"no","is_shortcode_tracking":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://fedu.vn/wp-content/themes/Divi/includes/builder/scripts/frontend-builder-scripts.js?ver=4.9.8'></script>
+<script type='text/javascript' src='http://fedu.vn/wp-content/plugins/enlighter/resources/mootools-core-yc.js?ver=3.8'></script>
+<script type='text/javascript' src='http://fedu.vn/wp-content/plugins/enlighter/resources/EnlighterJS.min.js?ver=3.8'></script>
+<script type='text/javascript' src='http://fedu.vn/wp-includes/js/wp-embed.min.js?ver=4.9.8'></script>
+<script type="text/javascript">/* <![CDATA[ */EnlighterJS_Config = {"selector":{"block":"pre.EnlighterJSRAW","inline":"code.EnlighterJSRAW"},"language":"generic","theme":"enlighter","indent":2,"hover":"hoverEnabled","showLinenumbers":true,"rawButton":true,"infoButton":true,"windowButton":true,"rawcodeDoubleclick":false,"grouping":true,"cryptex":{"enabled":false,"email":"mail@example.tld"}};!function(){var a=function(a){var b="Enlighter Error: ";console.error?console.error(b+a):console.log&&console.log(b+a)};return window.addEvent?"undefined"==typeof EnlighterJS?void a("Javascript Resources not loaded yet!"):"undefined"==typeof EnlighterJS_Config?void a("Configuration not loaded yet!"):void window.addEvent("domready",function(){EnlighterJS.Util.Init(EnlighterJS_Config.selector.block,EnlighterJS_Config.selector.inline,EnlighterJS_Config)}):void a("MooTools Framework not loaded yet!")}();;/* ]]> */</script>	
+
+	
+
+<script type="text/javascript">
+
+jQuery('.et-cart-info>span').append('(<i style="font-style: normal;">0</i>)');	
+
+jQuery(document).ready(function()
+
+{
+
+	jQuery('.et_pb_slide').css('cursor', 'pointer');
+
+	jQuery('.et_pb_slide').click(function(){
+
+		var link_slider = jQuery(this).find('.et_pb_more_button').attr('href');
+
+		window.location.href=link_slider;
+
+	});
+
+
+
+	
+});
+
+</script>	
+
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5854c195709acbb6"></script>
+
+<div id="fb-root"></div>
+
+<script>(function(d, s, id) {
+
+  var js, fjs = d.getElementsByTagName(s)[0];
+
+  if (d.getElementById(id)) return;
+
+  js = d.createElement(s); js.id = id;
+
+  js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.10&appId=307477792684519";
+
+  fjs.parentNode.insertBefore(js, fjs);
+
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script>
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+
+
+  ga('create', 'UA-101721581-1', 'auto');
+
+  ga('send', 'pageview');
+
+
+
+</script>
+
+
+
+<script>
+
+(function($) {
+
+    $(window).on('load resize', function() {
+
+        $('.et_fullscreen_slider').each(function() {
+
+            et_fullscreen_slider($(this));
+
+        });
+
+    });
+
+    function et_fullscreen_slider(et_slider) {
+
+        var et_viewport_height = $(window).height(),
+
+            et_slider_height = $(et_slider).find('.et_pb_slider_container_inner').innerHeight(),
+
+            $admin_bar = $('#wpadminbar'),
+
+            $main_header = $('#main-header'),
+
+            $top_header = $('#top-header');
+
+        $(et_slider).height('auto');
+
+   
+
+        
+        if ($admin_bar.length) {
+
+            var et_viewport_height = et_viewport_height - $admin_bar.height();
+
+        }
+
+        if ($top_header.length) {
+
+            var et_viewport_height = et_viewport_height - $top_header.height();
+
+        }
+
+        if (!$('.et_transparent_nav').length && !$('.et_vertical_nav').length) {
+
+            var et_viewport_height = et_viewport_height - $main_header.height();
+
+        }
+
+        if (et_viewport_height > et_slider_height) {
+
+            $(et_slider).height(et_viewport_height);
+
+        }
+
+        
+        
+
+    }
+
+})(jQuery);
+
+</script>
+
+<div class="fb-customerchat" page_id="115700545682365">
+</div>
+
+<!--Start of Tawk.to Script-->
+<!-- <script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5b96231ef31d0f771d8498f5/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script> -->
+<!--End of Tawk.to Script-->
+
+
+
+
+<!-- Google Code dành cho Thẻ tiếp thị lại -->
+
+<!--------------------------------------------------
+
+Không thể liên kết thẻ tiếp thị lại với thông tin nhận dạng cá nhân hay đặt thẻ tiếp thị lại trên các trang có liên quan đến danh mục nhạy cảm. Xem thêm thông tin và hướng dẫn về cách thiết lập thẻ trên: http://google.com/ads/remarketingsetup
+
+--------------------------------------------------->
+
+<script type="text/javascript">
+
+var google_tag_params = {
+
+ecomm_prodid: 'REPLACE_WITH_VALUE',
+
+ecomm_pagetype: 'REPLACE_WITH_VALUE',
+
+ecomm_totalvalue: 'REPLACE_WITH_VALUE',
+
+dynx_itemid: 'REPLACE_WITH_VALUE',
+
+dynx_itemid2: 'REPLACE_WITH_VALUE',
+
+dynx_pagetype: 'REPLACE_WITH_VALUE',
+
+dynx_totalvalue: 'REPLACE_WITH_VALUE',
+
+};
+
+</script>
+
+<script type="text/javascript">
+
+/* <![CDATA[ */
+
+var google_conversion_id = 853881412;
+
+var google_custom_params = window.google_tag_params;
+
+var google_remarketing_only = true;
+
+/* ]]> */
+
+</script>
+
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+
+</script>
+
+<noscript>
+
+<div style="display:inline;">
+
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/853881412/?guid=ON&amp;script=0"/>
+
+</div>
+
+</noscript>
+
+
+
+</body>
+
+
+</html>
+
+

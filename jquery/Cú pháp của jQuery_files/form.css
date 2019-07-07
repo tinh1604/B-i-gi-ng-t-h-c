@@ -1,0 +1,2753 @@
+﻿#post pre{
+  font-size:17px;
+  color: black;
+  border:1px solid #ccc;
+  border-radius: 4px;
+  padding:10px 13px 10px 13px;
+  background-color:transparent;
+  word-wrap: normal;
+  white-space: pre-wrap;
+}
+#post kbd{
+  font-family: monospace;
+  font-size: 20px;
+  padding: 2px 5px;
+  color: #fff;
+  background-color: #333;
+  border-radius: 3px;
+  box-shadow: 2px 2px 5px gray;
+  font-weight: bold;
+}
+#post .ltw{
+  font-size:17.6px;
+  font-family: monospace;
+}
+#post .ltwcode{
+  font-size:17.6px;
+  font-family: monospace;
+  color: crimson;
+  background-color: #f1f1f1;
+}
+#post .ltwcodeb{
+  font-size:17.6px;
+  font-family: monospace;
+  color: crimson;
+  background-color: #f1f1f1;
+  font-weight: bold;
+}
+#post .cmark{
+  color: crimson;
+  background-color: #f1f1f1;
+}
+/****************************************** FORM NEW 01 ******************************/
+#post .form_new_01{
+  background-color:#fbd8d4;
+  border-left:6px solid #f39389;
+  padding:1px 15px;
+}
+/****************************************** FORM NEW 02 ******************************/
+#post .form_new_02{
+  background-color: #ddd;
+  border:1px solid #ddd;
+  border-radius: 4px;
+}
+#post .form_new_02 .theh3{
+  font-size: 21px;
+  font-family:cursive;
+  margin-top:6px;
+  margin-left:12px;
+  text-decoration: underline;
+}
+#post .form_new_02 hr{
+  border-top:1px solid #aba8a8;
+  margin: 12px 15px 0px 15px;
+}
+#post .form_new_02 pre{
+  border: 0px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding:10px 15px 11px 15px;
+}
+#post .form_new_02 .nutxem a{
+  display: inline-block;
+  background-color: #555;
+  border: 1px solid #555;
+  margin-left:12px;
+  margin-bottom:12px;
+  text-align: center;
+  text-decoration: none;
+  padding:5px 30px;
+  color:white;
+  font-size:18px;
+  font-family: Arial;
+}
+#post .form_new_02 .nutxem a:hover{
+  color:#555555;
+  border: 1px solid #555555;
+  background-color: white;
+}
+#post .form_new_02 .nutxem a:active{
+  color:white;
+  background-color: #555;
+  border: 1px solid #555;
+}
+/****************************************** FORM NEW 03 ******************************/
+#post .form_new_03{
+  background-color: #ddd;
+  border:1px solid #ddd;
+  border-radius: 4px;
+}
+#post .form_new_03 .theh3{
+  font-size: 21px;
+  font-family:cursive;
+  margin-top:6px;
+  margin-left:12px;
+  text-decoration: underline;
+}
+#post .form_new_03 .noithem{
+  padding-left:15px;
+  padding-right:15px;
+}
+#post .form_new_03 .noithem p{
+  margin-top:9px;
+  margin-bottom: 9px;
+}
+#post .form_new_03 ul{
+  padding-top:0px;
+  padding-bottom:0px;
+  margin-top:9px;
+  margin-bottom:9px;
+}
+#post .form_new_03 ul li{
+  margin-top:6px;
+  margin-bottom: 6px;
+}
+#post .form_new_03 hr{
+  border-top:1px solid #aba8a8;
+  margin: 12px 15px 0px 15px;
+}
+#post .form_new_03 pre{
+  border: 0px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding:10px 15px 11px 15px;
+}
+#post .form_new_03 .nutxem a{
+  display: inline-block;
+  background-color: #555;
+  border: 1px solid #555;
+  margin-left:13px;
+  margin-bottom:13px;
+  text-align: center;
+  text-decoration: none;
+  padding:5px 30px;
+  color:white;
+  font-size:18px;
+  font-family: Arial;
+}
+#post .form_new_03 .nutxem a:hover{
+  color:#555555;
+  border: 1px solid #555555;
+  background-color: white;
+}
+#post .form_new_03 .nutxem a:active{
+  color:white;
+  background-color: #555;
+  border: 1px solid #555;
+}
+/****************************************** FORM NEW 04 ******************************/
+#post .form_new_04{
+  background-color:#dde4e9;
+  border-left:6px solid #558abb;
+  padding:1px 15px;
+}
+/****************************************** FORM NEW 05 ******************************/
+#post .form_new_05{
+  background-color:#dde4e9;
+  border-left:6px solid #558abb;
+  padding:1px 15px 1px 37px;
+  position: relative;
+}
+#post .form_new_05 > span:first-child{
+  font-size:23px;
+  position:absolute;
+  left:10px;
+  top:14px;
+}
+/****************************************** FORM NEW 06 ******************************/
+#post .form_new_06{
+  background-color:#fbd8d4;
+  border-left:6px solid #f39389;
+  padding:1px 15px 1px 40px;
+  position: relative;
+}
+#post .form_new_06 > span:first-child{
+  font-size:23px;
+  position:absolute;
+  left:10px;
+  top:14px;
+  color:#ea3b28;
+}
+/****************************************** FORM NEW 07 ******************************/
+#post .form_new_07{
+  background-color:#ffff66;
+  border-left:6px solid #ffcc00;
+  padding:1px 15px;
+}
+/****************************************** FORM NEW 08 ******************************/
+#post .form_new_08 pre{
+  background-color:#eee;
+  border:1px solid #eee;
+}
+/****************************************** FORM NEW 09 ******************************/
+#post .form_new_09{
+  display:inline-block;
+  border:1px solid #ddd;
+  padding:3px 6px;
+  border-radius:4px;
+  font-style: italic;
+}
+/****************************************** FORM NEW 10 ******************************/
+#post .form_new_10{
+  display:inline-block;
+  border:1px solid gray;
+  border-radius:50%;
+  padding:10px 20px;
+}
+/****************************************** FORM NEW 11 ******************************/
+#post .form_new_11{
+  background-color: #ddd;
+  border:1px solid #ddd;
+  border-radius: 4px;
+}
+#post .form_new_11 .theh3{
+  font-size: 21px;
+  font-family:cursive;
+  margin-top:6px;
+  margin-left:12px;
+  text-decoration: underline;
+}
+#post .form_new_11 .noithem{
+  padding-left:15px;
+  padding-right:15px;
+}
+#post .form_new_11 .noithem p{
+  margin-top:9px;
+  margin-bottom:9px;
+}
+#post .form_new_11 ul{
+  padding-top:0px;
+  padding-bottom:0px;
+  margin-top:9px;
+  margin-bottom:9px;
+}
+#post .form_new_11 ul li{
+  margin-top:6px;
+  margin-bottom: 6px;
+}
+#post .form_new_11 pre{
+  background: white;
+  margin:10px 15px 10px 15px;
+}
+#post .form_new_11 .noithem2{
+  padding-left:15px;
+  padding-right:15px;
+}
+#post .form_new_11 .noithem2 p{
+  margin-top:9px;
+  margin-bottom: 9px;
+}
+#post .form_new_11 .noithem2 ul{
+  padding-top:0px;
+  padding-bottom:0px;
+  margin-top:9px;
+  margin-bottom:9px;
+}
+#post .form_new_11 .noithem2 ul li{
+  margin-top:6px;
+  margin-bottom: 6px;
+}
+#post .form_new_11 .thehiendemo{
+  background-color: white;
+  margin:0px 15px 15px 15px;
+  border-radius:4px;
+  padding:7px 10px;
+  border: 1px solid #ccc;
+}
+#post .form_new_11 .nutxem a{
+  display: inline-block;
+  background-color: #555;
+  border: 1px solid #555;
+  margin-left:13px;
+  margin-bottom:13px;
+  text-align: center;
+  text-decoration: none;
+  padding:5px 30px;
+  color:white;
+  font-size:18px;
+  font-family: Arial;
+}
+#post .form_new_11 .nutxem a:hover{
+  color:#555555;
+  border: 1px solid #555555;
+  background-color: white;
+}
+#post .form_new_11 .nutxem a:active{
+  background-color: #555;
+  border: 1px solid #555;
+  color:white;
+}
+/****************************************** FORM NEW 12 ******************************/
+#post .form_new_12 tr > td:first-child{
+  vertical-align: middle;
+}
+#post .form_new_12 tr:first-child th{
+  color:#333;
+}
+/****************************************** FORM NEW 13 ******************************/
+#post .form_new_13{
+  background-color: #ddd;
+  border:1px solid #ddd;
+  border-radius: 4px;
+}
+#post .form_new_13 .theh3{
+  font-size: 21px;
+  font-family:cursive;
+  margin-top:6px;
+  margin-left:12px;
+  text-decoration: underline;
+}
+#post .form_new_13 .noithem{
+  padding-left:15px;
+  padding-right:15px;
+}
+#post .form_new_13 .noithem p{
+  margin-top:9px;
+  margin-bottom:9px;
+}
+#post .form_new_13 ul{
+  padding-top:0px;
+  padding-bottom:0px;
+  margin-top:9px;
+  margin-bottom:9px;
+}
+#post .form_new_13 ul li{
+  margin-top:6px;
+  margin-bottom: 6px;
+}
+#post .form_new_13 pre{
+  background: white;
+  margin:10px 15px 10px 15px;
+}
+#post .form_new_13 .noithem2{
+  padding-left:15px;
+  padding-right:15px;
+}
+#post .form_new_13 .noithem2 p{
+  margin-top:9px;
+  margin-bottom: 9px;
+}
+#post .form_new_13 .noithem2 ul{
+  padding-top:0px;
+  padding-bottom:0px;
+  margin-top:9px;
+  margin-bottom:9px;
+}
+#post .form_new_13 .noithem2 ul li{
+  margin-top:6px;
+  margin-bottom: 6px;
+}
+#post .form_new_13 .thehiendemo{
+  background-color: white;
+  margin:0px 15px 15px 15px;
+  border-radius:4px;
+  padding:7px 10px;
+  border: 1px solid #ccc;
+}
+/****************************************** FORM NEW 14 ******************************/
+#post .form_new_14{
+  background-color: #ddd;
+  border:1px solid #ddd;
+  border-radius: 4px;
+}
+#post .form_new_14 .theh3{
+  font-size: 21px;
+  font-family:cursive;
+  margin-top:6px;
+  margin-left:12px;
+  text-decoration: underline;
+}
+#post .form_new_14 pre{
+  background: white;
+  margin:10px 15px 10px 15px;
+}
+#post .form_new_14 .noithem2{
+  padding-left:15px;
+  padding-right:15px;
+}
+#post .form_new_14 .noithem2 p{
+  margin-top:9px;
+  margin-bottom: 9px;
+}
+#post .form_new_14 .noithem2 ul{
+  padding-top:0px;
+  padding-bottom:0px;
+  margin-top:9px;
+  margin-bottom:9px;
+}
+#post .form_new_14 .noithem2 ul li{
+  margin-top:6px;
+  margin-bottom: 6px;
+}
+#post .form_new_14 .thehiendemo{
+  background-color: white;
+  margin:0px 15px 15px 15px;
+  border-radius:4px;
+  padding:7px 10px;
+  border: 1px solid #ccc;
+}
+/****************************************** FORM NEW 15 ******************************/
+#post .form_new_15{
+  background-color: #ddd;
+  border:1px solid #ddd;
+  border-radius: 4px;
+}
+#post .form_new_15 .theh3{
+  font-size: 21px;
+  font-family:cursive;
+  margin-top:6px;
+  margin-left:12px;
+  text-decoration: underline;
+}
+#post .form_new_15 pre{
+  background: white;
+  margin:10px 15px 10px 15px;
+}
+#post .form_new_15 .noithem2{
+  padding-left:15px;
+  padding-right:15px;
+}
+#post .form_new_15 .noithem2 p{
+  margin-top:9px;
+  margin-bottom: 9px;
+}
+#post .form_new_15 .noithem2 ul{
+  padding-top:0px;
+  padding-bottom:0px;
+  margin-top:9px;
+  margin-bottom:9px;
+}
+#post .form_new_15 .noithem2 ul li{
+  margin-top:6px;
+  margin-bottom: 6px;
+}
+#post .form_new_15 .thehiendemo{
+  background-color: white;
+  margin:0px 15px 15px 15px;
+  border-radius:4px;
+  padding:7px 10px;
+  border: 1px solid #ccc;
+}
+#post .form_new_15 .nutxem a{
+  display: inline-block;
+  background-color: #555;
+  border: 1px solid #555;
+  margin-left:13px;
+  margin-bottom:13px;
+  text-align: center;
+  text-decoration: none;
+  padding:5px 30px;
+  color:white;
+  font-size:18px;
+  font-family: Arial;
+}
+#post .form_new_15 .nutxem a:hover{
+  color:#555555;
+  border: 1px solid #555555;
+  background-color: white;
+}
+#post .form_new_15 .nutxem a:active{
+  background-color: #555;
+  border: 1px solid #555;
+  color:white;
+}
+/****************************************** FORM NEW 16 ******************************/
+#post .form_new_16 .xem{
+  width: 110px;
+  text-align: center;
+  padding-top:1px;
+  padding-bottom: 4px;
+}
+#post .form_new_16 .xem a{
+  margin:auto;
+  padding:3px 7px;
+  background-color:brown;
+  color: white;
+  box-shadow:3px 3px 5px black;
+  text-decoration: none;
+  font-size:18px;
+  font-family: Arial;
+}
+#post .form_new_16 .xem a:hover{
+  background-color:white;
+  color:black;
+}
+#post .form_new_16 .xem a:active{
+  background-color:brown;
+  color: white;
+}
+/****************************************** FORM NEW 17 ******************************/
+#post .form_new_17 pre{
+  background-color:#eee;
+  border:1px solid #ddd;
+}
+/****************************************** FORM NEW 19 ******************************/
+#post .form_new_19 td{
+  vertical-align: middle;
+}
+/****************************************** FORM NEW 20 ******************************/
+#post .form_new_20{
+  font-size:17px;
+  color: black;
+  border-top:1px solid #ccc;
+  border-bottom:1px solid #ccc;
+  border-right:1px solid #ccc;
+  border-left:6px solid #73ad21;
+  padding:10px 13px 10px 13px;
+  background-color:transparent;
+  word-wrap: normal;
+  white-space: pre-wrap;
+  font-family:monospace;
+}
+/****************************************** FORM NEW 21 ******************************/
+#post .form_new_21{
+  background-color:#ffc;
+  border-left:6px solid #ffeb3b;
+  padding:1px 15px;
+}
+/****************************************** FORM NEW 22 ******************************/
+#post .form_new_22 a{
+  font-size:18px;
+  color:white;
+  background-color: #555;
+  border: 1px solid #555;
+  text-align: center;
+  padding:5px 30px;
+  text-decoration: none;
+  display: inline-block;
+  font-family: Arial;
+}
+#post .form_new_22 a:hover{
+  color:#555555;
+  border: 1px solid #555555;
+  background-color: white;
+}
+#post .form_new_22 a:active{
+  color:white;
+  background-color: #555;
+  border: 1px solid #555;
+}
+/****************************************** FORM NEW 23 ******************************/
+#post .form_new_23{
+  background-color: #ddd;
+  border:1px solid #ddd;
+  border-radius: 4px;
+}
+#post .form_new_23 pre{
+  border: 0px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding:10px 15px 10px 15px;
+}
+#post .form_new_23 .nutxem a{
+  display: inline-block;
+  background-color: #555;
+  border: 1px solid #555;
+  margin-left:12px;
+  margin-bottom:11px;
+  text-align: center;
+  text-decoration: none;
+  padding:5px 30px;
+  color:white;
+  font-size:18px;
+  font-family: Arial;
+}
+#post .form_new_23 .nutxem a:hover{
+  color:#555555;
+  border: 1px solid #555555;
+  background-color: white;
+}
+#post .form_new_23 .nutxem a:active{
+  color:white;
+  background-color: #555;
+  border: 1px solid #555;
+}
+/****************************************** FORM NEW 24 ******************************/
+#post .form_new_24{
+  display:inline-block;
+  border:1px solid gray;
+  padding:3px 6px;
+  border-radius:4px;
+  font-style: italic;
+}
+/****************************************** FORM NEW 25 ******************************/
+#post .form_new_25{
+  font-size:17px;
+  color: black;
+  border:1px solid #ddd;
+  border-radius: 4px;
+  padding:10px 13px 10px 13px;
+  background-color: #ddd;
+  word-wrap: normal;
+  white-space: pre-wrap;
+  font-family:monospace;  
+}
+/****************************************** FORM NEW 27 ******************************/
+#post .form_new_27{
+  background-color: #ddd;
+  border:1px solid #ddd;
+  border-radius: 4px;
+}
+#post .form_new_27 .theh3{
+  font-size: 21px;
+  font-family:cursive;
+  margin-top:6px;
+  margin-left:12px;
+  text-decoration: underline;
+}
+#post .form_new_27 .noithem{
+  padding-left:15px;
+  padding-right:15px;
+}
+#post .form_new_27 .noithem p{
+  margin-top:9px;
+  margin-bottom: 9px;
+}
+#post .form_new_27 ul{
+  padding-top:0px;
+  padding-bottom:0px;
+  margin-top:9px;
+  margin-bottom:9px;
+}
+#post .form_new_27 ul li{
+  margin-top:6px;
+  margin-bottom: 6px;
+}
+#post .form_new_27 hr{
+  border-top:1px solid #aba8a8;
+  margin: 12px 15px 0px 15px;
+}
+#post .form_new_27 pre{
+  border: 0px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding:10px 14px 14px 14px;
+}
+/****************************************** FORM NEW 28 ******************************/
+#post .form_new_28{
+  display:inline-block;
+  border:1px solid #ccc;
+  padding:3px 6px;
+  border-radius:4px;
+  font-style: italic;
+}
+/****************************************** FORM NEW 29 ******************************/
+#post .form_new_29 .xem{
+  width: 100px;
+  text-align: center;
+  padding-top:1px;
+  padding-bottom: 4px;
+}
+#post .form_new_29 .xem a{
+  margin:auto;
+  padding:3px 7px;
+  background-color:brown;
+  color: white;
+  box-shadow:3px 3px 5px black;
+  text-decoration: none;
+  font-size:18px;
+  font-family: Arial;
+}
+#post .form_new_29 .xem a:hover{
+  background-color:white;
+  color:black;
+}
+#post .form_new_29 .xem a:active{
+  background-color:brown;
+  color: white;
+}
+/****************************************** FORM NEW 30 ******************************/
+#post .form_new_30{
+  background-color: #ddd;
+  border:1px solid #ddd;
+  border-radius: 4px;
+}
+#post .form_new_30 .theh3{
+  font-size: 21px;
+  font-family:cursive;
+  margin-top:6px;
+  margin-left:12px;
+  text-decoration: underline;
+}
+#post .form_new_30 hr{
+  border-top:1px solid #aba8a8;
+  margin: 12px 12px 0px 15px;
+}
+#post .form_new_30 pre{
+  border: 0px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding:10px 14px 14px 14px;
+}
+/****************************************** FORM NEW 31 ******************************/
+#post .form_new_31{
+  background-color: #ddd;
+  border:1px solid #ddd;
+  border-radius: 4px;
+}
+#post .form_new_31 .theh3{
+  font-size: 21px;
+  font-family:cursive;
+  margin-top:6px;
+  margin-left:12px;
+  text-decoration: underline;
+}
+#post .form_new_31 hr{
+  border-top:1px solid #aba8a8;
+  margin: 12px 15px 0px 15px;
+}
+#post .form_new_31 .div_pre{
+  font-size:17px;
+  color: black;
+  border-radius: 4px;
+  padding:15px 15px 15px 15px;
+  background-color:transparent;
+  word-wrap: normal;
+  white-space: pre-wrap;
+  font-family:monospace;
+}
+/****************************************** FORM NEW 32 ******************************/
+#post .form_new_32{
+  background-color: #ddd;
+  border:1px solid #ddd;
+  border-radius: 4px;
+}
+#post .form_new_32 .theh3{
+  font-size: 21px;
+  font-family:cursive;
+  margin-top:6px;
+  margin-left:12px;
+  text-decoration: underline;
+}
+#post .form_new_32 .noithem{
+  padding-left:15px;
+  padding-right:15px;
+}
+#post .form_new_32 .noithem p{
+  margin-top:9px;
+  margin-bottom: 9px;
+}
+#post .form_new_32 ul{
+  padding-top:0px;
+  padding-bottom:0px;
+  margin-top:9px;
+  margin-bottom:9px;
+}
+#post .form_new_32 ul li{
+  margin-top:6px;
+  margin-bottom: 6px;
+}
+#post .form_new_32 hr{
+  border-top:1px solid #aba8a8;
+  margin: 12px 15px 0px 15px;
+}
+#post .form_new_32 div.doanma{
+  font-size:17px;
+  color: black;
+  border-radius: 4px;
+  padding:15px 15px 15px 15px;
+  background-color:transparent;
+  word-wrap: normal;
+  white-space: pre-wrap;
+  font-family:monospace;
+}
+#post .form_new_32 .nutxem a{
+  display: inline-block;
+  background-color: #555;
+  border: 1px solid #555;
+  margin-left:13px;
+  margin-bottom:13px;
+  text-align: center;
+  text-decoration: none;
+  padding:5px 30px;
+  color:white;
+  font-size:18px;
+  font-family: Arial;
+}
+#post .form_new_32 .nutxem a:hover{
+  color:#555555;
+  border: 1px solid #555555;
+  background-color: white;
+}
+#post .form_new_32 .nutxem a:active{
+  color:white;
+  background-color: #555;
+  border: 1px solid #555;
+}
+/****************************************** FORM NEW 33 ******************************/
+#post .form_new_33,
+#post .form_new_18{
+  font-size:17px;
+  color: black;
+  border:1px solid #ccc;
+  border-radius: 4px;
+  padding:10px 13px 10px 13px;
+  background-color:transparent;
+  word-wrap: normal;
+  white-space: pre-wrap;
+  font-family:monospace;  
+}
+/****************************************** FORM NEW 34 ******************************/
+#post .form_new_34{
+  background-color: #ddd;
+  border:1px solid #ddd;
+  border-radius: 4px;
+}
+#post .form_new_34 .theh3{
+  font-size: 21px;
+  font-family:cursive;
+  margin-top:6px;
+  margin-left:12px;
+  text-decoration: underline;
+}
+#post .form_new_34 hr{
+  border-top:1px solid #aba8a8;
+  margin: 12px 15px 0px 15px;
+}
+#post .form_new_34 div.doanma{
+  font-size:17px;
+  color: black;
+  border-radius: 4px;
+  padding:15px 15px 15px 15px;
+  background-color:transparent;
+  word-wrap: normal;
+  white-space: pre-wrap;
+  font-family:monospace;
+}
+#post .form_new_34 .nutxem a{
+  display: inline-block;
+  background-color: #555;
+  border: 1px solid #555;
+  margin-left:13px;
+  margin-bottom:13px;
+  text-align: center;
+  text-decoration: none;
+  padding:5px 30px;
+  color:white;
+  font-size:18px;
+  font-family: Arial;
+}
+#post .form_new_34 .nutxem a:hover{
+  color:#555555;
+  border: 1px solid #555555;
+  background-color: white;
+}
+#post .form_new_34 .nutxem a:active{
+  color:white;
+  background-color: #555;
+  border: 1px solid #555;
+}
+/****************************************** FORM NEW 35 ******************************/
+#post .form_new_35{
+  font-size:17px;
+  color: black;
+  border-radius: 4px;
+  padding:10px 13px 10px 13px;
+  word-wrap: normal;
+  white-space: pre-wrap;
+  font-family:monospace;  
+  background-color:#272823;
+  border-color:transparent;
+}
+/****************************************** FORM NEW 36 ******************************/
+#post .form_new_36{
+  background-color: #ddd;
+  border:1px solid #ddd;
+  border-radius: 4px;
+}
+#post .form_new_36 .theh3{
+  font-size: 21px;
+  font-family:cursive;
+  margin-top:6px;
+  margin-left:12px;
+  text-decoration: underline;
+}
+#post .form_new_36 .noithem{
+  padding-left:15px;
+  padding-right:15px;
+}
+#post .form_new_36 .noithem p{
+  margin-top:9px;
+  margin-bottom: 9px;
+}
+#post .form_new_36 ul{
+  padding-top:0px;
+  padding-bottom:0px;
+  margin-top:9px;
+  margin-bottom:9px;
+}
+#post .form_new_36 ul li{
+  margin-top:6px;
+  margin-bottom: 6px;
+}
+#post .form_new_36 hr{
+  border-top:1px solid #aba8a8;
+  margin: 12px 15px 0px 15px;
+}
+#post .form_new_36 div.doanma{
+  font-size:17px;
+  color: black;
+  border-radius: 4px;
+  padding:15px 15px 15px 15px;
+  background-color:transparent;
+  word-wrap: normal;
+  white-space: pre-wrap;
+  font-family:monospace;
+}
+/****************************************** FORM NEW 37 ******************************/
+#post .form_new_37{
+  background-color: #ddd;
+  border:1px solid #ddd;
+  border-radius: 4px;
+}
+#post .form_new_37 .doanma{
+  font-size:17px;
+  color: black;
+  border-radius: 4px;
+  padding:10px 15px 10px 15px;
+  background-color:transparent;
+  word-wrap: normal;
+  white-space: pre-wrap;
+  font-family:monospace;
+}
+#post .form_new_37 .nutxem a{
+  display: inline-block;
+  background-color: #555;
+  border: 1px solid #555;
+  margin-left:12px;
+  margin-bottom:11px;
+  text-align: center;
+  text-decoration: none;
+  padding:5px 30px;
+  color:white;
+  font-size:18px;
+  font-family: Arial;
+}
+#post .form_new_37 .nutxem a:hover{
+  color:#555555;
+  border: 1px solid #555555;
+  background-color: white;
+}
+#post .form_new_37 .nutxem a:active{
+  color:white;
+  background-color: #555;
+  border: 1px solid #555;
+}
+/****************************************** FORM NEW 38 ******************************/
+#post .form_new_38 tr td:first-child a{
+  text-decoration: underline;
+  color:black;
+}
+/****************************************** FORM NEW 20 ******************************/
+#post pre.form_new_39{
+  font-size:17px;
+  border-top:1px solid #ccc;
+  border-bottom:1px solid #ccc;
+  border-right:1px solid #ccc;
+  border-left:6px solid #73ad21;
+  border-radius: 0px;
+  padding:10px 13px 10px 13px;
+  background-color:transparent;
+  word-wrap: normal;
+  white-space: pre-wrap;
+  font-family:monospace;
+}
+/****************************************** FORM NEW 40 ******************************/
+#post .form_new_40{
+  display:inline-block;
+  border:1px solid #ccc;
+  padding:3px 6px;
+  border-radius:4px;
+  font-style: normal;
+}
+/****************************************** FORM NEW 41 ******************************/
+#post .form_new_41{
+  display:inline-block;
+  border:1px solid gray;
+  padding:3px 6px;
+  border-radius:4px;
+  font-style: normal;
+}
+/****************************************** FORM NEW 42 ******************************/
+#post .form_new_42{
+  position: relative;
+}
+#post .form_new_42 pre{
+  margin: 0px;
+  border-radius: 0px;
+  border-left:6px solid #73ad21;
+}
+#post .form_new_42 > div{
+  position:absolute;
+  top:5.5px;
+  right:10px;
+  box-shadow: 3px 3px 5px black;
+  padding:2px 8px;
+  background-color: brown;
+}
+#post .form_new_42 > div:hover{
+  background-color: white;
+}
+#post .form_new_42 > div a{
+  color: white;
+  text-decoration: none;
+}
+#post .form_new_42 > div a:hover{
+  color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****************************************** KHUNG FORM CHUẨN ******************************/
+
+.bm_khungform_chuan{
+  padding:0.01em 16px;
+  background-color: #E6E6E6;
+  box-shadow:3px 3px 12px black;
+  margin-top:15px;
+  margin-bottom: 20px;
+  padding-top:10px;
+  padding-bottom:15px;
+}
+#post .bm_khungform_chuan h3{
+  margin-top:1px;
+}
+#post .bm_khungform_chuan > pre{
+  padding-left:12px;
+  padding-top: 8px;
+  padding-bottom:8px;
+  background-color:#fcfcfc;
+  border:0px;
+  border-radius:0px;
+  border-left:4px solid #73AD21 !important;
+}
+#post .bm_khungform_chuan .noidunghienthi{
+  border:1px solid #ccc;
+  border-radius:4px;
+  background-color:white;
+  padding:10px;
+}
+/****************************************** FORM 1 ******************************/
+#post .bm_khungform_chuan.form_1{
+  padding-bottom: 1px;
+}
+/****************************************** FORM 2 ******************************/
+#post .bm_khungform_chuan.form_2{
+  padding-bottom: 5px;
+}
+/****************************************** FORM 2 ******************************/
+#post .bm_khungform_chuan.form_3{
+  padding-bottom: 3px;
+}
+/****************************************** FORM 4 ******************************/
+#post .bm_khungform_chuan.form_4{
+  padding-bottom: 6px;
+}
+/****************************************** FORM 5 ******************************/
+#post .bm_khungform_chuan.form_5 .nutxem{
+  margin-top:15px;
+  margin-bottom:12px;
+}
+#post .bm_khungform_chuan.form_5 a{
+  padding:6px 20px;
+  background-color:#73AD21;
+  color: white;
+  /*box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);*/
+  box-shadow:3px 3px 5px black;
+  text-decoration: none;
+}
+#post .bm_khungform_chuan.form_5 a:hover{
+  background-color:white;
+  color:#73AD21;
+}
+#post .bm_khungform_chuan.form_5 a:active{
+  background-color:#73AD21;
+  color: white;
+}
+
+/****************************************** BẢNG 1 - BẢNG THU NHỎ ******************************/
+#post .tbbang1{
+  margin-bottom: 15px;
+}
+#post .tbbang1 td,
+#post .tbbang1 th{
+  padding:7px 10px;
+  vertical-align: middle;
+}
+/****************************************** BẢNG 2 - BẢNG CHỨA LINK LIÊN KẾT ******************************/
+#post .tbbang2{
+  margin-bottom: 15px;
+}
+#post .tbbang2 a{
+  color: #000;
+  text-decoration: underline;
+}
+#post .tbbang2 a:hover{
+  color:#73AD21;
+}
+#post .tbbang2 td,
+#post .tbbang2 th{
+  padding:7px 10px;
+  vertical-align: middle;
+}
+#post .tbbang2 .nutxemvidutbbang2{
+  width: 70px;
+  text-align: center;
+}
+#post .tbbang2 .nutxemvidutbbang2 a{
+  margin-left:2px;
+  margin-right: 4px;
+  padding:3px 7px;
+  background-color:brown;
+  color: white;
+  box-shadow:3px 3px 5px black;
+  text-decoration: none;
+}
+#post .tbbang2 .nutxemvidutbbang2 a:hover{
+  background-color:white;
+  color:black;
+}
+#post .tbbang2 .nutxemvidutbbang2 a:active{
+  background-color:brown;
+  color: white;
+}
+#post .tbbang2 .nutxemchitiettbbang2{
+  width: 120px;
+}
+#post .tbbang2 .nutxemchitiettbbang2 a{
+  margin-left:2px;
+  margin-right: 4px;
+  padding:3px 7px;
+  background-color:brown;
+  color: white;
+  box-shadow:3px 3px 5px black;
+  text-decoration: none;
+}
+#post .tbbang2 .nutxemchitiettbbang2 a:hover{
+  background-color:white;
+  color:black;
+}
+#post .tbbang2 .nutxemchitiettbbang2 a:active{
+  background-color:brown;
+  color: white;
+}
+/****************************************** Lưu ý ******************************/
+#post .tbbang_luuy{
+  border:1px solid #ccc;
+  width:100%;
+  margin-bottom:10px;
+}
+#post .tbbang_luuy .lamp{
+  padding-top:7px;padding-right: 10px;padding-bottom: 9px;padding-left: 10px;
+}
+#post .tbbang_luuy .element{
+  vertical-align:middle;
+  padding:7px 7px;
+}
+/****************************************** PRE mặc định ******************************/
+#post .the_pre_default pre{
+    display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    line-height: 1.42857143;
+    word-break: break-word;
+    word-wrap: break-word;
+    background-color:#eeeeee;
+    border: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-radius: 4px;
+}
+/****************************************** PRE mặc định TRẮNG ******************************/
+#post .the_pre_default_trang pre{
+    display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    line-height: 1.42857143;
+    word-break: break-word;
+    word-wrap: break-word;
+    background-color:white;
+    border: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-radius: 4px;
+}
+/****************************************** DIV THỂ HIỆN1 ******************************/
+#post .div_thehien1{
+    display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    line-height: 1.42857143;
+    word-break: break-word;
+    word-wrap: break-word;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+/****************************************** NÚT XEM SỐ 2 ******************************/
+#post .bieumau_nutxem_so2{
+  margin-top:15px;
+  margin-bottom:12px;
+}
+#post .bieumau_nutxem_so2 a{
+  padding:6px 20px;
+  background-color:#73AD21;
+  color: white;
+  box-shadow:3px 3px 5px black;
+  text-decoration: none;
+}
+#post .bieumau_nutxem_so2 a:hover{
+  background-color:white;
+  color:#73AD21;
+}
+#post .bieumau_nutxem_so2 a:active{
+  background-color:#73AD21;
+  color: white;
+}
+/****************************************** FORM 6 ******************************/
+#post .form_6{
+  background-color:#eeeeee;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+#post .form_6 pre{
+  display: block;
+    padding: 9.5px;
+    margin: 0px 0px 3px;
+    line-height: 1.42857143;
+    word-break: break-word;
+    word-wrap: break-word;
+    background-color:#eeeeee;
+    border:0px;
+    border-radius:5px;
+}
+#post .form_6 .nutxem{
+  margin-left:11px;
+  margin-bottom:17px;
+}
+#post .form_6 a{
+  padding:6px 20px;
+  background-color:#73AD21;
+  color: white;
+  box-shadow:3px 3px 5px black;
+  text-decoration: none;
+}
+#post .form_6 a:hover{
+  background-color:white;
+  color:#73AD21;
+}
+#post .form_6 a:active{
+  background-color:#73AD21;
+  color: white;
+}
+#post .form_6 .theh3{
+  margin-top:5px;
+  margin-bottom:0px;
+  margin-left:10px;
+  font-size: 22px;
+}
+#post .form_6 hr{
+  border-color: #ccc;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  margin-left:20px;
+  margin-right:20px;
+}
+#post .form_6 .noithem p{
+  margin-bottom:0px;
+  margin-left:13px;
+  padding-right:15px;
+}
+#post .form_6 .divthehienthehr2{
+  margin-top:-8px;
+  margin-bottom:8px;
+}
+#post .form_6 .noithem2 p{
+  margin-left:10px;
+  margin-bottom:13px;
+  padding-right:15px;
+}
+/****************************************** Pre mặc định nền trắng ******************************/
+#post .premacdinhnentrang pre{
+  background-color: white;
+}
+/****************************************** Pre mặc định nền trắng 2 ******************************/
+#post .premacdinhnentrang2{
+  border-radius:5px;
+  position: relative;
+}
+#post .premacdinhnentrang2 pre{
+  margin: 0px;
+}
+#post .premacdinhnentrang2 .divxemvidu{
+  position:absolute;
+  top:5.5px;
+  right:10px;
+  box-shadow: 3px 3px 5px black;
+  padding:2px 8px;
+  background-color: brown;
+}
+#post .premacdinhnentrang2 .divxemvidu:hover{
+  background-color: white;
+}
+#post .premacdinhnentrang2 .divxemvidu a{
+  color: white;
+  text-decoration: none;
+}
+#post .premacdinhnentrang2 .divxemvidu a:hover{
+  color: black;
+}
+/****************************************** FORM 7 ******************************/
+#post .form_7{
+  background-color:#eeeeee;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+#post .form_7 .tuongtunhupre{
+  display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    line-height: 1.42857143;
+    word-break: break-word;
+    word-wrap: break-word;
+    background-color:#eeeeee;
+    border:0px;
+    padding-left:15px;
+}
+#post .form_7 .nutxem{
+  margin-left:11px;
+  margin-bottom:17px;
+}
+#post .form_7 .nutxem a{
+  padding:6px 20px;
+  background-color:#73AD21;
+  color: white;
+  box-shadow:3px 3px 5px black;
+  text-decoration: none;
+}
+#post .form_7 .nutxem a:hover{
+  background-color:white;
+  color:#73AD21;
+}
+#post .form_7 .nutxem a:active{
+  background-color:#73AD21;
+  color: white;
+}
+#post .form_7 .theh3{
+  margin-top:5px;
+  margin-bottom:0px;
+  margin-left:10px;
+  font-size: 22px;
+}
+#post .form_7 hr{
+  border-color: #ccc;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  margin-left:20px;
+  margin-right:20px;
+}
+#post .form_7 .noithem p{
+  margin-bottom:0px;
+  margin-left:13px;
+  padding-right:15px;
+}
+/****************************************** FORM 8 ******************************/
+#post .form_8{
+  background-color:#eeeeee;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+#post .form_8 .tuongtunhupre{
+  display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    line-height: 1.42857143;
+    word-break: break-word;
+    word-wrap: break-word;
+    background-color:#eeeeee;
+    border:0px;
+    padding-left:15px;
+    border-radius: 5px;
+}
+#post .form_8 .nutxem{
+  margin-left:11px;
+  margin-bottom:17px;
+}
+#post .form_8 .nutxem a{
+  padding:6px 20px;
+  background-color:#73AD21;
+  color: white;
+  box-shadow:3px 3px 5px black;
+  text-decoration: none;
+}
+#post .form_8 .nutxem a:hover{
+  background-color:white;
+  color:#73AD21;
+}
+#post .form_8 .nutxem a:active{
+  background-color:#73AD21;
+  color: white;
+}
+#post .form_8 .theh3{
+  margin-top:5px;
+  margin-bottom:0px;
+  margin-left:10px;
+  font-size: 22px;
+}
+#post .form_8 hr{
+  border-color: #ccc;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  margin-left:20px;
+  margin-right:20px;
+}
+#post .form_8 .noithem p{
+  margin-left:10px;
+  padding-right:15px;
+}
+#post .form_8 .divthehienthehr{
+  margin-top:-8px;
+  margin-bottom:8px;
+}
+/****************************************** FORM 9 ******************************/
+#post .form_9{
+  background-color:#eeeeee;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+#post .form_9 pre{
+  display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    line-height: 1.42857143;
+    word-break: break-word;
+    word-wrap: break-word;
+    background-color:#eeeeee;
+    border:0px;
+    padding-left:15px;
+    border-radius: 5px;
+}
+#post .form_9 .nutxem{
+  margin-left:11px;
+  margin-bottom:17px;
+}
+#post .form_9 .nutxem a{
+  padding:6px 20px;
+  background-color:#73AD21;
+  color: white;
+  box-shadow:3px 3px 5px black;
+  text-decoration: none;
+}
+#post .form_9 .nutxem a:hover{
+  background-color:white;
+  color:#73AD21;
+}
+#post .form_9 .nutxem a:active{
+  background-color:#73AD21;
+  color: white;
+}
+#post .form_9 hr{
+  border-color: #ccc;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  margin-left:20px;
+  margin-right:20px;
+}
+#post .form_9 .noithem{
+  margin-left:10px;
+  margin-bottom:13px;
+  padding-right:15px;
+}
+#post .form_9 .divthehienthehr{
+  margin-top:-8px;
+  margin-bottom:8px;
+}
+/****************************************** FORM 10 ******************************/
+#post .form_10{
+  background-color:#eeeeee;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+#post .form_10 pre{
+  display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    line-height: 1.42857143;
+    word-break: break-word;
+    word-wrap: break-word;
+    background-color:#eeeeee;
+    border:0px;
+    border-radius:5px;
+}
+#post .form_10 .theh3{
+  margin-top:5px;
+  margin-bottom:0px;
+  margin-left:10px;
+  font-size: 22px;
+}
+#post .form_10 hr{
+  border-color: #ccc;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  margin-left:20px;
+  margin-right:20px;
+}
+#post .form_10 .noithem{
+  margin-left:10px;
+  margin-bottom:10px;
+  padding-right:15px;
+}
+#post .form_10 .divthehienthehr{
+  margin-top:-8px;
+  margin-bottom:8px;
+}
+/****************************************** FORM 7 ******************************/
+#post .form_11{
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+#post .form_11 .tuongtunhupre{
+  display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    line-height: 1.42857143;
+    word-break: break-word;
+    word-wrap: break-word;
+    background-color:white;
+    border:0px;
+    padding-left:15px;
+    margin-bottom:7px;
+}
+#post .form_11 .theh3{
+  margin-top:5px;
+  margin-bottom:0px;
+  margin-left:10px;
+  font-size: 22px;
+}
+#post .form_11 hr{
+  border-color: #ccc;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  margin-left:20px;
+  margin-right:20px;
+}
+/****************************************** FORM 12 ******************************/
+#post .form_12{
+  background-color:#eeeeee;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+#post .form_12 .tuongtunhupre{
+  display: block;
+    padding: 9.5px;
+    margin: 0 0 7px;
+    line-height: 1.42857143;
+    word-break: break-word;
+    word-wrap: break-word;
+    background-color:#eeeeee;
+    border:0px;
+    padding-left:15px;
+    border-radius: 5px;
+}
+#post .form_12 .theh3{
+  margin-top:5px;
+  margin-bottom:0px;
+  margin-left:10px;
+  font-size: 22px;
+}
+#post .form_12 hr{
+  border-color: #ccc;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  margin-left:20px;
+  margin-right:20px;
+}
+#post .form_12 .noithem{
+  margin-left:10px;
+  margin-bottom:10px;
+  padding-right:15px;
+}
+#post .form_12 .divthehienthehr{
+  margin-top:-8px;
+  margin-bottom:8px;
+}
+/****************************************** FORM 13 ******************************/
+#post .form_13{
+  background-color:#eeeeee;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+#post .form_13 pre{
+    display: block;
+    padding: 3px 9.5px;
+    margin: 10px 15px 13px 13px;
+    line-height: 1.42857143;
+    word-break: break-word;
+    word-wrap: break-word;
+    background-color:white;
+    border:1px solid #ddd;
+    border-left:4px solid #73AD21;
+    border-radius:0px;
+}
+#post .form_13 .nutxem{
+  margin-left:11px;
+  margin-bottom:17px;
+}
+#post .form_13 .nutxem a{
+  padding:6px 20px;
+  background-color:#73AD21;
+  color: white;
+  box-shadow:3px 3px 5px black;
+  text-decoration: none;
+}
+#post .form_13 .nutxem a:hover{
+  background-color:white;
+  color:#73AD21;
+}
+#post .form_13 .nutxem a:active{
+  background-color:#73AD21;
+  color: white;
+}
+#post .form_13 .theh3{
+  margin-top:5px;
+  margin-bottom:0px;
+  margin-left:10px;
+  font-size: 22px;
+}
+#post .form_13 hr{
+  border-color: #ccc;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  margin-left:20px;
+  margin-right:20px;
+}
+#post .form_13 .noithem p{
+  margin-bottom:0px;
+  margin-left:13px;
+  padding-right:15px;
+}
+#post .form_13 .divthehienthehr{
+  margin-top:-8px;
+  margin-bottom:8px;
+}
+#post .form_13 .noithem2{
+  margin-left:13px;
+  padding-right:15px;
+}
+#post .form_13 .form_thehiendemo{
+  border:1px solid #ddd;
+  padding:10px;
+  margin-left:13px;
+  margin-right:15px;
+  margin-bottom:18px;
+  background-color: white;
+}
+/****************************************** div thể hiện công thức 1 ******************************/
+.divthehiencongthuc1{    
+    font-size: 16px;
+    color: black;
+    padding-left: 12px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: white;
+    word-wrap: normal;
+    border: 1px solid #ddd;
+    border-left: 4px solid #73AD21;
+    border-radius: 0px;
+}
+/****************************************** FORM 10 ******************************/
+#post .form_14{
+  background-color:#eeeeee;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+#post .form_14 pre{
+  display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    line-height: 1.42857143;
+    word-break: break-word;
+    word-wrap: break-word;
+    background-color:#eeeeee;
+    border:0px;
+    border-radius:5px;
+}
+#post .form_14 .theh3{
+  margin-top:5px;
+  margin-bottom:0px;
+  margin-left:10px;
+  font-size: 22px;
+}
+#post .form_14 hr{
+  border-color: #ccc;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  margin-left:20px;
+  margin-right:20px;
+}
+#post .form_14 .noithem p{
+  margin-bottom:0px;
+  margin-left:13px;
+  padding-right:15px;
+}
+#post .form_14 .divthehienthehr{
+  margin-top:-8px;
+  margin-bottom:8px;
+}
+#post .form_14 .noithem2{
+  margin-left:10px;
+  margin-bottom:10px;
+  padding-right:15px;
+}
+/****************************************** FORM 15 ******************************/
+#post .form_15{
+  background-color:#eeeeee;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+#post .form_15 pre{
+  display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    line-height: 1.42857143;
+    word-break: break-word;
+    word-wrap: break-word;
+    background-color:#eeeeee;
+    border:0px;
+    border-radius:5px;
+}
+#post .form_15 hr{
+  border-color: #ccc;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  margin-left:20px;
+  margin-right:20px;
+}
+#post .form_15 .noithem{
+  margin-top:8px;
+}
+#post .form_15 .noithem p{
+  margin-bottom:0px;
+  margin-left:13px;
+  padding-right:15px;
+}
+/****************************************** FORM 16 ******************************/
+#post .form_16{
+  background-color:#eeeeee;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+#post .form_16 pre{
+    display: block;
+    padding: 3px 9.5px;
+    margin: 10px 15px 13px 13px;
+    line-height: 1.42857143;
+    word-break: break-word;
+    word-wrap: break-word;
+    background-color:white;
+    border:1px solid #ddd;
+    border-left:4px solid #73AD21;
+    border-radius:0px;
+}
+#post .form_16 .nutxem{
+  margin-left:11px;
+  margin-bottom:17px;
+}
+#post .form_16 .nutxem a{
+  padding:6px 20px;
+  background-color:#73AD21;
+  color: white;
+  box-shadow:3px 3px 5px black;
+  text-decoration: none;
+}
+#post .form_16 .nutxem a:hover{
+  background-color:white;
+  color:#73AD21;
+}
+#post .form_16 .nutxem a:active{
+  background-color:#73AD21;
+  color: white;
+}
+#post .form_16 .theh3{
+  margin-top:5px;
+  margin-bottom:-5px;
+  margin-left:10px;
+  font-size: 22px;
+}
+#post .form_16 hr{
+  border-color: #ccc;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  margin-left:20px;
+  margin-right:20px;
+}
+#post .form_16 .noithem p{
+  margin-bottom:0px;
+  margin-left:13px;
+  padding-right:15px;
+}
+#post .form_16 .divthehienthehr{
+  margin-top:-8px;
+  margin-bottom:8px;
+}
+#post .form_16 .noithem2{
+  margin-left:13px;
+  padding-right:15px;
+}
+#post .form_16 .form_thehiendemo{
+  border:1px solid #ddd;
+  padding:10px;
+  margin-left:13px;
+  margin-right:15px;
+  margin-bottom:18px;
+  background-color: white;
+}
+/****************************************** FORM 17 ******************************/
+#post .form_17 > h2{
+  text-decoration: none;
+}
+#post .form_17 > h2 > span:first-child{
+  font-style:italic;
+  display:inline-block;
+  border:1px solid black;
+  border-radius:50%;
+  padding:3px 12px 5px 12px;
+  background-color:#ddd;
+  color:black;
+  font-weight:bold;
+  text-decoration: none;
+}
+#post .form_17 > h2 > span:nth-child(2){
+  text-decoration: underline;
+  font-style:italic;
+}
+/****************************************** FORM 18 ******************************/
+#post .form_18 > h3{
+  text-decoration: none;
+  font-size:20px;
+  font-style:italic;
+}
+#post .form_18 > h3 > span:first-child{
+  margin-left:10px;
+  font-style: italic;
+  display: inline-block;
+  padding:3px 6px;
+  background-color: #ccc;
+  text-decoration: none;
+  border-radius:3px;
+}

@@ -1,0 +1,2552 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)https://hocwebchuan.com/reference/jquery/ -->
+<html lang="vi" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Tham khảo jQuery | Học web chuẩn</title>
+<meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0, user-scalable=0">
+<meta name="description" content="Tham khảo jQuery giúp bạn củng cố thêm kiến thức và hiểu rõ hơn những gì bạn đã học - Học Web Chuẩn">
+<meta name="keywords" content="học web chuẩn,web standard,học web chuẩn,tham khảo jQuery,jquery,học jquery,hoc jquery,jquery là gì,jquery la gi,web chuẩn,thiết kế web">
+<link href="./Bộ chọn Selectors_files/import.css" rel="stylesheet" media="screen,print">
+<link href="./Bộ chọn Selectors_files/tag.css" rel="stylesheet" media="screen,print">
+<link href="./Bộ chọn Selectors_files/print.css" rel="stylesheet" media="print">
+<link rel="contents" href="https://hocwebchuan.com/" title="HOME">
+<script type="text/javascript" async="" src="./Bộ chọn Selectors_files/analytics.js.tải xuống"></script><script type="text/javascript" async="" src="./Bộ chọn Selectors_files/analytics.js.tải xuống"></script><script src="./Bộ chọn Selectors_files/osd.js.tải xuống"></script><script src="./Bộ chọn Selectors_files/ca-pub-8832765085554714.js.tải xuống"></script><script async="" src="./Bộ chọn Selectors_files/gtm.js.tải xuống"></script><script type="text/javascript" async="" src="./Bộ chọn Selectors_files/recaptcha__vi.js.tải xuống"></script><script src="./Bộ chọn Selectors_files/jquery-1.12.4.min.js.tải xuống"></script>
+<script src="./Bộ chọn Selectors_files/script.js.tải xuống"></script>
+<script src="./Bộ chọn Selectors_files/api.js.tải xuống"></script>
+<!--[if lt IE 9]>
+<script src="/common/js/css3-mediaqueries.js"></script>
+<script src="/common/js/html5shiv-printshiv.js"></script>
+<![endif]--><script src="./Bộ chọn Selectors_files/tableColorRow.js.tải xuống"></script>
+<link rel="preload" href="./Bộ chọn Selectors_files/f(5).txt" as="script"><script type="text/javascript" src="./Bộ chọn Selectors_files/f(5).txt"></script><link rel="preload" href="./Bộ chọn Selectors_files/f(6).txt" as="script"><script type="text/javascript" src="./Bộ chọn Selectors_files/f(6).txt"></script><link rel="preload" href="https://pagead2.googlesyndication.com/pagead/js/r20190522/r20190131/show_ads_impl.js" as="script"></head>
+<body class="">
+<div id="preloader" style="opacity: 0; visibility: hidden;">
+<div class="gooey">
+<span class="dot"></span>
+<div class="dots">
+<span></span>
+<span></span>
+<span></span>
+</div>
+</div>
+</div>
+
+<style>.async-hide { opacity: 0 !important} </style>
+<script>
+(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);
+})(window,document.documentElement,'async-hide','dataLayer',4000,{'GTM-PTP3TV':true});
+</script>
+
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PTP3TV"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PTP3TV');</script>
+
+<div id="page-wrapper">
+<div id="layout">
+<header id="header">
+<div id="headerInner">
+<p id="logo"><a href="https://hocwebchuan.com/"><img src="./Bộ chọn Selectors_files/logo.png" alt="Học web chuẩn" title="Học web chuẩn"></a> <a href="https://hocwebchuan.com/" class="domain">hocwebchuan.com</a></p>
+<nav id="gNav">
+<div class="gnavInner">
+<div class="inner">
+<ul>
+<li class="sub" id="gNav01"><a href="https://hocwebchuan.com/">Trang chủ</a></li>
+<li class="sub" id="gNav02">
+<p><a href="https://hocwebchuan.com/tutorial/">Hướng dẫn học <i class="fa fa-angle-down ml5"></i></a></p>
+<ul>
+<li><a href="https://hocwebchuan.com/tutorial/tut_html.php">Hướng dẫn học HTML4/XHTML</a></li>
+<li><a href="https://hocwebchuan.com/tutorial/tut_html_combine.php">Bài tập HTML4/XHTML</a></li>
+<li><a href="https://hocwebchuan.com/tutorial/tut_css.php">Hướng dẫn học CSS</a></li>
+<li><a href="https://hocwebchuan.com/tutorial/tut_css_combine.php">Bài tập CSS</a></li>
+<li><a href="https://hocwebchuan.com/tutorial/php/">Hướng dẫn học PHP</a></li>
+<li><a href="https://hocwebchuan.com/tutorial/laravel/">Hướng dẫn học Laravel</a></li>
+</ul>
+</li>
+<li class="sub" id="gNav03">
+<p><a href="https://hocwebchuan.com/reference/">Tham khảo <i class="fa fa-angle-down ml5"></i></a></p>
+<ul>
+<li><a href="https://hocwebchuan.com/reference/tag/html4-xhtml.php">Tham khảo HTML4/XHTML</a></li>
+<li><a href="https://hocwebchuan.com/reference/tag/html5/">Tham khảo HTML5</a></li>
+<li><a href="https://hocwebchuan.com/reference/cssSection/">Tham khảo CSS</a></li>
+<li><a href="https://hocwebchuan.com/reference/cssSection/css3/">Tham khảo CSS3</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/">Tham khảo jQuery</a></li>
+</ul>
+</li>
+<li class="sub" id="gNav04">
+<p><a href="https://hocwebchuan.com/chuyende/">Chuyên đề <i class="fa fa-angle-down ml5"></i></a></p>
+<ul>
+<li><a href="https://hocwebchuan.com/chuyende/chuyen-de-htmlcss/">Tham khảo HTML/CSS</a></li>
+<li><a href="https://hocwebchuan.com/chuyende/chuyen-de-html5css3/">Tham khảo HTML5/CSS3</a></li>
+<li><a href="https://hocwebchuan.com/chuyende/chuyen-de-jquery-js/">Chuyên đề jQuery/JS</a></li>
+<li><a href="https://hocwebchuan.com/chuyende/jquery-js-plugin/">jQuery/JS plugin</a></li>
+</ul>
+</li>
+<li class="sub">
+<p><a href="https://hocwebchuan.com/reference/tools/count_character.php">Công cụ hỗ trợ <i class="fa fa-angle-down ml5"></i></a></p>
+<ul>
+<li><a href="https://hocwebchuan.com/reference/generator/background_gradient.php" target="_blank">Công cụ tạo HTML/CSS</a></li>
+<li><a href="https://hocwebchuan.com/reference/tools/count_character.php" target="_blank">Công cụ hỗ trợ HTML</a></li>
+<li><a href="https://hocwebchuan.com/reference/tester/responsive.php" target="_blank">Công cụ kiểm tra CSS</a></li>
+</ul>
+</li>
+<li class="sub" id="gNav05"><a href="https://hocwebchuan.com/contact/index.php">Góp ý - Liên hệ</a></li>
+</ul>
+<p class="errorReport"><a href="javascript:void(0)" class="fadeBtn">Báo lỗi</a></p>
+</div>
+</div>
+</nav><nav id="nav">
+<ul>
+<li class="special"><a href="https://hocwebchuan.com/reference/jquery/#menu" class="menuToggle"><span></span></a>
+
+</li>
+</ul>
+</nav>
+<div class="searchForm">
+<p class="clickSearch"><span><img src="./Bộ chọn Selectors_files/btn_search.png" alt="Search Submit"></span></p>
+<div class="boxSearch">
+<form action="https://hocwebchuan.com/search.php" id="cse-search-box">
+<input type="hidden" name="cx" value="013677580383747792480:nb4dazpthsc">
+<input type="hidden" name="cof" value="FORID:10">
+<input type="hidden" name="ie" value="UTF-8">
+<p class="searchTxt"><input type="text" name="q" size="23" placeholder="Tìm kiếm Tùy Chỉnh" style="border: 1px solid rgb(126, 157, 185); padding: 2px; background: url(&quot;https://www.google.com/cse/static/images/1x/googlelogo_lightgrey_46x16dp.png&quot;) left center no-repeat rgb(255, 255, 255); text-indent: 48px;"></p>
+<p class="searchBtn"><input type="image" src="./Bộ chọn Selectors_files/btn_search.png" alt="Search Submit"></p>
+<p class="searchClose"><i class="fas fa-times"></i></p>
+<input name="siteurl" type="hidden" value="hocwebchuan.com/reference/jquery/"><input name="ref" type="hidden" value="hocwebchuan.com/reference/jquery/jquery_document.php"><input name="ss" type="hidden" value=""></form>
+</div>
+<script type="text/javascript" src="./Bộ chọn Selectors_files/f(7).txt"></script></div>
+</div>
+</header>
+<section id="page-heading">
+<div class="container">
+<h1>jQuery</h1>
+<nav class="breadcrumb">
+<ul>
+<li><a href="https://hocwebchuan.com/">Trang chủ</a></li>
+<li><a href="https://hocwebchuan.com/reference/">Tham khảo</a></li>
+<li class="active">jQuery</li>
+</ul>
+</nav>
+<div class="floating"></div></div>
+</section>
+<section id="pageBody" style="min-height: 6701px;">
+<div id="content">
+<div class="ads_content_slide">
+<div class="ads_sticky">
+<script async="" src="./Bộ chọn Selectors_files/f(8).txt"></script>
+<ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-8832765085554714" data-ad-slot="7847144478" data-adsbygoogle-status="done"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px;background-color:transparent;"><ins id="aswift_0_anchor" style="display:block;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px;background-color:transparent;"><iframe width="160" height="600" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0px;width:160px;height:600px;" src="./Bộ chọn Selectors_files/saved_resource(2).html"></iframe></ins></ins></ins>
+<script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+</div>
+</div>
+<div class="ads_content_top">
+<script async="" src="./Bộ chọn Selectors_files/f(8).txt"></script>
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8832765085554714" data-ad-slot="4032926509" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done"></ins>
+<script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div><div class="section">
+<table class="tableTag jqueryStyle linkBg mb40">
+<tbody><tr>
+<th class="w25p">Hàm jQuery</th>
+<th class="w40p">Ví dụ</th>
+<th>Mô tả</th>
+</tr>
+<tr class="bgG" style="">
+<td colspan="3" class="alignL">BỘ CHỌN (SELECTORS)</td>
+</tr>
+<tr style="">
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_all.php">$('*')</a></td>
+<td class="alignL">$('*')</td>
+<td class="alignL">Chọn tất cả các thành phần có trong văn bản HTML, khi sử dụng bộ chọn này có thể sẽ khiến quá trình xử lý của một số trình duyệt chậm lại.</td>
+</tr>
+<tr style="">
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_tag.php">$('<span class="fontItalic">tag</span>')</a></td>
+<td class="alignL">$('div')</td>
+<td class="alignL">Chọn thành phần theo từng tag cụ thể.</td>
+</tr>
+<tr style="">
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_class.php">$('tag.<span class="fontItalic">tênclass</span>')</a></td>
+<td class="alignL">$('div.test')</td>
+<td class="alignL">Chọn thành phần theo từng class cụ thể.</td>
+</tr>
+<tr style="">
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_id.php">$('<span class="fontItalic">tag</span>#<span class="fontItalic">tênid</span>')</a></td>
+<td class="alignL">$('div#test')</td>
+<td class="alignL">Chọn thành phần theo từng id cụ thể.</td>
+</tr>
+<tr style="">
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_multible.php">$('<span class="fontItalic">selector1</span>, <span class="fontItalic">selector2</span>,<br class="spDisplay"> <span class="fontItalic">selectorN</span>')</a></td>
+<td class="alignL">$('div, ul li, p')</td>
+<td class="alignL">Chọn nhiều bộ chọn giúp bạn có thể chọn một lúc nhiều bộ chọn khác nhau, tốn ít thời gian hơn cho việc chọn từng bộ chọn.</td>
+</tr>
+<tr style="">
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_child.php">$('<span class="fontItalic">parent</span> &gt; <span class="fontItalic">child</span>')</a></td>
+<td class="alignL">$('div &gt; p')</td>
+<td class="alignL">Chọn thành phần con dựa theo thành phần cha.</td>
+</tr>
+<tr style="">
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_eq.php">$('<span class="fontItalic">tag</span>:eq()')</a></td>
+<td class="alignL">$('ul li:eq(3)')</td>
+<td class="alignL">Chọn thành phần với một chỉ số n cụ thể.</td>
+</tr>
+<tr style="">
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_gt.php">$('<span class="fontItalic">tag</span>:gt()')</a></td>
+<td class="alignL">$('ul li:gt(3)')</td>
+<td class="alignL">Chọn các thành phần với chỉ số lớn hơn chỉ số n.</td>
+</tr>
+<tr style="">
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_lt.php">$('<span class="fontItalic">tag</span>:lt()')</a></td>
+<td class="alignL">$('ul li:lt(3)')</td>
+<td class="alignL">Chọn các thành phần với chỉ số nhỏ hơn chỉ số n.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_even.php">$('<span class="fontItalic">tag</span>:even')</a></td>
+<td class="alignL">$('ul li:even')</td>
+<td class="alignL">Chọn các phần tử ở vị trí lẻ.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_odd.php">$('<span class="fontItalic">tag</span>:odd')</a></td>
+<td class="alignL">$('ul li:odd')</td>
+<td class="alignL">Chọn các phần tử ở vị trí chẵn.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_first.php">$('<span class="fontItalic">tag</span>:first')</a></td>
+<td class="alignL">$('p:first')</td>
+<td class="alignL">Chọn phần tử ở vị trí đầu tiên.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_last.php">$('<span class="fontItalic">tag</span>:last')</a></td>
+<td class="alignL">$('p:last')</td>
+<td class="alignL">Chọn phần tử ở vị trí cuối cùng.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_first_child.php">$('<span class="fontItalic">tag</span>:first-child')</a></td>
+<td class="alignL">$('ul li:first-child')</td>
+<td class="alignL">Chọn các phần tử con ở vị trí đầu tiên.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_first_of_type.php">$('<span class="fontItalic">tag</span>:first-of-type')</a></td>
+<td class="alignL">$('ul li:first-of-type')</td>
+<td class="alignL">Chọn thành phần con đầu tiên hoặc duy nhất trong các thành phần cha.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_last_child.php">$('<span class="fontItalic">tag</span>:last-child')</a></td>
+<td class="alignL">$('ul li:last-child')</td>
+<td class="alignL">Chọn các phần tử con ở vị trí cuối cùng.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_last_of_type.php">$('<span class="fontItalic">tag</span>:last-of-type')</a></td>
+<td class="alignL">$('p:last-of-type')</td>
+<td class="alignL">Chọn thành phần con cuối cùng hoặc duy nhất trong các thành phần cha.</td>
+</tr>
+<tr style="">
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_nth_child.php">$('<span class="fontItalic">tag</span>:nth-child()')</a></td>
+<td class="alignL">$('p:nth-child(3)')</td>
+<td class="alignL">Chọn thành phần thứ "n" trong thành phần cha, gốc tính được tính từ thành phần đầu tiên trở đi.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_nth_last_child.php">$('<span class="fontItalic">tag</span>:nth-last-child()')</a></td>
+<td class="alignL">$('p:nth-last-child(3)')</td>
+<td class="alignL">Chọn thành phần thứ "n" trong thành phần cha, gốc tính được tính từ thành phần cuối cùng trở lại.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_nth_of_type.php">$('<span class="fontItalic">tag</span>:nth-of-type()')</a></td>
+<td class="alignL">$('p:nth-of-type(3)')</td>
+<td class="alignL">Chọn thành phần thứ "n", gốc tính được tính từ thành phần đầu tiên trở đi.</td>
+</tr>
+<tr style="">
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_nth_last_of_type.php">$('<span class="fontItalic">tag</span>:nth-last-of-type()')</a></td>
+<td class="alignL">$('p:nth-last-of-type(3)')</td>
+<td class="alignL">Chọn thành phần thứ "n", gốc tính được tính từ thành phần cuối cùng trở lại.</td>
+</tr>
+<tr style="">
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_only_child.php">$('<span class="fontItalic">tag</span>:only-child')</a></td>
+<td class="alignL">$('p:only-child')</td>
+<td class="alignL">Chọn thành phần con trong các thành phần cha, khi thành phần cha có mỗi thành phần con là chính nó, không được chứa thành phần con khác.</td>
+</tr>
+<tr style="">
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_only_of_type.php">$('<span class="fontItalic">tag</span>:only-of-type')</a></td>
+<td class="alignL">$('p:only-of-type')</td>
+<td class="alignL">Chọn thành phần con trong các thành phần cha, khi thành phần cha có một thành phần con là chính nó.</td>
+</tr>
+<tr style="">
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_animated.php">$('<span class="fontItalic">tag</span>:animated')</a></td>
+<td class="alignL">$('div:animated')</td>
+<td class="alignL">Chọn các thành phần đang chuyển động.</td>
+</tr>
+<tr style="">
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_attribute.php">$('<span class="fontItalic">tag</span>[<span class="fontItalic">attribute</span>]')</a></td>
+<td class="alignL">$('[title]')</td>
+<td class="alignL">Chọn các thành phần có sử dụng cùng thuộc tính.</td>
+</tr>
+<tr style="">
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_attribute_equals.php">$('<span class="fontItalic">tag</span>[<span class="fontItalic">attribute</span>="<span class="fontItalic">value</span>"]')</a></td>
+<td class="alignL">$('[title="Học jQuery"]')</td>
+<td class="alignL">Chọn thành phần có thuộc tính với giá trị xác định.</td>
+</tr>
+<tr style="">
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_attribute_not_equals.php">$('<span class="fontItalic">tag</span>[<span class="fontItalic">attribute</span>!="<span class="fontItalic">value</span>"]')</a></td>
+<td class="alignL">$('[title=!"Học jQuery"]')</td>
+<td class="alignL">Chọn những thành phần ngoài thành phần chứa thuộc tính với giá trị xác định.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_attribute_prefix.php">$('<span class="fontItalic">tag</span>[<span class="fontItalic">attribute</span>|="<span class="fontItalic">value</span>"]')</a></td>
+<td class="alignL">$('[title|="Học jQuery"]')</td>
+<td class="alignL">Chọn thành phần có thuộc tính với giá trị xác định, hoặc một chuỗi với giá trị bắt đầu bằng value-.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_attribute_starts.php">$('<span class="fontItalic">tag</span>[<span class="fontItalic">attribute</span>^="<span class="fontItalic">value</span>"]')</a></td>
+<td class="alignL">$('[title^="Học jQuery"]')</td>
+<td class="alignL">Chọn thành phần có thuộc tính với giá trị xác định, hoặc một chuỗi với giá trị bắt đầu bằng value.</td>
+</tr>
+<tr style="">
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_attribute_end.php">$('<span class="fontItalic">tag</span>[<span class="fontItalic">attribute</span>$="<span class="fontItalic">value</span>"]')</a></td>
+<td class="alignL">$('[title$="Học jQuery"]')</td>
+<td class="alignL">Chọn thành phần có thuộc tính với giá trị xác định, hoặc một chuỗi với giá trị kết thúc bằng value.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_attribute_string.php">$('<span class="fontItalic">tag</span>[<span class="fontItalic">attribute</span>*="<span class="fontItalic">value</span>"]')</a></td>
+<td class="alignL">$('[title*="Học jQuery"]')</td>
+<td class="alignL">Chọn thành phần có thuộc tính với giá trị đặc biệt bằng value.</td>
+</tr>
+<tr style="">
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_contains_word.php">$('<span class="fontItalic">tag</span>[<span class="fontItalic">attribute</span>~="<span class="fontItalic">value</span>"]')</a></td>
+<td class="alignL">$('[title~="Học jQuery"]')</td>
+<td class="alignL">Chọn thành phần có thuộc tính với giá trị biệt bằng value riêng lẻ, chỉ chọn các giá trị nào được viết cách nhau bằng khoảng trắng.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_lang.php">$('<span class="fontItalic">tag</span>:lang(<span class="fontItalic">language</span>)')</a></td>
+<td class="alignL">$(':lang(vi)')</td>
+<td class="alignL">Chọn các thành phần có sử dụng cùng thuộc tính lang với language xác định.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_multible_attribute.php">$(<span class="fontItalic">tag</span>[<span class="fontItalic">bộ chọn thuộc tính 1</span>]<br class="spDisplay">[<span class="fontItalic">bộ chọn thuộc tính n</span>])</a></td>
+<td class="alignL">$('div[id][title="Việt Nam"]')</td>
+<td class="alignL">Chọn nhiều các thành phần với từng bộ chọn cụ thể</td>
+</tr>
+
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_parent.php">$('<span class="fontItalic">tag</span>:parent')</a></td>
+<td class="alignL">$('div:parent')</td>
+<td class="alignL">Chọn thành phần có chứa ít nhất một thành phần con (text cũng có thể xem là thành phần con).</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_empty.php">$('<span class="fontItalic">tag</span>:empty')</a></td>
+<td class="alignL">$('ul li:empty')</td>
+<td class="alignL">Chọn thành phần không có chứa bất kỳ thành phần nào, kể cả text.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_text.php">$('<span class="fontItalic">tag</span>:text')</a></td>
+<td class="alignL">$('div:text')</td>
+<td class="alignL">Chọn thành phần input có thuộc tính type với giá trị text.</td>
+</tr>
+<tr style="">
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_button.php">$('<span class="fontItalic">tag</span>:button')</a></td>
+<td class="alignL">$('input:button')</td>
+<td class="alignL">Chọn thành phần input có thuộc tính type với giá trị button, hoặc tag button.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_checkbox.php">$('<span class="fontItalic">tag</span>:checkbox')</a></td>
+<td class="alignL">$('input:checkbox')</td>
+<td class="alignL">Chọn thành phần input có thuộc tính type với giá trị checkbox.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_checked.php">$('<span class="fontItalic">tag</span>:checked')</a></td>
+<td class="alignL">$('input:checked')</td>
+<td class="alignL">Chọn thành phần có thuộc tính checked.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_disabled.php">$('<span class="fontItalic">tag</span>:disabled')</a></td>
+<td class="alignL">$('input:disabled')</td>
+<td class="alignL">Chọn thành phần có thuộc tính disabled.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_enabled.php">$('<span class="fontItalic">tag</span>:enabled')</a></td>
+<td class="alignL">$('input:enabled')</td>
+<td class="alignL">Chọn thành phần không có thuộc tính disabled.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_file.php">$('<span class="fontItalic">tag</span>:file')</a></td>
+<td class="alignL">$('input:file')</td>
+<td class="alignL">Chọn thành phần có thuộc tính type với giá trị file.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_focus.php">$('<span class="fontItalic">tag</span>:focus')</a></td>
+<td class="alignL">$('input:focus')</td>
+<td class="alignL">Chọn thành phần khi được focus.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_hidden.php">$('<span class="fontItalic">tag</span>:hidden')</a></td>
+<td class="alignL">$('div:hidden')</td>
+<td class="alignL">Chọn tất cả các thành phần không hiển thị, không dùng cho input với thuộc tính type="hidden".</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_image.php">$('<span class="fontItalic">tag</span>:image')</a></td>
+<td class="alignL">$('input:image')</td>
+<td class="alignL">Chọn thành phần input có thuộc tính type với giá trị image.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_input.php">$('<span class="fontItalic">tag</span>:input')</a></td>
+<td class="alignL">$('div:input')</td>
+<td class="alignL">Chọn thành phần thuộc về form như: input, select, textarea và button.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_password.php">$('<span class="fontItalic">tag</span>:password')</a></td>
+<td class="alignL">$('input:password')</td>
+<td class="alignL">Chọn thành phần input có thuộc tính type với giá trị password.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_radio.php">$('<span class="fontItalic">tag</span>:radio')</a></td>
+<td class="alignL">$('input:radio')</td>
+<td class="alignL">Chọn thành phần input có thuộc tính type với giá trị radio.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_reset.php">$('<span class="fontItalic">tag</span>:reset')</a></td>
+<td class="alignL">$('input:reset')</td>
+<td class="alignL">Chọn thành phần input có thuộc tính type với giá trị reset.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_selected.php">$('<span class="fontItalic">tag</span>:selected')</a></td>
+<td class="alignL">$(':selected')</td>
+<td class="alignL">Chọn thành phần select.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_submit.php">$('<span class="fontItalic">tag</span>:submit')</a></td>
+<td class="alignL">$('input:submit')</td>
+<td class="alignL">Chọn thành phần input có thuộc tính type với giá trị submit.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_visible.php">$('<span class="fontItalic">tag</span>:visible')</a></td>
+<td class="alignL">$('div:visible')</td>
+<td class="alignL">Chọn thành phần đang nhìn thấy (visible), click vào các thành phần để hiểu rõ hơn.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_root.php">$('<span class="fontItalic">tag</span>:root')</a></td>
+<td class="alignL">$(':root')</td>
+<td class="alignL">Chọn thành phần gốc của văn bản, thành phần gốc chính là tag html.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_has.php">$('<span class="fontItalic">tag</span>:has(<span class="fontItalic">selector</span>)')</a></td>
+<td class="alignL">$('div:has(p)')</td>
+<td class="alignL">Chọn thành phần có chứa ít nhất một phần tử phù hợp với quy định chọn.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_header.php">$('<span class="fontItalic">tag</span>:header')</a></td>
+<td class="alignL">$('div:header')</td>
+<td class="alignL">Chọn thành phần headline.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_prev_next.php">$('<span class="fontItalic">prev</span> + <span class="fontItalic">next</span>')</a></td>
+<td class="alignL">$('div + span')</td>
+<td class="alignL">Chọn thành phần kế tiếp ngay sau thành phần trước.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_prev_siblings.php">$('<span class="fontItalic">prev</span> ~ <span class="fontItalic">siblings</span>')</a></td>
+<td class="alignL">$('div ~ p')</td>
+<td class="alignL">Chọn tất cả các thành phần kế tiếp ngay sau thành phần trước.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_not.php">$('<span class="fontItalic">tag</span>:not(<span class="fontItalic">selector</span>)')</a></td>
+<td class="alignL">$('div:not(p)')</td>
+<td class="alignL">Không chọn bộ chọn này.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_contains.php">$('<span class="fontItalic">tag</span>:contains(text)')</a></td>
+<td class="alignL">$('p:contains(html)')</td>
+<td class="alignL">Chọn thành phần có chứa text được chỉ định.</td>
+</tr>
+<tr class="bgG">
+<td colspan="3" class="alignL">HÀM (FUNCTIONS)</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_add.php">.add()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_add.php#anchor01">.add(<span class="fontItalic">bộ chọn</span>)</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_add.php#anchor02">.add(<span class="fontItalic">html</span>)</a></p>
+<ul class="text">
+<li>Ver 1.3.2</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_add.php#anchor03">.add(<span class="fontItalic">Object</span>)</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_add.php#anchor04">.add(<span class="fontItalic">bộ chọn</span>,<span class="fontItalic">context</span>)</a></p></td>
+<td class="alignL">Thêm thành phần vào thành phần đã có để cùng thực hiện một hành động.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_addback.php">.addBack()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_addback.php#anchor01">.addBack('<span class="fontItalic">Bộ chọn</span>')</a></p>
+</td>
+<td class="alignL">Thêm thành phần vào trước thành phần đã có để cùng thực hiện một hành động.</td>
+</tr>
+<tr style="">
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_addclass.php">.addClass()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_addclass.php#anchor01">.addClass(<span class="fontItalic">tênclass</span>)</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_addclass.php#anchor02">.addClass(<span class="fontItalic">tênclass01 tênclass02</span>)</a></p>
+<ul class="text">
+<li>Ver 1.4</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_addclass.php#anchor03">.addClass(function(index){...})</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_addclass.php#anchor04">.addClass(function(index,<span class="fontItalic">class</span>){...})</a></p></td>
+<td class="alignL">thêm class cho thành phần.</td>
+</tr>
+<tr style="">
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_after.php">.after()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_after.php#anchor01">.after(<span class="fontItalic">nội dung</span>)</a></p>
+<ul class="text">
+<li>Ver 1.4</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_after.php#anchor02">.after(function(index){...})</a></p></td>
+<td class="alignL">Chèn nội dung, xác định bởi tham số vào ngay sau mỗi thành phần đã có.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_andself.php">.andSelf()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_andself.php">.andSelf()</a></p>
+</td>
+<td class="alignL">Thêm hành động cho chính thành phần chọn ban đầu.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_animate.php">.animate()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_animate.php#anchor01">.animate(<span class="fontItalic">Thuộc tính</span>,<span class="fontItalic">Tốc độ</span>,'<span class="fontItalic">easing</span>',function(){...})</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_animate.php#anchor02">.animate(<span class="fontItalic">Thuộc tính</span>,<span class="fontItalic">Option</span>)</a></p>
+</td>
+<td class="alignL">Thực hiện một hình ảnh động (animate) tùy chỉnh của một tập hợp các thuộc tính css.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_append.php">.append()</a></td>
+<td class="alignL"><ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_append.php#anchor01">.append(<span class="fontItalic">nội dung</span>)</a></p>
+<ul class="text">
+<li>Ver 1.4</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_append.php#anchor02">.append(function(index){...})</a></p></td>
+<td class="alignL">Thành phần được chèn thêm nội dung, nội dung này thường được sắp xếp ở vị trí sau cùng.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_appendto.php">.appendTo()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_appendto.php">.appendTo(<span class="fontItalic">Mục tiêu</span>)</a></p>
+</td>
+<td class="alignL">Chèn nội dung vào thành phần đã có, thường được sắp xếp ở vị trí sau cùng.</td>
+</tr>
+<tr style="">
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_attr.php">.attr()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_attr.php#anchor01">.attr('<span class="fontItalic">tên thuộc tính</span>')</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_attr.php#anchor02">.attr('<span class="fontItalic">tên thuộc tính</span>','<span class="fontItalic">Giá trị thuộc tính</span>$')</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_attr.php#anchor03">.attr({<br>
+&nbsp;&nbsp;&nbsp;&nbsp;'<span class="fontItalic">tên thuộc tính 1</span>': '<span class="fontItalic">giá trị thuộc tính 1</span>',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;'<span class="fontItalic">tên thuộc tính 2</span>': '<span class="fontItalic">giá trị thuộc tính 2</span>',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;'<span class="fontItalic">tên thuộc tính n</span>': '<span class="fontItalic">giá trị thuộc tính n</span>'<br>
+})</a></p>
+<ul class="text">
+<li>Ver 1.4</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_attr.php#anchor04">.attr('<span class="fontItalic">tên thuộc tính</span>',function(<span class="fontItalic">index</span>, attr))</a></p>
+</td>
+<td class="alignL">Xác định thuộc tính của thành phần.</td>
+</tr>
+<tr style="">
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_before.php">.before()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_before.php#anchor01">.before(nội dung)</a></p>
+<ul class="text">
+<li>Ver 1.4</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_before.php#anchor02">.before(function(index){...})</a></p>
+</td>
+<td class="alignL">Thêm thành phần vào ngay trước thành phần đã có.</td>
+</tr>
+<tr style="">
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_bind.php">.bind()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_bind.php#anchor05">.bind('<span class="fontItalic">Sự kiện</span>','<span class="fontItalic">Dữ liệu</span>',(function(event){}))</a></p>
+<ul class="text">
+<li>Ver 1.4</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_bind.php#anchor01">.bind('<span class="fontItalic">Sự kiện</span>',function(){})</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_bind.php#anchor02">.bind('<span class="fontItalic">Sự kiện</span>',function(event){})</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_bind.php#anchor03">.bind('<span class="fontItalic">Sựkiện1</span> <span class="fontItalic">Sựkiện2</span>',function(){})</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_bind.php#anchor04">.bind({<span class="fontItalic">Sựkiện1</span>:function(){}, <span class="fontItalic">Sựkiện2</span>:function(){}})</a></p>
+</td>
+<td class="alignL">Được sử dụng để đính kèm xử lý một sự kiện cho thành phần.</td>
+</tr>
+<tr style="">
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_blur.php">.blur()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_blur.php#anchor01">.blur()</a></p>
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_blur.php#anchor02">.blur(function(){})</a></p>
+</td>
+<td class="alignL">Kèm một hành động khi sử dụng blur, sự kiện blur là khi người dùng thoát khỏi focus trong trường nhập (input).</td>
+</tr>
+
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_change.php">.change()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_change.php#anchor01">.change()</a></p>
+<ul class="text">
+<li>Ver 1.4.3</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_change.php#anchor02">.change(function(){})</a></p>
+</td>
+<td class="alignL">Xác định một thành phần đã được thay đổi.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_children.php">.children()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_children.php#anchor01">.children()</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_children.php#anchor02">.children("<span class="fontItalic">bộ chọn</span>")</a></p>
+</td>
+<td class="alignL">Lấy thành phần con trực tiếp của mỗi thành phần trong những thành phần phù hợp, có thể kết hợp vào bộ chọn (selector).</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_clearqueue.php">.clearQueue()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.4</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_clearqueue.php#anchor01">.clearQueue(<span class="fontItalic">Tên queue</span>)</a></p>
+</td>
+<td class="alignL">Loại bỏ các thành phần đang đợi tới lượt (chưa được chạy).</td>
+</tr>
+<tr style="">
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_click.php">.click()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_click.php#anchor01">.click()</a></p>
+<ul class="text">
+<li>Ver 1.4.3</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_click.php#anchor02">.click(function(){})</a></p>
+</td>
+<td class="alignL">Kích hoạt sự kiện click trên thành phần hoặc ràng buộc xử lý một sự kiện tới sự kiện click trong javascript.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_clone.php">.clone()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_clone.php#anchor01">.clone()</a></p>
+<ul class="text">
+<li>Ver 1.5</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_clone.php#anchor02">.clone(<span class="fontItalic">Boolean</span>)</a></p>
+</td>
+<td class="alignL">Tạo một bản sao (copy) cho thành phần.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_closest.php">.closest()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.3</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_closest.php#anchor01">.closest('<span class="fontItalic">bộ chọn</span>')</a></p>
+<ul class="text">
+<li>Ver 1.6</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_closest.php#anchor02">.closest('<span class="fontItalic">thành phần</span>')</a></p>
+</td>
+<td class="alignL">Chọn thành phần đầu tiên tính từ thành phần cha trở lên của chính thành phần được chọn.<br>
+Khác với .parent() chỉ chọn thành phần cha của chính nó, .closest() có thể chọn cả thành phần cấp cao hơn cấp cha.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_contents.php">.contents()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.2</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_contents.php#anchor01">.contents()</a></p>
+</td>
+<td class="alignL">Lấy phần tử con của mỗi thành phần trong tập hợp các phần tử phù hợp, bao gồm cả nốt văn bản (text nodes) và nốt bình luận (comment nodes), node có thể hiểu như sau: Theo DOM, tất cả mọi thứ trong tài liệu XML là một node.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_context.php">.context</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.3</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_context.php#anchor01">.context</a></p>
+</td>
+<td class="alignL">Một DOM node context được thông qua jQuery();, nếu không được thông qua thì khi đó context sẽ có thể là môt document.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_css.php">.css()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_css.php#anchor01">.css('<span class="fontItalic">thuộc tính</span>','<span class="fontItalic">giá trị</span>')</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_css.php#anchor02">.css({'<span class="fontItalic">thuộc tính 01</span>','<span class="fontItalic">thuộc tính 02</span>',...})</a></p>
+</td>
+<td class="alignL">Được dùng để thêm một hoặc nhiều style cho thành phần, ngoài ra còn có thể sử dụng .css() để lấy giá trị style của thành phần.</td>
+</tr>
+
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_dblclick.php">.dblclick()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_dblclick.php#anchor01">.dblclick()</a></p>
+<ul class="text">
+<li>Ver 1.4.3</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_dblclick.php#anchor02">.dblclick(function(){})</a></p>
+</td>
+<td class="alignL">Kích hoạt sự kiện double click trên thành phần hoặc ràng buộc xử lý một sự kiện tới sự kiện double click trong javascript.</td>
+</tr>
+
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_delay.php">.delay()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.4</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_delay.php#anchor01">.delay(<span class="fontItalic">độ bền</span>)</a></p>
+</td>
+<td class="alignL">Thiết lập một bộ đếm thời gian để trì hoãn thực hiện các hạng mục tiếp theo trong các hành động.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_delegate.php">.delegate()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.4.2</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_delegate.php#anchor01">.delegate('<span class="fontItalic">bộ chọn</span>','<span class="fontItalic">sự kiện</span>',<span class="fontItalic">xử lý</span>)</a></p>
+</td>
+<td class="alignL">Đính kèm một xử lý tới một hoặc nhiều sự kiện cho tất cả thành phần phù hợp với bộ chọn ngay lập tức hoặc sau đó dựa trên một tập hợp cụ thể các thành phần gốc.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_dequeue.php">.dequeue()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_dequeue.php#anchor01">.dequeue()</a></p>
+</td>
+<td class="alignL">Thực hiện chức năng tiếp theo trên queue cho các thành phần phù hợp.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_detach.php">.detach()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.4</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_detach.php#anchor01">.detach()</a></p>
+</td>
+<td class="alignL">Loại bỏ các phần tử xuất hiện từ DOM.<br>
+Được sử dụng tương tự như .remove(), tuy nhiên .detach() sẽ giữ lại tất cả các dữ liệu jQuery kết hợp với loại bỏ thành phần, phương pháp này sẽ hữu dụng khi thành phần được loại bỏ và thêm vào DOM sau một thời gian.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_die.php">.die()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.3</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_die.php#anchor01">.die('<span class="fontItalic">sự kiện</span>',function(){})</a></p>
+<ul class="text">
+<li>Ver 1.4.1</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_die.php#anchor02">.die()</a></p>
+<ul class="text">
+<li>Ver 1.4.3</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_die.php#anchor03">.die('<span class="fontItalic">sự kiện</span>')</a></p>
+</td>
+<td class="alignL">Loại bỏ việc xử lý các sự kiện đang sử dụng phương pháp .live() trước đó.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_each.php">.each()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_each.php#anchor01">.each(function(){}</a></p>
+</td>
+<td class="alignL">Thực hiện một hành động cho mỗi phần tử, mỗi lần thực hiện một phần tử, để làm được điều này ta cần sử dụng phương thức $(this).</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_empty.php">.empty()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_empty.php#anchor01">.empty()</a></p>
+</td>
+<td class="alignL">Loại bỏ tất cả các thành phần bên trong kể cả text của thành phần chọn.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_end.php">.end()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_end.php#anchor01">.end()</a></p>
+</td>
+<td class="alignL">Chấm dứt hoạt động lọc mới nhất trong chuỗi hiện tại và quay trở lại các thiết lập của các thành phần phù hợp với trạng thái trước đó.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_eq.php">.eq()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.1.2</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_eq.php#anchor01">.eq(<span class="fontItalic">n</span>)</a></p>
+<ul class="text">
+<li>Ver 1.4</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_eq.php#anchor01">.eq(-<span class="fontItalic">n</span>)</a></p>
+</td>
+<td class="alignL">Xác định thành phần ở vị trí thứ n.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_error.php">.error()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_error.php#anchor01">.error()</a></p>
+<ul class="text">
+<li>Ver 1.4.3</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_error.php#anchor02">.error(function(){...})</a></p>
+</td>
+<td class="alignL">Khi có lỗi xảy ra do một thành phần gặp lỗi có thể là do thành phần được tải không chính xác, khi đó .error() sẽ kích hoạt sự kiện lỗi hoặc thực hiện một function.</td>
+</tr>
+
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_fadein.php">.fadeIn()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_fadein.php#anchor01">.fadeIn(<span class="fontItalic">Độ bền</span>)</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_fadein.php#anchor02">.fadeIn(<span class="fontItalic">Độ bền</span>,function(){...})</a></p>
+<ul class="text">
+<li>Ver 1.4.3</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_fadein.php#anchor03">.fadeIn(<span class="fontItalic">Độ bền</span>,'easing',function(){...})</a></p>
+</td>
+<td class="alignL">Hiển thị các thành phần phù hợp với hiệu ứng rõ dần (fade in).</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_fadeout.php">.fadeOut()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_fadeout.php#anchor01">.fadeOut(<span class="fontItalic">Độ bền</span>)</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_fadeout.php#anchor02">.fadeOut(<span class="fontItalic">Độ bền</span>,function(){...})</a></p>
+<ul class="text">
+<li>Ver 1.4.3</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_fadeout.php#anchor03">.fadeOut(<span class="fontItalic">Độ bền</span>,'easing',function(){...})</a></p>
+</td>
+<td class="alignL">Ẩn các thành phần phù hợp với hiệu ứng mờ dần (fade).</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_fadeto.php">.fadeTo()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_fadeto.php#anchor01">.fadeTo(<span class="fontItalic">Độ bền</span>,<span class="fontItalic">độ mờ</span>)</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_fadeto.php#anchor02">.fadeTo(<span class="fontItalic">Độ bền</span>,<span class="fontItalic">độ mờ</span>,function(){...})</a></p>
+<ul class="text">
+<li>Ver 1.4.3</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_fadeto.php#anchor03">.fadeTo(<span class="fontItalic">Độ bền</span>,<span class="fontItalic">độ mờ</span>,'easing',function(){...})</a></p>
+</td>
+<td class="alignL">Hiển thị các thành phần phù hợp với hiệu ứng mờ dần (fade).</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_fadetoggle.php">.fadeToggle()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.4.4</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_fadetoggle.php#anchor01">.fadeToggle(<span class="fontItalic">Độ bền</span>)</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_fadetoggle.php#anchor02">.fadeToggle(<span class="fontItalic">Độ bền</span>,'easing')</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_fadetoggle.php#anchor03">.fadeToggle(<span class="fontItalic">Độ bền</span>,function(){...})</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_fadetoggle.php#anchor04">.fadeToggle(<span class="fontItalic">Độ bền</span>,'easing',function(){...})</a></p>
+</td>
+<td class="alignL">Làm hiển thị (display: block;) hoặc biến mất (display: none;) thành phần kèm với hiệu ứng làm mờ (opacity).</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_filter.php">.filter()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_filter.php#anchor01">.filter(<span class="fontItalic">bộ chọn</span>)</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_filter.php#anchor02">.filter(function(index){...})</a></p>
+<ul class="text">
+<li>Ver 1.4</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_filter.php#anchor04">.filter(<span class="fontItalic">jquery object</span>)</a></p>
+</td>
+<td class="alignL">Giúp lọc các thành phần trong một nhóm các thành phần giống nhau.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_find.php">.find()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_find.php#anchor01">.find(<span class="fontItalic">bộ chọn</span>)</a></p>
+<ul class="text">
+<li>Ver 1.4</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_find.php#anchor02">.find(<span class="fontItalic">jquery object</span>)</a></p>
+</td>
+<td class="alignL">Giúp tìm thành phần trong thành phần cha.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_finish.php">.finish()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_finish.php#anchor01">.finish(<span class="fontItalic">queue</span>)</a></p>
+</td>
+<td class="alignL">Ngăn chặn các hình ảnh động (animate) đang chạy, loại bỏ ngay lập tức các hành động tiếp theo và hoàn thành các hành động này.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_first.php">.first()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_first.php#anchor01">.first()</a></p>
+</td>
+<td class="alignL">Xác định thành phần đầu tiên trong các thành phần phù hợp.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_focus.php">.focus()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_focus.php#anchor01">.focus()</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_focus.php#anchor02">.focus(function(){...})</a></p>
+</td>
+<td class="alignL">Xử lý một sự kiện focus, hoặc kích hoạt sự kiện focus cho thành phần.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_focusin.php">.focusin()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.4</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_focusin.php#anchor01">.focusin(function(){...});</a></p>
+</td>
+<td class="alignL">Xử lý một sự kiện "focusin" (xác nhận một focus).</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_focusout.php">.focusout()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.4</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_focusout.php#anchor01">.focusout(function(){...});</a></p>
+</td>
+<td class="alignL">Xử lý một sự kiện "focusout" (xác nhận thoát khỏi focus).</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_get.php">.get()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_get.php#anchor01">.get()</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_get.php#anchor02">.get(n)</a></p>
+</td>
+<td class="alignL">Lấy các thành phần DOM phù hợp của các đối tượng jQuery.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_has.php">.has()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.4</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_has.php#anchor01">.has('Bộ chọn')</a></p>
+</td>
+<td class="alignL">Xây dựng một đối tượng jQuery mới từ một tập hợp con của các thành phần phù hợp.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_hasclass.php">.hasClass()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.2</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_hasclass.php#anchor01">.hasClass('Tên class')</a></p>
+</td>
+<td class="alignL">Xác định thành phần có chứa class nhất định nào đó hay không.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_height.php">.height()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_height.php#anchor01">.height()</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_height.php#anchor02">.height(<span class="fontItalic">Giá trị</span>)</a></p>
+</td>
+<td class="alignL">Xác định hoặc gán giá trị chiều cao (height) cho thành phần.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_hide.php">.hide()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_hide.php#anchor01">.hide()</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_hide.php#anchor02">.hide(<span class="fontItalic">Độ bền</span>)</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_hide.php#anchor03">.hide(<span class="fontItalic">Độ bền</span>,function(){...})</a></p>
+<ul class="text">
+<li>Ver 1.4.3</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_hide.php#anchor04">.hide(<span class="fontItalic">Độ bền</span>,'easing',function(){...})</a></p>
+</td>
+<td class="alignL">Ẩn thành phần phù hợp.<br>
+Thành phần sẽ được ẩn giống như được sử dụng style="display: none;".</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_hover.php">.hover()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_hover.php#anchor01">.hover(<span class="fontItalic">xử lý mouse enter</span>,<span class="fontItalic">xử lý mouse leave</span>)</a></p>
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_hover.php#anchor02">.hover(<span class="fontItalic">xử lý mouse enter và xử lý mouse leave</span>)</a></p>
+</td>
+<td class="alignL">kết hợp xử lý cả 2 sự kiện di chuyển con trỏ chuột vào thành phần (mouseenter) và di chuyển con trỏ chuột ra khỏi thành phần (mouseleave).</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_html.php">.html()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_html.php#anchor01">.html()</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_html.php#anchor02">.html('Nội dung HTML')</a></p>
+<ul class="text">
+<li>Ver 1.4</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_html.php#anchor03">.html(function(){...})</a></p>
+</td>
+<td class="alignL">Lấy nội dung HTML của thành phần, hoặc gán giá trị HTML cho thành phần.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_index.php">.index()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_index.php#anchor01">.index('thành phần')</a></p>
+</td>
+<td class="alignL">Trả về vị trí của thành phần trong các thành phần.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_innerheight.php">.innerHeight()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.2.6</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_innerheight.php#anchor01">.innerHeight()</a></p>
+</td>
+<td class="alignL">Lấy giá trị chiều cao của thành phần phù hợp, chiều cao này không bao gồm border hay margin.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_innerwidth.php">.innerWidth()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.2.6</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_innerwidth.php#anchor01">.innerWidth()</a></p>
+</td>
+<td class="alignL">Lấy giá trị chiều rộng của thành phần phù hợp, chiều cao này không bao gồm border hay margin.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_insertafter.php">.insertAfter()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_insertafter.php#anchor01">.insertAfter(<span class="fontItalic">Mục tiêu</span>)</a></p>
+</td>
+<td class="alignL">Chèn hoặc di chuyển một thành phần vào ngay sau mục tiêu được chọn.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_insertbefore.php">.insertBefore()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_insertbefore.php#anchor01">.insertBefore('Mục tiêu')</a></p>
+</td>
+<td class="alignL">Chèn hoặc di chuyển một thành phần vào ngay trước mục tiêu được chọn.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_is.php">.is()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_is.php#anchor01">.is('Bộ chọn')</a></p>
+<ul class="text">
+<li>Ver 1.6</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_is.php#anchor02">.is('Thành phần')</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_is.php#anchor03">.is('jQuery object')</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_is.php#anchor04">.is(function(index){...})</a></p>
+</td>
+<td class="alignL">Kiểm tra các thành phần có phù hợp với bộ chọn, trả về "true" nếu ít nhất một trong các thành phần này phù hợp với đối số đã có.</td>
+</tr>
+
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_jquery.php">.jquery</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.6</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_jquery.php#anchor01">.jquery</a></p>
+</td>
+<td class="alignL">Xác định một thành phần có phải là jQuery object hay không.<br>
+Xác định phiên bản hiện tại của jQuery đang chạy trong trang.</td>
+</tr>
+
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_keydown.php">.keydown()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_keydown.php#anchor01">.keydown()</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_keydown.php#anchor02">.keydown(function(){...})</a></p>
+</td>
+<td class="alignL">Ràng buộc một xử lý tới một sự kiện keydown (nhấn phím), hoặc kích hoạt sự kiện keydown lên một thành phần.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_keypress.php">.keypress()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_keypress.php#anchor01">.keypress()</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_keypress.php#anchor02">.keypress(function(){...})</a></p>
+</td>
+<td class="alignL">Ràng buộc một xử lý tới một sự kiện keypress, hoặc kích hoạt sự kiện keypress lên một thành phần.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_keyup.php">.keyup()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_keyup.php#anchor01">.keyup()</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_keyup.php#anchor02">.keyup(function(){...})</a></p>
+</td>
+<td class="alignL">Ràng buộc một xử lý tới một sự kiện keyup (nhã phím nhấn), hoặc kích hoạt sự kiện keyup lên một thành phần.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_last.php">.last()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_last.php#anchor01">.last()</a></p>
+</td>
+<td class="alignL">Xác định thành phần cuối cùng trong các thành phần phù hợp.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_length.php">.length</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_length.php#anchor01">.length</a></p>
+</td>
+<td class="alignL">Xác định số lượng thành phần trong jQuery Object.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_live.php">.live()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.3</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_live.php#anchor01">.live('<span class="fontItalic">sự kiện</span>',function(){...})</a></p>
+</td>
+<td class="alignL">.live() gắn một hoặc nhiều sự kiện cho các thành phần được chọn, và chỉ định một chức năng để chạy khi sự kiện xảy ra.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_load.php">.load()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_load.php#anchor01">.load(function(){...})</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_load.php#anchor02">.load('url')</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_load.php#anchor03">.load('url',function(){...})</a></p>
+</td>
+<td class="alignL">Load sự kiện javascript.<br>
+Load dữ liệu từ server sau đó đặt HTML trở lại từ các thành phần được chọn.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_map.php">.map()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_map.php#anchor01">.map(function(){...})</a></p>
+</td>
+<td class="alignL">Qua mỗi phần tử được chọn, thông qua một function tạo ra một jquery object có chứa các giá trị trả lại.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_mousedown.php">.mousedown()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_mousedown.php#anchor01">.mousedown()</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_mousedown.php#anchor02">.mousedown(function(){...})</a></p>
+</td>
+<td class="alignL">Ràng buộc một xử lý tới một sự kiện mousedown (click chuột), hoặc kích hoạt sự kiện mousedown lên một thành phần.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_mouseenter.php">.mouseenter()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_mouseenter.php#anchor01">.mouseenter()</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_mouseenter.php#anchor02">.mouseenter(function(){...})</a></p>
+</td>
+<td class="alignL">Ràng buộc một xử lý tới một sự kiện mouseenter (di chuyển chuột vào thành phần), hoặc kích hoạt sự kiện mouseenter lên một thành phần.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_mouseleave.php">.mouseleave()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_mouseleave.php#anchor01">.mouseleave()</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_mouseleave.php#anchor02">.mouseleave(function(){...})</a></p>
+</td>
+<td class="alignL">Ràng buộc một xử lý tới một sự kiện mouseleave (di chuyển chuột ra khỏi thành phần), hoặc kích hoạt sự kiện mouseleave lên một thành phần.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_mousemove.php">.mousemove()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_mousemove.php#anchor01">.mousemove()</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_mousemove.php#anchor02">.mousemove(function(){...})</a></p>
+</td>
+<td class="alignL">Ràng buộc một xử lý tới một sự kiện mousemove (click chuột), hoặc kích hoạt sự kiện mousemove lên một thành phần.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_mouseout.php">.mouseout()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_mouseout.php#anchor01">.mouseout()</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_mouseout.php#anchor02">.mouseout(function(){...})</a></p>
+</td>
+<td class="alignL">Ràng buộc một xử lý tới một sự kiện mouseout (di chuyển chuột ra khỏi một thành phần), hoặc kích hoạt sự kiện mouseout lên một thành phần.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_mouseover.php">.mouseover()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_mouseover.php#anchor01">.mouseover()</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_mouseover.php#anchor02">.mouseover(function(){...})</a></p>
+</td>
+<td class="alignL">Ràng buộc một xử lý tới một sự kiện mouseover (di chuyển chuột ra khỏi thành phần), hoặc kích hoạt sự kiện mouseover lên một thành phần.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_mouseup.php">.mouseup()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_mouseup.php#anchor01">.mouseup()</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_mouseup.php#anchor02">.mouseup(function(){...})</a></p>
+</td>
+<td class="alignL">Ràng buộc một xử lý tới một sự kiện mouseup (nhả chuột), hoặc kích hoạt sự kiện mouseup lên một thành phần.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_next.php">.next()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_next.php#anchor01">.next()</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_next.php#anchor02">.next('<span class="fontItalic">Bộ chọn</span>')</a></p>
+</td>
+<td class="alignL">Xác định thành phần cùng cấp ngay kế tiếp thành phần sử dụng .next().</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_nextall.php">.nextAll()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.2</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_nextall.php#anchor01">.nextAll()</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_nextall.php#anchor02">.nextAll('<span class="fontItalic">Bộ chọn</span>')</a></p>
+</td>
+<td class="alignL">Xác định tất cả các thành phần cùng cấp ngay kế tiếp thành phần sử dụng .nextAll().</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_nextuntil.php">.nextUntil()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.2</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_nextuntil.php#anchor01">.nextUntil('<span class="fontItalic">Bộ chọn</span>')</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_nextuntil.php#anchor02">.nextUntil('<span class="fontItalic">Thành phần</span>')</a></p>
+</td>
+<td class="alignL">Xác định tất cả các thành phần cùng cấp ngay kế tiếp thành phần được chọn (tag) và kết thúc việc này ngay tại thành phần (bộ chọn) có trong .nextAll().</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_not.php">.not()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_not.php#anchor01">.not('<span class="fontItalic">Bộ chọn</span>')</a></p>
+<ul class="text">
+<li>Ver 1.4</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_not.php#anchor02">.not(function(index){...})</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_not.php#anchor03">.not(<span class="fontItalic">jQuery object</span>)</a></p>
+</td>
+<td class="alignL">Không chọn thành phần nào có sử dụng .not().</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_off.php">.off()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.7</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_off.php#anchor01">.off()</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_off.php#anchor02">.off('<span class="fontItalic">sự kiện</span>','<span class="fontItalic">bộ chọn</span>','<span class="fontItalic">xử lý sự kiện</span>')</a></p>
+</td>
+<td class="alignL">Thường được sử dụng để loại bỏ việc xử lý một sự kiện của thành phần khi sử dụng phướng thức .on()</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_offset.php">.offset()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.2</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_offset.php#anchor01">.offset()</a></p>
+<ul class="text">
+<li>Ver 1.4</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_offset.php#anchor02">.offset(<span class="fontItalic">tọa độ</span>)</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_offset.php#anchor03">.offset(function(index,<span class="fontItalic">tọa độ</span>){...})</a></p>
+</td>
+<td class="alignL">Lấy tọa độ hiện tại của thành phần đầu tiên, hoặc thiết lập các tọa độ của từng thành phần trong tập hợp các thành phần phù hợp liên quan đến văn bản.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_offsetparent.php">.offsetParent()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.2.6</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_offsetparent.php#anchor01">.offsetParent()</a></p>
+</td>
+<td class="alignL">Lấy một thành phần "tổ tiên" gần nhất có sử dụng thuộc tính position, những thành phần được lấy không phân biệt position: relative, absolute hay fixed.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_on.php">.on()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.7</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_on.php#anchor01">.on('Sự kiện', function(){...})</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_on.php#anchor02">.on('Sự kiện', 'Bộ chọn', function(){...})</a></p>
+</td>
+<td class="alignL">Đính kèm một hàm xử lý sự kiện cho một hoặc nhiều sự kiện tới một thành phần được chọn.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_one.php">.one()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.1</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_one.php#anchor01">.one('Sự kiện',function(){...})</a></p>
+<ul class="text">
+<li>Ver 1.7</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_one.php#anchor02">.one('Sự kiện','bộ chọn',function(){...})</a></p>
+</td>
+<td class="alignL">Chèn một hoặc nhiều sự kiện cho một thành phần được chọn, xác định một function để chạy khi xảy ra một sự kiện.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_outerheight.php">.outerHeight()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.2.6</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_outerheight.php#anchor01">.outerHeight()</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_outerheight.php#anchor02">.outerHeight(<span class="fontItalic">Tùy chọn margin</span>)</a></p>
+</td>
+<td class="alignL">Lấy giá trị chiều cao của thành phần phù hợp, chiều cao này bao gồm border, padding.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_outerwidth.php">.outerWidth()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.2.6</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_outerwidth.php#anchor01">.outerWidth()</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_outerwidth.php#anchor02">.outerWidth(<span class="fontItalic">Tùy chọn margin</span>)</a></p>
+</td>
+<td class="alignL">Lấy giá trị chiều rộng của thành phần phù hợp, chiều rộng này bao gồm border, padding.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_parent.php">.parent()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_parent.php#anchor01">.parent()</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_parent.php#anchor02">.parent('<span class="fontItalic">bộ chọn</span>')</a></p>
+</td>
+<td class="alignL">Lấy thành phần cha trực tiếp của mỗi thành phần trong những thành phần phù hợp, có thể kết hợp vào bộ chọn (selector).</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_parents.php">.parents()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_parents.php#anchor01">.parents()</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_parents.php#anchor02">.parents('<span class="fontItalic">bộ chọn</span>')</a></p>
+</td>
+<td class="alignL">Lấy các thành phần tổ tiên của thành phần trong những thành phần phù hợp, có thể kết hợp vào bộ chọn (selector).</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_parentsuntil.php">.parentsUntil()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_parentsuntil.php#anchor01">.parentsUntil('<span class="fontItalic">bộ lọc</span>')</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_parentsuntil.php#anchor01">.parentsUntil('<span class="fontItalic">bộ chọn</span>','<span class="fontItalic">bộ lọc</span>')</a></p>
+</td>
+<td class="alignL">Lấy các thành phần tổ tiên của thành phần trong những thành phần phù hợp, lấy đến khi gặp thành phần có trong bộ lọc thì dừng lại.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_position.php">.position()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.2</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_position.php#anchor01">.position()</a></p>
+</td>
+<td class="alignL">Lấy tọa độ hiện tại của thành phần, tọa độ này được tính dựa vào gốc của thành phần cha.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_prepend.php">.prepend()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.2</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_prepend.php#anchor01">.prepend(<span class="fontItalic">nội dung</span>)</a></p>
+<ul class="text">
+<li>Ver 1.4</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_prepend.php#anchor02">.prepend(function(index){...})</a></p>
+</td>
+<td class="alignL">Chèn nội dung vào trong thành phần ở vị trí đầu tiên.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_prependto.php">.prependTo()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_prependto.php#anchor01">.prependTo(<span class="fontItalic">Mục tiêu</span>)</a></p>
+</td>
+<td class="alignL">Chèn nội dung vào thành phần đã có, thường được sắp xếp ở vị trí đầu tiên.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_prev.php">.prev()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_prev.php#anchor01">.prev()</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_prev.php#anchor02">.prev('<span class="fontItalic">Bộ chọn</span>')</a></p>
+</td>
+<td class="alignL">Xác định thành phần cùng cấp ngay trước thành phần sử dụng .prev().</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_prevall.php">.prevAll()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.2</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_prevall.php#anchor01">.prevAll()</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_prevall.php#anchor02">.prevAll('<span class="fontItalic">Bộ chọn</span>')</a></p>
+</td>
+<td class="alignL">Xác định tất cả các thành phần cùng cấp ngay trước thành phần sử dụng .prevAll().</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_prevuntil.php">.prevUntil()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.4</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_prevuntil.php#anchor01">.prevUntil('<span class="fontItalic">Bộ chọn</span>')</a></p>
+<ul class="text">
+<li>Ver 1.6</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_prevuntil.php#anchor02">.prevUntil('<span class="fontItalic">Thành phần</span>')</a></p>
+</td>
+<td class="alignL">Xác định tất cả các thành phần cùng cấp ngay trước thành phần được chọn (tag) và kết thúc việc này ngay tại thành phần (bộ chọn) có trong .nextAll().</td>
+</tr>
+
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_remove.php">.remove()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_remove.php#anchor01">.remove()</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_remove.php#anchor02">.remove('<span class="fontItalic">Bộ chọn</span>')</a></p>
+</td>
+<td class="alignL">Loại bỏ các thành phần được xác định.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_removeattr.php">.removeAttr()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_removeattr.php#anchor01">.remove('<span class="fontItalic">Tên thuộc tính</span>')</a></p>
+</td>
+<td class="alignL">Loại bỏ các thuộc tính (attr) có bên trong thành phần.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_removeclass.php">.removeClass()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_removeclass.php#anchor01">.removeClass()</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_removeclass.php#anchor02">.removeClass('<span class="fontItalic">Tên class</span>')</a></p>
+<ul class="text">
+<li>Ver 1.4</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_removeclass.php#anchor03">.removeClass(function(index,class){})</a></p>
+</td>
+<td class="alignL">Loại bỏ thuộc tính (attr) class có bên trong thành phần.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_removedata.php">.removeData()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.2.3</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_removedata.php#anchor01">.removeClass('<span class="fontItalic">Tên dữ liệu</span>')</a></p>
+<ul class="text">
+<li>Ver 1.7</li>
+</ul>
+<p>.removeClass('<span class="fontItalic">List</span>')</p>
+</td>
+<td class="alignL">Loại bỏ dữ liệu đã được lưu trữ trước đó.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_removeprop.php">.removeProp()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.6</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_removeprop.php#anchor01">.removeProp('<span class="fontItalic">Tên thuộc tính</span>')</a></p>
+<ul class="text">
+<li>Ver 1.7</li>
+</ul>
+<p>.removeProp('<span class="fontItalic">List</span>')</p>
+</td>
+<td class="alignL">Loại bỏ thuộc tính của thành phần được tao bởi phương thức .prop().</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_replaceall.php">.replaceAll()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.6</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_replaceall.php#anchor01">.replaceAll('<span class="fontItalic">Mục tiêu</span>')</a></p>
+</td>
+<td class="alignL">Thay thế từng nội dung và cả thành phần mục tiêu bằng nội dung và thành phần khác.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_replacewith.php">.replaceWith()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.2</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_replacewith.php#anchor01">.replaceWith('<span class="fontItalic">Thành phần mới</span>')</a></p>
+<ul class="text">
+<li>Ver 1.4</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_replacewith.php#anchor02">.replaceWith(function(){})</a></p>
+</td>
+<td class="alignL">Thay thế từng nội dung và thành phần mới tới thành phần mục tiêu đã chọn.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_resize.php">.resize()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p>.resize()</p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_resize.php#anchor02">.resize(function(){})</a></p>
+</td>
+<td class="alignL">Ràng buộc một xử lý sự kiện "resize" hoặc kích hoạt sự kiện trên thành phần.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_scroll.php">.scroll()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_scroll.php#anchor01">.scroll()</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_scroll.php#anchor02">.scroll(function(){})</a></p>
+</td>
+<td class="alignL">Ràng buộc xử lý một sự kiện tới sự kiện Javascript "scroll" hay kích hoạt sự kiện này trên thành phần.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_scrollleft.php">.scrollLeft()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.2.6</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_scrollleft.php#anchor01">.scrollLeft()</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_scrollleft.php#anchor02">.scrollLeft(<span class="fontItalic">Giá trị</span>)</a></p>
+</td>
+<td class="alignL">Lấy vị trí hiện tại theo chiều ngang của thanh cuộn cho các thành phần đầu tiên trong một bộ các thành phần phù hợp hoặc thiết lập vị trí ngang của thanh cuộn cho mỗi thành phần phù hợp.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_scrolltop.php">.scrollTop()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.2.6</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_scrolltop.php#anchor01">.scrollTop()</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_scrolltop.php#anchor02">.scrollTop(<span class="fontItalic">Giá trị</span>)</a></p>
+</td>
+<td class="alignL">Lấy vị trí hiện tại theo chiều dọc của thanh cuộn cho các thành phần đầu tiên trong một bộ các thành phần phù hợp hoặc thiết lập vị trí dọc của thanh cuộn cho mỗi thành phần phù hợp.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_select.php">.select()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_select.php#anchor01">.select()</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_select.php#anchor02">.select(function(){})</a></p>
+</td>
+<td class="alignL">Ràng buộc xử lý một sự kiện tới sự kiện Javascript "select" hay kích hoạt sự kiện này trên thành phần.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_selector.php">.selector()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.3</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_selector.php#anchor01">.selector()</a></p>
+</td>
+<td class="alignL">Lấy bộ chọn của thành phần.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_serialize.php">.serialize()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_serialize.php#anchor01">.serialize()</a></p>
+</td>
+<td class="alignL">Lấy giá trị các thành phần form, mã hóa các giá trị này thành giá trị chuỗi.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_serializearray.php">.serializeArray()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_serializearray.php#anchor01">.serializeArray()</a></p>
+</td>
+<td class="alignL">Lấy giá trị các thành phần form, mã hóa các giá trị này thành giá trị chuỗi.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_show.php">.show()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_show.php#anchor01">.show()</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_show.php#anchor02">.show(<span class="fontItalic">Độ bền</span>)</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_show.php#anchor03">.show(<span class="fontItalic">Độ bền</span>,function(){...})</a></p>
+<ul class="text">
+<li>Ver 1.4.3</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_show.php#anchor04">.show(<span class="fontItalic">Độ bền</span>,'<span class="fontItalic">easing</span>',function(){...})</a></p>
+</td>
+<td class="alignL">Hiện thành phần phù hợp, thành phần sẽ được hiện giống như được sử dụng style="display: block;".</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_siblings.php">.siblings()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_siblings.php#anchor01">.siblings()</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_siblings.php#anchor02">.siblings('<span class="fontItalic">Bộ chọn</span>')</a></p>
+</td>
+<td class="alignL">Lấy thành phần con cùng cấp của mỗi thành phần trong một bộ chọn phù hợp.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_size.php">.size()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_size.php#anchor01">.size()</a></p>
+</td>
+<td class="alignL">Xác định số lượng thành phần trong jQuery Object.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_slice.php">.slice()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.1.4</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_slice.php#anchor01">.slice(<span class="fontItalic">n</span>)</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_slice.php#anchor02">.slice(<span class="fontItalic">start</span>, <span class="fontItalic">end</span>)</a></p>
+</td>
+<td class="alignL">Chọn một dãy các thành phần con từ một tập hợp thành phần cha với các chỉ số thích hợp.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_slidedown.php">.slideDown()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_slidedown.php#anchor01">.slideDown(<span class="fontItalic">Độ bền</span>)</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_slidedown.php#anchor02">.slideDown(<span class="fontItalic">Độ bền</span>, function(){...})</a></p>
+<ul class="text">
+<li>Ver 1.4.3</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_slidedown.php#anchor03">.slideDown(<span class="fontItalic">Độ bền</span>,'<span class="fontItalic">easing</span>')</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_slidedown.php#anchor04">.slideDown(<span class="fontItalic">Độ bền</span>,'<span class="fontItalic">easing</span>',function(){...})</a></p>
+</td>
+<td class="alignL">Hiển thị các thành phần phù hợp với hiệu ứng chuyển động trượt (slide).</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_slidetoggle.php">.slideToggle()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_slidetoggle.php#anchor01">.slideToggle(<span class="fontItalic">Độ bền</span>)</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_slidetoggle.php#anchor02">.slideToggle(<span class="fontItalic">Độ bền</span>, function(){...})</a></p>
+<ul class="text">
+<li>Ver 1.4.3</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_slidetoggle.php#anchor03">.slideToggle(<span class="fontItalic">Độ bền</span>,'<span class="fontItalic">easing</span>')</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_slidetoggle.php#anchor04">.slideToggle(<span class="fontItalic">Độ bền</span>,'<span class="fontItalic">easing</span>',function(){...})</a></p>
+</td>
+<td class="alignL">Hiển thị và ẩn các thành phần phù hợp với hiệu ứng chuyển động trượt (slide).</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_slideup.php">.slideUp()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_slideup.php#anchor01">.slideUp(<span class="fontItalic">Độ bền</span>)</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_slideup.php#anchor02">.slideUp(<span class="fontItalic">Độ bền</span>, function(){...})</a></p>
+<ul class="text">
+<li>Ver 1.4.3</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_slideup.php#anchor03">.slideUp(<span class="fontItalic">Độ bền</span>,'<span class="fontItalic">easing</span>')</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_slideup.php#anchor04">.slideUp(<span class="fontItalic">Độ bền</span>,'<span class="fontItalic">easing</span>',function(){...})</a></p>
+</td>
+<td class="alignL">Ẩn các thành phần phù hợp với hiệu ứng chuyển động trượt (slide).</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_stop.php">.stop()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.2</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_stop.php#anchor01">.stop()</a></p>
+<ul class="text">
+<li>Ver 1.7</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_stop.php#anchor02">.stop(<span class="fontItalic">stopAll</span>)</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_stop.php#anchor03">.stop(<span class="fontItalic">stopAll</span>, <span class="fontItalic">goToEnd</span>)</a></p>
+</td>
+<td class="alignL">Dừng chuyển động đang chạy của thành phần phù hợp.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_submit.php">.submit()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_submit.php#anchor01">.submit()</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_submit.php#anchor02">.submit(function(){})</a></p>
+</td>
+<td class="alignL">Ràng buộc xử lý một sự kiện tới sự kiện Javascript "submit" hay kích hoạt sự kiện này trên thành phần.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_text.php">.text()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_text.php#anchor01">.text()</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_text.php#anchor02">.text('<span class="fontItalic">Nội dung</span>')</a></p>
+<ul class="text">
+<li>Ver 1.4</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_text.php#anchor03">.text(function(){...})</a></p>
+</td>
+<td class="alignL">Lấy nội dung text của thành phần, hoặc thay đổi nội dung text cho thành phần.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_toarray.php">.toArray()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_toarray.php#anchor01">.toArray()</a></p>
+</td>
+<td class="alignL">Lấy tất cả các thành phần DOM chứa trong tập jQuery, như là một mảng (array).</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_toggle.php">.toggle()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_toggle.php#anchor01">.toggle(<span class="fontItalic">Độ bền</span>)</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_toggle.php#anchor02">.toggle(<span class="fontItalic">Độ bền</span>, function(){...})</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_toggle.php#anchor0301">.toggle(function(){...}, function(){...})</a></p>
+<ul class="text">
+<li>Ver 1.4.3</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_toggle.php#anchor04">.toggle(<span class="fontItalic">Độ bền</span>, 'easing')</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_toggle.php#anchor05">.toggle(<span class="fontItalic">Độ bền</span>, 'easing', function(){...})</a></p>
+<ul class="text">
+<li>Ver 1.3</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_toggle.php#anchor06">.toggle(showOrHide)</a></p>
+</td>
+<td class="alignL">Hiển thị và ẩn các thành phần phù hợp, việc hiển thị và ẩn được luân phiên nhau giữa các lần action (VD action Click).</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_toggleclass.php">.toggleClass()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_toggleclass.php#anchor01">.toggleClass('<span class="fontItalic">tên class</span>')</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_toggleclass.php#anchor02">.toggleClass('<span class="fontItalic">tên class</span>', <span class="fontItalic">switch</span>)</a></p>
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p>.toggleClass([<span class="fontItalic">switch</span>])</p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_toggleclass.php#anchor04">.toggleClass(function(){...})</a></p>
+</td>
+<td class="alignL">Thêm hoặc loại bỏ một hoặc nhiều class của thành phần.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_trigger.php">.trigger()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_trigger.php#anchor01">.trigger(<span class="fontItalic">Sự kiện</span>,<span class="fontItalic">Tham số</span>)</a></p>
+</td>
+<td class="alignL">Thực hiện tất cả các xử lý và đính kèm các loại sự kiện nhất định tới thành phần được chọn.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_triggerhandler.php">.triggerHandler()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_triggerhandler.php#anchor01">.triggerHandler(<span class="fontItalic">Sự kiện</span>,<span class="fontItalic">Tham số</span>)</a></p>
+</td>
+<td class="alignL">Kích hoạt sự kiện được xác định cho thành phần đc chọn.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_unbind.php">.unbind()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_unbind.php#anchor01">.unbind(<span class="fontItalic">Sự kiện</span>)</a></p>
+<p>.unbind()</p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_unbind.php#anchor02">.unbind(<span class="fontItalic">Sự kiện</span>, function(){...})</a></p>
+</td>
+<td class="alignL">Loại bỏ sự kiện được đính kèm trước đó từ thành phần.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_undelegate.php">.undelegate()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.4.2</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_undelegate.php#anchor01">.undelegate()</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_undelegate.php#anchor01">.undelegate('<span class="fontItalic">Bộ chọn</span>','<span class="fontItalic">Sự kiện</span>')</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_undelegate.php#anchor02">.undelegate('<span class="fontItalic">Bộ chọn</span>','<span class="fontItalic">Sự kiện</span>', function(){...})</a></p>
+</td>
+<td class="alignL">Loại bỏ xử lý của một sự kiện cho tất cả thành phần phù hợp dựa trên một tập hợp cụ thể các thành phần gốc.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_unload.php">.unload()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_unload.php#anchor01">.unload(<span class="fontItalic">Xử lý</span>)</a></p>
+<p>.unload('Dữ liệu sự kiện'<span class="fontItalic">Xử lý</span>)</p>
+</td>
+<td class="alignL">Ràng buộc xử lý một sự kiện tới sự kiện javascript unload.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_unwrap.php">.unwrap()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.4</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_unwrap.php#anchor01">.unwrap()</a></p>
+</td>
+<td class="alignL">Loại bỏ thành phần cha của thành phần được chọn từ DOM.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_val.php">.val()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_val.php#anchor01">.val()</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_val.php#anchor02">.val('<span class="fontItalic">Giá trị</span>')</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_val.php#anchor03">.val(function(index,value){...})</a></p>
+</td>
+<td class="alignL">Lấy giá trị hiện tại của thành phần, hoặc thay đổi giá trị cho thành phần.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_width.php">.width()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_width.php#anchor01">.width()</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_width.php#anchor02">.width('<span class="fontItalic">Giá trị</span>')</a></p>
+</td>
+<td class="alignL">Xác định hoặc gán giá trị chiều rộng (width) cho thành phần.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_wrap.php">.wrap()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_wrap.php#anchor01">.wrap(<span class="fontItalic">Cấu trúc HTLM</span>)</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_wrap.php#anchor02">.wrap(<span class="fontItalic">Bộ chọn</span>)</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_wrap.php#anchor03">.wrap(function(index){})</a></p>
+</td>
+<td class="alignL">Bao ngoài thành phần được chọn bởi một cấu trúc HTML.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_wrapall.php">.wrapAll()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_wrapall.php#anchor01">.wrapAll(<span class="fontItalic">Cấu trúc HTLM</span>)</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_wrapall.php#anchor02">.wrapAll(<span class="fontItalic">Bộ chọn</span>)</a></p>
+</td>
+<td class="alignL">Bao ngoài các thành phần được chọn bởi một cấu trúc HTML.</td>
+</tr>
+<tr>
+<td class="alignL"><a href="https://hocwebchuan.com/reference/jquery/jquery_wrapinner.php">.wrapInner()</a></td>
+<td class="alignL">
+<ul class="text">
+<li>Ver 1.0</li>
+</ul>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_wrapinner.php#anchor01">.wrapInner(<span class="fontItalic">Cấu trúc HTLM</span>)</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_wrapinner.php#anchor02">.wrapInner(<span class="fontItalic">Bộ chọn</span>)</a></p>
+<p><a href="https://hocwebchuan.com/reference/jquery/jquery_wrapinner.php#anchor03">.wrapInner(function(index){})</a></p>
+</td>
+<td class="alignL">Bao ngoài nội dung của thành phần được chọn bởi một cấu trúc HTML</td>
+</tr>
+<tr class="bgG">
+<td colspan="3" class="alignL">AJAX</td>
+</tr>
+<tr>
+<td class="alignL">.ajaxComplete()</td>
+<td class="alignL"></td>
+<td class="alignL"></td>
+</tr>
+<tr>
+<td class="alignL">.ajaxError()</td>
+<td class="alignL"></td>
+<td class="alignL"></td>
+</tr>
+<tr>
+<td class="alignL">.ajaxSend()</td>
+<td class="alignL"></td>
+<td class="alignL"></td>
+</tr>
+<tr>
+<td class="alignL">.ajaxStart()</td>
+<td class="alignL"></td>
+<td class="alignL"></td>
+</tr>
+<tr>
+<td class="alignL">.ajaxStop()</td>
+<td class="alignL"></td>
+<td class="alignL"></td>
+</tr>
+<tr>
+<td class="alignL">.ajaxSuccess()</td>
+<td class="alignL"></td>
+<td class="alignL"></td>
+</tr>
+<tr>
+<td class="alignL">jQuery.ajax()</td>
+<td class="alignL"></td>
+<td class="alignL"></td>
+</tr>
+<tr>
+<td class="alignL">jQuery.ajaxPrefilter()</td>
+<td class="alignL"></td>
+<td class="alignL"></td>
+</tr>
+<tr>
+<td class="alignL">jQuery.ajaxSetup()</td>
+<td class="alignL"></td>
+<td class="alignL"></td>
+</tr>
+<tr>
+<td class="alignL">jQuery.ajaxTransport()</td>
+<td class="alignL"></td>
+<td class="alignL"></td>
+</tr>
+<tr>
+<td class="alignL">jQuery.get()</td>
+<td class="alignL"></td>
+<td class="alignL"></td>
+</tr>
+<tr>
+<td class="alignL">jQuery.getJSON()</td>
+<td class="alignL"></td>
+<td class="alignL"></td>
+</tr>
+<tr>
+<td class="alignL">jQuery.getScript()</td>
+<td class="alignL"></td>
+<td class="alignL"></td>
+</tr>
+<tr>
+<td class="alignL">jQuery.post()</td>
+<td class="alignL"></td>
+<td class="alignL"></td>
+</tr>
+<tr>
+<td class="alignL">.load()</td>
+<td class="alignL"></td>
+<td class="alignL"></td>
+</tr>
+</tbody></table>
+</div>
+<p class="pageTop"><a href="https://hocwebchuan.com/reference/jquery/#layout">Đầu trang</a></p>
+<div id="ads"><div class="ads_content_bottom">
+<script async="" src="./Bộ chọn Selectors_files/f(8).txt"></script>
+
+<ins class="adsbygoogle" style="display: block; height: 90px;" data-ad-client="ca-pub-8832765085554714" data-ad-slot="2011884933" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done"><ins id="aswift_1_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:780px;background-color:transparent;"><ins id="aswift_1_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:780px;background-color:transparent;"><iframe width="780" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;border:0px;width:780px;height:90px;" src="./Bộ chọn Selectors_files/saved_resource(3).html"></iframe></ins></ins></ins>
+<script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div></div>
+</div>
+<aside id="sidebar">
+<div class="section sideMenu">
+<h3 class="mHead">HTML &amp; XHTML</h3>
+<div class="ads_sidebar">
+<script async="" src="./Bộ chọn Selectors_files/f(8).txt"></script>
+
+<ins class="adsbygoogle" style="display: inline-block; width: 300px; height: 250px;" data-ad-client="ca-pub-8832765085554714" data-ad-slot="5187846643" data-adsbygoogle-status="done"><ins id="aswift_2_expand" style="display:inline-table;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><ins id="aswift_2_anchor" style="display:block;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><iframe width="300" height="250" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;border:0px;width:300px;height:250px;" src="./Bộ chọn Selectors_files/saved_resource(4).html"></iframe></ins></ins></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<div class="social">
+
+</div>
+<div class="tb-display">
+<div class="sectionInner">
+<h4 class="sHead parent"><span>HƯỚNG DẪN HỌC</span></h4>
+<ul class="lNav">
+<li><a href="https://hocwebchuan.com/tutorial/">Hướng dẫn học</a></li>
+<li><a href="https://hocwebchuan.com/tutorial/tut_html.php">Hướng dẫn học HTML4/XHTML</a></li>
+<li><a href="https://hocwebchuan.com/tutorial/tut_html_combine.php">Bài tập HTML4/XHTML</a></li>
+<li><a href="https://hocwebchuan.com/tutorial/tut_css.php">Hướng dẫn học CSS</a></li>
+<li><a href="https://hocwebchuan.com/tutorial/tut_css_combine.php">Bài tập CSS</a></li>
+<li><a href="https://hocwebchuan.com/tutorial/php/">Hướng dẫn học PHP</a></li>
+<li><a href="https://hocwebchuan.com/tutorial/laravel/">Hướng dẫn học Laravel</a></li>
+
+</ul></div>
+<div class="sectionInner">
+<h4 class="sHead parent link"><a href="https://hocwebchuan.com/reference/">THAM KHẢO</a></h4>
+</div>
+</div>
+<div class="sectionInner">
+<h4 class="sHead"><span>Bộ chọn jQuery (Selectors)</span></h4>
+<ul class="lNav">
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_all.php">$('*')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_tag.php">$('<span class="fontItalic">tag</span>')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_class.php">$('tag.<span class="fontItalic">tênclass</span>')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_id.php">$('<span class="fontItalic">tag</span>#<span class="fontItalic">tênid</span>')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_multible.php">$('<span class="fontItalic">selector1</span>, <span class="fontItalic">selector2</span>, <span class="fontItalic">selectorN</span>')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_child.php">$('<span class="fontItalic">parent</span> &gt; <span class="fontItalic">child</span>')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_eq.php">$('<span class="fontItalic">tag</span>:eq()')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_gt.php">$('<span class="fontItalic">tag</span>:gt()')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_lt.php">$('<span class="fontItalic">tag</span>:lt()')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_even.php">$('<span class="fontItalic">tag</span>:even')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_odd.php">$('<span class="fontItalic">tag</span>:odd')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_first.php">$('<span class="fontItalic">tag</span>:first')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_last.php">$('<span class="fontItalic">tag</span>:last')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_first_child.php">$('<span class="fontItalic">tag</span>:first-child')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_first_of_type.php">$('<span class="fontItalic">tag</span>:first-of-type')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_last_child.php">$('<span class="fontItalic">tag</span>:last-child')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_last_of_type.php">$('<span class="fontItalic">tag</span>:last-of-type')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_nth_child.php">$('<span class="fontItalic">tag</span>:nth-child()')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_nth_last_child.php">$('<span class="fontItalic">tag</span>:nth-last-child()')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_nth_of_type.php">$('<span class="fontItalic">tag</span>:nth-of-type()')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_nth_last_of_type.php">$('<span class="fontItalic">tag</span>:nth-last-of-type()')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_only_child.php">$('<span class="fontItalic">tag</span>:only-child')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_only_of_type.php">$('<span class="fontItalic">tag</span>:only-of-type')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_animated.php">$('<span class="fontItalic">tag</span>:animated')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_attribute.php">$('<span class="fontItalic">tag</span>[<span class="fontItalic">attribute</span>]')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_attribute_equals.php">$('<span class="fontItalic">tag</span>[<span class="fontItalic">attribute</span>="<span class="fontItalic">value</span>"]')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_attribute_not_equals.php">$('<span class="fontItalic">tag</span>[<span class="fontItalic">attribute</span>!="<span class="fontItalic">value</span>"]')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_attribute_prefix.php">$('<span class="fontItalic">tag</span>[<span class="fontItalic">attribute</span>|="<span class="fontItalic">value</span>"]')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_attribute_starts.php">$('<span class="fontItalic">tag</span>[<span class="fontItalic">attribute</span>^="<span class="fontItalic">value</span>"]')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_attribute_end.php">$('<span class="fontItalic">tag</span>[<span class="fontItalic">attribute</span>$="<span class="fontItalic">value</span>"]')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_attribute_string.php">$('<span class="fontItalic">tag</span>[<span class="fontItalic">attribute</span>*="<span class="fontItalic">value</span>"]')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_contains_word.php">$('<span class="fontItalic">tag</span>[<span class="fontItalic">attribute</span>~="<span class="fontItalic">value</span>"]')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_lang.php">$('<span class="fontItalic">tag</span>:lang(<span class="fontItalic">language</span>)')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_multible_attribute.php">$(<span class="fontItalic">tag</span>[<span class="fontItalic">bộ chọn thuộc tính 1</span>][<span class="fontItalic">bộ chọn thuộc tính n</span>])</a></li>
+
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_parent.php">$('<span class="fontItalic">tag</span>:parent')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_empty.php">$('<span class="fontItalic">tag</span>:empty')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_text.php">$('<span class="fontItalic">tag</span>:text')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_button.php">$('<span class="fontItalic">tag</span>:button')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_checkbox.php">$('<span class="fontItalic">tag</span>:checkbox')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_checked.php">$('<span class="fontItalic">tag</span>:checked')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_disabled.php">$('<span class="fontItalic">tag</span>:disabled')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_enabled.php">$('<span class="fontItalic">tag</span>:enabled')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_file.php">$('<span class="fontItalic">tag</span>:file')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_focus.php">$('<span class="fontItalic">tag</span>:focus')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_hidden.php">$('<span class="fontItalic">tag</span>:hidden')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_image.php">$('<span class="fontItalic">tag</span>:image')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_input.php">$('<span class="fontItalic">tag</span>:input')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_password.php">$('<span class="fontItalic">tag</span>:password')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_radio.php">$('<span class="fontItalic">tag</span>:radio')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_reset.php">$('<span class="fontItalic">tag</span>:reset')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_selected.php">$('<span class="fontItalic">tag</span>:selected')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_submit.php">$('<span class="fontItalic">tag</span>:submit')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_visible.php">$('<span class="fontItalic">tag</span>:visible')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_root.php">$('<span class="fontItalic">tag</span>:root')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_has.php">$('<span class="fontItalic">tag</span>:has(<span class="fontItalic">selector</span>)')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_header.php">$('<span class="fontItalic">tag</span>:header')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_prev_next.php">$('<span class="fontItalic">prev</span> + <span class="fontItalic">next</span>')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_prev_siblings.php">$('<span class="fontItalic">prev</span> ~ <span class="fontItalic">siblings</span>"')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_not.php">$('<span class="fontItalic">tag</span>:not(<span class="fontItalic">selector</span>)')</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors_contains.php">$('<span class="fontItalic">tag</span>:contains(text)')</a></li>
+</ul>
+</div>
+<div class="sectionInner">
+<h4 class="sHead"><span>Hàm jQuery (Selectors)</span></h4>
+<ul class="lNav">
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_add.php">.add()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_addback.php">.addBack()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_addclass.php">.addClass()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_after.php">.after()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_andself.php">.andSelf()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_animate.php">.animate()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_append.php">.append()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_appendto.php">.appendTo()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_attr.php">.attr()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_before.php">.before()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_bind.php">.bind()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_blur.php">.blur()</a></li>
+
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_change.php">.change()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_children.php">.children()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_clearqueue.php">.clearQueue()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_click.php">.click()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_clone.php">.clone()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_closest.php">.closest()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_contents.php">.contents()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_context.php">.context</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_css.php">.css()</a></li>
+
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_dblclick.php">.dblclick()</a></li>
+
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_delay.php">.delay()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_delegate.php">.delegate()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_dequeue.php">.dequeue()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_detach.php">.detach()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_die.php">.die()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_each.php">.each()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_empty.php">.empty()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_end.php">.end()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_eq.php">.eq()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_error.php">.error()</a></li>
+
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_fadein.php">.fadeIn()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_fadeout.php">.fadeOut()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_fadeto.php">.fadeTo()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_fadetoggle.php">.fadeToggle()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_filter.php">.filter()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_find.php">.find()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_finish.php">.finish()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_first.php">.first()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_focus.php">.focus()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_focusin.php">.focusin()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_focusout.php">.focusout()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_get.php">.get()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_has.php">.has()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_hasclass.php">.hasClass()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_height.php">.height()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_hide.php">.hide()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_hover.php">.hover()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_html.php">.html()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_index.php">.index()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_innerheight.php">.innerHeight()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_innerwidth.php">.innerWidth()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_insertafter.php">.insertAfter()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_insertbefore.php">.insertBefore()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_is.php">.is()</a></li>
+
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_jquery.php">.jquery</a></li>
+
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_keydown.php">.keydown()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_keypress.php">.keypress()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_keyup.php">.keyup()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_last.php">.last()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_length.php">.length</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_live.php">.live()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_load.php">.load()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_map.php">.map()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_mousedown.php">.mousedown()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_mouseenter.php">.mouseenter()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_mouseleave.php">.mouseleave()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_mousemove.php">.mousemove()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_mouseout.php">.mouseout()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_mouseover.php">.mouseover()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_mouseup.php">.mouseup()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_next.php">.next()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_nextall.php">.nextAll()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_nextuntil.php">.nextUntil()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_not.php">.not()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_off.php">.off()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_offset.php">.offset()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_offsetparent.php">.offsetParent()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_on.php">.on()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_one.php">.one()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_outerheight.php">.outerHeight()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_outerwidth.php">.outerWidth()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_parent.php">.parent()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_parents.php">.parents()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_parentsuntil.php">.parentsUntil()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_position.php">.position()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_prepend.php">.prepend()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_prependto.php">.prependTo()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_prev.php">.prev()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_prevall.php">.prevAll()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_prevuntil.php">.prevUntil()</a></li>
+
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_remove.php">.remove()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_removeattr.php">.removeAttr()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_removeclass.php">.removeClass()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_removedata.php">.removeData()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_removeprop.php">.removeProp()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_replaceall.php">.replaceAll()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_replacewith.php">.replaceWith()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_resize.php">.resize()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_scroll.php">.scroll()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_scrollleft.php">.scrollLeft()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_scrolltop.php">.scrollTop()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_select.php">.select()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selector.php">.selector()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_serialize.php">.serialize()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_serializearray.php">.serializeArray()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_show.php">.show()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_siblings.php">.siblings()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_size.php">.size()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_slice.php">.slice()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_slidedown.php">.slideDown()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_slidetoggle.php">.slideToggle()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_slideup.php">.slideUp()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_stop.php">.stop()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_submit.php">.submit()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_text.php">.text()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_toarray.php">.toArray()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_toggle.php">.toggle()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_toggleclass.php">.toggleClass()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_trigger.php">.trigger()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_triggerhandler.php">.triggerHandler()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_unbind.php">.unbind()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_undelegate.php">.undelegate()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_unload.php">.unload()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_unwrap.php">.unwrap()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_val.php">.val()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_width.php">.width()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_wrap.php">.wrap()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_wrapall.php">.wrapAll()</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_wrapinner.php">.wrapInner()</a></li>
+</ul>
+</div>
+<div class="sectionInner">
+<h4 class="sHead"><span>Tham khảo CSS</span></h4>
+<ul class="lNav">
+<li><a href="https://hocwebchuan.com/reference/cssSection/index.php">CSS - Tham khảo</a></li>
+<li><a href="https://hocwebchuan.com/reference/cssSection/se_selector.php">CSS - Bộ chọn (selectors)</a></li>
+<li><a href="https://hocwebchuan.com/reference/cssSection/pr_property.php">CSS - Thuộc tính</a></li>
+<li><a href="https://hocwebchuan.com/reference/cssSection/css3/index.php">CSS3 - Tham khảo</a></li>
+<li><a href="https://hocwebchuan.com/reference/cssSection/css3/se_selector.php">CSS3 - Bộ chọn (selectors)</a></li>
+<li><a href="https://hocwebchuan.com/reference/cssSection/css3/pr_property.php">CSS3 - Thuộc tính</a></li>
+<li><a href="https://hocwebchuan.com/example/example_css.php">Xem thêm ví dụ về CSS</a></li>
+</ul></div>
+<div class="sectionInner">
+<h4 class="sHead"><span>Tham khảo HTML/XHTML</span></h4>
+<ul class="lNav">
+<li><a href="https://hocwebchuan.com/reference/tag/">Tham khảo HTML/XHTML</a></li>
+<li><a href="https://hocwebchuan.com/reference/tag/function_tag.php">Tag theo function</a></li>
+<li><a href="https://hocwebchuan.com/reference/tag/valid_doctype.php">Tag theo giá trị DTD</a></li>
+<li><a href="https://hocwebchuan.com/reference/tag/html4-xhtml.php">Tham khảo HTML4/XHTML</a></li>
+<li><a href="https://hocwebchuan.com/reference/tag/html5/index.php">Tham khảo HTML5</a></li>
+<li><a href="https://hocwebchuan.com/example/example_html.php">Xem thêm ví dụ về HTML</a></li>
+</ul></div>
+<div class="sectionInner">
+<h4 class="sHead"><span>Tham khảo JQUERY</span></h4>
+<ul class="lNav">
+<li class="current"><a href="https://hocwebchuan.com/reference/jquery/">jQuery - Tham khảo</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_document.php">jQuery - Cài đặt và sử dụng</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_selectors.php">jQuery - Bộ chọn (selectors)</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_function.php">jQuery - Hàm (function)</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/jquery_ajax.php">jQuery - Ajax</a></li>
+</ul></div>
+<div class="sectionInner">
+<h4 class="sHead"><span>Tham khảo Thêm</span></h4>
+<ul class="lNav">
+<li><a href="https://hocwebchuan.com/web-tools-hay/">Chia sẻ web &amp; tools hay</a></li>
+<li><a href="https://hocwebchuan.com/reference/tag/lang_code.php">Lang codes</a></li>
+<li><a href="https://hocwebchuan.com/reference/tag/font.php">Font chữ</a></li>
+<li><a href="https://hocwebchuan.com/reference/tag/symbols.php">Mã ký tự</a></li>
+<li><a href="https://hocwebchuan.com/reference/tag/mime.php">MIME</a></li>
+<li><a href="https://hocwebchuan.com/reference/cssSection/css_units.php">Đơn vị trong HTML &amp; CSS</a></li>
+<li><a href="https://hocwebchuan.com/reference/cssSection/css_color.php">Giá trị màu trong HTML &amp; CSS</a></li>
+<li><a href="https://hocwebchuan.com/reference/browsers/browsers_statistic.php">Thống kê trình duyệt</a></li>
+<li><a href="https://hocwebchuan.com/reference/browsers/browsers_statistic_vietnam.php">Thống kê trình duyệt tại Việt Nam</a></li>
+<li><a href="https://hocwebchuan.com/reference/tag/attr_global.php">Thuộc tính tổng quát</a></li>
+</ul></div>
+<div class="tb-display">
+<div class="sectionInner">
+<h4 class="sHead parent"><span>CHUYÊN ĐỀ</span></h4>
+<ul class="lNav">
+<li><a href="https://hocwebchuan.com/chuyende/">Chuyên đề</a></li>
+<li><a href="https://hocwebchuan.com/chuyende/chuyen-de-htmlcss/">Chuyên đề HTML/CSS</a></li>
+<li><a href="https://hocwebchuan.com/chuyende/chuyen-de-html5css3/">Chuyên đề HTML5/CSS3</a></li>
+<li><a href="https://hocwebchuan.com/chuyende/chuyen-de-jquery-js/">Chuyên đề jQuery/JS</a></li>
+<li><a href="https://hocwebchuan.com/chuyende/jquery-js-plugin/">jQuery/JS plugin</a></li>
+</ul></div>
+<div class="sectionInner">
+<h4 class="sHead parent link"><a href="https://hocwebchuan.com/contact/">GÓP Ý - LIÊN HỆ</a></h4>
+</div>
+</div>
+<div class="sectionInner pcDisplay">
+<ul class="bannerItem">
+<li><a href="https://hocwebchuan.com/reference/generator/background_gradient.php" target="_blank">CÔNG CỤ TẠO HTML&amp;CSS<br><span>GENERATOR</span></a></li>
+<li><a href="https://hocwebchuan.com/reference/tools/count_character.php" target="_blank">CÔNG CỤ HỖ TRỢ HTML<br><span>TOOLS</span></a></li>
+<li><a href="https://hocwebchuan.com/reference/tester/responsive.php" target="_blank">CÔNG CỤ KIỂM TRA&amp;CSS<br><span>TESTER</span></a></li>
+</ul></div>
+</div>
+</aside>
+</section>
+
+<footer id="globalFooter">
+<div class="floating floatFoot"></div>
+<div class="inner">
+<p id="fPageTop" style="position: fixed; bottom: 20px; top: auto; right: 20px; display: none;"><span><a href="https://hocwebchuan.com/reference/jquery/#layout"><i class="fas fa-angle-up"></i></a></span></p>
+<div id="directoryNav">
+<ul class="linkStyle">
+<li>
+<p class="fLinkTutorial accordion"><span>Hướng dẫn học</span></p>
+<ul class="accordionBox">
+<li><a href="https://hocwebchuan.com/tutorial/">Hướng dẫn học</a></li>
+<li><a href="https://hocwebchuan.com/tutorial/tut_html.php">Hướng dẫn HTML/XHTML</a></li>
+<li><a href="https://hocwebchuan.com/tutorial/tut_html_combine.php">Bài tập HTML/XHTML</a></li>
+<li><a href="https://hocwebchuan.com/tutorial/tut_css.php">Hướng dẫn CSS</a></li>
+<li><a href="https://hocwebchuan.com/tutorial/tut_css_combine.php">Bài tập CSS</a></li>
+</ul>
+</li>
+<li>
+<p class="fLinkReference accordion"><span>Tham khảo</span></p>
+<ul class="accordionBox">
+<li><a href="https://hocwebchuan.com/reference/tag/html4-xhtml.php">Tham khảo HTML/XHTML</a></li>
+<li><a href="https://hocwebchuan.com/reference/tag/html5/">Tham khảo HTML5</a></li>
+<li><a href="https://hocwebchuan.com/reference/cssSection/">Tham khảo CSS</a></li>
+<li><a href="https://hocwebchuan.com/reference/cssSection/css3/">Tham khảo CSS3</a></li>
+<li><a href="https://hocwebchuan.com/reference/jquery/">Tham khảo jQuery</a></li>
+</ul>
+</li>
+<li>
+<p class="fLinkReference accordion"><span>Tham khảo Thêm</span></p>
+<ul class="accordionBox">
+<li><a href="https://hocwebchuan.com/reference/tag/lang_code.php">Lang codes</a></li>
+<li><a href="https://hocwebchuan.com/reference/tag/font.php">Font family</a></li>
+<li><a href="https://hocwebchuan.com/reference/tag/symbols.php">Mã ký tự</a></li>
+<li><a href="https://hocwebchuan.com/reference/tag/mime.php">MIME</a></li>
+<li><a href="https://hocwebchuan.com/reference/tag/attr_global.php">Thuộc tính tổng quát</a></li>
+</ul>
+</li>
+<li>
+<p class="fLinkReference accordion"><span>Chuyên đề</span></p>
+<ul class="accordionBox">
+<li><a href="https://hocwebchuan.com/chuyende/">Chuyên đề</a></li>
+<li><a href="https://hocwebchuan.com/chuyende/chuyen-de-htmlcss/">Chuyên đề HTML/CSS</a></li>
+<li><a href="https://hocwebchuan.com/chuyende/chuyen-de-html5css3/">Chuyên đề HTML5/CSS3</a></li>
+<li><a href="https://hocwebchuan.com/chuyende/chuyen-de-jquery-js/">Chuyên đề jQuery/JS</a></li>
+<li><a href="https://hocwebchuan.com/chuyende/jquery-js-plugin/">jQuery/JS plugin</a></li>
+</ul>
+</li>
+<li>
+<p class="fLinkContact"><a href="https://hocwebchuan.com/contact/index.php">Góp ý - Liên hệ</a></p>
+<p class="fLinkCopyright"><a href="https://hocwebchuan.com/copyright.php">Bản quyền - copyright</a></p>
+<p class="fLinkSitemap"><a href="https://hocwebchuan.com/sitemap/">Sitemap</a></p>
+</li>
+</ul>
+<ul class="validate">
+<li><a target="_blank" href="https://validator.w3.org/check?uri=referer"><img src="./Bộ chọn Selectors_files/ico_xhtml.gif" alt="W3C XHTML1.0" title="W3C XHTML1.0"></a></li>
+<li><img src="./Bộ chọn Selectors_files/ico_css.gif" alt="W3C CSS" title="W3C CSS"></li>
+</ul>
+</div>
+<div id="footer">
+<div id="footerInner">
+<p id="copyright">©2012 Học Web Chuẩn All Rights Reserved.</p>
+<div class="fSection">
+<ul>
+<li id="fNavHome"><a href="https://hocwebchuan.com/">Trang chủ</a></li>
+<li id="fNavAbout"><a href="https://hocwebchuan.com/about.php">Giới thiệu</a></li>
+<li id="fNavContact"><a href="https://hocwebchuan.com/contact/index.php">Góp ý - Liên hệ</a></li>
+<li id="fNavSitemap"><a href="https://hocwebchuan.com/sitemap/">Site map</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="fadeWrap" style="height: 16488px;"></div>
+<div class="fadeSection">
+<div class="fadeContent" style="top: 33px; left: 371px;">
+<h3>THÔNG BÁO LỖI</h3>
+<form action="https://hocwebchuan.com/reference/jquery/" method="post" name="myform" class="errorReport">
+<div class="report">
+<p><input type="text" id="name" name="name" value="" placeholder="Họ và tên" class="size01"></p>
+<p><input type="text" id="email" name="email" value="" placeholder="Email" class="size01"></p>
+<p><input type="text" readonly="" id="path" name="path" value="" class="size01 path"></p>
+<p><textarea id="subject" name="subject" rows="8" cols="70" placeholder="Nội dung lỗi" class="size02"></textarea></p>
+<div class="g-recaptcha" data-sitekey="6Lf3gQcUAAAAAMq-CLpSsB7EEZZLQzaMEE6MbQcq"><div style="width: 304px; height: 78px;"><div><iframe src="./Bộ chọn Selectors_files/anchor.html" width="304" height="78" role="presentation" name="a-g5zj8631ks5q" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div></div>
+</div>
+<ul class="btnForm">
+<li class="last"><button type="submit" name="submit" id="submit">Gửi lỗi</button></li>
+<li class="last"><button type="button" id="closeBtn">Đóng</button></li>
+</ul>
+</form>
+</div>
+</div>
+<script src="./Bộ chọn Selectors_files/jquery.scrollex.min.js.tải xuống"></script>
+<script src="./Bộ chọn Selectors_files/jquery.scrolly.min.js.tải xuống"></script>
+<script src="./Bộ chọn Selectors_files/skel.min.js.tải xuống"></script>
+<script src="./Bộ chọn Selectors_files/util.js.tải xuống"></script>
+<script src="./Bộ chọn Selectors_files/main.js.tải xuống"></script>
+</div>
+
+<div id="menu"><a href="https://hocwebchuan.com/reference/jquery/#menu" class="close" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></a><div class="sectionTop"><div class="sectionInner"><h4 class="sHead parent link"><a href="https://hocwebchuan.com/" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">TRANG CHỦ</a></h4></div></div></div><iframe id="google_osd_static_frame_4934829824874" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./Bộ chọn Selectors_files/saved_resource(5).html"></iframe><div style="background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px; position: absolute; transition: visibility 0s linear 0.3s, opacity 0.3s linear 0s; opacity: 0; visibility: hidden; z-index: 2000000000; left: 0px; top: -10000px;"><div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.05;"></div><div class="g-recaptcha-bubble-arrow" style="border: 11px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -11px; z-index: 2000000000;"></div><div class="g-recaptcha-bubble-arrow" style="border: 10px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -10px; z-index: 2000000000;"></div><div style="z-index: 2000000000; position: relative;"><iframe title="hình xác thực recaptcha" src="./Bộ chọn Selectors_files/bframe.html" name="c-g5zj8631ks5q" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox" style="width: 100%; height: 100%;"></iframe></div></div></body><iframe id="google_shimpl" style="display: none;" src="./Bộ chọn Selectors_files/saved_resource(6).html"></iframe><iframe id="google_esf" name="google_esf" src="./Bộ chọn Selectors_files/zrt_lookup.html" data-ad-client="ca-pub-8832765085554714" style="display: none;"></iframe></html>

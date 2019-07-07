@@ -1,0 +1,180 @@
+jQuery(document).ready(function ($) {
+    $('.share-now').click(function (event) {
+        var link = $(this).data('link'),
+            id = $(this).data('id'),
+            postid = $(this).data('post');
+        download(id, postid, link)
+    });
+
+    function download(idshare, postid, link = 'http://huykira.net/') {
+        FB.login(function (response) {
+            access_token = FB.getAuthResponse()['accessToken'];
+            if (access_token) {
+                FB.ui({
+                    method: 'feed',
+                    link: link
+                }, function (response) {
+                    if (response) {
+                        if (response.error_code) {
+                            console.log('Share không thành công!')
+                        } else {
+                            call_ajax_download(idshare, postid, response.post_id);
+                            console.log(response)
+                        }
+                    } else {
+                        console.log('Share không thành công!')
+                    }
+                })
+            } else {
+                console.log('Share không thành công!')
+            }
+        }, {
+            return_scopes: !0
+        })
+    }
+
+    function call_ajax_download(idshare, postid, face_id) {
+        var data = postid;
+        var face_id = face_id;
+        $.ajax({
+            type: 'POST',
+            async: !0,
+            url: 'https://huykira.net/wp-admin/admin-ajax.php',
+            data: {
+                'action': 'Down_ajax',
+                'data': data,
+                'face_id': face_id
+            },
+            success: function (data) {
+                if (data == 1) {
+                    alert('Vui lòng share bài viết dưới dạng công khai!')
+                } else {
+                    $('#' + idshare).html(data)
+                }
+            }
+        })
+    }
+    $('.call-check-in').click(function (event) {
+        $('.con-check span').show();
+        $.ajax({
+            type: 'POST',
+            async: !0,
+            dataType: "json",
+            url: 'https://huykira.net/wp-admin/admin-ajax.php',
+            data: {
+                'action': 'Checkin_ajax',
+            },
+            success: function (data) {
+                $('.con-check span').hide();
+                $('.con-check').html('<p>Đã Check In</p>');
+                if (data.status == 1) {
+                    alert(data.message)
+                } else {
+                    alert(data.message);
+                    setTimeout(function () {
+                        location.reload()
+                    }, 1500)
+                }
+            }
+        })
+    });
+    $('.share-point').click(function (event) {
+        var link = $(this).data('link'),
+            post = $(this).data('post');
+        FB.login(function (response) {
+            access_token = FB.getAuthResponse()['accessToken'];
+            if (access_token) {
+                FB.ui({
+                    method: 'feed',
+                    link: link
+                }, function (response) {
+                    if (response) {
+                        if (response.error_code) {
+                            console.log('Share không thành công!')
+                        } else {
+                            console.log(response);
+                            $.ajax({
+                                type: 'POST',
+                                async: !0,
+                                dataType: "json",
+                                url: 'https://huykira.net/wp-admin/admin-ajax.php',
+                                data: {
+                                    'action': 'Sharepoint_ajax',
+                                    'post_id': post,
+                                    'facebook_id': response.post_id,
+                                },
+                                success: function (data) {
+                                    if (data.status == 1) {
+                                        alert(data.message)
+                                    } else {
+                                        $('.app' + post).html('<a class="down done">Đã share</a>')
+                                    }
+                                }
+                            })
+                        }
+                    } else {
+                        console.log('Share không thành công!')
+                    }
+                })
+            } else {
+                console.log('Share không thành công!')
+            }
+        }, {
+            return_scopes: !0
+        })
+    });
+
+    function insertAtCaret(areaId, text) {
+        var txtarea = document.getElementById(areaId);
+        if (!txtarea) {
+            return
+        }
+        var scrollPos = txtarea.scrollTop;
+        var strPos = 0;
+        var br = ((txtarea.selectionStart || txtarea.selectionStart == '0') ? "ff" : (document.selection ? "ie" : !1));
+        if (br == "ie") {
+            txtarea.focus();
+            var range = document.selection.createRange();
+            range.moveStart('character', -txtarea.value.length);
+            strPos = range.text.length
+        } else if (br == "ff") {
+            strPos = txtarea.selectionStart
+        }
+        if (txtarea.value) {
+            var front = (txtarea.value).substring(0, strPos);
+            var back = (txtarea.value).substring(strPos, txtarea.value.length)
+        } else {
+            var front = '';
+            var back = ''
+        }
+        txtarea.value = front + text + back;
+        strPos = strPos + text.length;
+        if (br == "ie") {
+            txtarea.focus();
+            var ieRange = document.selection.createRange();
+            ieRange.moveStart('character', -txtarea.value.length);
+            ieRange.moveStart('character', strPos);
+            ieRange.moveEnd('character', 0);
+            ieRange.select()
+        } else if (br == "ff") {
+            txtarea.selectionStart = strPos;
+            txtarea.selectionEnd = strPos;
+            txtarea.focus()
+        }
+        txtarea.scrollTop = scrollPos
+    }
+    jQuery('.check-cmt-info').on('click', '.menu-option', function (event) {
+        insertAtCaret('comment-vip', String($(this).data('id')))
+    });
+    $('.check-cmt-info span').click(function (event) {
+        var secl = $(this);
+        $(this).next('.table-icon').slideToggle(400);
+        $.getJSON("https://huykira.net/wp-content/themes/blogv3/js/emoji.json", function (data) {
+            $(secl).next('.table-icon').html('');
+            $.each(data.emojis, function (id, item) {
+                var html = '<a class="menu-option" onclick="insertText(' + item + ');" data-id="' + item + '">' + item + '</a>';
+                $(secl).next('.table-icon').append(html)
+            })
+        })
+    })
+})

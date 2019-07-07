@@ -1,0 +1,671 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="author" content="Thanh Tai">
+    <meta property="article:author" content="https://www.facebook.com/toidicode/"/>
+
+    <title>Các hàm tác động vào nội dung của thẻ HTML trong Jquery - Toidicode.com</title>
+    <!--[if lt IE 9]>
+    <script src="https://toidicode.com/wp-content/themes/thanhtai/js/html5.js"></script>
+    <![endif]-->
+    <meta name="description"
+          content="Ở bài trước chúng ta đã tìm hiểu về hai hàm tác động vào nội dung của thẻ HTML là html() và text() trong jquery rồi. Nhưng do Jquery hỗ trợ chúng ta rất mạnh về DOM, nên mình sẽ viết thêm bài này để tổng hợp lại các hàm tác động đến nội dung của thẻ HTML trong jquery."/>
+    <link rel="canonical" href="https://toidicode.com/cac-ham-tac-dong-vao-noi-dung-cua-the-html-trong-jquery-165.html"/>
+    <link rel="publisher" href="https://plus.google.com/117776577259145153645"/>
+
+    <meta property="og:locale" content="en_US"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Các hàm tác động vào nội dung của thẻ HTML trong Jquery"/>
+    <meta property="og:description"
+          content="Ở bài trước chúng ta đã tìm hiểu về hai hàm tác động vào nội dung của thẻ HTML là html() và text() trong jquery rồi. Nhưng do Jquery hỗ trợ chúng ta rất mạnh về DOM, nên mình sẽ viết thêm bài này để tổng hợp lại các hàm tác động đến nội dung của thẻ HTML trong jquery."/>
+    <meta property="og:url" content="https://toidicode.com/cac-ham-tac-dong-vao-noi-dung-cua-the-html-trong-jquery-165.html"/>
+    <meta property="og:site_name" content="Toidicode.com"/>
+    <meta property="fb:app_id" content="610336262482409"/>
+    <meta property="og:image" content="https://toidicode.com/upload/images/jquery/cac-ham-tac-dong-den-noi-dung-cua-the-html.jpg"/>
+    <meta property="og:image:width" content="600"/>
+    <meta property="og:image:height" content="312"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:description"
+          content="Ở bài trước chúng ta đã tìm hiểu về hai hàm tác động vào nội dung của thẻ HTML là html() và text() trong jquery rồi. Nhưng do Jquery hỗ trợ chúng ta rất mạnh về DOM, nên mình sẽ viết thêm bài này để tổng hợp lại các hàm tác động đến nội dung của thẻ HTML trong jquery."/>
+    <meta name="twitter:title" content="Các hàm tác động vào nội dung của thẻ HTML trong Jquery"/>
+    <meta name="twitter:image" content="https://toidicode.com/upload/images/jquery/cac-ham-tac-dong-den-noi-dung-cua-the-html.jpg"/>
+    <link rel='stylesheet' id='vce_style-css' href='https://toidicode.com/wp-content/themes/thanhtai/css/app.min.css '
+          type='text/css' media='screen, print'/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link rel='shortlink' href='https://toidicode.com/'/>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="shortcut icon" href="https://toidicode.com/wp-content/uploads/2016/11/favicon77.png"
+          type="image/x-icon"/>
+    <link rel="apple-touch-icon" href="https://toidicode.com/wp-content/uploads/2016/11/favicon77.png"/>
+    <meta name="theme-color" content="#3d454c">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="https://toidicode.com/wp-content/uploads/2016/11/favicon144.png"/>
+
+    <!-- ads -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+    <link href="https://toidicode.com/assets/css/toastr.min.css" rel="stylesheet">
+        <link href="https://toidicode.com/wp-content/themes/thanhtai/ocean.css" rel="stylesheet">
+</head>
+
+<body>
+<div id="vce-main">
+    <header id="header" class="main-header">
+        <div class="top-header">
+            <div class="container">
+                <div class="vce-wrap-left">
+                    <ul id="vce_top_navigation_menu" class="top-nav-menu">
+                        <li class="menu-item">
+                            <a href="https://toidicode.com/page/gioi-thieu.html" style="text-decoration: none;">Giới
+                                Thiệu</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="https://toidicode.com/page/lien-he.html" style="text-decoration: none;">Liên Hệ</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="https://toidicode.com/page/ban-quyen.html" style="text-decoration: none;">Bản Quyền</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="javascript:;" style="text-decoration: none;">Hợp Tác</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="https://toidicode.com/job" style="text-decoration: none;">Tuyển Dụng</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="vce-wrap-right">
+                    <div class="menu-social-menu-container">
+                        <ul id="vce_social_menu" class="soc-nav-menu">
+                            <li id="menu-item-5" class="menu-item"><a href="https://www.facebook.com/toidicode/"><span
+                                            class="vce-social-name">Facebook</span></a></li>
+                            <li id="menu-item-6" class="menu-item "><a href="https://twitter.com/vthanhtai"><span
+                                            class="vce-social-name">Twitter</span></a></li>
+                            <li id="menu-item-10" class="menu-item "><a href="https://github.com/toidicode/"><span
+                                            class="vce-social-name">Github</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container header-1-wrapper header-main-area">
+            <div class="vce-res-nav">
+                <a class="vce-responsive-nav" href="javascript:void(0)"><i class="fa fa-bars" style="color:#3d454c"></i></a>
+            </div>
+            <div class="site-branding">
+                <h1 class="site-title" style="">
+                    <a href="https://toidicode.com" title="Toidicode.com" class="has-logo"><img
+                                src="https://toidicode.com/upload/images/logo.png" alt="Toidicode.com"/></a>
+                </h1>
+                <span class="site-description">BASIC TO ADVANCE</span>
+            </div>
+        </div>
+        <div class="header-bottom-wrapper">
+            <div class="container">
+                <nav id="site-navigation" class="main-navigation" role="navigation">
+                    <ul id="vce_main_navigation_menu" class="nav-menu">
+                        <li id="menu-item-642" class="menu-item menu-item-type-custom" style=""><a
+                                    href="https://toidicode.com">HOME</a>
+                        </li>
+                        <li class="menu-item menu-item-type-custom menu-item-has-children"><a href="https://toidicode.com/script-language" style="">SCRIPT LANGUAGE</a><ul class="sub-menu" ><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-javascript" style="">JAVASCRIPT</a><ul class="sub-menu" ><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-javascript-co-ban" style="">JAVASCRIPT CƠ BẢN</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-jquery-js" style="">JQUERY</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-angularjs" style="">ANGULARJS</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-vuejs-co-ban" style="">VUEJS</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-nodejs" style="">NODE.JS</a><ul class="sub-menu" ><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/nodejs-co-ban" style="">NODE.JS CƠ BẢN</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/express-framework" style="">EXPRESS FRAMEWORK</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/nodejs-mysql" style="">NODE.JS & MYSQL</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/nodejs-mongodb" style="">NODE.JS & MONGODB</a></li></ul></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-ecmascript" style="">ECMASCRIPT</a></li></ul></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/tu-hoc-php" style="">PHP</a><ul class="sub-menu" ><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/php-co-ban" style="">PHP CƠ BẢN</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/php-huong-doi-tuong" style="">PHP HƯỚNG ĐỐI TƯỢNG</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/php-standards" style="">PHP STANDARDS</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-laravel" style="">LARAVEL</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-codeigniter" style="">CODEIGNITER</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/php-mysql" style="">PHP&MYSQL</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/php-optimize" style="">PHP OPTIMIZE & SCURITY</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-php7" style="">PHP 7X</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/php-tip" style="">PHP TIP</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/php-regular-expression" style="">REGULAR EXPRESSION</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/php-mongodb" style="">PHP&MONGODB</a></li></ul></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-python" style="">PYTHON</a><ul class="sub-menu" ><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/python-co-ban" style="">PYTHON CƠ BẢN</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-python-nang-cao" style="">PYTHON NÂNG CAO</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/python-mysql" style="">PYTHON & MYSQL</a></li></ul></li></ul></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/computer-language" style="">COMPUTER LANGUAGE</a><ul class="sub-menu" ><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-csharp" style="">C#</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-java" style="">JAVA</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-android" style="">ANDROID</a></li></ul></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-database" style="">DATABASE</a><ul class="sub-menu" ><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-sql" style="">SQL</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-mongodb" style="">MONGODB</a></li></ul></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/#" style="">MORE</a><ul class="sub-menu" ><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-html" style="">HTML</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/linh-tinh" style="">LINH TINH</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-marketing-online" style="">MARKETING ONLINE</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-css" style="">CSS</a><ul class="sub-menu" ><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-css-can-ban" style="">CSS</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/hoc-css3" style="">CSS3</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/css-reference" style="">CSS REFERENCE</a></li></ul></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/dinh-nghia" style="">ĐỊNH NGHĨA</a></li><li class="menu-item menu-item-type-taxonomy"><a href="https://toidicode.com/sublime-text" style="">SUBLIME TEXT</a></li></ul></li></li>
+                        <li class="search-header-wrap">
+                            <a class="search_header" href="javascript:void(0)"><i class="fa fa-search"></i></a>
+                            <ul class="search-header-form-ul" style="background: white">
+                                <li>
+                                    <form class="search-header-form" action="https://toidicode.com/search.html"
+                                          method="get">
+                                        <input name="q" class="search-input" size="20" type="text"
+                                               onfocus="(this.value == 'Nhập nội dung tìm kiếm ....') && (this.value = '')"
+                                               onblur="(this.value == '') && (this.value = 'Nhập nội dung tìm kiếm ....')"
+                                               placeholder="Nhập nội dung tìm kiếm ...."/>
+                                    </form>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+        <div id="main-wrapper">
+
+        <div id="content" class="container site-content">
+
+
+            <div id="primary" class="vce-main-content">
+
+                <main id="main" class="main-box main-box-single">
+                    <article class="vce-single">
+                        <header class="entry-header">
+                            <span class="meta-category">DANH MỤC: <a
+                                        href="https://toidicode.com/hoc-jquery-js"
+                                        class="category-55">Jquery js</a></span>
+                            <h1 class="entry-title">Bài 4: Các hàm tác động vào nội dung của thẻ HTML trong Jquery</h1>
+                            <hr/>
+
+                                                    </header>
+                        <div class="entry-content">
+                            <p>Ở b&agrave;i trước ch&uacute;ng ta đ&atilde; t&igrave;m hiểu về hai h&agrave;m t&aacute;c động v&agrave;o nội dung của thẻ HTML l&agrave;&nbsp;<a href="https://toidicode.com/ham-html-va-text-trong-jquery-164.html">html() v&agrave; text() trong jquery</a> rồi. Nhưng do Jquery hỗ trợ ch&uacute;ng ta rất mạnh về <a href="https://toidicode.com/dom-elements-trong-javascript-112.html">DOM</a>, n&ecirc;n m&igrave;nh sẽ viết th&ecirc;m b&agrave;i n&agrave;y để tổng hợp lại c&aacute;c h&agrave;m t&aacute;c động đến nội dung của thẻ HTML trong jquery.</p>
+
+<h2>1, H&agrave;m append().</h2>
+
+<p>-H&agrave;m append() trong Jquery c&oacute; t&aacute;c dụng ch&egrave;n th&ecirc;m nội dung&nbsp;v&agrave;o ph&iacute;a sau&nbsp;của th&agrave;nh phần cần t&aacute;c động.</p>
+
+<p><strong>C&uacute; Ph&aacute;p</strong>:</p>
+
+<pre><code class="language-javascript">$('selector').append(content);</code></pre>
+
+<p><strong>Trong đ&oacute;</strong>: content l&agrave; nội dung m&agrave; c&aacute;c bạn cần th&ecirc;m.</p>
+
+<p><strong>VD</strong>:</p>
+
+<pre><code class="language-javascript">$('p').append('&lt;b&gt;Toidicode.com&lt;/b&gt;');</code></pre>
+
+<p><a class="btn-demo" href="https://toidicode.com/live/?id=211" target="_blank">Xem Kết Quả</a></p>
+
+<h2>2, H&agrave;m prepend().</h2>
+
+<p>-H&agrave;m prepend() trong Jquery c&oacute; t&aacute;c dụng ch&egrave;n th&ecirc;m nội dung v&agrave;o đầu của th&agrave;nh phần cần t&aacute;c động.</p>
+
+<p><strong>C&uacute; Ph&aacute;p</strong>:</p>
+
+<pre><code class="language-javascript">$('selector').prepend(content);</code></pre>
+
+<p><strong>Trong đ&oacute;</strong>: content l&agrave; nội dung m&agrave; c&aacute;c bạn cần th&ecirc;m.</p>
+
+<p><strong>VD</strong>:</p>
+
+<pre><code class="language-javascript">$('p').prepend('&lt;b&gt;Toidicode.com&lt;/b&gt;, ');</code></pre>
+
+<p><a class="btn-demo" href="https://toidicode.com/live/?id=212" target="_blank">Xem Kết Quả</a></p>
+
+<h2>3, H&agrave;m&nbsp;after().</h2>
+
+<p>-H&agrave;m after() trong Jquery&nbsp;c&oacute; t&aacute;c dụng ch&egrave;n nội dung v&agrave;o ph&iacute;a sau của th&agrave;nh phần cần t&aacute;c động.</p>
+
+<p><strong>C&uacute; Ph&aacute;p</strong>:</p>
+
+<pre><code class="language-javascript">$('selector').after(content);</code></pre>
+
+<p><strong>Trong đ&oacute;</strong>: content l&agrave; nội dung m&agrave; c&aacute;c bạn cần th&ecirc;m.</p>
+
+<p><strong>VD</strong>:</p>
+
+<pre><code class="language-javascript">$('p').after('&lt;div style="background:red;"&gt;Toidicode.com&lt;/div&gt;');</code></pre>
+
+<p><a class="btn-demo" href="https://toidicode.com/live/?id=213" target="_blank">Xem Kết Quả</a></p>
+
+<h2>4, H&agrave;m before().</h2>
+
+<p>-H&agrave;m before() trong Jquery&nbsp;c&oacute; t&aacute;c dụng ch&egrave;n th&ecirc;m nội dung v&agrave;o ph&iacute;a trước của th&agrave;nh phần cần t&aacute;c động.</p>
+
+<p><strong>C&uacute; Ph&aacute;p</strong>:</p>
+
+<pre><code class="language-javascript">$('selector').before(content);</code></pre>
+
+<p><strong>Trong đ&oacute;</strong>: content l&agrave; nội dung m&agrave; c&aacute;c bạn cần th&ecirc;m.</p>
+
+<p><strong>VD</strong>:</p>
+
+<pre><code class="language-javascript">$('p').before('&lt;div style="background:red;"&gt;Toidicode.com&lt;/div&gt;');</code></pre>
+
+<p><a class="btn-demo" href="https://toidicode.com/live/?id=214" target="_blank">Xem Kết Quả</a></p>
+
+<h2>5, H&agrave;m empty().</h2>
+
+<p>-H&agrave;m empty() trong Jquery&nbsp;c&oacute; t&aacute;c dụng l&agrave;m trống nội dung của th&agrave;nh phần cần t&aacute;c động.</p>
+
+<p><strong>C&uacute; Ph&aacute;p</strong>:</p>
+
+<pre><code class="language-javascript">$('selector').empty();</code></pre>
+
+<p><strong>VD</strong>:</p>
+
+<pre><code class="language-javascript">$('p').empty();</code></pre>
+
+<p><a class="btn-demo" href="https://toidicode.com/live/?id=216" target="_blank">Xem Kết Quả</a></p>
+
+<h2>6, H&agrave;m remove().</h2>
+
+<p>-H&agrave;m remove() trong Jquery c&oacute; t&aacute;c dụng x&oacute;a c&aacute;c&nbsp;th&agrave;nh phần vừa được chọn.</p>
+
+<p><strong>C&uacute; Ph&aacute;p</strong>:</p>
+
+<pre><code class="language-javascript">$('selector').remove(argument);</code></pre>
+
+<p><strong>Trong đ&oacute;</strong>:</p>
+
+<ul>
+	<li>Nếu để trống h&agrave;m <code>remove()</code> th&igrave; l&agrave; x&oacute;a hết c&aacute;c th&agrave;nh phần b&ecirc;n trong th&agrave;nh phần cần chọn.</li>
+	<li>Nếu muốn x&oacute;a c&aacute;c th&agrave;nh phần cụ thể th&igrave; chỉ cần liệt k&ecirc; c&aacute;c th&agrave;nh phần cần x&oacute;a trong h&agrave;m <code>remove()</code>.</li>
+</ul>
+
+<p><strong>VD</strong>: X&oacute;a tất cả c&aacute;c thẻ&nbsp;p.</p>
+
+<pre><code class="language-javascript">$('p').remove();</code></pre>
+
+<p><a class="btn-demo" href="https://toidicode.com/live/?id=216" target="_blank">Xem Kết Quả</a></p>
+
+<p><strong>VD</strong>: X&oacute;a tất cả c&aacute;c thẻ p c&oacute; class l&agrave; &#39;<em>demo</em>&#39;.</p>
+
+<pre><code>$('p').remove('.demo');</code></pre>
+
+<p><a class="btn-demo" href="https://toidicode.com/live/?id=217" target="_blank">Xem Kết Quả</a></p>
+
+<p><strong>VD</strong>: X&oacute;a tất cả c&aacute;c thẻ p c&oacute; class l&agrave; &#39;<em>demo</em>&#39; hoặc id l&agrave; &#39;<em>des</em>&#39;.</p>
+
+<pre><code>$('p').remove('.demo, #des');</code></pre>
+
+<p><a class="btn-demo" href="https://toidicode.com/live/?id=218" target="_blank">Xem Kết Quả</a></p>
+
+<h2>7, Lời kết.</h2>
+
+<p>-Như vậy, qua b&agrave;i n&agrave;y nữa l&agrave; m&igrave;nh đ&atilde; giới thiệu đến mọi người 8 h&agrave;m t&aacute;c động đến nội dung của thẻ HTML bằng jquery. Mọi người ch&uacute; &yacute; &ocirc;n tập kỹ, b&agrave;i sau ch&uacute;ng ta sẽ t&igrave;m hiểu về hai h&agrave;m <strong>addClass() v&agrave; removeClass() trong jquery</strong>.</p>
+                            <p style="text-align:right">
+                                <em>Nguồn: <a href="http://toidicode.com">Toidicode.com</a></em>
+                            </p>
+                        </div>
+
+                        <footer class="entry-footer">
+                            <div class="meta-tags">
+                            </div>
+                        </footer>
+
+                        <div style="width:98%;margin:15px 5px;padding:7px 5px;background:white;border:1px solid #12537f;text-align:center">
+                            <a href="#" class='OneSignal-prompt' style='text-align:center; '>
+                                <b>Nếu bạn là người có văn
+                                    hóa, hãy để lại link bài viết gốc khi chia sẻ bài viết. Xin cảm ơn!</b>
+                            </a>
+                        </div>
+
+                    </article>
+                    <div class="option-news">
+                        <div class="action">
+                            <a href="#" id="likenews" data-id="165"><i
+                                        class="fa fa-thumbs-up like-status">501</i></a>
+                        </div>
+                        <div class="vce-share-bar">
+                            <ul class="vce-share-items">
+                                <li>
+                                    <a class="fa fa-facebook" href="javascript:void(0);"
+                                       data-url="https://www.facebook.com/sharer/sharer.php?u=https://toidicode.com/cac-ham-tac-dong-vao-noi-dung-cua-the-html-trong-jquery-165.html"></a>
+                                </li>
+                                <li>
+                                    <a class="fa fa-twitter" href="javascript:void(0);"
+                                       data-url="https://twitter.com/intent/tweet?url=https://toidicode.com/cac-ham-tac-dong-vao-noi-dung-cua-the-html-trong-jquery-165.html"></a>
+                                </li>
+                                <li>
+                                    <a class="fa fa-google-plus" href="javascript:void(0);"
+                                       data-url="https://plus.google.com/share?url=https://toidicode.com/cac-ham-tac-dong-vao-noi-dung-cua-the-html-trong-jquery-165.html"></a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <nav class="prev-next-nav">
+                                                            <div class="vce-prev-link">
+                                    <a href="https://toidicode.com/tong-quan-ve-jquery-162.html" rel="prev"
+                                       title="Bài 1: Tổng quan về jquery?">
+                                        <i class="fa fa-backward"></i>
+                                    </a>
+                                </div>
+                                                                                        <div class="vce-next-link">
+                                    <a href="https://toidicode.com/classes-trong-jquery-166.html" rel="next"
+                                       title="Bài 5: Classes trong Jquery">
+                                        <i class="fa fa-forward"></i>
+                                    </a>
+                                </div>
+                                                    </nav>
+                        <div class="toggle-prenext" style="">
+                            <i class="fa fa-bell tip-icon" title="Đây là chức năng hỗ trợ người dùng mới"></i>
+                            <ul>
+                                <li>
+                                                                            <div class="vce-prev-link">
+                                            <a href="https://toidicode.com/tong-quan-ve-jquery-162.html"
+                                               rel="prev"
+                                               title="Bài 1: Tổng quan về jquery?">
+                                                <i class="fa fa-backward"> Bài Trước</i>
+                                            </a>
+                                        </div>
+                                                                    </li>
+                                <li>
+                                                                            <div class="vce-next-link">
+                                            <a href="https://toidicode.com/classes-trong-jquery-166.html"
+                                               rel="next"
+                                               title="Bài 5: Classes trong Jquery">
+                                                Bài Tiếp <i class="fa fa-forward"></i>
+                                            </a>
+                                        </div>
+                                                                    </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </main>
+                <section class="main-box mbt-border-top author-box">
+
+                    <h3 class="main-box-title">Thông tin tác giả</h3>
+
+                    <div class="main-box-inside">
+
+                        <div class="data-image">
+                            <img alt='Vũ Thanh Tài' src='https://toidicode.com/upload/images/users/taivt.jpg'
+                                 class='avatar avatar-112 photo'
+                                 height='112' width='112'/>
+                        </div>
+                        <div class="data-content">
+                            <h4 class="author-title">Vũ Thanh Tài</h4>
+                            <div class="data-entry-content">
+                                <p>The best way to learn is to share</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="vce-content-outside">
+                        <div class="data-links">
+                            <a href="https://toidicode.com/user/vu-thanh-tai.html" class="vce-author-link vce-button">Xem
+                                Tất cả bài đăng</a>
+                        </div>
+                        <div class="vce-author-links">
+                            <a href="" target="_blank" class="fa fa-link vce-author-website"></a>
+                            <a href="https://facebook.com/" target="_blank"
+                               class="fa fa-facebook"></a>
+                            <a href="https://plus.google.com/" target="_blank"
+                               class="fa fa-google"></a>
+                        </div>
+                    </div>
+
+                </section>
+                <div class="tip-f">Hãy tham gia group facebook để cùng giao lưu chia sẻ kiến thức! <a
+                            href="https://www.facebook.com/groups/toidicodegroup/">Tham Gia</a></div>
+                <div id="comments" class="comments-main">
+                </div>
+                <div id="respond" class="comment-respond">
+                </div>
+            </div>
+            <aside id="sidebar" class="sidebar right">
+                <div id="" class="" style="margin-bottom: 30px; overflow-x: : hidden;">
+	<h4 class="widget-title">QC</h4>
+		<ins class="adsbygoogle"
+		style="display:inline-block;width:300px;height:250px"
+		data-ad-client="ca-pub-8768260344279113"
+		data-ad-slot="4493528180"></ins>
+		<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>                <div id="" class="widget list-news ">
+    <h4 class="widget-title">CÙNG DANH MỤC</h4>
+    <ul>
+                    <li><a href="https://toidicode.com/tong-quan-ve-jquery-162.html" title="Tổng quan về jquery?" >Bài 1: Tổng quan về jquery?</a></li>
+                    <li><a href="https://toidicode.com/selector-trong-jquery-163.html" title="Selector trong jquery" >Bài 2: Selector trong jquery</a></li>
+                    <li><a href="https://toidicode.com/ham-html-va-text-trong-jquery-164.html" title="Hàm html() và text() trong jquery" >Bài 3: Hàm html() và text() trong jquery</a></li>
+                    <li><a href="https://toidicode.com/cac-ham-tac-dong-vao-noi-dung-cua-the-html-trong-jquery-165.html" title="Các hàm tác động vào nội dung của thẻ HTML trong Jquery" >Bài 4: Các hàm tác động vào nội dung của thẻ HTML trong Jquery</a></li>
+                    <li><a href="https://toidicode.com/classes-trong-jquery-166.html" title="Classes trong Jquery" >Bài 5: Classes trong Jquery</a></li>
+            </ul>
+</div>
+                <div id="email-subscribers-2" class="widget widget_text elp-widget"><h5 class="widget-title">ĐĂNG KÝ NHẬN BÀI QUA EMAIL</h5>
+    <script src="https://toidicode.com/public/ajax/ajaxmail.min.js?v=1.1"></script>
+    <div>
+     <div class="es_msg"><font color='red' id="es_msg"></font></div>
+     <div class="es_msgc"><font color='green' id="es_msgc"></font></div>
+     <div class="es_lablebox">Email *</div>
+     <div class="es_textbox">
+        <form action="javascript:void(0)" onsubmit="subMail('XFT96dW4da5Aku84WZtRnhJGoxZeDwQQ6ayNhiTp')" autocomplete="off">
+            <input class="es_textbox_class" type="email" name="email_feild" id="email_feild" onkeypress="if(event.keyCode==13) submail()" placeholder="Mail..." minlength="6" maxlength="30" required="">
+        </div>
+        <div class="es_button" style="margin-top: 5px;">
+            <input class="es_textbox_button" name="es_txt_button" id="es_txt_button" value="Subscribe" type="submit">
+       </form>
+   </div>
+</div>
+</div>                <div class="widget widget_text elp-widget">
+	<h4 class="widget-title">Tools</h4>
+		<ul class="listtools">
+			<li><a href="https://chrome.google.com/webstore/detail/toidicodecom-extension/geinliihnjpahdmepmimcjjendjbgijm?hl=vi" target="_bank" title="Toidicode extension">Toidicode Extension</a></li>
+			<li><a href="https://toidicode.com/face-transform.html" target="_bank" title="Face transform">Face Transform</a></li>
+			<li><a href="https://youtubevi.com" target="_bank" title="Download Video From Youtube">Download Video From Youtube</a></li>
+		</ul>
+</div>
+<div id="" class="">
+	<h4 class="widget-title">FANPAGE</h4>
+	<div class="fb-page" data-href="https://www.facebook.com/toidicode/" data-tabs="false" data-width="300" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true">
+		<blockquote cite="https://www.facebook.com/toidicode/" class="fb-xfbml-parse-ignore">
+			<a href="https://www.facebook.com/toidicode/">Toidicode.com</a>
+		</blockquote>
+	</div>
+</div>                <!-- ads -->
+<div id="" class="widget widget_text elp-widget vce-sticky">
+    <!-- fix-top -->
+    <ins class="adsbygoogle"
+    style="display:inline-block;width:300px;height:600px"
+    data-ad-client="ca-pub-8768260344279113"
+    data-ad-slot="9202929389"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>            </aside>
+
+        </div>
+    </div>
+
+    <footer id="footer" class="site-footer">
+        <div class="container">
+            <div class="container-fix">
+                <div class="bit-1">
+                    <a href="https://toidicode.com"><img src="https://toidicode.com/upload/images/logo.png"
+                                                       alt="toidicode.com"></a>
+                </div>
+                <div class="bit-3">
+                    <h4 style="color: white;border-bottom:1px solid #646a70 ">
+                        <div style="border-bottom:1px solid #2a2e32">Giới thiệu</div>
+                    </h4>
+                    <div style="font-size: 14px">Toidicode.com được tạo ra nhằm mục đích chia sẻ các tutorial về lập
+                        trình nói chung và lập trình Web nói riêng.
+                        <p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img
+                                        alt="Creative Commons License" style="border-width:0"
+                                        src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"/></a></p>
+                    </div>
+                </div>
+                <div class="bit-3">
+                    <h4 style="color: white;border-bottom:1px solid #646a70 ">
+                        <div style="border-bottom:1px solid #2a2e32">Liên kết</div>
+                    </h4>
+                    <div style="font-size: 14px">
+                        <a href="https://vannien.vn" target="_blank" rel="noopener" title="Xem tử vi tướng số"
+                           style="color: #ffffff">Vannien.vn</a>
+                        <br>
+                        <a href="https://youtubevi.com" target="_blank" rel="noopener"
+                           title="Download any video from youtube" style="color: #ffffff">Youtubevi.com</a>
+                        <br>
+                        <a href="https://canhsale.info" target="_blank" rel="noopener"
+                           title="Review sản phẩm, tư vẫn chọn mua" style="color: #ffffff">Lanhchanh.com</a>
+                        <br>
+
+                        <br>
+                    </div>
+                </div>
+                <div class="bit-3">
+                    <h4 style="color: white;border-bottom:1px solid #646a70 ">
+                        <div style="border-bottom:1px solid #2a2e32">Liên hệ</div>
+                    </h4>
+                    <div style="font-size: 14px">
+                        Điện thoại: +849 XXXX 7680
+                        <br/> Email: <a href="/cdn-cgi/l/email-protection#31455e585558525e55541f525e5c71565c50585d1f525e5c0e4244535b5452450c725e5f45505245" style="color: #f90"><span class="__cf_email__" data-cfemail="e99d86808d808a868d8cc78a8684a98e84888085c78a8684">[email&#160;protected]</span></a>
+                        <br/> Copyright © 2017. by <a href="https://toidicode.com" style="color: #f90">Toidicode.com</a>
+                        <p>
+                            <a rel="noopener"
+                               href="http://www.dmca.com/Protection/Status.aspx?ID=21f417fa-aaee-437b-aa8b-2145d3fbd02e"
+                               title="DMCA.com Protection Status" class="dmca-badge" target="_blank"> <img
+                                        src="//images.dmca.com/Badges/dmca-badge-w100-5x1-02.png?ID=21f417fa-aaee-437b-aa8b-2145d3fbd02e"
+                                        alt="DMCA.com Protection Status"></a>
+                            <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="//images.dmca.com/Badges/DMCABadgeHelper.min.js">
+                            </script>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="height:5px;">
+            <div style="width:25%;background:#af472d;height:100%;float:left"></div>
+            <div style="width:25%;background:#c6ac27;height:100%;float:left"></div>
+            <div style="width:25%;background:#207347;height:100%;float:left"></div>
+            <div style="width:25%;background:#8f99b6;height:100%;float:left"></div>
+        </div>
+        <div id="fra" style="width: 0;height: 0;overflow: hidden;"></div>
+    </footer>
+</div>
+</div>
+<a href="javascript:void(0)" id="back-top" style="bottom:57px; border: 1px solid #DDDDDD"><i class="fa fa-angle-up"></i></a>
+<script>
+    console.log("%c%s", 'color:red;', `
+
+   /$$               /$$       /$$ /$$                           /$$
+  | $$              |__/      | $$|__/                          | $$
+ /$$$$$$    /$$$$$$  /$$  /$$$$$$$ /$$  /$$$$$$$  /$$$$$$   /$$$$$$$  /$$$$$$       /$$$$$$$  /$$$$$$  /$$$$$$/$$$$
+|_  $$_/   /$$__  $$| $$ /$$__  $$| $$ /$$_____/ /$$__  $$ /$$__  $$ /$$__  $$     /$$_____/ /$$__  $$| $$_  $$_  $$
+  | $$    | $$  \\ $$| $$| $$  | $$| $$| $$      | $$  \\ $$| $$  | $$| $$$$$$$$    | $$      | $$  \\ $$| $$ \\ $$ \\ $$
+  | $$ /$$| $$  | $$| $$| $$  | $$| $$| $$      | $$  | $$| $$  | $$| $$_____/    | $$      | $$  | $$| $$ | $$ | $$
+  |  $$$$/|  $$$$$$/| $$|  $$$$$$$| $$|  $$$$$$$|  $$$$$$/|  $$$$$$$|  $$$$$$$ /$$|  $$$$$$$|  $$$$$$/| $$ | $$ | $$
+   \\___/   \\______/ |__/ \\_______/|__/ \\_______/ \\______/  \\_______/ \\_______/|__/ \\_______/ \\______/ |__/ |__/ |__/
+
+
+
+`);
+</script>
+
+
+<script type='text/javascript' src='https://toidicode.com/wp-content/themes/thanhtai/js/custom.js?ver=0.1'></script>
+<script type='text/javascript' src='https://toidicode.com/assets/js/adsense.js'></script>
+<script>
+    if (typeof flagADS === "undefined") {
+        toastr.warning('Làm ơn tắt adblock đi giùm mình với! please!');
+    }
+
+    window.fbAsyncInit = function () {
+        FB.init({
+            appId: '610336262482409',
+            xfbml: true,
+            version: 'v2.7'
+        });
+    };
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/vi_VN/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+    <!-- Facebook Pixel Code -->
+
+    !function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+            n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s)
+    }(window,
+        document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1006627516070863'); // Insert your pixel ID here.
+    fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+               src="https://www.facebook.com/tr?id=1006627516070863&ev=PageView&noscript=1"/></noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code -->
+<!-- analytics-->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-84078941-1', 'auto');
+    ga('send', 'pageview');
+</script>
+<!-- end analytics-->
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
+<script src="https://toidicode.com/assets/js/toastr.min.js"></script>
+<script>
+    var OneSignal = window.OneSignal || [];
+    OneSignal.push(["init", {
+        appId: "6f7bb3d7-7a68-49e2-8482-64665bc9c1b3",
+        autoRegister: true,
+        notifyButton: {
+            enable: false /* Set to false to hide */
+        },
+        welcomeNotification: {
+            "title": "Toidicode.com",
+            "message": "Cảm ơn bạn đã đăng ký nhận thông báo từ chúng tôi!",
+            "url": "https://toidicode.com"
+        }
+    }]);
+
+    toastr.options = {
+        "closeButton": true,
+        "timeOut": "0",
+        "extendedTimeOut": "0",
+        // "positionClass": "toast-bottom-right",
+    };
+
+        
+</script>
+    
+    <script src="https://toidicode.com/vendor/unisharp/laravel-ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js"></script>
+    <script src="https://toidicode.com/wp-content/themes/thanhtai/custom.min.js?v=2.3"
+            type="text/javascript"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+      $(document).ready(function () {
+        $(window).scroll(function (e) {
+          var windowOs = $(window).scrollTop();
+          var elementOs = $('.option-news').offset().top;
+
+          if (elementOs - windowOs < (100 + window.outerHeight)) {
+            $('.toggle-prenext').show(300);
+          } else {
+            $('.toggle-prenext').hide(300);
+          }
+        });
+
+              loadHeading();
+        showMucluc();
+                addCurrentLink();
+      });
+
+      var config = {
+        url: 'https://toidicode.com/',
+        id: 165,
+        type: 'post',
+        token: 'XFT96dW4da5Aku84WZtRnhJGoxZeDwQQ6ayNhiTp'
+      };
+    </script>
+    <script src="https://toidicode.com/public/ckeditor-basic/ckeditor.js?v=0.1" defer type="text/javascript"
+            charset="utf-8"></script>
+    <script src="https://toidicode.com/public/ajax/comment.min.js" type="text/javascript"
+            charset="utf-8"></script>
+</body>
+</html>

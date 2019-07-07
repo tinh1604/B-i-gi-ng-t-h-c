@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- saved from url=(0163)https://tpc.googlesyndication.com/sadbundle/$csp%3Der3$/16231785621279649673/300x600/300x600.html#t=5402307516629184890&p=https%3A%2F%2Fgoogleads.g.doubleclick.net -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./f(7).txt" type="text/javascript"></script><script src="./f(8).txt" type="text/javascript"></script><meta content="width=300,height=600" name="ad.size"><title>300x600</title><script src="./easeljs-0.8.1.min.js.download"></script><script src="./tweenjs-0.6.1.min.js.download"></script><script src="./movieclip-0.8.1.min.js.download"></script><script src="./preloadjs-0.6.1.min.js.download"></script><script src="./300x600.js.download"></script><script>
+var canvas, stage, exportRoot;
+
+function init() {
+	canvas = document.getElementById("canvas");
+	images = images||{};
+
+	var loader = new createjs.LoadQueue(false);
+	loader.addEventListener("fileload", handleFileLoad);
+	loader.addEventListener("complete", handleComplete);
+	loader.loadManifest(lib.properties.manifest);
+}
+
+function handleFileLoad(evt) {
+	if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
+}
+
+function handleComplete(evt) {
+	exportRoot = new lib._300x600();
+
+	stage = new createjs.Stage(canvas);
+	stage.addChild(exportRoot);
+	stage.update();
+
+	createjs.Ticker.setFPS(lib.properties.fps);
+	createjs.Ticker.addEventListener("tick", stage);
+}
+</script><script type="text/javascript" src="./GnxoNjy95ElcNbseRQoPpC52n642YsfduVAjpitmiGE.js.download"></script></head><body onclick="ExitApi.exit();" onload="init();" style="background-color:#D4D4D4;margin:0;; cursor:pointer">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<canvas height="600" id="canvas" style="background-color:#FFFFFF" width="300"></canvas>
+
+</body></html>

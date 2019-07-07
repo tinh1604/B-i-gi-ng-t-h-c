@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<!-- saved from url=(0090)http://webcoban.vn/mysql/count-dem-so-luong-mau-tin-du-lieu-hang-cua-bang-trong-mysql.html -->
+<html lang="vi"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=0.8">
+<meta name="description" content="COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL">
+<link rel="icon" href="http://webcoban.vn/home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="./COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL_files/style2.css">
+<link rel="stylesheet" type="text/css" href="./COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL_files/form2.css">
+<link rel="stylesheet" type="text/css" href="./COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL_files/default.css">
+<link rel="stylesheet" type="text/css" href="./COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL_files/font-awesome.min.css">
+<script src="./COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL_files/cb=gapi.loaded_2" async=""></script><script type="text/javascript" async="" src="./COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL_files/analytics.js.tải xuống"></script><script src="./COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL_files/cb=gapi.loaded_1" async=""></script><script src="./COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL_files/cb=gapi(2).loaded_0" async=""></script><script src="./COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL_files/sdk.js.tải xuống" async="" crossorigin="anonymous"></script><script src="./COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL_files/jquery-1.12.0.min.js.tải xuống"></script>
+<link href="./COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL_files/css" rel="stylesheet">
+<style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#1d3c78;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}</style><style>.gc-bubbleDefault{background-color:transparent !important;text-align:left;padding:0 !important;margin:0 !important;border:0 !important;table-layout:auto !important}.gc-reset{background-color:transparent !important;border:0 !important;padding:0 !important;margin:0 !important;text-align:left}.pls-bubbleTop{border-bottom:1px solid #ccc !important}.pls-topTail,.pls-vertShimLeft,.pls-contentLeft{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/border_3.gif) !important}.pls-topTail{background-repeat:repeat-x !important;background-position:bottom !important}.pls-vertShim{background-color:#fff !important;text-align:right}.tbl-grey .pls-vertShim{background-color:#f5f5f5 !important}.pls-vertShimLeft{background-repeat:repeat-y !important;background-position:right !important;height:4px}.pls-vertShimRight{height:4px}.pls-confirm-container .pls-vertShim{background-color:#fff3c2 !important}.pls-contentWrap{background-color:#fff !important;position:relative !important;vertical-align:top}.pls-contentLeft{background-repeat:repeat-y;background-position:right;vertical-align:top}.pls-dropRight{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleDropR_3.png) !important;background-repeat:repeat-y !important;vertical-align:top}.pls-vert,.pls-tailleft,.pls-dropTR .pls-dropBR,.pls-dropBL,.pls-vert img{vertical-align:top}.pls-dropBottom{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleDropB_3.png) !important;background-repeat:repeat-x !important;width:100%;vertical-align:top}.pls-topLeft{background:inherit !important;text-align:right;vertical-align:bottom}.pls-topRight{background:inherit !important;text-align:left;vertical-align:bottom}.pls-bottomLeft{background:inherit !important;text-align:right}.pls-bottomRight{background:inherit !important;text-align:left;vertical-align:top}.pls-tailtop,.pls-tailright,.pls-tailbottom,.pls-tailleft{display:none;position:relative}.pls-tailbottom,.pls-tailtop,.pls-tailright,.pls-tailleft,.pls-dropTR,.pls-dropBR,.pls-dropBL{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleSprite_3.png) !important;background-repeat:no-repeat}.tbl-grey .pls-tailbottom,.tbl-grey .pls-tailtop,.tbl-grey .pls-tailright,.tbl-grey .pls-tailleft,.tbl-grey .pls-dropTR,.tbl-grey .pls-dropBR,.tbl-grey .pls-dropBL{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleSprite-grey.png) !important}.pls-tailbottom{background-position:-23px 0}.pls-confirm-container .pls-tailbottom{background-position:-23px -10px}.pls-tailtop{background-position:-19px -20px}.pls-tailright{background-position:0 0}.pls-tailleft{background-position:-10px 0}.pls-tailtop{vertical-align:top}.gc-bubbleDefault td{line-height:0;font-size:0}.pls-topLeft img,.pls-topRight img,.pls-tailbottom{vertical-align:bottom}.pls-bottomLeft img,.bubbleDropTR,.pls-dropBottomL img,.pls-dropBottom img,.pls-dropBottomR img,.pls-bottomLeft{vertical-align:top}.pls-dropTR{background-position:0 -22px}.pls-dropBR{background-position:0 -27px}.pls-dropBL{background-position:0 -16px}.pls-spacertop,.pls-spacerright,.pls-spacerbottom,.pls-spacerleft{position:static !important}.pls-spinner{bottom:0;position:absolute;left:0;margin:auto;right:0;top:0} </style></head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="http://webcoban.vn/"><img src="./COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL_files/logo.png"></a></div>
+<div><div><img src="./COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL_files/quangcao1.png"></div></div>
+</div>
+</header>
+<nav id="navigation" style="position: fixed; top: 0px;">
+<div class="container">
+<ul>
+<li class="btn-post"><a onclick="open_post()"><span class="fa fa-bars fa-lg"></span></a></li>
+<li class="btn-home"><a href="http://webcoban.vn/"><span class="fa fa-home fa-lg"></span></a></li>
+<li class="btn-project"><a onclick="open_project()"><span class="fa fa-book fa-lg"></span> TẤT CẢ TÀI LIỆU</a></li>
+<li class="item"><a href="http://webcoban.vn/html/default.html">HTML</a></li>
+<li class="item"><a href="http://webcoban.vn/css/default.html">CSS</a></li>
+<li class="item"><a href="http://webcoban.vn/javascript/default.html">JAVASCRIPT</a></li>
+<li class="item"><a href="http://webcoban.vn/jquery/default.html">JQUERY</a></li>
+<li class="item"><a href="http://webcoban.vn/mysql/default.html">MYSQL</a></li>
+<li class="item"><a href="http://webcoban.vn/php/default.html">PHP</a></li>
+<li class="btn-search"><a onclick="open_search()"><span class="fa fa-search"></span></a></li>
+</ul>
+</div>
+</nav>
+<div id="body" style="margin-top: 45px;">
+<div class="container">
+<aside id="side" style="top: 49px; bottom: 0px;">
+<div>
+<div>
+<div class="close"><a onclick="close_post()">CLOSE</a></div>
+<div class="project">MySQL</div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="http://webcoban.vn/mysql/default.html">- Bài 01: Tổng quan về MySQL</a>
+<a href="http://webcoban.vn/mysql/huong-dan-cai-dat-xampp.html">- Bài 02: Cài đặt XAMPP để học MySQL</a>
+<a href="http://webcoban.vn/mysql/cach-chay-lenh-mysql-tren-phpmyadmin.html">- Bài 03: Chạy câu lệnh MySQL đầu tiên</a>
+<a href="http://webcoban.vn/mysql/mo-hinh-phan-cap-trong-mysql.html">- Bài 04: Mô hình phân cấp trong MySQL</a>
+<a href="http://webcoban.vn/mysql/cau-lenh-tao-database-trong-mysql.html">- Bài 05: CREATE DATABASE (Tạo database)</a>
+<a href="http://webcoban.vn/mysql/cac-kieu-du-lieu-trong-mysql.html">- Bài 06: DATA TYPE (Các kiểu dữ liệu trong MySQL)</a>
+<a href="http://webcoban.vn/mysql/cau-lenh-tao-bang-trong-mysql.html">- Bài 07: CREATE TABLE (Tạo bảng)</a>
+<a href="http://webcoban.vn/mysql/cach-them-du-lieu-vao-bang-trong-mysql.html">- Bài 08: INSERT INTO (Thêm dữ liệu vào bảng)</a>
+<a href="http://webcoban.vn/mysql/cach-truy-xuat-du-lieu-trong-mysql.html">- Bài 09: SELECT (Truy xuất dữ liệu)</a>
+<a href="http://webcoban.vn/mysql/truy-xuat-du-lieu-dua-theo-dieu-kien-trong-mysql.html">- Bài 10: WHERE (Truy xuất dữ liệu dựa theo điều kiện)</a>
+<a href="http://webcoban.vn/mysql/truy-xuat-du-lieu-dua-theo-nhieu-dieu-kien-trong-mysql.html">- Bài 11: AND &amp; OR (Truy xuất dữ liệu dựa theo nhiều điều kiện)</a>
+<a href="http://webcoban.vn/mysql/order-by-lay-ket-qua-theo-thu-tu-trong-mysql.html">- Bài 12: ORDER BY (Lấy kết quả theo thứ tự)</a>
+<a href="http://webcoban.vn/mysql/distinct-truy-xuat-cac-du-lieu-khac-nhau-trong-mysql.html">- Bài 13: DISTINCT (Lấy các kết quả không trùng nhau)</a>
+<a href="http://webcoban.vn/mysql/limit-gioi-han-so-luong-ket-qua-tra-ve-trong-mysql.html">- Bài 14: LIMIT (Giới hạn số lượng kết quả trả về)</a>
+<a href="http://webcoban.vn/mysql/in-truy-xuat-du-lieu-khi-thoa-mot-trong-so-cac-gia-tri.html">- Bài 15: IN (Truy xuất dữ liệu khi thỏa một trong số các giá trị)</a>
+<a href="http://webcoban.vn/mysql/between-truy-xuat-du-lieu-trong-mot-khoang-gia-tri-trong-mysql.html">- Bài 16: BETWEEN (Truy xuất dữ liệu trong một khoảng giá trị)</a>
+<a href="http://webcoban.vn/mysql/like-truy-xuat-du-lieu-dua-theo-chuoi-trong-mysql.html">- Bài 17: LIKE &amp; NOT LIKE (Truy xuất dự liệu dựa theo chuỗi ký tự)</a>
+<a href="http://webcoban.vn/mysql/delete-xoa-du-lieu-cua-bang-trong-mysql.html">- Bài 18: DELETE (Xóa dữ liệu)</a>
+<a href="http://webcoban.vn/mysql/update-cap-nhat-du-lieu-trong-bang-trong-mysql.html">- Bài 19: UPDATE (Cập nhật dữ liệu)</a>
+<a href="http://webcoban.vn/mysql/as-dat-lai-ten-cho-bang-cot-trong-mysql.html">- Bài 20: AS (Đặt tên tạm thời cho bảng, cột)</a>
+<a href="http://webcoban.vn/mysql/ghep-bang-bang-menh-de-inner-join-trong-mysql.html">- Bài 21: INNER JOIN</a>
+<a href="http://webcoban.vn/mysql/ghep-bang-bang-menh-de-left-join-trong-mysql.html">- Bài 22: LEFT JOIN</a>
+<a href="http://webcoban.vn/mysql/ghep-bang-bang-menh-de-right-join-trong-mysql.html">- Bài 23: RIGHT JOIN</a>
+<a href="http://webcoban.vn/mysql/ghep-bang-bang-menh-de-full-join-trong-mysql.html">- Bài 24: FULL JOIN</a>
+<a href="http://webcoban.vn/mysql/alter-sua-doi-cau-truc-bang-trong-mysql.html">- Bài 25: ALTER (Sửa đổi cấu trúc bảng)</a>
+<a href="http://webcoban.vn/mysql/not-null-khong-cho-phep-nhan-gia-tri-null-trong-mysql.html">- Bài 26: NOT NULL</a>
+<a href="http://webcoban.vn/mysql/primary-key-tao-khoa-chinh-trong-mysql.html">- Bài 27: PRIMARY KEY (Tạo khóa chính cho bảng)</a>
+<a href="http://webcoban.vn/mysql/avg-lay-gia-tri-trung-binh-cua-cot-trong-mysql.html">- Bài 28: AVG() - Lấy giá trị trung bình cộng của cột</a>
+<a href="http://webcoban.vn/mysql/count-dem-so-luong-mau-tin-du-lieu-hang-cua-bang-trong-mysql.html" class="active">- Bài 29: COUNT() - Đếm số lượng mẫu tin trong bảng</a>
+<a href="http://webcoban.vn/mysql/ham-max-lay-gia-tri-lon-nhat-cua-cot-trong-mysql.html">- Bài 30: MAX() - Lấy giá trị lớn nhất của cột</a>
+<a href="http://webcoban.vn/mysql/ham-min-lay-gia-tri-nho-nhat-cua-cot-trong-mysql.html">- Bài 31: MIN() - Lấy giá trị nhỏ nhất của cột</a>
+<a href="http://webcoban.vn/mysql/ham-sum-lay-gia-tri-tong-cua-mot-cot-trong-mysql.html">- Bài 31: SUM() - Lấy tổng của cột</a>
+<a href="http://webcoban.vn/mysql/ham-round-lam-tron-so-trong-mysql.html">- Bài 33: ROUND() - Làm tròn số</a>
+<a href="http://webcoban.vn/mysql/ham-substring-lay-chuoi-con-trong-mysql.html">- Bài 34: SUBSTRING() - Trích xuất chuỗi ký tự con</a>
+<a href="http://webcoban.vn/mysql/ham-upper-doi-chu-hoa-trong-mysql.html">- Bài 35: UPPER() - Truy xuất dữ liệu ở dạng chữ HOA</a>
+<a href="http://webcoban.vn/mysql/ham-lower-doi-chu-thuong-trong-mysql.html">- Bài 36: LOWER() - Truy xuất dữ liệu ở dạng chữ thường</a>
+</div>
+</div>
+</aside>
+<div id="main">
+<a href="http://webcoban.vn/mysql/count-dem-so-luong-mau-tin-du-lieu-hang-cua-bang-trong-mysql.html" title="COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL"><h1>COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL</h1></a>
+<div class="hidden">
+<h3>COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL</h3>
+<h4>COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL</h4>
+</div>
+<div class="breadcrumb">
+<div class="previous"><a href="http://webcoban.vn/mysql/avg-lay-gia-tri-trung-binh-cua-cot-trong-mysql.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a></div>
+<div class="next"><a href="http://webcoban.vn/mysql/ham-max-lay-gia-tri-lon-nhat-cua-cot-trong-mysql.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a></div>
+</div>
+<h4>Hàm COUNT() được dùng để đếm số lượng mẫu tin (dữ liệu, hàng) trong bảng.</h4>
+
+<h2>Cú pháp</h2>
+
+<pre class="hljs sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">COUNT</span>(*)
+<span class="hljs-keyword">FROM</span> table_name;
+</pre>
+
+<h2>Một số ví dụ</h2>
+
+<p>Chúng ta có một bảng sinh_vien như sau:</p>
+
+<p><a href="http://webcoban.vn/mysql/demo?file=35" style="color:brown" target="_blank">(Bạn có thể bấm vào đây để download câu lệnh tạo bảng như bên dưới)</a></p>
+
+<table class="table-bordered table-hover table-striped tbbang1">
+	<tbody>
+		<tr>
+			<th>Full_name</th>
+			<th>Gender</th>
+			<th>Age</th>
+			<th>City</th>
+		</tr>
+		<tr>
+			<td>Nguyen Thanh Nhan</td>
+			<td>Nam</td>
+			<td>19</td>
+			<td>Can Tho</td>
+		</tr>
+		<tr>
+			<td>Pham Thu Huong</td>
+			<td>Nu</td>
+			<td>20</td>
+			<td>Vinh Long</td>
+		</tr>
+		<tr>
+			<td>Nguyen Nhu Ngoc</td>
+			<td>Nu</td>
+			<td>20</td>
+			<td>Soc Trang</td>
+		</tr>
+		<tr>
+			<td>Bui Thanh Bao</td>
+			<td>Nam</td>
+			<td>19</td>
+			<td>Soc Trang</td>
+		</tr>
+		<tr>
+			<td>Le My Nhan</td>
+			<td>Nu</td>
+			<td>22</td>
+			<td>Can Tho</td>
+		</tr>
+		<tr>
+			<td>Tan Thuc Bao</td>
+			<td>Nam</td>
+			<td>35</td>
+			<td>An Giang</td>
+		</tr>
+		<tr>
+			<td>Trinh Giao Kim</td>
+			<td>Nam</td>
+			<td>44</td>
+			<td>Bac Lieu</td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="bm_khungform_chuan form_2">
+<h3>Ví dụ 1</h3>
+
+<p>Đếm tổng số lượng sinh viên</p>
+
+<pre class="hljs sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">COUNT</span>(*)
+<span class="hljs-keyword">FROM</span> sinh_vien;
+</pre>
+</div>
+
+<p>Sau khi thực thi, MySQL trả về một bảng kết quả như sau:</p>
+
+<table class="table-bordered table-hover table-striped tbbang1">
+	<tbody>
+		<tr>
+			<th>COUNT(*)</th>
+		</tr>
+		<tr>
+			<td>7</td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="bm_khungform_chuan form_2">
+<h3>Ví dụ 2</h3>
+
+<p>Đếm số lượng sinh viên có giới tính là nam. Đặt tên cột của bảng kết quả là so_luong_sinh_vien_nam.</p>
+
+<pre class="hljs sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">COUNT</span>(*) <span class="hljs-keyword">AS</span> so_luong_sinh_vien_nam
+<span class="hljs-keyword">FROM</span> sinh_vien
+<span class="hljs-keyword">WHERE</span> Gender = <span class="hljs-string">'Nam'</span>;</pre>
+</div>
+
+<p>Sau khi thực thi, MySQL trả về một bảng kết quả như sau:</p>
+
+<table class="table-bordered table-hover table-striped tbbang1">
+	<tbody>
+		<tr>
+			<th>so_luong_sinh_vien_nam</th>
+		</tr>
+		<tr>
+			<td>4</td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="bm_khungform_chuan form_2">
+<h3>Ví dụ 3</h3>
+
+<p>Đếm số lượng sinh viên có giới tính là nam và tuổi khác nhau.</p>
+
+<pre class="hljs sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">COUNT</span>(<span class="hljs-keyword">DISTINCT</span> Age)
+<span class="hljs-keyword">FROM</span> sinh_vien
+<span class="hljs-keyword">WHERE</span> Gender= <span class="hljs-string">'Nam'</span>;</pre>
+</div>
+
+<p>Sau khi thực thi, MySQL trả về một bảng kết quả như sau:</p>
+
+<table class="table-bordered table-hover table-striped tbbang1">
+	<tbody>
+		<tr>
+			<th>COUNT(DISTINCT Age)</th>
+		</tr>
+		<tr>
+			<td>3</td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="bm_khungform_chuan form_2">
+<h3>Ví dụ 4</h3>
+
+<p>Đếm số lượng sinh viên có tuổi là 19, 20, 35. Đặt tên cột cho bảng kết quả là so_luong</p>
+
+<pre class="hljs sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">COUNT</span>(*) <span class="hljs-keyword">AS</span> so_luong
+<span class="hljs-keyword">FROM</span> sinh_vien
+<span class="hljs-keyword">WHERE</span> Age <span class="hljs-keyword">IN</span> (<span class="hljs-number">19</span>,<span class="hljs-number">20</span>,<span class="hljs-number">35</span>);</pre>
+</div>
+
+<p>Sau khi thực thi, MySQL trả về một bảng kết quả như sau:</p>
+
+<table class="table-bordered table-hover table-striped tbbang1">
+	<tbody>
+		<tr>
+			<th>so_luong</th>
+		</tr>
+		<tr>
+			<td>5</td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="breadcrumb">
+<div class="previous"><a href="http://webcoban.vn/mysql/avg-lay-gia-tri-trung-binh-cua-cot-trong-mysql.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a></div>
+<div class="next"><a href="http://webcoban.vn/mysql/ham-max-lay-gia-tri-lon-nhat-cua-cot-trong-mysql.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a></div>
+</div>
+</div>
+<div id="ads">
+<div id="ads_160x600_1"><img src="./COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL_files/quangcao2.png"></div>
+<div id="ads_160x600_2" style="position: static; margin-top: 0px; top: 45px;">
+<div style="position:relative;">
+<img src="./COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL_files/like.jpg">
+<div style="position:absolute;top:227px;width:160px;text-align:center">
+<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div><div><iframe name="fb_xdm_frame_https" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="./COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL_files/xd_arbiter.html" style="border: none;"></iframe></div></div></div>
+<script async="" defer="" crossorigin="anonymous" src="./COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL_files/sdk.js(1).tải xuống"></script>
+<div class="fb-like fb_iframe_widget" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=&amp;container_width=160&amp;href=https%3A%2F%2Fwww.facebook.com%2Fwebcoban.vn%2F&amp;layout=button&amp;locale=en_US&amp;sdk=joey&amp;share=false&amp;show_faces=false&amp;size=large"><span style="vertical-align: bottom; width: 63px; height: 28px;"><iframe name="f2fb3cce454ba4" width="1000px" height="1000px" title="fb:like Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="./COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL_files/like.html" style="border: none; visibility: visible; width: 63px; height: 28px;" class=""></iframe></span></div>
+</div>
+<div style="position:absolute;top:310px;width:160px;text-align:center">
+<script src="./COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL_files/platform.js.tải xuống" gapi_processed="true"></script>
+<div id="___ytsubscribe_0" style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 109px; height: 24px;"><iframe ng-non-bindable="" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 109px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 24px;" tabindex="0" vspace="0" width="100%" id="I0_1562000884791" name="I0_1562000884791" src="./COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL_files/subscribe_embed.html" data-gapiattached="true"></iframe></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="search">
+<div class="container">
+<div>
+<div class="close"><img src="./COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL_files/close.png" onclick="close_search()"></div>
+<div class="search"></div>
+</div>
+</div>
+</div>
+<div id="all-project">
+<div class="container">
+<div>
+<ul>
+<li class="close"><a onclick="close_project()">CLOSE</a></li>
+<li><a href="http://webcoban.vn/html/default.html">HTML</a></li>
+<li><a href="http://webcoban.vn/css/default.html">CSS</a></li>
+<li><a href="http://webcoban.vn/javascript/default.html">JavaScript</a></li>
+<li><a href="http://webcoban.vn/jquery/default.html">jQuery</a></li>
+<li><a href="http://webcoban.vn/mysql/default.html">MySQL</a></li>
+<li><a href="http://webcoban.vn/php/default.html">PHP</a></li>
+</ul>
+</div>
+</div>
+</div>
+<footer id="footer">
+<div>
+<div class="container">
+<div>
+<div>
+<div>GIỚI THIỆU</div>
+<p><u>WEBCOBAN.VN</u> là một trang web cung cấp tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên chia sẻ các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><img src="./COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL_files/dmca-badge-w200-5x1-06.png" alt="DMCA.com Protection Status"></p>
+</div>
+<div>
+<div>LIÊN HỆ</div>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <span><a href="https://facebook.com/webcoban.vn" target="_blank">facebook.com/webcoban.vn</a></span></li>
+</ul>
+</div>
+<div>
+<div>HỖ TRỢ TÁC GIẢ</div>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div>
+<div class="container">
+<div>©2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<script src="./COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL_files/post.js.tải xuống"></script>
+<script src="./COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL_files/highlight.pack.js.tải xuống"></script>
+<script async="" src="./COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL_files/js"></script>
+<script src="./COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL_files/analytics.js(1).tải xuống"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<iframe name="oauth2relay367617045" id="oauth2relay367617045" src="./COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL_files/postmessageRelay.html" tabindex="-1" aria-hidden="true" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe><div style="display: block; visibility: hidden; position: absolute; width: 106px; left: -1000px; top: -1000px;"><table cellpadding="0" cellspacing="0" dir="ltr" style="width:106px;" frame="void" rules="none" class=" gc-bubbleDefault pls-container"><tbody><tr class="gc-reset"><td class="pls-topLeft gc-reset"><img class="gc-reset" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;" src="./COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL_files/border_3.gif"></td><td class="pls-topTail gc-reset"><img class="pls-tailbottom gc-reset" style="width:15px !important; height:9px !important; max-width: 15px !important; max-height: 9px !important;" src="./COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL_files/spacer.gif"><img class="pls-spacerbottom gc-reset" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;" src="./COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL_files/spacer.gif"></td><td class="pls-topRight gc-reset"><img class="gc-reset" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;" src="./COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL_files/border_3.gif"></td></tr><tr class="gc-reset"><td class="pls-vertShimLeft gc-reset"><img class="gc-reset" style="width:1px !important; height:4px !important; max-width: 1px !important; max-height: 4px !important;" src="./COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL_files/spacer.gif"></td><td class="pls-vertShim gc-reset"><img class="gc-reset" style="width:1px !important; height:4px !important; max-width: 1px !important; max-height: 4px !important;" src="./COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL_files/spacer.gif"></td><td class="pls-vertShimRight gc-reset"><img class="pls-dropTR gc-reset" style="width:5px !important; height:4px !important; max-width: 5px !important; max-height: 4px !important;" src="./COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL_files/spacer.gif"></td></tr><tr class="gc-reset"><td class="pls-contentLeft gc-reset"><img class="pls-tailright gc-reset" style="width:9px !important; height:15px !important; max-width: 9px !important; max-height: 15px !important;" src="./COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL_files/spacer.gif"><img class="pls-spacerright gc-reset" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;" src="./COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL_files/spacer.gif"></td><td class="pls-contentWrap gc-reset"><div class="goog-bubble-content gc-reset"><iframe ng-non-bindable="" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="margin:0px;position:absolute;z-index:1;border-style:none;outline:none;width:100px;" tabindex="0" vspace="0" width="100%" id="I0_1562000885849" name="I0_1562000885849" src="./COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL_files/subscribe_embed(1).html"></iframe></div></td><td class="pls-dropRight gc-reset"><img class="pls-tailleft gc-reset" style="width:12px !important; height:19px !important; max-width: 12px !important; max-height: 19px !important;" src="./COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL_files/spacer.gif"><img class="pls-spacerleft gc-reset" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;" src="./COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL_files/spacer.gif"></td></tr><tr class="gc-reset"><td class="pls-bottomLeft gc-reset"><img class="gc-reset" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;" src="./COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL_files/border_3.gif"></td><td class="gc-reset"><table cellpadding="0" cellspacing="0" style="width:100%" class="gc-reset"><tbody><tr class="gc-reset"><td class="pls-vert gc-reset"><img class="pls-dropBL gc-reset" style="width:4px !important; height:5px !important; max-width: 4px !important; max-height: 5px !important;" src="./COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL_files/spacer.gif"></td><td class="pls-dropBottom gc-reset"><img class="pls-tailtop gc-reset" style="width:19px !important; height:13px !important; max-width: 19px !important; max-height: 13px !important;" src="./COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL_files/spacer.gif"><img class="pls-spacertop gc-reset" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;" src="./COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL_files/spacer.gif"></td></tr></tbody></table></td><td class="pls-vert gc-reset"><img class="pls-dropBR gc-reset" style="width:5px !important; height:5px !important; max-width: 5px !important; max-height: 5px !important;" src="./COUNT() Đếm số lượng mẫu tin (dữ liệu, hàng) của bảng trong MySQL_files/spacer.gif"></td></tr></tbody></table></div></body></html>

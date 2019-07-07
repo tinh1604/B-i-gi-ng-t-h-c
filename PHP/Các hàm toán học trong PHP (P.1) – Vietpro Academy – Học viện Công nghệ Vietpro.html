@@ -1,0 +1,2233 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-1.html -->
+<html lang="en-US" class="td-md-is-chrome skrollr skrollr-desktop"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="pingback" href="https://vietpro.net.vn/xmlrpc.php">
+
+    <title>Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro</title>
+<meta property="og:image" content="https://vietpro.net.vn/wp-content/uploads/2019/05/php-300x224.png"><link rel="icon" type="image/png" href="http://htkw.temit.vn/wp-content/uploads/2019/05/vp-300x300.png"><link rel="dns-prefetch" href="https://maps.googleapis.com/">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="https://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="Vietpro Academy - Học viện Công nghệ Vietpro » Feed" href="https://vietpro.net.vn/feed">
+<link rel="alternate" type="application/rss+xml" title="Vietpro Academy - Học viện Công nghệ Vietpro » Comments Feed" href="https://vietpro.net.vn/comments/feed">
+<link rel="alternate" type="application/rss+xml" title="Vietpro Academy - Học viện Công nghệ Vietpro » Các hàm toán học trong PHP (P.1) Comments Feed" href="https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-1.html/feed">
+		<script src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/cb=gapi.loaded_2" async=""></script><script src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/inferredEvents.js.tải xuống" async=""></script><script src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/sdk.js.tải xuống" async="" crossorigin="anonymous"></script><script src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/cb=gapi.loaded_1" async=""></script><script src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/cb=gapi.loaded_0" async=""></script><script src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/2458027844209563" async=""></script><script src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/identity.js.tải xuống" async=""></script><script async="" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/fbevents.js.tải xuống"></script><script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/vietpro.net.vn\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.1"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/wp-emoji-release.min.js.tải xuống" type="text/javascript" defer=""></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="crayon-css" href="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/crayon.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="crayon-theme-classic-css" href="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/classic.css" type="text/css" media="all">
+<link rel="stylesheet" id="crayon-font-monaco-css" href="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/monaco.css" type="text/css" media="all">
+<link rel="stylesheet" id="td-plugin-newsletter-css" href="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="td-plugin-multi-purpose-css" href="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/style(1).css" type="text/css" media="all">
+<link crossorigin="anonymous" rel="stylesheet" id="google-fonts-style-css" href="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/css" type="text/css" media="all">
+<link rel="stylesheet" id="ubermenu-css" href="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/ubermenu.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="ubermenu-black-white-2-css" href="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/blackwhite2.css" type="text/css" media="all">
+<link rel="stylesheet" id="ubermenu-font-awesome-all-css" href="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/all.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="mpc-massive-style-css" href="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/mpc-styles.css" type="text/css" media="all">
+<link rel="stylesheet" id="js_composer_front-css" href="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/js_composer.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="td-theme-css" href="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/style(2).css" type="text/css" media="all">
+<style id="td-theme-inline-css" type="text/css">
+
+    
+
+        @media (max-width: 767px) {
+
+            .td-header-desktop-wrap {
+
+                display: none;
+
+            }
+
+        }
+
+        @media (min-width: 767px) {
+
+            .td-header-mobile-wrap {
+
+                display: none;
+
+            }
+
+        }
+
+    
+
+	
+</style>
+<link rel="stylesheet" id="td-legacy-framework-front-style-css" href="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/td_legacy_main.css" type="text/css" media="all">
+<link rel="stylesheet" id="tdb_front_style-css" href="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/tdb_less_front.css" type="text/css" media="all">
+<script type="text/javascript" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/jquery.js.tải xuống"></script>
+<script type="text/javascript" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/jquery-migrate.min.js.tải xuống"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var CrayonSyntaxSettings = {"version":"_2.7.2_beta","is_admin":"0","ajaxurl":"https:\/\/vietpro.net.vn\/wp-admin\/admin-ajax.php","prefix":"crayon-","setting":"crayon-setting","selected":"crayon-setting-selected","changed":"crayon-setting-changed","special":"crayon-setting-special","orig_value":"data-orig-value","debug":""};
+var CrayonSyntaxStrings = {"copy":"Press %s to Copy, %s to Paste","minimize":"Click To Expand Code"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/crayon.min.js.tải xuống"></script>
+<link rel="https://api.w.org/" href="https://vietpro.net.vn/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://vietpro.net.vn/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://vietpro.net.vn/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Các hàm về thời gian trong PHP" href="https://vietpro.net.vn/cac-ham-ve-thoi-gian-trong-php-2.html">
+<link rel="next" title="Các hàm toán học trong PHP (P.2)" href="https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-2.html">
+<meta name="generator" content="WordPress 5.2.1">
+<link rel="canonical" href="https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-1.html">
+<link rel="shortlink" href="https://vietpro.net.vn/?p=969">
+<link rel="alternate" type="application/json+oembed" href="https://vietpro.net.vn/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fvietpro.net.vn%2Fcac-ham-toan-hoc-trong-php-p-1.html">
+<link rel="alternate" type="text/xml+oembed" href="https://vietpro.net.vn/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fvietpro.net.vn%2Fcac-ham-toan-hoc-trong-php-p-1.html&amp;format=xml">
+<style id="ubermenu-custom-generated-css">
+/** Font Awesome 4 Compatibility **/
+.fa{font-style:normal;font-variant:normal;font-weight:normal;font-family:FontAwesome;}
+
+/* Status: Loaded from Transient */
+
+</style><!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+
+    
+    <script>
+
+        window.tdb_globals = {"wpRestNonce":"1293b3848b","wpRestUrl":"https:\/\/vietpro.net.vn\/wp-json\/","permalinkStructure":"\/%postname%.html","isAjax":false,"isAdminBarShowing":false,"autoloadScrollPercent":50,"origPostEditUrl":null};
+
+    </script>
+
+    
+			<script>
+
+				window.tdwGlobal = {"adminUrl":"https:\/\/vietpro.net.vn\/wp-admin\/","wpRestNonce":"1293b3848b","wpRestUrl":"https:\/\/vietpro.net.vn\/wp-json\/","permalinkStructure":"\/%postname%.html"};
+
+			</script>
+
+			
+<!-- Facebook Pixel Code -->
+<script type="text/javascript">
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+</script>
+<!-- End Facebook Pixel Code -->
+<script type="text/javascript">
+  fbq('init', '2458027844209563', [], {
+    "agent": "wordpress-5.2.1-1.7.25"
+});
+</script><script type="text/javascript">
+  fbq('track', 'PageView', []);
+</script>
+<!-- Facebook Pixel Code -->
+<noscript>
+<img height="1" width="1" style="display:none" alt="fbpx"
+src="https://www.facebook.com/tr?id=2458027844209563&ev=PageView&noscript=1" />
+</noscript>
+<!-- End Facebook Pixel Code -->
+<meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress.">
+<!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="https://vietpro.net.vn/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css" media="screen"><![endif]-->
+<!-- JS generated by theme -->
+
+<script>
+    
+
+    
+
+
+
+	    var tdBlocksArray = []; //here we store all the items for the current page
+
+
+
+	    //td_block class - each ajax block uses a object of this class for requests
+
+	    function tdBlock() {
+
+		    this.id = '';
+
+		    this.block_type = 1; //block type id (1-234 etc)
+
+		    this.atts = '';
+
+		    this.td_column_number = '';
+
+		    this.td_current_page = 1; //
+
+		    this.post_count = 0; //from wp
+
+		    this.found_posts = 0; //from wp
+
+		    this.max_num_pages = 0; //from wp
+
+		    this.td_filter_value = ''; //current live filter value
+
+		    this.is_ajax_running = false;
+
+		    this.td_user_action = ''; // load more or infinite loader (used by the animation)
+
+		    this.header_color = '';
+
+		    this.ajax_pagination_infinite_stop = ''; //show load more at page x
+
+	    }
+
+
+
+
+
+        // td_js_generator - mini detector
+
+        (function(){
+
+            var htmlTag = document.getElementsByTagName("html")[0];
+
+
+
+	        if ( navigator.userAgent.indexOf("MSIE 10.0") > -1 ) {
+
+                htmlTag.className += ' ie10';
+
+            }
+
+
+
+            if ( !!navigator.userAgent.match(/Trident.*rv\:11\./) ) {
+
+                htmlTag.className += ' ie11';
+
+            }
+
+
+
+	        if ( navigator.userAgent.indexOf("Edge") > -1 ) {
+
+                htmlTag.className += ' ieEdge';
+
+            }
+
+
+
+            if ( /(iPad|iPhone|iPod)/g.test(navigator.userAgent) ) {
+
+                htmlTag.className += ' td-md-is-ios';
+
+            }
+
+
+
+            var user_agent = navigator.userAgent.toLowerCase();
+
+            if ( user_agent.indexOf("android") > -1 ) {
+
+                htmlTag.className += ' td-md-is-android';
+
+            }
+
+
+
+            if ( -1 !== navigator.userAgent.indexOf('Mac OS X')  ) {
+
+                htmlTag.className += ' td-md-is-os-x';
+
+            }
+
+
+
+            if ( /chrom(e|ium)/.test(navigator.userAgent.toLowerCase()) ) {
+
+               htmlTag.className += ' td-md-is-chrome';
+
+            }
+
+
+
+            if ( -1 !== navigator.userAgent.indexOf('Firefox') ) {
+
+                htmlTag.className += ' td-md-is-firefox';
+
+            }
+
+
+
+            if ( -1 !== navigator.userAgent.indexOf('Safari') && -1 === navigator.userAgent.indexOf('Chrome') ) {
+
+                htmlTag.className += ' td-md-is-safari';
+
+            }
+
+
+
+            if( -1 !== navigator.userAgent.indexOf('IEMobile') ){
+
+                htmlTag.className += ' td-md-is-iemobile';
+
+            }
+
+
+
+        })();
+
+
+
+
+
+
+
+
+
+        var tdLocalCache = {};
+
+
+
+        ( function () {
+
+            "use strict";
+
+
+
+            tdLocalCache = {
+
+                data: {},
+
+                remove: function (resource_id) {
+
+                    delete tdLocalCache.data[resource_id];
+
+                },
+
+                exist: function (resource_id) {
+
+                    return tdLocalCache.data.hasOwnProperty(resource_id) && tdLocalCache.data[resource_id] !== null;
+
+                },
+
+                get: function (resource_id) {
+
+                    return tdLocalCache.data[resource_id];
+
+                },
+
+                set: function (resource_id, cachedData) {
+
+                    tdLocalCache.remove(resource_id);
+
+                    tdLocalCache.data[resource_id] = cachedData;
+
+                }
+
+            };
+
+        })();
+
+
+
+    
+
+    
+var td_viewport_interval_list=[{"limitBottom":767,"sidebarWidth":228},{"limitBottom":1018,"sidebarWidth":300},{"limitBottom":1140,"sidebarWidth":324}];
+var td_animation_stack_effect="type0";
+var tds_animation_stack=true;
+var td_animation_stack_specific_selectors=".entry-thumb, img";
+var td_animation_stack_general_selectors=".td-animation-stack img, .td-animation-stack .entry-thumb, .post img";
+var tds_general_modal_image="yes";
+var tdc_is_installed="yes";
+var td_ajax_url="https:\/\/vietpro.net.vn\/wp-admin\/admin-ajax.php?td_theme_name=Newspaper&v=9.7.2";
+var td_get_template_directory_uri="https:\/\/vietpro.net.vn\/wp-content\/themes\/Newspaper";
+var tds_snap_menu="";
+var tds_logo_on_sticky="";
+var tds_header_style="";
+var td_please_wait="Vui l\u00f2ng ch\u1edd...";
+var td_email_user_pass_incorrect="Ng\u01b0\u1eddi d\u00f9ng ho\u1eb7c m\u1eadt kh\u1ea9u kh\u00f4ng ch\u00ednh x\u00e1c!";
+var td_email_user_incorrect="Email ho\u1eb7c t\u00e0i kho\u1ea3n kh\u00f4ng ch\u00ednh x\u00e1c!";
+var td_email_incorrect="Email kh\u00f4ng \u0111\u00fang!";
+var tds_more_articles_on_post_enable="";
+var tds_more_articles_on_post_time_to_wait="";
+var tds_more_articles_on_post_pages_distance_from_top=0;
+var tds_theme_color_site_wide="#ff9600";
+var tds_smart_sidebar="";
+var tdThemeName="Newspaper";
+var td_magnific_popup_translation_tPrev="Tr\u01b0\u1edbc (Left arrow key)";
+var td_magnific_popup_translation_tNext="Ti\u1ebfp (Right arrow key)";
+var td_magnific_popup_translation_tCounter="%curr% c\u1ee7a %total%";
+var td_magnific_popup_translation_ajax_tError="Kh\u00f4ng th\u1ec3 t\u1ea3i n\u1ed9i dung t\u1ea1i %url%";
+var td_magnific_popup_translation_image_tError="Kh\u00f4ng th\u1ec3 t\u1ea3i \u1ea3nh #%curr%";
+var tdBlockNonce="91ae27e224";
+var tdDateNamesI18n={"month_names":["January","February","March","April","May","June","July","August","September","October","November","December"],"month_names_short":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"day_names":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"day_names_short":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]};
+var td_ad_background_click_link="";
+var td_ad_background_click_target="";
+</script>
+
+
+<!-- Header style compiled by theme -->
+
+<style>
+    
+.td-header-wrap .black-menu .sf-menu > .current-menu-item > a,
+    .td-header-wrap .black-menu .sf-menu > .current-menu-ancestor > a,
+    .td-header-wrap .black-menu .sf-menu > .current-category-ancestor > a,
+    .td-header-wrap .black-menu .sf-menu > li > a:hover,
+    .td-header-wrap .black-menu .sf-menu > .sfHover > a,
+    .td-header-style-12 .td-header-menu-wrap-full,
+    .sf-menu > .current-menu-item > a:after,
+    .sf-menu > .current-menu-ancestor > a:after,
+    .sf-menu > .current-category-ancestor > a:after,
+    .sf-menu > li:hover > a:after,
+    .sf-menu > .sfHover > a:after,
+    .td-header-style-12 .td-affix,
+    .header-search-wrap .td-drop-down-search:after,
+    .header-search-wrap .td-drop-down-search .btn:hover,
+    input[type=submit]:hover,
+    .td-read-more a,
+    .td-post-category:hover,
+    .td-grid-style-1.td-hover-1 .td-big-grid-post:hover .td-post-category,
+    .td-grid-style-5.td-hover-1 .td-big-grid-post:hover .td-post-category,
+    .td_top_authors .td-active .td-author-post-count,
+    .td_top_authors .td-active .td-author-comments-count,
+    .td_top_authors .td_mod_wrap:hover .td-author-post-count,
+    .td_top_authors .td_mod_wrap:hover .td-author-comments-count,
+    .td-404-sub-sub-title a:hover,
+    .td-search-form-widget .wpb_button:hover,
+    .td-rating-bar-wrap div,
+    .td_category_template_3 .td-current-sub-category,
+    .dropcap,
+    .td_wrapper_video_playlist .td_video_controls_playlist_wrapper,
+    .wpb_default,
+    .wpb_default:hover,
+    .td-left-smart-list:hover,
+    .td-right-smart-list:hover,
+    .woocommerce-checkout .woocommerce input.button:hover,
+    .woocommerce-page .woocommerce a.button:hover,
+    .woocommerce-account div.woocommerce .button:hover,
+    #bbpress-forums button:hover,
+    .bbp_widget_login .button:hover,
+    .td-footer-wrapper .td-post-category,
+    .td-footer-wrapper .widget_product_search input[type="submit"]:hover,
+    .woocommerce .product a.button:hover,
+    .woocommerce .product #respond input#submit:hover,
+    .woocommerce .checkout input#place_order:hover,
+    .woocommerce .woocommerce.widget .button:hover,
+    .single-product .product .summary .cart .button:hover,
+    .woocommerce-cart .woocommerce table.cart .button:hover,
+    .woocommerce-cart .woocommerce .shipping-calculator-form .button:hover,
+    .td-next-prev-wrap a:hover,
+    .td-load-more-wrap a:hover,
+    .td-post-small-box a:hover,
+    .page-nav .current,
+    .page-nav:first-child > div,
+    .td_category_template_8 .td-category-header .td-category a.td-current-sub-category,
+    .td_category_template_4 .td-category-siblings .td-category a:hover,
+    #bbpress-forums .bbp-pagination .current,
+    #bbpress-forums #bbp-single-user-details #bbp-user-navigation li.current a,
+    .td-theme-slider:hover .slide-meta-cat a,
+    a.vc_btn-black:hover,
+    .td-trending-now-wrapper:hover .td-trending-now-title,
+    .td-scroll-up,
+    .td-smart-list-button:hover,
+    .td-weather-information:before,
+    .td-weather-week:before,
+    .td_block_exchange .td-exchange-header:before,
+    .td_block_big_grid_9.td-grid-style-1 .td-post-category,
+    .td_block_big_grid_9.td-grid-style-5 .td-post-category,
+    .td-grid-style-6.td-hover-1 .td-module-thumb:after,
+    .td-pulldown-syle-2 .td-subcat-dropdown ul:after,
+    .td_block_template_9 .td-block-title:after,
+    .td_block_template_15 .td-block-title:before,
+    div.wpforms-container .wpforms-form div.wpforms-submit-container button[type=submit] {
+        background-color: #ff9600;
+    }
+
+    .td_block_template_4 .td-related-title .td-cur-simple-item:before {
+        border-color: #ff9600 transparent transparent transparent !important;
+    }
+
+    .woocommerce .woocommerce-message .button:hover,
+    .woocommerce .woocommerce-error .button:hover,
+    .woocommerce .woocommerce-info .button:hover {
+        background-color: #ff9600 !important;
+    }
+    
+    
+    .td_block_template_4 .td-related-title .td-cur-simple-item,
+    .td_block_template_3 .td-related-title .td-cur-simple-item,
+    .td_block_template_9 .td-related-title:after {
+        background-color: #ff9600;
+    }
+
+    .woocommerce .product .onsale,
+    .woocommerce.widget .ui-slider .ui-slider-handle {
+        background: none #ff9600;
+    }
+
+    .woocommerce.widget.widget_layered_nav_filters ul li a {
+        background: none repeat scroll 0 0 #ff9600 !important;
+    }
+
+    a,
+    cite a:hover,
+    .td_mega_menu_sub_cats .cur-sub-cat,
+    .td-mega-span h3 a:hover,
+    .td_mod_mega_menu:hover .entry-title a,
+    .header-search-wrap .result-msg a:hover,
+    .td-header-top-menu .td-drop-down-search .td_module_wrap:hover .entry-title a,
+    .td-header-top-menu .td-icon-search:hover,
+    .td-header-wrap .result-msg a:hover,
+    .top-header-menu li a:hover,
+    .top-header-menu .current-menu-item > a,
+    .top-header-menu .current-menu-ancestor > a,
+    .top-header-menu .current-category-ancestor > a,
+    .td-social-icon-wrap > a:hover,
+    .td-header-sp-top-widget .td-social-icon-wrap a:hover,
+    .td-page-content blockquote p,
+    .td-post-content blockquote p,
+    .mce-content-body blockquote p,
+    .comment-content blockquote p,
+    .wpb_text_column blockquote p,
+    .td_block_text_with_title blockquote p,
+    .td_module_wrap:hover .entry-title a,
+    .td-subcat-filter .td-subcat-list a:hover,
+    .td-subcat-filter .td-subcat-dropdown a:hover,
+    .td_quote_on_blocks,
+    .dropcap2,
+    .dropcap3,
+    .td_top_authors .td-active .td-authors-name a,
+    .td_top_authors .td_mod_wrap:hover .td-authors-name a,
+    .td-post-next-prev-content a:hover,
+    .author-box-wrap .td-author-social a:hover,
+    .td-author-name a:hover,
+    .td-author-url a:hover,
+    .td_mod_related_posts:hover h3 > a,
+    .td-post-template-11 .td-related-title .td-related-left:hover,
+    .td-post-template-11 .td-related-title .td-related-right:hover,
+    .td-post-template-11 .td-related-title .td-cur-simple-item,
+    .td-post-template-11 .td_block_related_posts .td-next-prev-wrap a:hover,
+    .comment-reply-link:hover,
+    .logged-in-as a:hover,
+    #cancel-comment-reply-link:hover,
+    .td-search-query,
+    .td-category-header .td-pulldown-category-filter-link:hover,
+    .td-category-siblings .td-subcat-dropdown a:hover,
+    .td-category-siblings .td-subcat-dropdown a.td-current-sub-category,
+    .widget a:hover,
+    .td_wp_recentcomments a:hover,
+    .archive .widget_archive .current,
+    .archive .widget_archive .current a,
+    .widget_calendar tfoot a:hover,
+    .woocommerce a.added_to_cart:hover,
+    .woocommerce-account .woocommerce-MyAccount-navigation a:hover,
+    #bbpress-forums li.bbp-header .bbp-reply-content span a:hover,
+    #bbpress-forums .bbp-forum-freshness a:hover,
+    #bbpress-forums .bbp-topic-freshness a:hover,
+    #bbpress-forums .bbp-forums-list li a:hover,
+    #bbpress-forums .bbp-forum-title:hover,
+    #bbpress-forums .bbp-topic-permalink:hover,
+    #bbpress-forums .bbp-topic-started-by a:hover,
+    #bbpress-forums .bbp-topic-started-in a:hover,
+    #bbpress-forums .bbp-body .super-sticky li.bbp-topic-title .bbp-topic-permalink,
+    #bbpress-forums .bbp-body .sticky li.bbp-topic-title .bbp-topic-permalink,
+    .widget_display_replies .bbp-author-name,
+    .widget_display_topics .bbp-author-name,
+    .footer-text-wrap .footer-email-wrap a,
+    .td-subfooter-menu li a:hover,
+    .footer-social-wrap a:hover,
+    a.vc_btn-black:hover,
+    .td-smart-list-dropdown-wrap .td-smart-list-button:hover,
+    .td_module_17 .td-read-more a:hover,
+    .td_module_18 .td-read-more a:hover,
+    .td_module_19 .td-post-author-name a:hover,
+    .td-instagram-user a,
+    .td-pulldown-syle-2 .td-subcat-dropdown:hover .td-subcat-more span,
+    .td-pulldown-syle-2 .td-subcat-dropdown:hover .td-subcat-more i,
+    .td-pulldown-syle-3 .td-subcat-dropdown:hover .td-subcat-more span,
+    .td-pulldown-syle-3 .td-subcat-dropdown:hover .td-subcat-more i,
+    .td-block-title-wrap .td-wrapper-pulldown-filter .td-pulldown-filter-display-option:hover,
+    .td-block-title-wrap .td-wrapper-pulldown-filter .td-pulldown-filter-display-option:hover i,
+    .td-block-title-wrap .td-wrapper-pulldown-filter .td-pulldown-filter-link:hover,
+    .td-block-title-wrap .td-wrapper-pulldown-filter .td-pulldown-filter-item .td-cur-simple-item,
+    .td_block_template_2 .td-related-title .td-cur-simple-item,
+    .td_block_template_5 .td-related-title .td-cur-simple-item,
+    .td_block_template_6 .td-related-title .td-cur-simple-item,
+    .td_block_template_7 .td-related-title .td-cur-simple-item,
+    .td_block_template_8 .td-related-title .td-cur-simple-item,
+    .td_block_template_9 .td-related-title .td-cur-simple-item,
+    .td_block_template_10 .td-related-title .td-cur-simple-item,
+    .td_block_template_11 .td-related-title .td-cur-simple-item,
+    .td_block_template_12 .td-related-title .td-cur-simple-item,
+    .td_block_template_13 .td-related-title .td-cur-simple-item,
+    .td_block_template_14 .td-related-title .td-cur-simple-item,
+    .td_block_template_15 .td-related-title .td-cur-simple-item,
+    .td_block_template_16 .td-related-title .td-cur-simple-item,
+    .td_block_template_17 .td-related-title .td-cur-simple-item,
+    .td-theme-wrap .sf-menu ul .td-menu-item > a:hover,
+    .td-theme-wrap .sf-menu ul .sfHover > a,
+    .td-theme-wrap .sf-menu ul .current-menu-ancestor > a,
+    .td-theme-wrap .sf-menu ul .current-category-ancestor > a,
+    .td-theme-wrap .sf-menu ul .current-menu-item > a,
+    .td_outlined_btn,
+     .td_block_categories_tags .td-ct-item:hover {
+        color: #ff9600;
+    }
+
+    a.vc_btn-black.vc_btn_square_outlined:hover,
+    a.vc_btn-black.vc_btn_outlined:hover,
+    .td-mega-menu-page .wpb_content_element ul li a:hover,
+    .td-theme-wrap .td-aj-search-results .td_module_wrap:hover .entry-title a,
+    .td-theme-wrap .header-search-wrap .result-msg a:hover {
+        color: #ff9600 !important;
+    }
+
+    .td-next-prev-wrap a:hover,
+    .td-load-more-wrap a:hover,
+    .td-post-small-box a:hover,
+    .page-nav .current,
+    .page-nav:first-child > div,
+    .td_category_template_8 .td-category-header .td-category a.td-current-sub-category,
+    .td_category_template_4 .td-category-siblings .td-category a:hover,
+    #bbpress-forums .bbp-pagination .current,
+    .post .td_quote_box,
+    .page .td_quote_box,
+    a.vc_btn-black:hover,
+    .td_block_template_5 .td-block-title > *,
+    .td_outlined_btn {
+        border-color: #ff9600;
+    }
+
+    .td_wrapper_video_playlist .td_video_currently_playing:after {
+        border-color: #ff9600 !important;
+    }
+
+    .header-search-wrap .td-drop-down-search:before {
+        border-color: transparent transparent #ff9600 transparent;
+    }
+
+    .block-title > span,
+    .block-title > a,
+    .block-title > label,
+    .widgettitle,
+    .widgettitle:after,
+    .td-trending-now-title,
+    .td-trending-now-wrapper:hover .td-trending-now-title,
+    .wpb_tabs li.ui-tabs-active a,
+    .wpb_tabs li:hover a,
+    .vc_tta-container .vc_tta-color-grey.vc_tta-tabs-position-top.vc_tta-style-classic .vc_tta-tabs-container .vc_tta-tab.vc_active > a,
+    .vc_tta-container .vc_tta-color-grey.vc_tta-tabs-position-top.vc_tta-style-classic .vc_tta-tabs-container .vc_tta-tab:hover > a,
+    .td_block_template_1 .td-related-title .td-cur-simple-item,
+    .woocommerce .product .products h2:not(.woocommerce-loop-product__title),
+    .td-subcat-filter .td-subcat-dropdown:hover .td-subcat-more, 
+    .td_3D_btn,
+    .td_shadow_btn,
+    .td_default_btn,
+    .td_round_btn, 
+    .td_outlined_btn:hover {
+    	background-color: #ff9600;
+    }
+
+    .woocommerce div.product .woocommerce-tabs ul.tabs li.active {
+    	background-color: #ff9600 !important;
+    }
+
+    .block-title,
+    .td_block_template_1 .td-related-title,
+    .wpb_tabs .wpb_tabs_nav,
+    .vc_tta-container .vc_tta-color-grey.vc_tta-tabs-position-top.vc_tta-style-classic .vc_tta-tabs-container,
+    .woocommerce div.product .woocommerce-tabs ul.tabs:before {
+        border-color: #ff9600;
+    }
+    .td_block_wrap .td-subcat-item a.td-cur-simple-item {
+	    color: #ff9600;
+	}
+
+
+    
+    .td-grid-style-4 .entry-title
+    {
+        background-color: rgba(255, 150, 0, 0.7);
+    }
+
+    
+    .td-post-content h1 {
+        font-size:24px;
+	
+    }
+    
+    .td-page-content h1,
+    .wpb_text_column h1 {
+    	font-size:24px;
+	
+    }
+</style>
+
+
+
+
+
+<script type="application/ld+json">
+
+    {
+
+        "@context": "http://schema.org",
+
+        "@type": "BreadcrumbList",
+
+        "itemListElement": [
+
+            {
+
+                "@type": "ListItem",
+
+                "position": 1,
+
+                "item": {
+
+                    "@type": "WebSite",
+
+                    "@id": "https://vietpro.net.vn/",
+
+                    "name": "Trang chủ"
+
+                }
+
+            },
+
+            {
+
+                "@type": "ListItem",
+
+                "position": 2,
+
+                    "item": {
+
+                    "@type": "WebPage",
+
+                    "@id": "https://vietpro.net.vn/category/lap-trinh-web-php/lap-trinh-php-lap-trinh-web-php/hoc-php",
+
+                    "name": "Học PHP"
+
+                }
+
+            }
+
+            ,{
+
+                "@type": "ListItem",
+
+                "position": 3,
+
+                    "item": {
+
+                    "@type": "WebPage",
+
+                    "@id": "https://vietpro.net.vn/category/lap-trinh-web-php/lap-trinh-php-lap-trinh-web-php/hoc-php/video-tong-hop-cac-ham-hay-su-dung-trong-lap-trinh-php",
+
+                    "name": "Video tổng hợp các hàm hay sử dụng trong lập trình PHP"                                
+
+                }
+
+            }
+
+            ,{
+
+                "@type": "ListItem",
+
+                "position": 4,
+
+                    "item": {
+
+                    "@type": "WebPage",
+
+                    "@id": "https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-1.html",
+
+                    "name": "Các hàm toán học trong PHP (P.1)"                                
+
+                }
+
+            }    
+
+        ]
+
+    }
+
+</script>
+
+<!-- Button style compiled by theme -->
+
+<style>
+    .tdm-menu-active-style3 .tdm-header.td-header-wrap .sf-menu > .current-category-ancestor > a,
+
+                .tdm-menu-active-style3 .tdm-header.td-header-wrap .sf-menu > .current-menu-ancestor > a,
+
+                .tdm-menu-active-style3 .tdm-header.td-header-wrap .sf-menu > .current-menu-item > a,
+
+                .tdm-menu-active-style3 .tdm-header.td-header-wrap .sf-menu > .sfHover > a,
+
+                .tdm-menu-active-style3 .tdm-header.td-header-wrap .sf-menu > li > a:hover,
+
+                .tdm_block_column_content:hover .tdm-col-content-title-url .tdm-title,
+
+                .tds-button2 .tdm-btn-text,
+
+                .tds-button2 i,
+
+                .tds-button5:hover .tdm-btn-text,
+
+                .tds-button5:hover i,
+
+                .tds-button6 .tdm-btn-text,
+
+                .tds-button6 i,
+
+                .tdm_block_list .tdm-list-item i,
+
+                .tdm_block_pricing .tdm-pricing-feature i,
+
+                .tdm-social-item i {
+
+                  color: #ff9600;
+
+                }
+
+                .tdm-menu-active-style5 .td-header-menu-wrap .sf-menu > .current-menu-item > a,
+
+                .tdm-menu-active-style5 .td-header-menu-wrap .sf-menu > .current-menu-ancestor > a,
+
+                .tdm-menu-active-style5 .td-header-menu-wrap .sf-menu > .current-category-ancestor > a,
+
+                .tdm-menu-active-style5 .td-header-menu-wrap .sf-menu > li > a:hover,
+
+                .tdm-menu-active-style5 .td-header-menu-wrap .sf-menu > .sfHover > a,
+
+                .tds-button1,
+
+                .tds-button6:after,
+
+                .tds-title2 .tdm-title-line:after,
+
+                .tds-title3 .tdm-title-line:after,
+
+                .tdm_block_pricing.tdm-pricing-featured:before,
+
+                .tdm_block_pricing.tds_pricing2_block.tdm-pricing-featured .tdm-pricing-header,
+
+                .tds-progress-bar1 .tdm-progress-bar:after,
+
+                .tds-progress-bar2 .tdm-progress-bar:after,
+
+                .tds-social3 .tdm-social-item {
+
+                  background-color: #ff9600;
+
+                }
+
+                .tdm-menu-active-style4 .tdm-header .sf-menu > .current-menu-item > a,
+
+                .tdm-menu-active-style4 .tdm-header .sf-menu > .current-menu-ancestor > a,
+
+                .tdm-menu-active-style4 .tdm-header .sf-menu > .current-category-ancestor > a,
+
+                .tdm-menu-active-style4 .tdm-header .sf-menu > li > a:hover,
+
+                .tdm-menu-active-style4 .tdm-header .sf-menu > .sfHover > a,
+
+                .tds-button2:before,
+
+                .tds-button6:before,
+
+                .tds-progress-bar3 .tdm-progress-bar:after {
+
+                  border-color: #ff9600;
+
+                }
+
+                .tdm-btn-style1 {
+
+					background-color: #ff9600;
+
+				}
+
+				.tdm-btn-style2:before {
+
+				    border-color: #ff9600;
+
+				}
+
+				.tdm-btn-style2 {
+
+				    color: #ff9600;
+
+				}
+
+				.tdm-btn-style3 {
+
+				    -webkit-box-shadow: 0 2px 16px #ff9600;
+
+                    -moz-box-shadow: 0 2px 16px #ff9600;
+
+                    box-shadow: 0 2px 16px #ff9600;
+
+				}
+
+				.tdm-btn-style3:hover {
+
+				    -webkit-box-shadow: 0 4px 26px #ff9600;
+
+                    -moz-box-shadow: 0 4px 26px #ff9600;
+
+                    box-shadow: 0 4px 26px #ff9600;
+
+				}
+</style>
+
+<noscript><style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>	<style id="tdw-css-placeholder"></style>
+<style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#1d3c78;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}</style><script type="text/javascript" charset="UTF-8" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/common.js.tải xuống"></script><script type="text/javascript" charset="UTF-8" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/util.js.tải xuống"></script><style>.gc-bubbleDefault{background-color:transparent !important;text-align:left;padding:0 !important;margin:0 !important;border:0 !important;table-layout:auto !important}.gc-reset{background-color:transparent !important;border:0 !important;padding:0 !important;margin:0 !important;text-align:left}.pls-bubbleTop{border-bottom:1px solid #ccc !important}.pls-topTail,.pls-vertShimLeft,.pls-contentLeft{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/border_3.gif) !important}.pls-topTail{background-repeat:repeat-x !important;background-position:bottom !important}.pls-vertShim{background-color:#fff !important;text-align:right}.tbl-grey .pls-vertShim{background-color:#f5f5f5 !important}.pls-vertShimLeft{background-repeat:repeat-y !important;background-position:right !important;height:4px}.pls-vertShimRight{height:4px}.pls-confirm-container .pls-vertShim{background-color:#fff3c2 !important}.pls-contentWrap{background-color:#fff !important;position:relative !important;vertical-align:top}.pls-contentLeft{background-repeat:repeat-y;background-position:right;vertical-align:top}.pls-dropRight{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleDropR_3.png) !important;background-repeat:repeat-y !important;vertical-align:top}.pls-vert,.pls-tailleft,.pls-dropTR .pls-dropBR,.pls-dropBL,.pls-vert img{vertical-align:top}.pls-dropBottom{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleDropB_3.png) !important;background-repeat:repeat-x !important;width:100%;vertical-align:top}.pls-topLeft{background:inherit !important;text-align:right;vertical-align:bottom}.pls-topRight{background:inherit !important;text-align:left;vertical-align:bottom}.pls-bottomLeft{background:inherit !important;text-align:right}.pls-bottomRight{background:inherit !important;text-align:left;vertical-align:top}.pls-tailtop,.pls-tailright,.pls-tailbottom,.pls-tailleft{display:none;position:relative}.pls-tailbottom,.pls-tailtop,.pls-tailright,.pls-tailleft,.pls-dropTR,.pls-dropBR,.pls-dropBL{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleSprite_3.png) !important;background-repeat:no-repeat}.tbl-grey .pls-tailbottom,.tbl-grey .pls-tailtop,.tbl-grey .pls-tailright,.tbl-grey .pls-tailleft,.tbl-grey .pls-dropTR,.tbl-grey .pls-dropBR,.tbl-grey .pls-dropBL{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleSprite-grey.png) !important}.pls-tailbottom{background-position:-23px 0}.pls-confirm-container .pls-tailbottom{background-position:-23px -10px}.pls-tailtop{background-position:-19px -20px}.pls-tailright{background-position:0 0}.pls-tailleft{background-position:-10px 0}.pls-tailtop{vertical-align:top}.gc-bubbleDefault td{line-height:0;font-size:0}.pls-topLeft img,.pls-topRight img,.pls-tailbottom{vertical-align:bottom}.pls-bottomLeft img,.bubbleDropTR,.pls-dropBottomL img,.pls-dropBottom img,.pls-dropBottomR img,.pls-bottomLeft{vertical-align:top}.pls-dropTR{background-position:0 -22px}.pls-dropBR{background-position:0 -27px}.pls-dropBL{background-position:0 -16px}.pls-spacertop,.pls-spacerright,.pls-spacerbottom,.pls-spacerleft{position:static !important}.pls-spinner{bottom:0;position:absolute;left:0;margin:auto;right:0;top:0} </style></head>
+
+
+
+<body class="post-template-default single single-post postid-969 single-format-standard cac-ham-toan-hoc-trong-php-p-1 global-block-template-1 single_template_5 wpb-js-composer js-comp-ver-5.7 vc_responsive td-full-layout mpc-loaded td-js-loaded" itemscope="itemscope" itemtype="https://schema.org/WebPage">
+
+
+
+    
+    <div class="td-scroll-up td-scroll-up-visible"><i class="td-icon-menu-up"></i></div>
+
+    
+
+    <div class="td-menu-background"></div>
+
+<div id="td-mobile-nav" style="min-height: 668px;">
+
+    <div class="td-mobile-container">
+
+        <!-- mobile menu top section -->
+
+        <div class="td-menu-socials-wrap">
+
+            <!-- socials -->
+
+            <div class="td-menu-socials">
+
+                
+            </div>
+
+            <!-- close button -->
+
+            <div class="td-mobile-close">
+
+                <a href="https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-1.html#"><i class="td-icon-close-mobile"></i></a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- login section -->
+
+        
+
+
+        <!-- menu section -->
+
+        <div class="td-mobile-content">
+
+            
+<!-- UberMenu [Configuration:main] [Theme Loc:header-menu] [Integration:auto] -->
+<a class="ubermenu-responsive-toggle ubermenu-responsive-toggle-main ubermenu-skin-black-white-2 ubermenu-loc-header-menu ubermenu-responsive-toggle-content-align-left ubermenu-responsive-toggle-align-full " data-ubermenu-target="ubermenu-main-30-header-menu-2"><i class="fas fa-bars"></i>Menu</a><nav id="ubermenu-main-30-header-menu-2" class="ubermenu ubermenu-main ubermenu-menu-30 ubermenu-loc-header-menu ubermenu-responsive ubermenu-responsive-default ubermenu-responsive-collapse ubermenu-horizontal ubermenu-transition-shift ubermenu-trigger-hover_intent ubermenu-skin-black-white-2 ubermenu-has-border ubermenu-bar-align-full ubermenu-items-align-auto ubermenu-bound ubermenu-disable-submenu-scroll ubermenu-sub-indicators ubermenu-retractors-responsive ubermenu-submenu-indicator-closes ubermenu-notouch"><ul id="ubermenu-nav-main-30-header-menu" class="ubermenu-nav"><li id="menu-item-19" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-home ubermenu-item-first ubermenu-item-19 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-target-with-icon ubermenu-item-layout-default ubermenu-item-layout-icon_left" href="https://vietpro.net.vn/" tabindex="0"><i class="ubermenu-icon fas fa-home"></i><span class="ubermenu-target-title ubermenu-target-text">Trang Chủ</span></a></li><li id="menu-item-1681" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-has-children ubermenu-item-1681 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-drop ubermenu-has-submenu-mega"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-1.html#" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">LẬP TRÌNH WEB PHP</span><i class="ubermenu-sub-indicator fas fa-angle-down"></i><span class="ubermenu-sub-indicator-close"><i class="fas fa-times"></i></span></a><ul class="ubermenu-submenu ubermenu-submenu-id-1681 ubermenu-submenu-type-auto ubermenu-submenu-type-mega ubermenu-submenu-drop ubermenu-submenu-align-full_width"><li id="menu-item-1683" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-has-children ubermenu-item-1683 ubermenu-item-auto ubermenu-item-header ubermenu-item-level-1 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-stack"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-1.html#"><span class="ubermenu-target-title ubermenu-target-text">HTML &amp; CSS</span></a><ul class="ubermenu-submenu ubermenu-submenu-id-1683 ubermenu-submenu-type-auto ubermenu-submenu-type-stack"><li id="menu-item-1743" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-1743 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/hoc-html4"><span class="ubermenu-target-title ubermenu-target-text">Học HTML4</span></a></li><li id="menu-item-1744" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-1744 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/hoc-html5"><span class="ubermenu-target-title ubermenu-target-text">Học HTML5</span></a></li><li id="menu-item-1741" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-1741 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/hoc-css2"><span class="ubermenu-target-title ubermenu-target-text">Học CSS2</span></a></li><li id="menu-item-1742" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-1742 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/hoc-css3"><span class="ubermenu-target-title ubermenu-target-text">Học CSS3</span></a></li><li id="menu-item-1740" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-1740 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/hoc-bootstrap-online"><span class="ubermenu-target-title ubermenu-target-text">Học Bootstrap Online</span></a></li><li id="menu-item-1745" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-1745 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/hoc-less-css"><span class="ubermenu-target-title ubermenu-target-text">Học LESS CSS</span></a></li><li id="menu-item-1746" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-1746 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/hoc-sass-css"><span class="ubermenu-target-title ubermenu-target-text">Học Sass CSS</span></a></li></ul></li><li id="menu-item-1684" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-has-children ubermenu-item-1684 ubermenu-item-auto ubermenu-item-header ubermenu-item-level-1 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-stack"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-1.html#"><span class="ubermenu-target-title ubermenu-target-text">JAVA SCRIPT</span></a><ul class="ubermenu-submenu ubermenu-submenu-id-1684 ubermenu-submenu-type-auto ubermenu-submenu-type-stack"><li id="menu-item-1747" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-1747 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/hoc-ajax-co-ban-den-nang-cao-qua-video"><span class="ubermenu-target-title ubermenu-target-text">Học Ajax</span></a></li><li id="menu-item-1748" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-1748 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/hoc-lap-trinh-angularjs-co-ban-den-nang-cao"><span class="ubermenu-target-title ubermenu-target-text">Học AngularJS</span></a></li><li id="menu-item-1749" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-1749 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/hoc-lap-trinh-javascript-co-ban-den-nang-cao"><span class="ubermenu-target-title ubermenu-target-text">Học Javascript</span></a></li><li id="menu-item-1750" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-1750 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/hoc-lap-trinh-jquery-co-ban"><span class="ubermenu-target-title ubermenu-target-text">Học JQuery</span></a></li><li id="menu-item-1751" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-1751 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/hoc-lap-trinh-nodejs-tu-hoc-nodejs-tu-co-ban-den-nang-cao"><span class="ubermenu-target-title ubermenu-target-text">Học NodeJS</span></a></li><li id="menu-item-1752" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-1752 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/hoc-lap-trinh-typescript-co-ban-den-nang-cao"><span class="ubermenu-target-title ubermenu-target-text">Học TypeScript</span></a></li><li id="menu-item-1753" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-1753 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/react-js-la-gi-hoc-lap-trinh-react-js-co-ban"><span class="ubermenu-target-title ubermenu-target-text">Học React JS</span></a></li></ul></li><li id="menu-item-1685" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-has-children ubermenu-item-1685 ubermenu-item-auto ubermenu-item-header ubermenu-item-level-1 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-stack"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-1.html#"><span class="ubermenu-target-title ubermenu-target-text">LẬP TRÌNH PHP</span></a><ul class="ubermenu-submenu ubermenu-submenu-id-1685 ubermenu-submenu-type-auto ubermenu-submenu-type-stack"><li id="menu-item-1754" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-1754 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/hoc-lap-trinh-codeigniter-framework-co-ban-den-nang-cao"><span class="ubermenu-target-title ubermenu-target-text">Học CodeIgniter</span></a></li><li id="menu-item-1755" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-1755 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/hoc-php-lap-trinh-php-tu-hoc-lap-trinh-web-php-online-mien-phi"><span class="ubermenu-target-title ubermenu-target-text">Học PHP – Lập Trình PHP</span></a></li><li id="menu-item-1757" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-1757 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/tu-hoc-laravel-5-hoc-lap-trinh-laravel-framework-co-ban-mien-phi"><span class="ubermenu-target-title ubermenu-target-text">Học Laravel</span></a></li><li id="menu-item-1761" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-1761 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/mvc-la-gi-mo-hinh-mvc-trong-php-co-ban-va-php-nang-cao"><span class="ubermenu-target-title ubermenu-target-text">HỌC PHP MVC</span></a></li><li id="menu-item-1759" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-1759 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/cakephp"><span class="ubermenu-target-title ubermenu-target-text">CAKEPHP</span></a></li><li id="menu-item-1756" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-1756 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/php-regex"><span class="ubermenu-target-title ubermenu-target-text">PHP REGEX</span></a></li><li id="menu-item-1758" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-1758 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/zend"><span class="ubermenu-target-title ubermenu-target-text">ZEND</span></a></li></ul></li><li id="menu-item-1686" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-has-children ubermenu-item-1686 ubermenu-item-auto ubermenu-item-header ubermenu-item-level-1 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-stack"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-1.html#"><span class="ubermenu-target-title ubermenu-target-text">DATABASE</span></a><ul class="ubermenu-submenu ubermenu-submenu-id-1686 ubermenu-submenu-type-auto ubermenu-submenu-type-stack"><li id="menu-item-1763" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-1763 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/hoc-xml-co-ban-den-nang-cao-tong-quan-ve-xml-2"><span class="ubermenu-target-title ubermenu-target-text">Học XML</span></a></li><li id="menu-item-1771" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-1771 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/hoc-mysql-hoc-sql-co-ban-den-nang-cao"><span class="ubermenu-target-title ubermenu-target-text">Học MySQL</span></a></li></ul></li><li id="menu-item-1687" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-1687 ubermenu-item-auto ubermenu-item-header ubermenu-item-level-1 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-1.html#"><span class="ubermenu-target-title ubermenu-target-text">WEB SERVER</span></a></li></ul></li><li id="menu-item-1764" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-has-children ubermenu-item-1764 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-drop ubermenu-has-submenu-mega"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-1.html#" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">LẬP TRÌNH MOBILE</span><i class="ubermenu-sub-indicator fas fa-angle-down"></i><span class="ubermenu-sub-indicator-close"><i class="fas fa-times"></i></span></a><ul class="ubermenu-submenu ubermenu-submenu-id-1764 ubermenu-submenu-type-auto ubermenu-submenu-type-mega ubermenu-submenu-drop ubermenu-submenu-align-full_width"><li id="menu-item-1790" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-has-children ubermenu-item-1790 ubermenu-item-auto ubermenu-item-header ubermenu-item-level-1 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-stack"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-1.html#"><span class="ubermenu-target-title ubermenu-target-text">LẬP TRÌNH ANDROID</span></a><ul class="ubermenu-submenu ubermenu-submenu-id-1790 ubermenu-submenu-type-auto ubermenu-submenu-type-stack"><li id="menu-item-1793" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-1793 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/hoc-android-co-ban-tu-hoc-lap-trinh-android-lap-trinh-android-online"><span class="ubermenu-target-title ubermenu-target-text">Học Android Cơ Bản</span></a></li><li id="menu-item-1795" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-1795 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/hoc-lap-trinh-java-co-ban-den-nang-cao-hoc-java-online-mien-phi"><span class="ubermenu-target-title ubermenu-target-text">Học Java Cơ Bản</span></a></li></ul></li><li id="menu-item-1791" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-has-children ubermenu-item-1791 ubermenu-item-auto ubermenu-item-header ubermenu-item-level-1 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-stack"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-1.html#"><span class="ubermenu-target-title ubermenu-target-text">HỌC REACT NATIVE</span></a><ul class="ubermenu-submenu ubermenu-submenu-id-1791 ubermenu-submenu-type-auto ubermenu-submenu-type-stack"><li id="menu-item-1796" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-1796 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/react-native-la-gi-hoc-lap-trinh-react-native"><span class="ubermenu-target-title ubermenu-target-text">Học React Native</span></a></li></ul></li><li id="menu-item-1792" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-has-children ubermenu-item-1792 ubermenu-item-auto ubermenu-item-header ubermenu-item-level-1 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-stack"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-1.html#"><span class="ubermenu-target-title ubermenu-target-text">HỌC IOS</span></a><ul class="ubermenu-submenu ubermenu-submenu-id-1792 ubermenu-submenu-type-auto ubermenu-submenu-type-stack"><li id="menu-item-1794" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-1794 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/hoc-lap-trinh-ios"><span class="ubermenu-target-title ubermenu-target-text">Học iOS</span></a></li></ul></li></ul></li><li id="menu-item-1769" class="ubermenu-item ubermenu-item-type-taxonomy ubermenu-item-object-category ubermenu-item-1769 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/category/goc-tuyen-dung" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">GÓC TUYỂN DỤNG</span></a></li><li id="menu-item-1839" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-has-children ubermenu-item-1839 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-drop ubermenu-has-submenu-mega"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-1.html#" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">SỰ KIỆN HOT</span><i class="ubermenu-sub-indicator fas fa-angle-down"></i><span class="ubermenu-sub-indicator-close"><i class="fas fa-times"></i></span></a><ul class="ubermenu-submenu ubermenu-submenu-id-1839 ubermenu-submenu-type-auto ubermenu-submenu-type-mega ubermenu-submenu-drop ubermenu-submenu-align-full_width"><li id="menu-item-1766" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-has-children ubermenu-item-1766 ubermenu-item-auto ubermenu-item-header ubermenu-item-level-1 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-stack"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-1.html#"><span class="ubermenu-target-title ubermenu-target-text">KHÓA HỌC FREE</span></a><ul class="ubermenu-submenu ubermenu-submenu-id-1766 ubermenu-submenu-type-auto ubermenu-submenu-type-stack"><li id="menu-item-1840" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-post ubermenu-td-no-down-arrow ubermenu-item-1840 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/100-free-xay-dung-game-mario-tren-javascript-cocos.html"><span class="ubermenu-target-title ubermenu-target-text">[ 100% FREE ] Xây Dựng Game Mario Trên JAVASCRIPT – COCOS</span></a></li><li id="menu-item-1841" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-post ubermenu-td-no-down-arrow ubermenu-item-1841 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/100-free-web-developer-fronend-html-5-css3-bootstrap4-ver-4-0.html"><span class="ubermenu-target-title ubermenu-target-text">[ 100% FREE ] Web Developer FronEnd: HTML 5 – CSS3 – Bootstrap4 (VER 4.0)</span></a></li><li id="menu-item-1842" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-post ubermenu-td-no-down-arrow ubermenu-item-1842 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/100-free-web-developer-php7-backend-ver-4-0.html"><span class="ubermenu-target-title ubermenu-target-text">[ 100% FREE ] Web Developer – PHP7 Backend (VER 4.0)</span></a></li></ul></li><li id="menu-item-1834" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-1834 ubermenu-item-auto ubermenu-item-header ubermenu-item-level-1 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/lich-live-stream"><span class="ubermenu-target-title ubermenu-target-text">LỊCH LIVE STREAM</span></a></li></ul></li></ul></nav>
+<!-- End UberMenu -->
+
+        </div>
+
+    </div>
+
+
+
+    <!-- register/login section -->
+
+    
+</div>
+    <div class="td-search-background"></div>
+
+<div class="td-search-wrap-mob">
+
+	<div class="td-drop-down-search" aria-labelledby="td-header-search-button">
+
+		<form method="get" class="td-search-form" action="https://vietpro.net.vn/">
+
+			<!-- close button -->
+
+			<div class="td-search-close">
+
+				<a href="https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-1.html#"><i class="td-icon-close-mobile"></i></a>
+
+			</div>
+
+			<div role="search" class="td-search-input">
+
+				<span>TÌM KIẾM</span>
+
+				<input id="td-header-search-mob" type="text" value="" name="s" autocomplete="off">
+
+			</div>
+
+		</form>
+
+		<div id="td-aj-search-mob"></div>
+
+	</div>
+
+</div>
+
+
+
+
+    <div id="td-outer-wrap" class="td-theme-wrap">
+
+    
+
+
+        
+
+
+            <div class="tdc-header-wrap ">
+
+
+
+            <!--
+
+Header style 1
+
+-->
+
+
+
+
+
+
+<div class="td-header-wrap td-header-style-1 ">
+
+    
+
+
+    <div class="td-header-top-menu-full td-container-wrap ">
+
+        <div class="td-container td-header-row td-header-top-menu">
+
+            
+
+
+    <div class="top-bar-style-1">
+
+        
+
+<div class="td-header-sp-top-menu">
+
+
+
+
+
+	
+</div>
+
+
+        <div class="td-header-sp-top-widget">
+
+    
+
+
+    
+</div>
+    </div>
+
+
+
+<!-- LOGIN MODAL -->
+
+
+        </div>
+
+    </div>
+
+
+
+    <div class="td-banner-wrap-full td-logo-wrap-full td-container-wrap ">
+
+        <div class="td-container td-header-row td-header-header">
+
+            <div class="td-header-sp-logo">
+
+                
+        <a class="td-main-logo" href="https://vietpro.net.vn/">
+
+            <img class="td-retina-data" data-retina="http://htkw.temit.vn/wp-content/uploads/2019/05/logo-1-2.png" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/logo-1-2.png" alt="">
+
+            <span class="td-visual-hidden">Vietpro Academy – Học viện Công nghệ Vietpro</span>
+
+        </a>
+
+    
+            </div>
+
+            
+                <div class="td-header-sp-recs">
+
+                    <div class="td-header-rec-wrap">
+
+    <div class="td-a-rec td-a-rec-id-header  td_uid_1_5cfdb87d16570_rand td_block_template_1">
+<style>
+/* custom css */
+.td_uid_1_5cfdb87d16570_rand.td-a-rec-img {
+
+				    text-align: left;
+
+				}
+
+				.td_uid_1_5cfdb87d16570_rand.td-a-rec-img img {
+
+                    margin: 0 auto 0 0;
+
+                }
+</style><img sr="http://htkw.temit.vn/wp-content/uploads/2019/05/banner.png"></div>
+
+
+</div>
+                </div>
+
+            
+        </div>
+
+    </div>
+
+
+
+    <div class="td-header-menu-wrap-full td-container-wrap " style="height: 47px;">
+
+        
+
+
+        <div class="td-header-menu-wrap td-header-gradient ">
+
+            <div class="td-container td-header-row td-header-main-menu">
+
+                <div id="td-header-menu" role="navigation">
+
+    <div id="td-top-mobile-toggle"><a href="https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-1.html#"><i class="td-icon-font td-icon-mobile"></i></a></div>
+
+    <div class="td-main-menu-logo td-logo-in-header">
+
+        
+        <a class="td-main-logo" href="https://vietpro.net.vn/">
+
+            <img class="td-retina-data" data-retina="http://htkw.temit.vn/wp-content/uploads/2019/05/logo-1-2.png" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/logo-1-2.png" alt="">
+
+        </a>
+
+    
+    </div>
+
+    
+<!-- UberMenu [Configuration:main] [Theme Loc:header-menu] [Integration:auto] -->
+<a class="ubermenu-responsive-toggle ubermenu-responsive-toggle-main ubermenu-skin-black-white-2 ubermenu-loc-header-menu ubermenu-responsive-toggle-content-align-left ubermenu-responsive-toggle-align-full " data-ubermenu-target="ubermenu-main-30-header-menu-4"><i class="fas fa-bars"></i>Menu</a><nav id="ubermenu-main-30-header-menu-4" class="ubermenu ubermenu-main ubermenu-menu-30 ubermenu-loc-header-menu ubermenu-responsive ubermenu-responsive-default ubermenu-responsive-collapse ubermenu-horizontal ubermenu-transition-shift ubermenu-trigger-hover_intent ubermenu-skin-black-white-2 ubermenu-has-border ubermenu-bar-align-full ubermenu-items-align-auto ubermenu-bound ubermenu-disable-submenu-scroll ubermenu-sub-indicators ubermenu-retractors-responsive ubermenu-submenu-indicator-closes ubermenu-notouch"><ul id="ubermenu-nav-main-30-header-menu" class="ubermenu-nav"><li class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-home ubermenu-item-first ubermenu-td-menu-item ubermenu-td-normal-menu ubermenu-item-19 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-target-with-icon ubermenu-item-layout-default ubermenu-item-layout-icon_left" href="https://vietpro.net.vn/" tabindex="0"><i class="ubermenu-icon fas fa-home"></i><span class="ubermenu-target-title ubermenu-target-text">Trang Chủ</span></a></li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-has-children ubermenu-td-menu-item ubermenu-td-normal-menu ubermenu-item-1681 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-drop ubermenu-has-submenu-mega"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-1.html#" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">LẬP TRÌNH WEB PHP</span><i class="ubermenu-sub-indicator fas fa-angle-down"></i><span class="ubermenu-sub-indicator-close"><i class="fas fa-times"></i></span></a><ul class="ubermenu-submenu ubermenu-submenu-id-1681 ubermenu-submenu-type-auto ubermenu-submenu-type-mega ubermenu-submenu-drop ubermenu-submenu-align-full_width"><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-has-children ubermenu-td-menu-item ubermenu-td-normal-menu ubermenu-item-1683 ubermenu-item-auto ubermenu-item-header ubermenu-item-level-1 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-stack"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-1.html#"><span class="ubermenu-target-title ubermenu-target-text">HTML &amp; CSS</span></a><ul class="ubermenu-submenu ubermenu-submenu-id-1683 ubermenu-submenu-type-auto ubermenu-submenu-type-stack"><li class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-td-menu-item ubermenu-td-normal-menu ubermenu-item-1743 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/hoc-html4"><span class="ubermenu-target-title ubermenu-target-text">Học HTML4</span></a></li><li class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-td-menu-item ubermenu-td-normal-menu ubermenu-item-1744 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/hoc-html5"><span class="ubermenu-target-title ubermenu-target-text">Học HTML5</span></a></li><li class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-td-menu-item ubermenu-td-normal-menu ubermenu-item-1741 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/hoc-css2"><span class="ubermenu-target-title ubermenu-target-text">Học CSS2</span></a></li><li class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-td-menu-item ubermenu-td-normal-menu ubermenu-item-1742 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/hoc-css3"><span class="ubermenu-target-title ubermenu-target-text">Học CSS3</span></a></li><li class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-td-menu-item ubermenu-td-normal-menu ubermenu-item-1740 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/hoc-bootstrap-online"><span class="ubermenu-target-title ubermenu-target-text">Học Bootstrap Online</span></a></li><li class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-td-menu-item ubermenu-td-normal-menu ubermenu-item-1745 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/hoc-less-css"><span class="ubermenu-target-title ubermenu-target-text">Học LESS CSS</span></a></li><li class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-td-menu-item ubermenu-td-normal-menu ubermenu-item-1746 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/hoc-sass-css"><span class="ubermenu-target-title ubermenu-target-text">Học Sass CSS</span></a></li></ul></li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-has-children ubermenu-td-menu-item ubermenu-td-normal-menu ubermenu-item-1684 ubermenu-item-auto ubermenu-item-header ubermenu-item-level-1 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-stack"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-1.html#"><span class="ubermenu-target-title ubermenu-target-text">JAVA SCRIPT</span></a><ul class="ubermenu-submenu ubermenu-submenu-id-1684 ubermenu-submenu-type-auto ubermenu-submenu-type-stack"><li class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-td-menu-item ubermenu-td-normal-menu ubermenu-item-1747 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/hoc-ajax-co-ban-den-nang-cao-qua-video"><span class="ubermenu-target-title ubermenu-target-text">Học Ajax</span></a></li><li class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-td-menu-item ubermenu-td-normal-menu ubermenu-item-1748 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/hoc-lap-trinh-angularjs-co-ban-den-nang-cao"><span class="ubermenu-target-title ubermenu-target-text">Học AngularJS</span></a></li><li class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-td-menu-item ubermenu-td-normal-menu ubermenu-item-1749 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/hoc-lap-trinh-javascript-co-ban-den-nang-cao"><span class="ubermenu-target-title ubermenu-target-text">Học Javascript</span></a></li><li class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-td-menu-item ubermenu-td-normal-menu ubermenu-item-1750 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/hoc-lap-trinh-jquery-co-ban"><span class="ubermenu-target-title ubermenu-target-text">Học JQuery</span></a></li><li class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-td-menu-item ubermenu-td-normal-menu ubermenu-item-1751 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/hoc-lap-trinh-nodejs-tu-hoc-nodejs-tu-co-ban-den-nang-cao"><span class="ubermenu-target-title ubermenu-target-text">Học NodeJS</span></a></li><li class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-td-menu-item ubermenu-td-normal-menu ubermenu-item-1752 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/hoc-lap-trinh-typescript-co-ban-den-nang-cao"><span class="ubermenu-target-title ubermenu-target-text">Học TypeScript</span></a></li><li class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-td-menu-item ubermenu-td-normal-menu ubermenu-item-1753 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/react-js-la-gi-hoc-lap-trinh-react-js-co-ban"><span class="ubermenu-target-title ubermenu-target-text">Học React JS</span></a></li></ul></li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-has-children ubermenu-td-menu-item ubermenu-td-normal-menu ubermenu-item-1685 ubermenu-item-auto ubermenu-item-header ubermenu-item-level-1 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-stack"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-1.html#"><span class="ubermenu-target-title ubermenu-target-text">LẬP TRÌNH PHP</span></a><ul class="ubermenu-submenu ubermenu-submenu-id-1685 ubermenu-submenu-type-auto ubermenu-submenu-type-stack"><li class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-td-menu-item ubermenu-td-normal-menu ubermenu-item-1754 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/hoc-lap-trinh-codeigniter-framework-co-ban-den-nang-cao"><span class="ubermenu-target-title ubermenu-target-text">Học CodeIgniter</span></a></li><li class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-td-menu-item ubermenu-td-normal-menu ubermenu-item-1755 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/hoc-php-lap-trinh-php-tu-hoc-lap-trinh-web-php-online-mien-phi"><span class="ubermenu-target-title ubermenu-target-text">Học PHP – Lập Trình PHP</span></a></li><li class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-td-menu-item ubermenu-td-normal-menu ubermenu-item-1757 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/tu-hoc-laravel-5-hoc-lap-trinh-laravel-framework-co-ban-mien-phi"><span class="ubermenu-target-title ubermenu-target-text">Học Laravel</span></a></li><li class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-td-menu-item ubermenu-td-normal-menu ubermenu-item-1761 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/mvc-la-gi-mo-hinh-mvc-trong-php-co-ban-va-php-nang-cao"><span class="ubermenu-target-title ubermenu-target-text">HỌC PHP MVC</span></a></li><li class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-td-menu-item ubermenu-td-normal-menu ubermenu-item-1759 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/cakephp"><span class="ubermenu-target-title ubermenu-target-text">CAKEPHP</span></a></li><li class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-td-menu-item ubermenu-td-normal-menu ubermenu-item-1756 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/php-regex"><span class="ubermenu-target-title ubermenu-target-text">PHP REGEX</span></a></li><li class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-td-menu-item ubermenu-td-normal-menu ubermenu-item-1758 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/zend"><span class="ubermenu-target-title ubermenu-target-text">ZEND</span></a></li></ul></li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-has-children ubermenu-td-menu-item ubermenu-td-normal-menu ubermenu-item-1686 ubermenu-item-auto ubermenu-item-header ubermenu-item-level-1 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-stack"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-1.html#"><span class="ubermenu-target-title ubermenu-target-text">DATABASE</span></a><ul class="ubermenu-submenu ubermenu-submenu-id-1686 ubermenu-submenu-type-auto ubermenu-submenu-type-stack"><li class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-td-menu-item ubermenu-td-normal-menu ubermenu-item-1763 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/hoc-xml-co-ban-den-nang-cao-tong-quan-ve-xml-2"><span class="ubermenu-target-title ubermenu-target-text">Học XML</span></a></li><li class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-td-menu-item ubermenu-td-normal-menu ubermenu-item-1771 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/hoc-mysql-hoc-sql-co-ban-den-nang-cao"><span class="ubermenu-target-title ubermenu-target-text">Học MySQL</span></a></li></ul></li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-td-menu-item ubermenu-td-normal-menu ubermenu-item-1687 ubermenu-item-auto ubermenu-item-header ubermenu-item-level-1 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-1.html#"><span class="ubermenu-target-title ubermenu-target-text">WEB SERVER</span></a></li></ul></li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-has-children ubermenu-td-menu-item ubermenu-td-normal-menu ubermenu-item-1764 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-drop ubermenu-has-submenu-mega"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-1.html#" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">LẬP TRÌNH MOBILE</span><i class="ubermenu-sub-indicator fas fa-angle-down"></i><span class="ubermenu-sub-indicator-close"><i class="fas fa-times"></i></span></a><ul class="ubermenu-submenu ubermenu-submenu-id-1764 ubermenu-submenu-type-auto ubermenu-submenu-type-mega ubermenu-submenu-drop ubermenu-submenu-align-full_width"><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-has-children ubermenu-td-menu-item ubermenu-td-normal-menu ubermenu-item-1790 ubermenu-item-auto ubermenu-item-header ubermenu-item-level-1 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-stack"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-1.html#"><span class="ubermenu-target-title ubermenu-target-text">LẬP TRÌNH ANDROID</span></a><ul class="ubermenu-submenu ubermenu-submenu-id-1790 ubermenu-submenu-type-auto ubermenu-submenu-type-stack"><li class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-td-menu-item ubermenu-td-normal-menu ubermenu-item-1793 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/hoc-android-co-ban-tu-hoc-lap-trinh-android-lap-trinh-android-online"><span class="ubermenu-target-title ubermenu-target-text">Học Android Cơ Bản</span></a></li><li class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-td-menu-item ubermenu-td-normal-menu ubermenu-item-1795 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/hoc-lap-trinh-java-co-ban-den-nang-cao-hoc-java-online-mien-phi"><span class="ubermenu-target-title ubermenu-target-text">Học Java Cơ Bản</span></a></li></ul></li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-has-children ubermenu-td-menu-item ubermenu-td-normal-menu ubermenu-item-1791 ubermenu-item-auto ubermenu-item-header ubermenu-item-level-1 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-stack"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-1.html#"><span class="ubermenu-target-title ubermenu-target-text">HỌC REACT NATIVE</span></a><ul class="ubermenu-submenu ubermenu-submenu-id-1791 ubermenu-submenu-type-auto ubermenu-submenu-type-stack"><li class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-td-menu-item ubermenu-td-normal-menu ubermenu-item-1796 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/react-native-la-gi-hoc-lap-trinh-react-native"><span class="ubermenu-target-title ubermenu-target-text">Học React Native</span></a></li></ul></li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-has-children ubermenu-td-menu-item ubermenu-td-normal-menu ubermenu-item-1792 ubermenu-item-auto ubermenu-item-header ubermenu-item-level-1 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-stack"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-1.html#"><span class="ubermenu-target-title ubermenu-target-text">HỌC IOS</span></a><ul class="ubermenu-submenu ubermenu-submenu-id-1792 ubermenu-submenu-type-auto ubermenu-submenu-type-stack"><li class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-td-menu-item ubermenu-td-normal-menu ubermenu-item-1794 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/hoc-lap-trinh-ios"><span class="ubermenu-target-title ubermenu-target-text">Học iOS</span></a></li></ul></li></ul></li><li class="ubermenu-item ubermenu-item-type-taxonomy ubermenu-item-object-category ubermenu-td-menu-item ubermenu-td-normal-menu ubermenu-item-1769 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/category/goc-tuyen-dung" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">GÓC TUYỂN DỤNG</span></a></li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-has-children ubermenu-td-menu-item ubermenu-td-normal-menu ubermenu-item-1839 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-drop ubermenu-has-submenu-mega"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-1.html#" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">SỰ KIỆN HOT</span><i class="ubermenu-sub-indicator fas fa-angle-down"></i><span class="ubermenu-sub-indicator-close"><i class="fas fa-times"></i></span></a><ul class="ubermenu-submenu ubermenu-submenu-id-1839 ubermenu-submenu-type-auto ubermenu-submenu-type-mega ubermenu-submenu-drop ubermenu-submenu-align-full_width"><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-has-children ubermenu-td-menu-item ubermenu-td-normal-menu ubermenu-item-1766 ubermenu-item-auto ubermenu-item-header ubermenu-item-level-1 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-stack"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-1.html#"><span class="ubermenu-target-title ubermenu-target-text">KHÓA HỌC FREE</span></a><ul class="ubermenu-submenu ubermenu-submenu-id-1766 ubermenu-submenu-type-auto ubermenu-submenu-type-stack"><li class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-post ubermenu-td-no-down-arrow ubermenu-td-menu-item ubermenu-td-normal-menu ubermenu-item-1840 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/100-free-xay-dung-game-mario-tren-javascript-cocos.html"><span class="ubermenu-target-title ubermenu-target-text">[ 100% FREE ] Xây Dựng Game Mario Trên JAVASCRIPT – COCOS</span></a></li><li class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-post ubermenu-td-no-down-arrow ubermenu-td-menu-item ubermenu-td-normal-menu ubermenu-item-1841 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/100-free-web-developer-fronend-html-5-css3-bootstrap4-ver-4-0.html"><span class="ubermenu-target-title ubermenu-target-text">[ 100% FREE ] Web Developer FronEnd: HTML 5 – CSS3 – Bootstrap4 (VER 4.0)</span></a></li><li class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-post ubermenu-td-no-down-arrow ubermenu-td-menu-item ubermenu-td-normal-menu ubermenu-item-1842 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/100-free-web-developer-php7-backend-ver-4-0.html"><span class="ubermenu-target-title ubermenu-target-text">[ 100% FREE ] Web Developer – PHP7 Backend (VER 4.0)</span></a></li></ul></li><li class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-td-menu-item ubermenu-td-normal-menu ubermenu-item-1834 ubermenu-item-auto ubermenu-item-header ubermenu-item-level-1 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://vietpro.net.vn/lich-live-stream"><span class="ubermenu-target-title ubermenu-target-text">LỊCH LIVE STREAM</span></a></li></ul></li></ul></nav>
+<!-- End UberMenu -->
+
+</div>
+
+
+
+
+
+
+
+    <div class="header-search-wrap">
+
+        <div class="td-search-btns-wrap">
+
+            <a id="td-header-search-button" href="https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-1.html#" role="button" class="dropdown-toggle " data-toggle="dropdown"><i class="td-icon-search"></i></a>
+
+            <a id="td-header-search-button-mob" href="https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-1.html#" class="dropdown-toggle " data-toggle="dropdown"><i class="td-icon-search"></i></a>
+
+        </div>
+
+
+
+        <div class="td-drop-down-search" aria-labelledby="td-header-search-button">
+
+            <form method="get" class="td-search-form" action="https://vietpro.net.vn/">
+
+                <div role="search" class="td-head-form-search-wrap">
+
+                    <input id="td-header-search" type="text" value="" name="s" autocomplete="off"><input class="wpb_button wpb_btn-inverse btn" type="submit" id="td-header-search-top" value="TÌM KIẾM">
+
+                </div>
+
+            </form>
+
+            <div id="td-aj-search"></div>
+
+        </div>
+
+    </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+</div>
+
+
+            </div>
+
+
+
+            
+
+
+
+<div class="td-main-content-wrap td-container-wrap">
+
+
+
+    <div class="td-container td-post-template-5 ">
+
+        <div class="td-crumb-container"><div class="entry-crumbs"><span><a title="" class="entry-crumb" href="https://vietpro.net.vn/">Trang chủ</a></span> <i class="td-icon-right td-bread-sep"></i> <span><a title="Xem tất cả bài viết trong Học PHP" class="entry-crumb" href="https://vietpro.net.vn/category/lap-trinh-web-php/lap-trinh-php-lap-trinh-web-php/hoc-php">Học PHP</a></span> <i class="td-icon-right td-bread-sep"></i> <span><a title="Xem tất cả bài viết trong Video tổng hợp các hàm hay sử dụng trong lập trình PHP" class="entry-crumb" href="https://vietpro.net.vn/category/lap-trinh-web-php/lap-trinh-php-lap-trinh-web-php/hoc-php/video-tong-hop-cac-ham-hay-su-dung-trong-lap-trinh-php">Video tổng hợp các hàm hay sử dụng trong lập trình PHP</a></span> <i class="td-icon-right td-bread-sep td-bred-no-url-last"></i> <span class="td-bred-no-url-last">Các hàm toán học trong PHP (P.1)</span></div></div>
+
+            <div class="td-pb-row">
+
+                
+                            <div class="td-pb-span8 td-main-content" role="main">
+
+                                <div class="td-ss-main-content">
+
+                                    
+
+
+    <article id="post-969" class="post-969 post type-post status-publish format-standard has-post-thumbnail category-video-tong-hop-cac-ham-hay-su-dung-trong-lap-trinh-php" itemscope="" itemtype="https://schema.org/Article">
+
+        <div class="td-post-header">
+
+
+
+            <ul class="td-category"><li class="entry-category"><a href="https://vietpro.net.vn/category/lap-trinh-web-php/lap-trinh-php-lap-trinh-web-php/hoc-php/video-tong-hop-cac-ham-hay-su-dung-trong-lap-trinh-php">Video tổng hợp các hàm hay sử dụng trong lập trình PHP</a></li></ul>
+
+
+            <header class="td-post-title">
+
+                <h1 class="entry-title">Các hàm toán học trong PHP (P.1)</h1>
+
+
+
+
+                
+
+
+
+
+                <div class="td-module-meta-info">
+
+                    <div class="td-post-author-name"><div class="td-author-by">Bởi</div> <a href="https://vietpro.net.vn/author/trang">trang</a><div class="td-author-line"> - </div> </div>
+                    <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2019-05-13T10:23:19+00:00">May 13, 2019</time></span>
+                    <div class="td-post-comments"><a href="https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-1.html#respond"><i class="td-icon-comments"></i>0</a></div>
+                    <div class="td-post-views"><i class="td-icon-views"></i><span class="td-nr-views-969">191</span></div>
+                </div>
+
+
+
+            </header>
+
+
+
+        </div>
+
+
+
+        <div class="td-post-sharing-top"><div id="td_social_sharing_article_top" class="td-post-sharing td-ps-bg td-ps-notext td-post-sharing-style1 "><div class="td-post-sharing-visible"><a class="td-social-sharing-button td-social-sharing-button-js td-social-network td-social-facebook" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fvietpro.net.vn%2Fcac-ham-toan-hoc-trong-php-p-1.html" style="transition: opacity 0.2s ease 0s; opacity: 1;">
+
+                                        <div class="td-social-but-icon"><i class="td-icon-facebook"></i></div>
+
+                                        <div class="td-social-but-text">Facebook</div>
+
+                                    </a><a class="td-social-sharing-button td-social-sharing-button-js td-social-network td-social-twitter" href="https://twitter.com/intent/tweet?text=C%C3%A1c+h%C3%A0m+to%C3%A1n+h%E1%BB%8Dc+trong+PHP+%28P.1%29&amp;url=https%3A%2F%2Fvietpro.net.vn%2Fcac-ham-toan-hoc-trong-php-p-1.html&amp;via=Vietpro+Academy+-+H%E1%BB%8Dc+vi%E1%BB%87n+C%C3%B4ng+ngh%E1%BB%87+Vietpro" style="transition: opacity 0.2s ease 0s; opacity: 1;">
+
+                                        <div class="td-social-but-icon"><i class="td-icon-twitter"></i></div>
+
+                                        <div class="td-social-but-text">Twitter</div>
+
+                                    </a><a class="td-social-sharing-button td-social-sharing-button-js td-social-network td-social-googleplus" href="https://plus.google.com/share?url=https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-1.html" style="transition: opacity 0.2s ease 0s; opacity: 1;">
+
+                                        <div class="td-social-but-icon"><i class="td-icon-googleplus"></i></div>
+
+                                        <div class="td-social-but-text">Google+</div>
+
+                                    </a><a class="td-social-sharing-button td-social-sharing-button-js td-social-network td-social-pinterest" href="https://pinterest.com/pin/create/button/?url=https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-1.html&amp;media=https://vietpro.net.vn/wp-content/uploads/2019/05/php-300x224.png&amp;description=C%C3%A1c+h%C3%A0m+to%C3%A1n+h%E1%BB%8Dc+trong+PHP+%28P.1%29" style="transition: opacity 0.2s ease 0s; opacity: 1;">
+
+                                        <div class="td-social-but-icon"><i class="td-icon-pinterest"></i></div>
+
+                                        <div class="td-social-but-text">Pinterest</div>
+
+                                    </a><a class="td-social-sharing-button td-social-sharing-button-js td-social-network td-social-whatsapp" href="whatsapp://send?text=C%C3%A1c+h%C3%A0m+to%C3%A1n+h%E1%BB%8Dc+trong+PHP+%28P.1%29 %0A%0A https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-1.html">
+
+                                        <div class="td-social-but-icon"><i class="td-icon-whatsapp"></i></div>
+
+                                        <div class="td-social-but-text">WhatsApp</div>
+
+                                    </a></div><div class="td-social-sharing-hidden" style="display: none;"><ul class="td-pulldown-filter-list"></ul><a class="td-social-sharing-button td-social-handler td-social-expand-tabs" href="https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-1.html#" data-block-uid="td_social_sharing_article_top">
+
+                                    <div class="td-social-but-icon"><i class="td-icon-plus td-social-expand-tabs-icon"></i></div>
+
+                                </a></div></div></div>
+
+
+
+
+        <div class="td-post-content">
+
+            <h4><strong>[ VIDEO TUT ]</strong></h4>
+<ul>
+<li>Đang cập nhật…</li>
+</ul>
+<div class="yut1">
+<div class="yut2">Bấm Subscribe Nhận video học mới nhất :</div>
+<div class="yut3"></div>
+<p><script src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/platform.js.tải xuống" gapi_processed="true"></script></p>
+<div style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 310px; height: 48px;" id="___ytsubscribe_0"><iframe ng-non-bindable="" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 310px; margin: 0px; border-style: none; height: 174.375px; left: 0px; visibility: visible;" tabindex="0" vspace="0" width="100%" id="I0_1560131860916" name="I0_1560131860916" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/subscribe_embed.html" data-gapiattached="true"></iframe></div>
+</div>
+<p>Chào các bạn hôm nay mình sẽ giới thiệu đến các bạn những hàm toán học hay được sử dụng trong php, trong bài này mình sẽ nói cách sử dụng và có những ví dụ cụ thể để các bạn có thể nắm được.</p>
+<h4><strong>1.&nbsp;Hàm toán học trong PHP (P.1)</strong></h4>
+<h5><strong>a. Hàm pi()</strong></h5>
+<p>Hàm trả về giá trị là một hằng số</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5cfdb87ce38e7491084500" class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important; height: auto;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important; height: 18px !important; line-height: 18px !important; margin-top: -18px; display: none; position: absolute; z-index: 2;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-mixed-highlight" title="Contains Mixed Languages"></span><div class="crayon-button crayon-nums-button crayon-pressed" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code" style="display: none;"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly="" style="tab-size: 4; font-size: 12px !important; line-height: 15px !important; z-index: 0; opacity: 0; overflow: hidden;">&lt;?php 
+ echo pi();
+?&gt;
+// Kết quả: 3.1415926535898</textarea></div>
+			<div class="crayon-main" style="position: relative; z-index: 1; overflow: hidden;">
+				<table class="crayon-table" style="">
+					<tbody><tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5cfdb87ce38e7491084500-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cfdb87ce38e7491084500-2">2</div><div class="crayon-num" data-line="crayon-5cfdb87ce38e7491084500-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cfdb87ce38e7491084500-4">4</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5cfdb87ce38e7491084500-1"><span class="crayon-ta">&lt;?php</span><span class="crayon-h"> </span></div><div class="crayon-line crayon-striped-line" id="crayon-5cfdb87ce38e7491084500-2"><span class="crayon-h"> </span><span class="crayon-k ">echo</span><span class="crayon-h"> </span><span class="crayon-e">pi</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5cfdb87ce38e7491084500-3"><span class="crayon-ta">?&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5cfdb87ce38e7491084500-4"><span class="crayon-c">// Kết quả: 3.1415926535898</span></div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0038 seconds] -->
+<p></p>
+<h5><strong>b. Hàm abs(number)</strong></h5>
+<p>Hàm trả về giá trị tuyệt đối của một số</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5cfdb87ce38f4763329606" class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important; height: auto;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important; height: 18px !important; line-height: 18px !important; margin-top: -18px; display: none; position: absolute; z-index: 2;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-mixed-highlight" title="Contains Mixed Languages"></span><div class="crayon-button crayon-nums-button crayon-pressed" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code" style="display: none;"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly="" style="tab-size: 4; font-size: 12px !important; line-height: 15px !important; z-index: 0; opacity: 0; overflow: hidden;">&lt;?php 
+ echo abs(-5.55);
+?&gt;
+// Kết quả: 5.55</textarea></div>
+			<div class="crayon-main" style="position: relative; z-index: 1; overflow: hidden;">
+				<table class="crayon-table" style="">
+					<tbody><tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5cfdb87ce38f4763329606-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cfdb87ce38f4763329606-2">2</div><div class="crayon-num" data-line="crayon-5cfdb87ce38f4763329606-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cfdb87ce38f4763329606-4">4</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5cfdb87ce38f4763329606-1"><span class="crayon-ta">&lt;?php</span><span class="crayon-h"> </span></div><div class="crayon-line crayon-striped-line" id="crayon-5cfdb87ce38f4763329606-2"><span class="crayon-h"> </span><span class="crayon-k ">echo</span><span class="crayon-h"> </span><span class="crayon-e">abs</span><span class="crayon-sy">(</span><span class="crayon-o">-</span><span class="crayon-cn">5.55</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5cfdb87ce38f4763329606-3"><span class="crayon-ta">?&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5cfdb87ce38f4763329606-4"><span class="crayon-c">// Kết quả: 5.55</span></div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0006 seconds] -->
+<p></p>
+<h5><strong>c. Hàm pow(number)</strong></h5>
+<p>Hàm trả về kết quả của phép lũy thừa</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5cfdb87ce38fc876453244" class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important; height: auto;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important; height: 18px !important; line-height: 18px !important; margin-top: -18px; display: none; position: absolute; z-index: 2;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-mixed-highlight" title="Contains Mixed Languages"></span><div class="crayon-button crayon-nums-button crayon-pressed" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code" style="display: none;"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly="" style="tab-size: 4; font-size: 12px !important; line-height: 15px !important; z-index: 0; opacity: 0; overflow: hidden;">&lt;?php 
+ echo pow(2,3);
+?&gt;
+// Kết quả: 8</textarea></div>
+			<div class="crayon-main" style="position: relative; z-index: 1; overflow: hidden;">
+				<table class="crayon-table" style="">
+					<tbody><tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5cfdb87ce38fc876453244-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cfdb87ce38fc876453244-2">2</div><div class="crayon-num" data-line="crayon-5cfdb87ce38fc876453244-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cfdb87ce38fc876453244-4">4</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5cfdb87ce38fc876453244-1"><span class="crayon-ta">&lt;?php</span><span class="crayon-h"> </span></div><div class="crayon-line crayon-striped-line" id="crayon-5cfdb87ce38fc876453244-2"><span class="crayon-h"> </span><span class="crayon-k ">echo</span><span class="crayon-h"> </span><span class="crayon-e">pow</span><span class="crayon-sy">(</span><span class="crayon-cn">2</span><span class="crayon-sy">,</span><span class="crayon-cn">3</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5cfdb87ce38fc876453244-3"><span class="crayon-ta">?&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5cfdb87ce38fc876453244-4"><span class="crayon-c">// Kết quả: 8</span></div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0009 seconds] -->
+<p></p>
+<h5><strong>d. Hàm sqrt(number)</strong></h5>
+<p>Hàm trả về giá trị căn bậc hai của một số</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5cfdb87ce3901429366945" class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important; height: auto;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important; height: 18px !important; line-height: 18px !important; margin-top: -18px; display: none; position: absolute; z-index: 2;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-mixed-highlight" title="Contains Mixed Languages"></span><div class="crayon-button crayon-nums-button crayon-pressed" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code" style="display: none;"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly="" style="tab-size: 4; font-size: 12px !important; line-height: 15px !important; z-index: 0; opacity: 0; overflow: hidden;">&lt;?php 
+ echo sqrt(4);
+?&gt;
+// Kết quả: 2</textarea></div>
+			<div class="crayon-main" style="position: relative; z-index: 1; overflow: hidden;">
+				<table class="crayon-table" style="">
+					<tbody><tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5cfdb87ce3901429366945-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cfdb87ce3901429366945-2">2</div><div class="crayon-num" data-line="crayon-5cfdb87ce3901429366945-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cfdb87ce3901429366945-4">4</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5cfdb87ce3901429366945-1"><span class="crayon-ta">&lt;?php</span><span class="crayon-h"> </span></div><div class="crayon-line crayon-striped-line" id="crayon-5cfdb87ce3901429366945-2"><span class="crayon-h"> </span><span class="crayon-k ">echo</span><span class="crayon-h"> </span><span class="crayon-e">sqrt</span><span class="crayon-sy">(</span><span class="crayon-cn">4</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5cfdb87ce3901429366945-3"><span class="crayon-ta">?&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5cfdb87ce3901429366945-4"><span class="crayon-c">// Kết quả: 2</span></div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0006 seconds] -->
+<p></p>
+<h5><strong>e. Hàm max(number)</strong></h5>
+<p>Hàm trả về giá trị lớn nhất</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5cfdb87ce3905419976115" class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important; height: auto;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important; height: 18px !important; line-height: 18px !important; margin-top: -18px; display: none; position: absolute; z-index: 2;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-mixed-highlight" title="Contains Mixed Languages"></span><div class="crayon-button crayon-nums-button crayon-pressed" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code" style="display: none;"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly="" style="tab-size: 4; font-size: 12px !important; line-height: 15px !important; z-index: 0; opacity: 0; overflow: hidden;">&lt;?php 
+ echo max(1,9,2,6,7);
+?&gt;
+// Kết quả: 9</textarea></div>
+			<div class="crayon-main" style="position: relative; z-index: 1; overflow: hidden;">
+				<table class="crayon-table" style="">
+					<tbody><tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5cfdb87ce3905419976115-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cfdb87ce3905419976115-2">2</div><div class="crayon-num" data-line="crayon-5cfdb87ce3905419976115-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cfdb87ce3905419976115-4">4</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5cfdb87ce3905419976115-1"><span class="crayon-ta">&lt;?php</span><span class="crayon-h"> </span></div><div class="crayon-line crayon-striped-line" id="crayon-5cfdb87ce3905419976115-2"><span class="crayon-h"> </span><span class="crayon-k ">echo</span><span class="crayon-h"> </span><span class="crayon-e">max</span><span class="crayon-sy">(</span><span class="crayon-cn">1</span><span class="crayon-sy">,</span><span class="crayon-cn">9</span><span class="crayon-sy">,</span><span class="crayon-cn">2</span><span class="crayon-sy">,</span><span class="crayon-cn">6</span><span class="crayon-sy">,</span><span class="crayon-cn">7</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5cfdb87ce3905419976115-3"><span class="crayon-ta">?&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5cfdb87ce3905419976115-4"><span class="crayon-c">// Kết quả: 9</span></div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0010 seconds] -->
+<p></p>
+<h5><strong>f. Hàm min(number)</strong></h5>
+<p>Hàm trả về giá trị bé nhất</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5cfdb87ce390a133590113" class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important; height: auto;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important; height: 18px !important; line-height: 18px !important; margin-top: -18px; display: none; position: absolute; z-index: 2;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-mixed-highlight" title="Contains Mixed Languages"></span><div class="crayon-button crayon-nums-button crayon-pressed" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code" style="display: none;"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly="" style="tab-size: 4; font-size: 12px !important; line-height: 15px !important; z-index: 0; opacity: 0; overflow: hidden;">&lt;?php 
+ echo max(1,9,2,6,7);
+?&gt;
+// Kết quả: 1</textarea></div>
+			<div class="crayon-main" style="position: relative; z-index: 1; overflow: hidden;">
+				<table class="crayon-table" style="">
+					<tbody><tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5cfdb87ce390a133590113-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cfdb87ce390a133590113-2">2</div><div class="crayon-num" data-line="crayon-5cfdb87ce390a133590113-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cfdb87ce390a133590113-4">4</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5cfdb87ce390a133590113-1"><span class="crayon-ta">&lt;?php</span><span class="crayon-h"> </span></div><div class="crayon-line crayon-striped-line" id="crayon-5cfdb87ce390a133590113-2"><span class="crayon-h"> </span><span class="crayon-k ">echo</span><span class="crayon-h"> </span><span class="crayon-e">max</span><span class="crayon-sy">(</span><span class="crayon-cn">1</span><span class="crayon-sy">,</span><span class="crayon-cn">9</span><span class="crayon-sy">,</span><span class="crayon-cn">2</span><span class="crayon-sy">,</span><span class="crayon-cn">6</span><span class="crayon-sy">,</span><span class="crayon-cn">7</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5cfdb87ce390a133590113-3"><span class="crayon-ta">?&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5cfdb87ce390a133590113-4"><span class="crayon-c">// Kết quả: 1</span></div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0010 seconds] -->
+<p></p>
+<h5><strong>g. Hàm rand(number)</strong></h5>
+<p>Hàm trả về một số ngẫu nhiên</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5cfdb87ce390f105533740" class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important; height: auto;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important; height: 18px !important; line-height: 18px !important; margin-top: -18px; display: none; position: absolute; z-index: 2;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-mixed-highlight" title="Contains Mixed Languages"></span><div class="crayon-button crayon-nums-button crayon-pressed" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code" style="display: none;"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly="" style="tab-size: 4; font-size: 12px !important; line-height: 15px !important; z-index: 0; opacity: 0; overflow: hidden;">&lt;?php 
+ echo rand();
+?&gt;
+// load lần 1
+// Kết quả: 11517
+// load lần 2
+// Kết quả: 28146</textarea></div>
+			<div class="crayon-main" style="position: relative; z-index: 1; overflow: hidden;">
+				<table class="crayon-table" style="">
+					<tbody><tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5cfdb87ce390f105533740-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cfdb87ce390f105533740-2">2</div><div class="crayon-num" data-line="crayon-5cfdb87ce390f105533740-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cfdb87ce390f105533740-4">4</div><div class="crayon-num" data-line="crayon-5cfdb87ce390f105533740-5">5</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cfdb87ce390f105533740-6">6</div><div class="crayon-num" data-line="crayon-5cfdb87ce390f105533740-7">7</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5cfdb87ce390f105533740-1"><span class="crayon-ta">&lt;?php</span><span class="crayon-h"> </span></div><div class="crayon-line crayon-striped-line" id="crayon-5cfdb87ce390f105533740-2"><span class="crayon-h"> </span><span class="crayon-k ">echo</span><span class="crayon-h"> </span><span class="crayon-e">rand</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5cfdb87ce390f105533740-3"><span class="crayon-ta">?&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5cfdb87ce390f105533740-4"><span class="crayon-c">// load lần 1</span></div><div class="crayon-line" id="crayon-5cfdb87ce390f105533740-5"><span class="crayon-c">// Kết quả: 11517</span></div><div class="crayon-line crayon-striped-line" id="crayon-5cfdb87ce390f105533740-6"><span class="crayon-c">// load lần 2</span></div><div class="crayon-line" id="crayon-5cfdb87ce390f105533740-7"><span class="crayon-c">// Kết quả: 28146</span></div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0006 seconds] -->
+<p></p>
+<h4><strong>2. Lời kết</strong></h4>
+<p>Qua bài viết này mong là các bạn đã biết được thêm một số hàm toán học cũng như cách sử dụng nó. Hẹn gặp lại các bạn ở những bài học tiếp theo. Xem thêm: <a href="https://hocthietkeweb.net.vn/khoa-hoc-lap-trinh-web-php-va-mysql.html">học PHP cơ bản</a> và <a href="https://hocthietkeweb.net.vn/khoa-hoc-lap-trinh-web-php-va-mysql.html">học PHP nâng cao</a></p>
+<p>Các bạn có thể xem thêm bài học tiếp theo tại đây:</p>
+<ul>
+<li><a href="https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-2.html" target="_blank" rel="noopener noreferrer">Các hàm toán học trong PHP (P.2)</a></li>
+</ul>
+<p style="text-align: right;"><strong>Tác giả:</strong> Đinh sáng Vietpro</p>
+
+        </div>
+
+
+
+
+
+        <footer>
+
+            
+            
+
+
+            <div class="td-post-source-tags">
+
+                
+                
+            </div>
+
+
+
+            <div class="td-post-sharing-bottom"><div class="td-post-sharing-classic"><iframe frameborder="0" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/like.html" style="border:none; overflow:hidden; width:105px; height:21px; background-color:transparent;"></iframe></div><div id="td_social_sharing_article_bottom" class="td-post-sharing td-ps-bg td-ps-notext td-post-sharing-style1 "><div class="td-post-sharing-visible"><a class="td-social-sharing-button td-social-sharing-button-js td-social-network td-social-facebook" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fvietpro.net.vn%2Fcac-ham-toan-hoc-trong-php-p-1.html" style="transition: opacity 0.2s ease 0s; opacity: 1;">
+
+                                        <div class="td-social-but-icon"><i class="td-icon-facebook"></i></div>
+
+                                        <div class="td-social-but-text">Facebook</div>
+
+                                    </a><a class="td-social-sharing-button td-social-sharing-button-js td-social-network td-social-twitter" href="https://twitter.com/intent/tweet?text=C%C3%A1c+h%C3%A0m+to%C3%A1n+h%E1%BB%8Dc+trong+PHP+%28P.1%29&amp;url=https%3A%2F%2Fvietpro.net.vn%2Fcac-ham-toan-hoc-trong-php-p-1.html&amp;via=Vietpro+Academy+-+H%E1%BB%8Dc+vi%E1%BB%87n+C%C3%B4ng+ngh%E1%BB%87+Vietpro" style="transition: opacity 0.2s ease 0s; opacity: 1;">
+
+                                        <div class="td-social-but-icon"><i class="td-icon-twitter"></i></div>
+
+                                        <div class="td-social-but-text">Twitter</div>
+
+                                    </a><a class="td-social-sharing-button td-social-sharing-button-js td-social-network td-social-googleplus" href="https://plus.google.com/share?url=https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-1.html" style="transition: opacity 0.2s ease 0s; opacity: 1;">
+
+                                        <div class="td-social-but-icon"><i class="td-icon-googleplus"></i></div>
+
+                                        <div class="td-social-but-text">Google+</div>
+
+                                    </a><a class="td-social-sharing-button td-social-sharing-button-js td-social-network td-social-pinterest" href="https://pinterest.com/pin/create/button/?url=https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-1.html&amp;media=https://vietpro.net.vn/wp-content/uploads/2019/05/php-300x224.png&amp;description=C%C3%A1c+h%C3%A0m+to%C3%A1n+h%E1%BB%8Dc+trong+PHP+%28P.1%29" style="transition: opacity 0.2s ease 0s; opacity: 1;">
+
+                                        <div class="td-social-but-icon"><i class="td-icon-pinterest"></i></div>
+
+                                        <div class="td-social-but-text">Pinterest</div>
+
+                                    </a><a class="td-social-sharing-button td-social-sharing-button-js td-social-network td-social-whatsapp" href="whatsapp://send?text=C%C3%A1c+h%C3%A0m+to%C3%A1n+h%E1%BB%8Dc+trong+PHP+%28P.1%29 %0A%0A https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-1.html">
+
+                                        <div class="td-social-but-icon"><i class="td-icon-whatsapp"></i></div>
+
+                                        <div class="td-social-but-text">WhatsApp</div>
+
+                                    </a></div><div class="td-social-sharing-hidden" style="display: none;"><ul class="td-pulldown-filter-list"></ul><a class="td-social-sharing-button td-social-handler td-social-expand-tabs" href="https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-1.html#" data-block-uid="td_social_sharing_article_bottom">
+
+                                    <div class="td-social-but-icon"><i class="td-icon-plus td-social-expand-tabs-icon"></i></div>
+
+                                </a></div></div></div>
+            <div class="td-block-row td-post-next-prev"><div class="td-block-span6 td-post-prev-post"><div class="td-post-next-prev-content"><span>Bài trước</span><a href="https://vietpro.net.vn/cac-ham-ve-thoi-gian-trong-php-2.html">Các hàm về thời gian trong PHP</a></div></div><div class="td-next-prev-separator"></div><div class="td-block-span6 td-post-next-post"><div class="td-post-next-prev-content"><span>Bài tiếp theo</span><a href="https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-2.html">Các hàm toán học trong PHP (P.2)</a></div></div></div>
+            <div class="author-box-wrap"><a href="https://vietpro.net.vn/author/trang"><img alt="" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/732406476deee3af1bf00e68eb04ebb9.png" srcset="https://secure.gravatar.com/avatar/732406476deee3af1bf00e68eb04ebb9?s=192&amp;d=mm&amp;r=g 2x" class="avatar avatar-96 photo" height="96" width="96"></a><div class="desc"><div class="td-author-name vcard author"><span class="fn"><a href="https://vietpro.net.vn/author/trang">trang</a></span></div><div class="td-author-description"></div><div class="td-author-social"></div><div class="clearfix"></div></div></div>
+            <span class="td-page-meta" itemprop="author" itemscope="" itemtype="https://schema.org/Person"><meta itemprop="name" content="trang"></span><meta itemprop="datePublished" content="2019-05-13T10:23:19+00:00"><meta itemprop="dateModified" content="2019-05-13T10:23:19+00:00"><meta itemscope="" itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-1.html"><span class="td-page-meta" itemprop="publisher" itemscope="" itemtype="https://schema.org/Organization"><span class="td-page-meta" itemprop="logo" itemscope="" itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="http://htkw.temit.vn/wp-content/uploads/2019/05/logo-1-2.png"></span><meta itemprop="name" content="Vietpro Academy - Học viện Công nghệ Vietpro"></span><meta itemprop="headline " content="Các hàm toán học trong PHP (P.1)"><span class="td-page-meta" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="https://vietpro.net.vn/wp-content/uploads/2019/05/php-300x224.png"><meta itemprop="width" content="300"><meta itemprop="height" content="224"></span>
+        </footer>
+
+
+
+    </article> <!-- /.post -->
+
+
+
+    <div class="td_block_wrap td_block_related_posts td_uid_3_5cfdb87d3ddbb_rand td_with_ajax_pagination td-pb-border-top td_block_template_1" data-td-block-uid="td_uid_3_5cfdb87d3ddbb"><script>var block_td_uid_3_5cfdb87d3ddbb = new tdBlock();
+block_td_uid_3_5cfdb87d3ddbb.id = "td_uid_3_5cfdb87d3ddbb";
+block_td_uid_3_5cfdb87d3ddbb.atts = '{"limit":3,"ajax_pagination":"next_prev","live_filter":"cur_post_same_categories","td_ajax_filter_type":"td_custom_related","class":"td_uid_3_5cfdb87d3ddbb_rand","td_column_number":3,"live_filter_cur_post_id":969,"live_filter_cur_post_author":"11","block_template_id":"","header_color":"","ajax_pagination_infinite_stop":"","offset":"","td_ajax_preloading":"","td_filter_default_txt":"","td_ajax_filter_ids":"","el_class":"","color_preset":"","border_top":"","css":"","tdc_css":"","tdc_css_class":"td_uid_3_5cfdb87d3ddbb_rand","tdc_css_class_style":"td_uid_3_5cfdb87d3ddbb_rand_style"}';
+block_td_uid_3_5cfdb87d3ddbb.td_column_number = "3";
+block_td_uid_3_5cfdb87d3ddbb.block_type = "td_block_related_posts";
+block_td_uid_3_5cfdb87d3ddbb.post_count = "3";
+block_td_uid_3_5cfdb87d3ddbb.found_posts = "8";
+block_td_uid_3_5cfdb87d3ddbb.header_color = "";
+block_td_uid_3_5cfdb87d3ddbb.ajax_pagination_infinite_stop = "";
+block_td_uid_3_5cfdb87d3ddbb.max_num_pages = "3";
+tdBlocksArray.push(block_td_uid_3_5cfdb87d3ddbb);
+</script><h4 class="td-related-title td-block-title"><a id="td_uid_4_5cfdb87d411a2" class="td-related-left td-cur-simple-item" data-td_filter_value="" data-td_block_id="td_uid_3_5cfdb87d3ddbb" href="https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-1.html#">BÀI VIẾT LIÊN QUAN</a><a id="td_uid_5_5cfdb87d411e8" class="td-related-right" data-td_filter_value="td_related_more_from_author" data-td_block_id="td_uid_3_5cfdb87d3ddbb" href="https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-1.html#">XEM THÊM</a></h4><div id="td_uid_3_5cfdb87d3ddbb" class="td_block_inner">
+
+	<div class="td-related-row">
+
+	<div class="td-related-span4">
+
+
+
+        <div class="td_module_related_posts td-animation-stack td_mod_related_posts">
+
+            <div class="td-module-image">
+
+                <div class="td-module-thumb"><a href="https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-2.html" rel="bookmark" class="td-image-wrap" title="Các hàm toán học trong PHP (P.2)"><img class="entry-thumb" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/php-300x224.png" alt="" title="Các hàm toán học trong PHP (P.2)" data-type="image_tag" data-img-url="https://vietpro.net.vn/wp-content/uploads/2019/05/php-300x224.png" width="201" height="150"></a></div>
+                
+            </div>
+
+            <div class="item-details">
+
+                <h3 class="entry-title td-module-title"><a href="https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-2.html" rel="bookmark" title="Các hàm toán học trong PHP (P.2)">Các hàm toán học trong PHP (P.2)</a></h3>
+            </div>
+
+        </div>
+
+        
+	</div> <!-- ./td-related-span4 -->
+
+	<div class="td-related-span4">
+
+
+
+        <div class="td_module_related_posts td-animation-stack td_mod_related_posts">
+
+            <div class="td-module-image">
+
+                <div class="td-module-thumb"><a href="https://vietpro.net.vn/cac-ham-ve-thoi-gian-trong-php-2.html" rel="bookmark" class="td-image-wrap" title="Các hàm về thời gian trong PHP"><img class="entry-thumb" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/td_218x150.png" alt="" data-type="image_tag" data-img-url="https://vietpro.net.vn/wp-content/plugins/td-composer/legacy/Newspaper/assets/images/no-thumb/td_218x150.png" width="218" height="150"></a></div>
+                
+            </div>
+
+            <div class="item-details">
+
+                <h3 class="entry-title td-module-title"><a href="https://vietpro.net.vn/cac-ham-ve-thoi-gian-trong-php-2.html" rel="bookmark" title="Các hàm về thời gian trong PHP">Các hàm về thời gian trong PHP</a></h3>
+            </div>
+
+        </div>
+
+        
+	</div> <!-- ./td-related-span4 -->
+
+	<div class="td-related-span4">
+
+
+
+        <div class="td_module_related_posts td-animation-stack td_mod_related_posts">
+
+            <div class="td-module-image">
+
+                <div class="td-module-thumb"><a href="https://vietpro.net.vn/cac-ham-thao-tac-voi-mang-trong-php-p-3.html" rel="bookmark" class="td-image-wrap" title="Các. hàm thao tác với Mảng trong PHP (P.3)"><img class="entry-thumb" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/php-300x224.png" alt="" title="Các. hàm thao tác với Mảng trong PHP (P.3)" data-type="image_tag" data-img-url="https://vietpro.net.vn/wp-content/uploads/2019/05/php-300x224.png" width="201" height="150"></a></div>
+                
+            </div>
+
+            <div class="item-details">
+
+                <h3 class="entry-title td-module-title"><a href="https://vietpro.net.vn/cac-ham-thao-tac-voi-mang-trong-php-p-3.html" rel="bookmark" title="Các. hàm thao tác với Mảng trong PHP (P.3)">Các. hàm thao tác với Mảng trong PHP (P.3)</a></h3>
+            </div>
+
+        </div>
+
+        
+	</div> <!-- ./td-related-span4 --></div><!--./row-fluid--></div><div class="td-next-prev-wrap"><a href="https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-1.html#" class="td-ajax-prev-page ajax-page-disabled" id="prev-page-td_uid_3_5cfdb87d3ddbb" data-td_block_id="td_uid_3_5cfdb87d3ddbb"><i class="td-icon-font td-icon-menu-left"></i></a><a href="https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-1.html#" class="td-ajax-next-page" id="next-page-td_uid_3_5cfdb87d3ddbb" data-td_block_id="td_uid_3_5cfdb87d3ddbb"><i class="td-icon-font td-icon-menu-right"></i></a></div></div> <!-- ./block -->
+
+
+
+	<div class="comments" id="comments">
+
+        	<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">BÌNH LUẬN <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://vietpro.net.vn/cac-ham-toan-hoc-trong-php-p-1.html#respond" style="display:none;">Hủy trả lời</a></small></h3>			<form action="https://vietpro.net.vn/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate="">
+				<div class="clearfix"></div>
+
+				<div class="comment-form-input-wrap td-form-comment">
+
+					<textarea placeholder="Bình luận:" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
+
+					<div class="td-warning-comment">Vui lòng nhập bình luận của bạn</div>
+
+				</div>
+
+		        <div class="comment-form-input-wrap td-form-author">
+
+			            <input class="" id="author" name="author" placeholder="Tên:*" type="text" value="" size="30" aria-required="true">
+
+			            <div class="td-warning-author">Vui lòng nhập tên của bạn ở đây</div>
+
+			         </div>
+<div class="comment-form-input-wrap td-form-email">
+
+			            <input class="" id="email" name="email" placeholder="Email:*" type="text" value="" size="30" aria-required="true">
+
+			            <div class="td-warning-email-error">Bạn đã nhập một địa chỉ email không chính xác!</div>
+
+			            <div class="td-warning-email">Vui lòng nhập địa chỉ email của bạn ở đây</div>
+
+			         </div>
+<div class="comment-form-input-wrap td-form-url">
+
+			            <input class="" id="url" name="url" placeholder="Website:" type="text" value="" size="30">
+
+                     </div>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"><label for="wp-comment-cookies-consent">Lưu tên, email và trang web của tôi trong trình duyệt này cho lần tiếp theo tôi nhận xét.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Đăng"> <input type="hidden" name="comment_post_ID" value="969" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p>			</form>
+			</div><!-- #respond -->
+	
+    </div> <!-- /.content -->
+
+
+                                </div>
+
+                            </div>
+
+                            <div class="td-pb-span4 td-main-sidebar" role="complementary">
+
+                                <div class="td-ss-main-sidebar">
+
+                                    <aside class="td_block_template_1 widget widget_text"><h4 class="block-title"><span>GROUP FACEBOOK HỌC LẬP TRÌNH MIỄN PHÍ</span></h4>			<div class="textwidget"><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/xd_arbiter.html" style="border: none;"></iframe></div><div></div></div></div>
+<p><script async="" defer="" crossorigin="anonymous" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/sdk.js(1).tải xuống"></script></p>
+<div class="fb-group fb_iframe_widget" data-href="https://www.facebook.com/groups/congdonglaptrinhwebvamobile" data-width="280" data-show-social-context="true" data-show-metadata="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=&amp;container_width=324&amp;href=https%3A%2F%2Fwww.facebook.com%2Fgroups%2Fcongdonglaptrinhwebvamobile&amp;locale=vi_VN&amp;sdk=joey&amp;show_metadata=false&amp;show_social_context=true&amp;width=280"><span style="vertical-align: top; width: 0px; height: 0px; overflow: hidden;"><iframe name="f38faebab6a5e88" width="280px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" title="fb:group Facebook Social Plugin" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/group.html" style="border: none; visibility: visible; width: 0px; height: 0px;"></iframe></span></div>
+</div>
+		</aside><aside class="td_block_template_1 widget widget_text"><h4 class="block-title"><span>Vietpro Trên Youtube</span></h4>			<div class="textwidget"><p><a href="https://www.youtube.com/channel/UCLjRjXUSy3g9iKRWTyw75Nw"><img src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/Giang-Vien-Khoa-Hoc-Lap-Trinh-Web-PHP2.jpg" width="100%"></a><br>
+<script src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/platform.js.tải xuống" gapi_processed="true"></script></p>
+<p><script>
+  function onYtEvent(payload) {
+    if (payload.eventType == 'subscribe') {
+      // Add code to handle subscribe event.
+    } else if (payload.eventType == 'unsubscribe') {
+      // Add code to handle unsubscribe event.
+    }
+    if (window.console) { // for debugging only
+      window.console.log('YT event: ', payload);
+    }
+  }
+</script></p>
+<div id="___ytsubscribe_1" style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 310px; height: 48px;"><iframe ng-non-bindable="" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 310px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 174.375px;" tabindex="0" vspace="0" width="100%" id="I0_1560131862982" name="I0_1560131862982" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/subscribe_embed(1).html" data-gapiattached="true"></iframe></div>
+</div>
+		</aside><aside class="td_block_template_1 widget widget_text"><h4 class="block-title"><span>Vietpro Trên Facebook</span></h4>			<div class="textwidget"><p><iframe src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/page.html" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></p>
+</div>
+		</aside>
+                                </div>
+
+                            </div>
+
+                        
+            </div> <!-- /.td-pb-row -->
+
+    </div> <!-- /.td-container -->
+
+</div> <!-- /.td-main-content-wrap -->
+
+
+
+<!-- Instagram -->
+
+
+
+
+
+
+
+
+
+
+
+	<!-- Footer -->
+
+	<div class="td-footer-wrapper td-footer-container td-container-wrap ">
+
+    <div class="td-container">
+
+
+
+	    <div class="td-pb-row">
+
+		    <div class="td-pb-span12">
+
+			    
+		    </div>
+
+	    </div>
+
+
+
+        <div class="td-pb-row">
+
+
+
+            <div class="td-pb-span4">
+
+                <div class="td_block_wrap td_block_7 td_uid_7_5cfdb87d45b9a_rand td-pb-border-top td_block_template_1 td-column-1 td_block_padding" data-td-block-uid="td_uid_7_5cfdb87d45b9a"><script>var block_td_uid_7_5cfdb87d45b9a = new tdBlock();
+block_td_uid_7_5cfdb87d45b9a.id = "td_uid_7_5cfdb87d45b9a";
+block_td_uid_7_5cfdb87d45b9a.atts = '{"custom_title":"B\u00c0I VI\u1ebeT TI\u00caU BI\u1ec2U","limit":3,"sort":"featured","separator":"","custom_url":"","block_template_id":"","m6_tl":"","post_ids":"","category_id":"","category_ids":"","tag_slug":"","autors_id":"","installed_post_types":"","offset":"","show_modified_date":"","el_class":"","td_ajax_filter_type":"","td_ajax_filter_ids":"","td_filter_default_txt":"All","td_ajax_preloading":"","f_header_font_header":"","f_header_font_title":"Block header","f_header_font_settings":"","f_header_font_family":"","f_header_font_size":"","f_header_font_line_height":"","f_header_font_style":"","f_header_font_weight":"","f_header_font_transform":"","f_header_font_spacing":"","f_header_":"","f_ajax_font_title":"Ajax categories","f_ajax_font_settings":"","f_ajax_font_family":"","f_ajax_font_size":"","f_ajax_font_line_height":"","f_ajax_font_style":"","f_ajax_font_weight":"","f_ajax_font_transform":"","f_ajax_font_spacing":"","f_ajax_":"","f_more_font_title":"Load more button","f_more_font_settings":"","f_more_font_family":"","f_more_font_size":"","f_more_font_line_height":"","f_more_font_style":"","f_more_font_weight":"","f_more_font_transform":"","f_more_font_spacing":"","f_more_":"","m6f_title_font_header":"","m6f_title_font_title":"Article title","m6f_title_font_settings":"","m6f_title_font_family":"","m6f_title_font_size":"","m6f_title_font_line_height":"","m6f_title_font_style":"","m6f_title_font_weight":"","m6f_title_font_transform":"","m6f_title_font_spacing":"","m6f_title_":"","m6f_cat_font_title":"Article category tag","m6f_cat_font_settings":"","m6f_cat_font_family":"","m6f_cat_font_size":"","m6f_cat_font_line_height":"","m6f_cat_font_style":"","m6f_cat_font_weight":"","m6f_cat_font_transform":"","m6f_cat_font_spacing":"","m6f_cat_":"","m6f_meta_font_title":"Article meta info","m6f_meta_font_settings":"","m6f_meta_font_family":"","m6f_meta_font_size":"","m6f_meta_font_line_height":"","m6f_meta_font_style":"","m6f_meta_font_weight":"","m6f_meta_font_transform":"","m6f_meta_font_spacing":"","m6f_meta_":"","ajax_pagination":"","ajax_pagination_infinite_stop":"","css":"","tdc_css":"","td_column_number":1,"header_color":"","color_preset":"","border_top":"","class":"td_uid_7_5cfdb87d45b9a_rand","tdc_css_class":"td_uid_7_5cfdb87d45b9a_rand","tdc_css_class_style":"td_uid_7_5cfdb87d45b9a_rand_style"}';
+block_td_uid_7_5cfdb87d45b9a.td_column_number = "1";
+block_td_uid_7_5cfdb87d45b9a.block_type = "td_block_7";
+block_td_uid_7_5cfdb87d45b9a.post_count = "3";
+block_td_uid_7_5cfdb87d45b9a.found_posts = "610";
+block_td_uid_7_5cfdb87d45b9a.header_color = "";
+block_td_uid_7_5cfdb87d45b9a.ajax_pagination_infinite_stop = "";
+block_td_uid_7_5cfdb87d45b9a.max_num_pages = "204";
+tdBlocksArray.push(block_td_uid_7_5cfdb87d45b9a);
+</script><div class="td-block-title-wrap"><h4 class="block-title td-block-title"><span class="td-pulldown-size">BÀI VIẾT TIÊU BIỂU</span></h4></div><div id="td_uid_7_5cfdb87d45b9a" class="td_block_inner">
+
+	<div class="td-block-span12">
+
+
+
+        <div class="td_module_6 td_module_wrap td-animation-stack">
+
+
+
+        <div class="td-module-thumb"><a href="https://vietpro.net.vn/100-free-xay-dung-game-mario-tren-javascript-cocos.html" rel="bookmark" class="td-image-wrap" title="[ 100% FREE ] Xây Dựng Game Mario Trên JAVASCRIPT – COCOS"><img class="entry-thumb" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/screen-2-100x70.png" alt="" title="[ 100% FREE ] Xây Dựng Game Mario Trên JAVASCRIPT – COCOS" data-type="image_tag" data-img-url="https://vietpro.net.vn/wp-content/uploads/2019/05/screen-2-100x70.png" data-img-retina-url="https://vietpro.net.vn/wp-content/uploads/2019/05/screen-2-200x140.png" width="100" height="70"></a></div>
+
+
+        <div class="item-details">
+
+            <h3 class="entry-title td-module-title"><a href="https://vietpro.net.vn/100-free-xay-dung-game-mario-tren-javascript-cocos.html" rel="bookmark" title="[ 100% FREE ] Xây Dựng Game Mario Trên JAVASCRIPT – COCOS">[ 100% FREE ] Xây Dựng Game Mario Trên JAVASCRIPT –...</a></h3>
+            <div class="td-module-meta-info">
+
+                
+                
+                
+                
+            </div>
+
+        </div>
+
+
+
+        </div>
+
+
+
+        
+	</div> <!-- ./td-block-span12 -->
+
+	<div class="td-block-span12">
+
+
+
+        <div class="td_module_6 td_module_wrap td-animation-stack">
+
+
+
+        <div class="td-module-thumb"><a href="https://vietpro.net.vn/100-free-web-developer-fronend-html-5-css3-bootstrap4-ver-4-0.html" rel="bookmark" class="td-image-wrap" title="[ 100% FREE ] Web Developer FronEnd: HTML 5 – CSS3 – Bootstrap4 (VER 4.0)"><img class="entry-thumb" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/Project_Bootstrap_Free_2019-100x70.png" alt="" title="[ 100% FREE ] Web Developer FronEnd: HTML 5 – CSS3 – Bootstrap4 (VER 4.0)" data-type="image_tag" data-img-url="https://vietpro.net.vn/wp-content/uploads/2019/05/Project_Bootstrap_Free_2019-100x70.png" data-img-retina-url="https://vietpro.net.vn/wp-content/uploads/2019/05/Project_Bootstrap_Free_2019-200x140.png" width="100" height="70"></a></div>
+
+
+        <div class="item-details">
+
+            <h3 class="entry-title td-module-title"><a href="https://vietpro.net.vn/100-free-web-developer-fronend-html-5-css3-bootstrap4-ver-4-0.html" rel="bookmark" title="[ 100% FREE ] Web Developer FronEnd: HTML 5 – CSS3 – Bootstrap4 (VER 4.0)">[ 100% FREE ] Web Developer FronEnd: HTML 5 – CSS3...</a></h3>
+            <div class="td-module-meta-info">
+
+                
+                
+                
+                
+            </div>
+
+        </div>
+
+
+
+        </div>
+
+
+
+        
+	</div> <!-- ./td-block-span12 -->
+
+	<div class="td-block-span12">
+
+
+
+        <div class="td_module_6 td_module_wrap td-animation-stack">
+
+
+
+        <div class="td-module-thumb"><a href="https://vietpro.net.vn/100-free-web-developer-php7-backend-ver-4-0.html" rel="bookmark" class="td-image-wrap" title="[ 100% FREE ] Web Developer – PHP7 Backend (VER 4.0)"><img class="entry-thumb" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/PHP7_Free_2019-100x70.png" alt="" title="[ 100% FREE ] Web Developer – PHP7 Backend (VER 4.0)" data-type="image_tag" data-img-url="https://vietpro.net.vn/wp-content/uploads/2019/05/PHP7_Free_2019-100x70.png" data-img-retina-url="https://vietpro.net.vn/wp-content/uploads/2019/05/PHP7_Free_2019-200x140.png" width="100" height="70"></a></div>
+
+
+        <div class="item-details">
+
+            <h3 class="entry-title td-module-title"><a href="https://vietpro.net.vn/100-free-web-developer-php7-backend-ver-4-0.html" rel="bookmark" title="[ 100% FREE ] Web Developer – PHP7 Backend (VER 4.0)">[ 100% FREE ] Web Developer – PHP7 Backend (VER 4.0)</a></h3>
+            <div class="td-module-meta-info">
+
+                
+                
+                
+                
+            </div>
+
+        </div>
+
+
+
+        </div>
+
+
+
+        
+	</div> <!-- ./td-block-span12 --></div></div> <!-- ./block -->
+                
+            </div>
+
+
+
+            <div class="td-pb-span4">
+
+                <div class="td_block_wrap td_block_7 td_uid_8_5cfdb87d4bbc6_rand td-pb-border-top td_block_template_1 td-column-1 td_block_padding" data-td-block-uid="td_uid_8_5cfdb87d4bbc6"><script>var block_td_uid_8_5cfdb87d4bbc6 = new tdBlock();
+block_td_uid_8_5cfdb87d4bbc6.id = "td_uid_8_5cfdb87d4bbc6";
+block_td_uid_8_5cfdb87d4bbc6.atts = '{"custom_title":"B\u00c0I VI\u1ebeT PH\u1ed4 BI\u1ebeN","limit":3,"sort":"popular","separator":"","custom_url":"","block_template_id":"","m6_tl":"","post_ids":"","category_id":"","category_ids":"","tag_slug":"","autors_id":"","installed_post_types":"","offset":"","show_modified_date":"","el_class":"","td_ajax_filter_type":"","td_ajax_filter_ids":"","td_filter_default_txt":"All","td_ajax_preloading":"","f_header_font_header":"","f_header_font_title":"Block header","f_header_font_settings":"","f_header_font_family":"","f_header_font_size":"","f_header_font_line_height":"","f_header_font_style":"","f_header_font_weight":"","f_header_font_transform":"","f_header_font_spacing":"","f_header_":"","f_ajax_font_title":"Ajax categories","f_ajax_font_settings":"","f_ajax_font_family":"","f_ajax_font_size":"","f_ajax_font_line_height":"","f_ajax_font_style":"","f_ajax_font_weight":"","f_ajax_font_transform":"","f_ajax_font_spacing":"","f_ajax_":"","f_more_font_title":"Load more button","f_more_font_settings":"","f_more_font_family":"","f_more_font_size":"","f_more_font_line_height":"","f_more_font_style":"","f_more_font_weight":"","f_more_font_transform":"","f_more_font_spacing":"","f_more_":"","m6f_title_font_header":"","m6f_title_font_title":"Article title","m6f_title_font_settings":"","m6f_title_font_family":"","m6f_title_font_size":"","m6f_title_font_line_height":"","m6f_title_font_style":"","m6f_title_font_weight":"","m6f_title_font_transform":"","m6f_title_font_spacing":"","m6f_title_":"","m6f_cat_font_title":"Article category tag","m6f_cat_font_settings":"","m6f_cat_font_family":"","m6f_cat_font_size":"","m6f_cat_font_line_height":"","m6f_cat_font_style":"","m6f_cat_font_weight":"","m6f_cat_font_transform":"","m6f_cat_font_spacing":"","m6f_cat_":"","m6f_meta_font_title":"Article meta info","m6f_meta_font_settings":"","m6f_meta_font_family":"","m6f_meta_font_size":"","m6f_meta_font_line_height":"","m6f_meta_font_style":"","m6f_meta_font_weight":"","m6f_meta_font_transform":"","m6f_meta_font_spacing":"","m6f_meta_":"","ajax_pagination":"","ajax_pagination_infinite_stop":"","css":"","tdc_css":"","td_column_number":1,"header_color":"","color_preset":"","border_top":"","class":"td_uid_8_5cfdb87d4bbc6_rand","tdc_css_class":"td_uid_8_5cfdb87d4bbc6_rand","tdc_css_class_style":"td_uid_8_5cfdb87d4bbc6_rand_style"}';
+block_td_uid_8_5cfdb87d4bbc6.td_column_number = "1";
+block_td_uid_8_5cfdb87d4bbc6.block_type = "td_block_7";
+block_td_uid_8_5cfdb87d4bbc6.post_count = "3";
+block_td_uid_8_5cfdb87d4bbc6.found_posts = "610";
+block_td_uid_8_5cfdb87d4bbc6.header_color = "";
+block_td_uid_8_5cfdb87d4bbc6.ajax_pagination_infinite_stop = "";
+block_td_uid_8_5cfdb87d4bbc6.max_num_pages = "204";
+tdBlocksArray.push(block_td_uid_8_5cfdb87d4bbc6);
+</script><div class="td-block-title-wrap"><h4 class="block-title td-block-title"><span class="td-pulldown-size">BÀI VIẾT PHỔ BIẾN</span></h4></div><div id="td_uid_8_5cfdb87d4bbc6" class="td_block_inner">
+
+	<div class="td-block-span12">
+
+
+
+        <div class="td_module_6 td_module_wrap td-animation-stack">
+
+
+
+        <div class="td-module-thumb"><a href="https://vietpro.net.vn/java-nang-cao-bai-18-nap-chong-trong-java.html" rel="bookmark" class="td-image-wrap" title="Java nâng cao bài 18: Nạp chồng trong Java"><img class="entry-thumb" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/td_100x70.png" alt="" data-type="image_tag" data-img-url="https://vietpro.net.vn/wp-content/plugins/td-composer/legacy/Newspaper/assets/images/no-thumb/td_100x70.png" width="100" height="70"></a></div>
+
+
+        <div class="item-details">
+
+            <h3 class="entry-title td-module-title"><a href="https://vietpro.net.vn/java-nang-cao-bai-18-nap-chong-trong-java.html" rel="bookmark" title="Java nâng cao bài 18: Nạp chồng trong Java">Java nâng cao bài 18: Nạp chồng trong Java</a></h3>
+            <div class="td-module-meta-info">
+
+                
+                
+                
+                
+            </div>
+
+        </div>
+
+
+
+        </div>
+
+
+
+        
+	</div> <!-- ./td-block-span12 -->
+
+	<div class="td-block-span12">
+
+
+
+        <div class="td_module_6 td_module_wrap td-animation-stack">
+
+
+
+        <div class="td-module-thumb"><a href="https://vietpro.net.vn/100-free-web-developer-fronend-html-5-css3-bootstrap4-ver-4-0.html" rel="bookmark" class="td-image-wrap" title="[ 100% FREE ] Web Developer FronEnd: HTML 5 – CSS3 – Bootstrap4 (VER 4.0)"><img class="entry-thumb" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/Project_Bootstrap_Free_2019-100x70.png" alt="" title="[ 100% FREE ] Web Developer FronEnd: HTML 5 – CSS3 – Bootstrap4 (VER 4.0)" data-type="image_tag" data-img-url="https://vietpro.net.vn/wp-content/uploads/2019/05/Project_Bootstrap_Free_2019-100x70.png" data-img-retina-url="https://vietpro.net.vn/wp-content/uploads/2019/05/Project_Bootstrap_Free_2019-200x140.png" width="100" height="70"></a></div>
+
+
+        <div class="item-details">
+
+            <h3 class="entry-title td-module-title"><a href="https://vietpro.net.vn/100-free-web-developer-fronend-html-5-css3-bootstrap4-ver-4-0.html" rel="bookmark" title="[ 100% FREE ] Web Developer FronEnd: HTML 5 – CSS3 – Bootstrap4 (VER 4.0)">[ 100% FREE ] Web Developer FronEnd: HTML 5 – CSS3...</a></h3>
+            <div class="td-module-meta-info">
+
+                
+                
+                
+                
+            </div>
+
+        </div>
+
+
+
+        </div>
+
+
+
+        
+	</div> <!-- ./td-block-span12 -->
+
+	<div class="td-block-span12">
+
+
+
+        <div class="td_module_6 td_module_wrap td-animation-stack">
+
+
+
+        <div class="td-module-thumb"><a href="https://vietpro.net.vn/100-free-web-developer-php7-backend-ver-4-0.html" rel="bookmark" class="td-image-wrap" title="[ 100% FREE ] Web Developer – PHP7 Backend (VER 4.0)"><img class="entry-thumb" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/PHP7_Free_2019-100x70.png" alt="" title="[ 100% FREE ] Web Developer – PHP7 Backend (VER 4.0)" data-type="image_tag" data-img-url="https://vietpro.net.vn/wp-content/uploads/2019/05/PHP7_Free_2019-100x70.png" data-img-retina-url="https://vietpro.net.vn/wp-content/uploads/2019/05/PHP7_Free_2019-200x140.png" width="100" height="70"></a></div>
+
+
+        <div class="item-details">
+
+            <h3 class="entry-title td-module-title"><a href="https://vietpro.net.vn/100-free-web-developer-php7-backend-ver-4-0.html" rel="bookmark" title="[ 100% FREE ] Web Developer – PHP7 Backend (VER 4.0)">[ 100% FREE ] Web Developer – PHP7 Backend (VER 4.0)</a></h3>
+            <div class="td-module-meta-info">
+
+                
+                
+                
+                
+            </div>
+
+        </div>
+
+
+
+        </div>
+
+
+
+        
+	</div> <!-- ./td-block-span12 --></div></div> <!-- ./block -->
+                
+            </div>
+
+
+
+            <div class="td-pb-span4">
+
+                <div class="td_block_wrap td_block_popular_categories td_uid_9_5cfdb87d52114_rand widget widget_categories td-pb-border-top td_block_template_1" data-td-block-uid="td_uid_9_5cfdb87d52114"><div class="td-block-title-wrap"><h4 class="block-title td-block-title"><span class="td-pulldown-size">MỤC XEM NHIỀU</span></h4></div><ul class="td-pb-padding-side"><li><a href="https://vietpro.net.vn/category/goc-tuyen-dung/tuyen-dung"><span class="td-cat-name">Tuyển dụng</span><span class="td-cat-no">40</span></a></li><li><a href="https://vietpro.net.vn/category/co-so-du-lieu/mysql"><span class="td-cat-name">MySQL</span><span class="td-cat-no">39</span></a></li><li><a href="https://vietpro.net.vn/category/lap-trinh-web-php/video-bai-giang-lap-trinh-web-php/video-hoc-javascript-co-ban"><span class="td-cat-name">Video Học Javascript cơ bản</span><span class="td-cat-no">36</span></a></li><li><a href="https://vietpro.net.vn/category/lap-trinh-web-php/htmlcss/hoc-bootstrap"><span class="td-cat-name">Học Bootstrap</span><span class="td-cat-no">29</span></a></li><li><a href="https://vietpro.net.vn/category/lap-trinh-web-php/lap-trinh-php-lap-trinh-web-php/hoc-laravel/noi-dung-laravel-5-7"><span class="td-cat-name">Nội Dung Laravel 5.7</span><span class="td-cat-no">29</span></a></li><li><a href="https://vietpro.net.vn/category/lap-trinh-mobile/video-bai-giang-mobile/video-android-co-ban"><span class="td-cat-name">Video Android cơ bản</span><span class="td-cat-no">24</span></a></li><li><a href="https://vietpro.net.vn/category/lap-trinh-web-php/htmlcss/hoc-html4"><span class="td-cat-name">Học HTML4</span><span class="td-cat-no">24</span></a></li><li><a href="https://vietpro.net.vn/category/cong-nghe-javascript/nodejs"><span class="td-cat-name">NodeJS</span><span class="td-cat-no">23</span></a></li><li><a href="https://vietpro.net.vn/category/jquery"><span class="td-cat-name">JQuery</span><span class="td-cat-no">23</span></a></li></ul></div> <!-- ./block -->
+                
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="td-footer-bottom-full">
+
+        <div class="td-container">
+
+            <div class="td-pb-row">
+
+                <div class="td-pb-span3"><aside class="footer-logo-wrap"><a href="https://vietpro.net.vn/"><img class="td-retina-data" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/logo-footer.png" data-retina="http://htkw.temit.vn/wp-content/uploads/2019/05/logo-footer.png" alt="" title="" width=""></a></aside></div><div class="td-pb-span5"><aside class="footer-text-wrap"><div class="block-title"><span>VỀ CHÚNG TÔI</span></div>Vietpro Academy thành lập năm 2009. Chúng tôi đào tạo chuyên sâu trong 2 lĩnh vực là Lập trình Website &amp; Mobile nhằm cung cấp cho thị trường CNTT Việt Nam những lập trình viên thực sự chất lượng, có khả năng làm việc độc lập, cũng như Team Work ở mọi môi trường đòi hỏi sự chuyên nghiệp cao.
+Tài liệu lập trình web cơ bản và các giáo trình chuyên nghiệp tại Vietpro sẽ giúp bạn lập trình PHP một cách nhanh nhất.<div class="footer-email-wrap">Liên hệ chúng tôi: <a href="mailto:sirtuanhoang@gmail.com">sirtuanhoang@gmail.com</a></div></aside></div><div class="td-pb-span4"><aside class="footer-social-wrap td-social-style-2"><div class="block-title"><span>THEO DÕI CHÚNG TÔI</span></div></aside></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+	<!-- Sub Footer -->
+
+	
+    <div class="td-sub-footer-container td-container-wrap ">
+
+        <div class="td-container">
+
+            <div class="td-pb-row">
+
+                <div class="td-pb-span td-sub-footer-menu">
+
+                    
+                </div>
+
+
+
+                <div class="td-pb-span td-sub-footer-copy">
+
+                    © Học Viện Công Nghệ Vietpro Academy - <a href="https://vietpro.net.vn/hoc-thiet-ke-website-mien-phi.html" title="học thiết kế website">học thiết kế web</a> - <a href="https://vietpro.net.vn/hoc-lap-trinh-web-php-co-ban" title="Lập trình php">Lập Trình PHP</a> - <a href="https://vietpro.net.vn/lap-trinh-android" title="lập trình android">Lập Trình Android</a> - <a href="https://vietpro.net.vn/hoc-lap-trinh-web-php-co-ban">học lập trình web</a> - <a href="https://vietpro.edu.vn/lap-trinh-android">khóa học android</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+</div><!--close td-outer-wrap-->
+
+
+
+
+
+
+
+
+
+    <!--
+
+
+
+        Theme: Newspaper by tagDiv.com 2019
+
+        Version: 9.7.2 (rara)
+
+        Deploy mode: deploy
+
+        
+
+        uid: 5cfdb87d568c8
+
+    -->
+
+
+
+    
+<!-- Custom css from theme panel -->
+<style type="text/css" media="screen">
+/* custom css theme panel */
+a{
+    color:#ff9600;
+    
+}
+</style>
+
+<script type="text/javascript" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/tdModalPostImages.js.tải xuống"></script>
+<script type="text/javascript" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/underscore.min.js.tải xuống"></script>
+<script type="text/javascript" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/js_posts_autoload.min.js.tải xuống"></script>
+<script type="text/javascript" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/tagdiv_theme.min.js.tải xuống"></script><iframe name="oauth2relay465398807" id="oauth2relay465398807" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/postmessageRelay.html" tabindex="-1" aria-hidden="true" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe>
+<script type="text/javascript" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/comment-reply.min.js.tải xuống"></script>
+<script type="text/javascript" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var ubermenu_data = {"remove_conflicts":"on","reposition_on_load":"off","intent_delay":"300","intent_interval":"100","intent_threshold":"7","scrollto_offset":"50","scrollto_duration":"1000","responsive_breakpoint":"959","accessible":"on","retractor_display_strategy":"responsive","touch_off_close":"on","submenu_indicator_close_mobile":"on","collapse_after_scroll":"on","v":"3.5","configurations":["main"],"ajax_url":"https:\/\/vietpro.net.vn\/wp-admin\/admin-ajax.php","plugin_url":"https:\/\/vietpro.net.vn\/wp-content\/plugins\/ubermenu\/","disable_mobile":"off","prefix_boost":"","aria_role_navigation":"off","aria_expanded":"off","aria_hidden":"off","aria_controls":"","aria_responsive_toggle":"off","icon_tag":"i","theme_locations":{"top-menu":"Top Header Menu","header-menu":"Header Menu (main)","footer-menu":"Footer Menu","header-menu-mobile":"Header Menu Mobile (main)","footer-menu-mobile":"Footer Menu Mobile"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/ubermenu.min.js.tải xuống"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var _mpc_ajax = "https:\/\/vietpro.net.vn\/wp-admin\/admin-ajax.php";
+var _mpc_animations = "0";
+var _mpc_parallax = "0";
+var _mpc_scroll_to_id = "1";
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/mpc-vendor.min.js.tải xuống"></script>
+<script type="text/javascript" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/mpc-scripts.min.js.tải xuống"></script>
+<script type="text/javascript" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/js_files_for_front.min.js.tải xuống"></script>
+<script type="text/javascript" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/wp-embed.min.js.tải xuống"></script>
+
+<!-- JS generated by theme -->
+
+<script>
+    
+
+
+	
+
+
+
+		(function(){
+
+			var html_jquery_obj = jQuery('html');
+
+
+
+			if (html_jquery_obj.length && (html_jquery_obj.is('.ie8') || html_jquery_obj.is('.ie9'))) {
+
+
+
+				var path = 'https://vietpro.net.vn/wp-content/themes/Newspaper/style.css';
+
+
+
+				jQuery.get(path, function(data) {
+
+
+
+					var str_split_separator = '#td_css_split_separator';
+
+					var arr_splits = data.split(str_split_separator);
+
+					var arr_length = arr_splits.length;
+
+
+
+					if (arr_length > 1) {
+
+
+
+						var dir_path = 'https://vietpro.net.vn/wp-content/themes/Newspaper';
+
+						var splited_css = '';
+
+
+
+						for (var i = 0; i < arr_length; i++) {
+
+							if (i > 0) {
+
+								arr_splits[i] = str_split_separator + ' ' + arr_splits[i];
+
+							}
+
+							//jQuery('head').append('<style>' + arr_splits[i] + '</style>');
+
+
+
+							var formated_str = arr_splits[i].replace(/\surl\(\'(?!data\:)/gi, function regex_function(str) {
+
+								return ' url(\'' + dir_path + '/' + str.replace(/url\(\'/gi, '').replace(/^\s+|\s+$/gm,'');
+
+							});
+
+
+
+							splited_css += "<style>" + formated_str + "</style>";
+
+						}
+
+
+
+						var td_theme_css = jQuery('link#td-theme-css');
+
+
+
+						if (td_theme_css.length) {
+
+							td_theme_css.after(splited_css);
+
+						}
+
+					}
+
+				});
+
+			}
+
+		})();
+
+
+
+	
+
+	
+</script>
+
+
+
+
+
+
+<div style="display: block; visibility: hidden; position: absolute; width: 106px; left: -10000px; top: -10000px;"><table cellpadding="0" cellspacing="0" dir="ltr" style="width:106px;" frame="void" rules="none" class=" gc-bubbleDefault pls-container"><tbody><tr class="gc-reset"><td class="pls-topLeft gc-reset"><img class="gc-reset" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/border_3.gif"></td><td class="pls-topTail gc-reset"><img class="pls-tailbottom gc-reset" style="width:15px !important; height:9px !important; max-width: 15px !important; max-height: 9px !important;" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/spacer.gif"><img class="pls-spacerbottom gc-reset" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/spacer.gif"></td><td class="pls-topRight gc-reset"><img class="gc-reset" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/border_3.gif"></td></tr><tr class="gc-reset"><td class="pls-vertShimLeft gc-reset"><img class="gc-reset" style="width:1px !important; height:4px !important; max-width: 1px !important; max-height: 4px !important;" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/spacer.gif"></td><td class="pls-vertShim gc-reset"><img class="gc-reset" style="width:1px !important; height:4px !important; max-width: 1px !important; max-height: 4px !important;" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/spacer.gif"></td><td class="pls-vertShimRight gc-reset"><img class="pls-dropTR gc-reset" style="width:5px !important; height:4px !important; max-width: 5px !important; max-height: 4px !important;" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/spacer.gif"></td></tr><tr class="gc-reset"><td class="pls-contentLeft gc-reset"><img class="pls-tailright gc-reset" style="width:9px !important; height:15px !important; max-width: 9px !important; max-height: 15px !important;" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/spacer.gif"><img class="pls-spacerright gc-reset" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/spacer.gif"></td><td class="pls-contentWrap gc-reset"><div class="goog-bubble-content gc-reset"><iframe ng-non-bindable="" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="margin: 0px; position: absolute; z-index: 1; border-style: none; outline: none; width: 100px; height: 56.25px;" tabindex="0" vspace="0" width="100%" id="I0_1560131869801" name="I0_1560131869801" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/subscribe_embed(2).html"></iframe></div></td><td class="pls-dropRight gc-reset"><img class="pls-tailleft gc-reset" style="width:12px !important; height:19px !important; max-width: 12px !important; max-height: 19px !important;" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/spacer.gif"><img class="pls-spacerleft gc-reset" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/spacer.gif"></td></tr><tr class="gc-reset"><td class="pls-bottomLeft gc-reset"><img class="gc-reset" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/border_3.gif"></td><td class="gc-reset"><table cellpadding="0" cellspacing="0" style="width:100%" class="gc-reset"><tbody><tr class="gc-reset"><td class="pls-vert gc-reset"><img class="pls-dropBL gc-reset" style="width:4px !important; height:5px !important; max-width: 4px !important; max-height: 5px !important;" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/spacer.gif"></td><td class="pls-dropBottom gc-reset"><img class="pls-tailtop gc-reset" style="width:19px !important; height:13px !important; max-width: 19px !important; max-height: 13px !important;" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/spacer.gif"><img class="pls-spacertop gc-reset" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/spacer.gif"></td></tr></tbody></table></td><td class="pls-vert gc-reset"><img class="pls-dropBR gc-reset" style="width:5px !important; height:5px !important; max-width: 5px !important; max-height: 5px !important;" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/spacer.gif"></td></tr></tbody></table></div><div style="display: block; visibility: hidden; position: absolute; width: 167px; left: -10000px; top: -10000px; height: 45px; z-index: 2000000003;"><table cellpadding="0" cellspacing="0" dir="ltr" style="width: 167px; height: 45px;" frame="void" rules="none" class=" gc-bubbleDefault pls-container"><tbody><tr class="gc-reset"><td class="pls-topLeft gc-reset"><img class="gc-reset" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/border_3.gif"></td><td class="pls-topTail gc-reset"><img class="pls-tailbottom gc-reset" style="width: 15px !important; height: 9px !important; max-width: 15px !important; max-height: 9px !important; display: inline; left: 35.5px; top: 0px;" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/spacer.gif"><img class="pls-spacerbottom gc-reset" style="width: 1px !important; height: 1px !important; max-width: 1px !important; max-height: 1px !important; display: none;" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/spacer.gif"></td><td class="pls-topRight gc-reset"><img class="gc-reset" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/border_3.gif"></td></tr><tr class="gc-reset"><td class="pls-vertShimLeft gc-reset"><img class="gc-reset" style="width:1px !important; height:4px !important; max-width: 1px !important; max-height: 4px !important;" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/spacer.gif"></td><td class="pls-vertShim gc-reset"><img class="gc-reset" style="width:1px !important; height:4px !important; max-width: 1px !important; max-height: 4px !important;" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/spacer.gif"></td><td class="pls-vertShimRight gc-reset"><img class="pls-dropTR gc-reset" style="width:5px !important; height:4px !important; max-width: 5px !important; max-height: 4px !important;" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/spacer.gif"></td></tr><tr class="gc-reset"><td class="pls-contentLeft gc-reset"><img class="pls-tailright gc-reset" style="width: 9px !important; height: 15px !important; max-width: 9px !important; max-height: 15px !important; display: none;" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/spacer.gif"><img class="pls-spacerright gc-reset" style="width: 1px !important; height: 1px !important; max-width: 1px !important; max-height: 1px !important; display: block;" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/spacer.gif"></td><td class="pls-contentWrap gc-reset"><div class="goog-bubble-content gc-reset" style="width: 161px; height: 27px;"><iframe ng-non-bindable="" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="margin: 0px; position: absolute; z-index: 1; border-style: none; outline: none; width: 161px; height: 90.5625px;" tabindex="0" vspace="0" width="100%" id="I1_1560131869822" name="I1_1560131869822" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/subscribe_embed(3).html"></iframe></div></td><td class="pls-dropRight gc-reset"><img class="pls-tailleft gc-reset" style="width: 12px !important; height: 19px !important; max-width: 12px !important; max-height: 19px !important; display: none;" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/spacer.gif"><img class="pls-spacerleft gc-reset" style="width: 1px !important; height: 1px !important; max-width: 1px !important; max-height: 1px !important; display: block;" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/spacer.gif"></td></tr><tr class="gc-reset"><td class="pls-bottomLeft gc-reset"><img class="gc-reset" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/border_3.gif"></td><td class="gc-reset"><table cellpadding="0" cellspacing="0" style="width:100%" class="gc-reset"><tbody><tr class="gc-reset"><td class="pls-vert gc-reset"><img class="pls-dropBL gc-reset" style="width:4px !important; height:5px !important; max-width: 4px !important; max-height: 5px !important;" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/spacer.gif"></td><td class="pls-dropBottom gc-reset"><img class="pls-tailtop gc-reset" style="width: 19px !important; height: 13px !important; max-width: 19px !important; max-height: 13px !important; display: none;" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/spacer.gif"><img class="pls-spacertop gc-reset" style="width: 1px !important; height: 1px !important; max-width: 1px !important; max-height: 1px !important; display: block;" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/spacer.gif"></td></tr></tbody></table></td><td class="pls-vert gc-reset"><img class="pls-dropBR gc-reset" style="width:5px !important; height:5px !important; max-width: 5px !important; max-height: 5px !important;" src="./Các hàm toán học trong PHP (P.1) – Vietpro Academy – Học viện Công nghệ Vietpro_files/spacer.gif"></td></tr></tbody></table></div><ins style="position: absolute !important; background-color: transparent !important; left: 198.5px !important; top: 596px !important; width: 85px !important; height: 24px !important; z-index: -10000 !important; display: none !important;"></ins></body></html>
